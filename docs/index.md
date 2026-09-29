@@ -1,46 +1,87 @@
-# 欢迎来到我的 Web3 学习 Wiki
+<div class="w3-hero" markdown="1">
 
-一个广外大一学生的 AI × Web3 公开学习档案：**本科四年 → 港 / 新 Web3 硕士 → 进入行业**。
+<div class="eyebrow">Open Knowledge Base · Builder Notes</div>
 
----
+# Web3 Learning Wiki
 
-## 快速开始
+<p class="tagline">
+A practical learning archive for AI × Web3 builders — documenting Web3,
+AI agents, developer tools, onchain applications and hands-on projects.
+记录从概念到构建的学习、实验与发现。
+</p>
 
-如果你是第一次来，建议按这个顺序阅读：
+<div class="w3-actions">
+  <a class="w3-btn w3-btn--primary" href="./start/index.md">Start Here</a>
+  <a class="w3-btn" href="./roadmap/learning-path.md">Learning Roadmap</a>
+  <a class="w3-btn" href="./field-notes/pitch-night.md">AI × Web3</a>
+  <a class="w3-btn" href="./fundamentals/core-concepts.md">Web3 Fundamentals</a>
+  <a class="w3-btn" href="./handbook/hackathon.md">Builder Handbook</a>
+  <a class="w3-btn" href="./roadmap/skills-resources.md">Resources</a>
+</div>
 
-1. [**从这里开始**](./00-start-here/index.md)：了解这份 Wiki 的理念和学习心法；
-2. [**小白概念词典**](./02-glossary/01-beginner-dictionary.md)：先把最基础的 20 个概念搞懂；
-3. [**四年总路线图**](./03-roadmap/01-four-year-roadmap.md)：看清全局，知道大一现在该做什么；
-4. 然后挑一篇 [**会议精读**](./01-meeting-notes/01-pitch-night.md)，看看真实行业里的人在做什么；
-5. 想动手时，翻 [**行动手册**](./05-playbooks/01-hackathon-guide.md)。
+<div class="w3-meta-row">
+  <span><strong>Personal</strong> Learning Archive</span>
+  <span><strong>Open</strong> Knowledge Base</span>
+  <span><strong>Public</strong> Builder Notes</span>
+</div>
 
-## 这份 Wiki 里有什么
+</div>
 
-```mermaid
-flowchart LR
-    A[输入 Input] --> B[消化 Notes]
-    B --> C[实践 Build]
-    C --> D[输出 Share]
-    D --> A
+<div class="w3-section-label">Learning Path</div>
 
-    A1[行业活动 / 课程 / 文档] --> A
-    B1[会议精读 / 小白词典] --> B
-    C1[黑客松 / 项目 / 实习] --> C
-    D1[Wiki 文章 / GitHub / 个人 IP] --> D
-```
+<div class="w3-paths">
+  <a class="w3-card" href="./fundamentals/core-concepts.md">
+    <div class="num">01</div>
+    <div class="title">Foundations</div>
+    <div class="desc">区块链、分布式账本、密码学基础与核心术语，建立第一层直觉。</div>
+  </a>
+  <a class="w3-card" href="./fundamentals/core-concepts.md">
+    <div class="num">02</div>
+    <div class="title">Onchain</div>
+    <div class="desc">交易、Gas、智能合约、钱包、L2 与 DeFi 原语。</div>
+  </a>
+  <a class="w3-card" href="./field-notes/pitch-night.md">
+    <div class="num">03</div>
+    <div class="title">AI × Web3</div>
+    <div class="desc">AI Agent、Agent 基础设施、MCP、Agent 支付与链上 Agent。</div>
+  </a>
+  <a class="w3-card" href="./handbook/hackathon.md">
+    <div class="num">04</div>
+    <div class="title">Building</div>
+    <div class="desc">开发工具、本地环境、部署、调试，把想法做成能跑的产品。</div>
+  </a>
+  <a class="w3-card" href="./field-notes/monad-hackathon.md">
+    <div class="num">05</div>
+    <div class="title">Hackathons</div>
+    <div class="desc">参赛方法、选题组队、Demo 演示，以及真实赛事观察。</div>
+  </a>
+  <a class="w3-card" href="./handbook/internship.md">
+    <div class="num">06</div>
+    <div class="title">Career / Open Source</div>
+    <div class="desc">岗位地图、作品集、实习求职与长期开源经营。</div>
+  </a>
+</div>
 
-学习就是一个「**输入 → 消化 → 实践 → 输出**」的循环，这份 Wiki 同时是我的笔记本、作品集和简历。
+<div class="w3-section-label">Browse the Archive</div>
 
-## 一句话信念
+<div class="w3-tiles">
+  <a class="w3-tile" href="./start/index.md"><div class="t">Start</div><div class="d">简介与使用方式</div></a>
+  <a class="w3-tile" href="./fundamentals/index.md"><div class="t">Fundamentals</div><div class="d">概念词典与黑话对照</div></a>
+  <a class="w3-tile" href="./field-notes/index.md"><div class="t">Field Notes</div><div class="d">活动记录与生态观察</div></a>
+  <a class="w3-tile" href="./handbook/index.md"><div class="t">Handbook</div><div class="d">黑客松、建站、求职</div></a>
+  <a class="w3-tile" href="./roadmap/index.md"><div class="t">Roadmap</div><div class="d">路线、技能与资源</div></a>
+</div>
 
-> 焦虑没用，唯一能做的是向它靠近；不碰看不懂的钱，靠时间和作品说话。
+## About this archive
 
-## 目录总览
+这是一个持续更新的**公开学习档案**，记录在 AI × Web3 方向上「Learn → Build →
+Research → Document」的过程：把活动、文档与课程消化成笔记，再通过项目、黑客松与
+开源实践验证，最后沉淀为可检索的知识库。
 
-| 板块 | 说明 |
-|---|---|
-| [会议精读](./01-meeting-notes/01-pitch-night.md) | 把真实行业活动嚼碎了讲给小白听 |
-| [小白词典](./02-glossary/01-beginner-dictionary.md) | 术语大白话解释 + 黑话对照表 |
-| [四年路线图](./03-roadmap/01-four-year-roadmap.md) | 分学年行动计划 + 港新硕士清单 |
-| [技能与资源](./04-skills/01-skill-tree-resources.md) | 技能树、免费课程、英语标化 |
-| [行动手册](./05-playbooks/01-hackathon-guide.md) | 黑客松、GitHub、实习求职 |
+- **新到 Web3**：从 [Start](./start/index.md) 与 [Foundations](./fundamentals/core-concepts.md) 开始；
+- **想动手**：直接进入 [Builder Handbook](./handbook/hackathon.md)；
+- **想看真实生态**：阅读 [Field Notes](./field-notes/pitch-night.md)。
+
+!!! note "关于准确性"
+    内容为个人学习记录，可能包含理解偏差或口误转写；涉及项目、数据与申请要求的部分
+    均标注来源与核查时间，重要决策请以官方资料为准，欢迎在 GitHub 指出问题。

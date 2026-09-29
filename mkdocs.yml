@@ -1,48 +1,71 @@
-# MkDocs Material 配置文件
-# 使用方法：
-#   1. pip install mkdocs-material
-#   2. mkdocs serve   （本地预览 http://127.0.0.1:8000）
-#   3. mkdocs gh-deploy （一键部署到 GitHub Pages）
-# 完整文档：https://squidfunk.github.io/mkdocs-material/
+# ============================================================
+#  Web3 Learning Wiki — MkDocs Material configuration
+#  Local:  python -m mkdocs serve   -> http://127.0.0.1:8000
+#  Deploy: python -m mkdocs gh-deploy
+#  Docs:   https://squidfunk.github.io/mkdocs-material/
+# ============================================================
 
-site_name: Web3 学习 Wiki
-site_description: 从大一小白到港新 Web3 硕士的公开学习档案
-site_author: （替换为你的名字）
-repo_url: https://github.com/你的用户名/web3-learning-wiki
-repo_name: web3-learning-wiki
+site_name: Web3 Learning Wiki
+site_description: >-
+  A practical open learning archive covering Web3, AI agents, blockchain
+  development, developer tools, hackathons and builder notes.
+site_url: https://mia03ther.github.io/web3-learning-wiki/
+site_author: Web3 Learning Wiki
+
+repo_url: https://github.com/mia03ther/web3-learning-wiki
+repo_name: mia03ther/web3-learning-wiki
 edit_uri: edit/main/docs/
+
+copyright: Licensed under CC BY-NC-SA 4.0
 
 theme:
   name: material
   language: zh
+  logo: assets/brand.svg
+  favicon: assets/favicon.svg
   features:
-    - navigation.tabs           # 顶部标签页
-    - navigation.sections       # 侧边栏分组
-    - navigation.expand         # 默认展开侧边栏
-    - navigation.indexes        # 分组首页
-    - navigation.top            # 回到顶部按钮
-    - search.suggest            # 搜索建议
-    - search.highlight          # 搜索高亮
-    - content.code.copy         # 代码块复制按钮
-    - content.tabs.link
+    - navigation.tabs             # 顶级标签栏
+    - navigation.tabs.sticky      # 标签栏固定
+    - navigation.sections         # 侧边栏分组
+    - navigation.indexes          # 分组首页
+    - navigation.top              # 回到顶部
+    - navigation.footer           # 上一页 / 下一页
+    - toc.follow                  # 右侧目录跟随
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
-      accent: amber
+      primary: white
+      accent: cyan
       toggle:
-        icon: material/brightness-7
-        name: 切换到暗色模式
+        icon: material/weather-night
+        name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
-      accent: amber
+      primary: black
+      accent: cyan
       toggle:
-        icon: material/brightness-4
-        name: 切换到亮色模式
+        icon: material/weather-sunny
+        name: 切换到浅色模式
   font:
-    text: Noto Sans SC
+    text: Inter
     code: JetBrains Mono
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mia03ther/web3-learning-wiki
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - assets/javascripts/extra.js
 
 plugins:
   - search:
@@ -50,14 +73,10 @@ plugins:
         - en
         - ja
 
-extra_javascript:
-  - https://unpkg.com/mermaid/dist/mermaid.min.js
-  - assets/javascripts/extra.js
-
 markdown_extensions:
-  - admonition                  # !!! note 提示框
-  - pymdownx.details            # 可折叠提示框
-  - pymdownx.superfences:       # 代码块/图表支持（含 Mermaid）
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
@@ -66,9 +85,8 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
   - pymdownx.inlinehilite
-  - pymdownx.arithmatex:
-      generic: true
   - attr_list
   - md_in_html
   - def_list
@@ -79,27 +97,26 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  - 首页: index.md
-  - 从这里开始:
-      - 00-start-here/index.md
-  - 会议精读:
-      - 01-meeting-notes/index.md
-      - 路演夜：四个 AI×Web3 项目: 01-meeting-notes/01-pitch-night.md
-      - Monad 黑客松与 Agent 金融: 01-meeting-notes/02-monad-hackathon.md
-  - 小白词典:
-      - 02-glossary/index.md
-      - Web3 小白概念词典: 02-glossary/01-beginner-dictionary.md
-      - 会议黑话对照表: 02-glossary/02-jargon-mapping.md
-  - 四年路线图:
-      - 03-roadmap/index.md
-      - 四年总路线图: 03-roadmap/01-four-year-roadmap.md
-      - 港新 Web3 硕士清单: 03-roadmap/02-hk-sg-masters.md
-  - 技能与资源:
-      - 04-skills/index.md
-      - 技能树与免费资源: 04-skills/01-skill-tree-resources.md
-      - 英语标化与背景提升: 04-skills/02-english-and-profile.md
-  - 行动手册:
-      - 05-playbooks/index.md
-      - 黑客松参赛指南: 05-playbooks/01-hackathon-guide.md
-      - GitHub 与个人 IP 搭建: 05-playbooks/02-github-and-personal-ip.md
-      - Web3 实习求职指南: 05-playbooks/03-internship-job-guide.md
+  - Home: index.md
+  - Start:
+      - start/index.md
+      - 如何使用本 Wiki: start/how-to-use.md
+  - Fundamentals:
+      - fundamentals/index.md
+      - 核心概念词典: fundamentals/core-concepts.md
+      - 黑话对照表: fundamentals/glossary.md
+  - Field Notes:
+      - field-notes/index.md
+      - 路演夜 · 四个 AI × Web3 项目: field-notes/pitch-night.md
+      - Monad 黑客松与 Agent 金融: field-notes/monad-hackathon.md
+  - Handbook:
+      - handbook/index.md
+      - 黑客松参赛指南: handbook/hackathon.md
+      - GitHub 与本站搭建: handbook/github-site.md
+      - 实习与求职指南: handbook/internship.md
+  - Roadmap:
+      - roadmap/index.md
+      - 学习路线图: roadmap/learning-path.md
+      - 技能树与资源: roadmap/skills-resources.md
+      - 标化与背景建设: roadmap/profile.md
+      - 海外深造参考: roadmap/graduate-study.md

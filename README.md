@@ -1,81 +1,91 @@
-# Web3 学习 Wiki · 从大一小白到港新硕士
+# Web3 Learning Wiki
 
-> 一个普通本科生的 AI × Web3 公开学习档案。
-> 目标：本科四年（广东外语外贸大学）→ 申请香港 / 新加坡 Web3 / 金融科技方向硕士 → 进入 Web3 行业。
+> An open learning archive documenting practical notes, experiments and
+> projects across AI × Web3.
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](./LICENSE)
 
----
+A practical, public knowledge base for learning **Web3, AI agents, blockchain
+development, developer tools, hackathons and onchain applications** — written
+from a builder's first-person perspective, and updated continuously.
 
-## 这是什么
+## What is this?
 
-这是我的**个人学习 Wiki**，也是一份持续更新的开源知识库。它记录我从「连区块链是什么都说不清」的大一小白，一步步学习、做项目、参加黑客松、申请海外硕士的全过程。
+This is a **personal learning archive** and an open knowledge base. It records
+the process of learning, building and experimenting across AI × Web3 — turning
+events, documentation and courses into structured notes, then validating them
+through projects and hackathons.
 
-它不是教科书，而是一个**真实学习者的第一视角笔记**：
+It is not a textbook; it is a working notebook:
 
-- 参加行业活动 / 黑客松后，我会把会议内容嚼碎了写下来（见 `会议精读`）；
-- 遇到不懂的术语，我会用大白话+类比解释，并整理成词典（见 `小白词典`）；
-- 我把四年要做的事拆成了可执行的路线图（见 `四年路线图`）；
-- 所有我筛选过的免费学习资源、工具、项目清单都在这里（见 `技能与资源`）；
-- 怎么参加黑客松、怎么搭 GitHub、怎么找实习，都有手把手的行动手册（见 `行动手册`）。
+- after events and hackathons, the material is broken down in **Field Notes**;
+- unfamiliar terms are explained in plain language in **Fundamentals**;
+- long-term goals are organized into an actionable **Roadmap**;
+- curated free resources, tools and references are collected in **Skills**;
+- step-by-step playbooks cover hackathons, deploying this site and finding work.
 
-## 为什么开源
+## What You'll Find
 
-1. **以输出倒逼输入**：写不明白 = 没学明白。公开写作是最强的学习方式。
-2. **打造个人 IP**：在 Web3 行业，「你公开做过什么」比简历更重要。这个仓库就是我四年的作品集。
-3. **帮助同类人**：如果你也是非技术强校出身、也对 Web3 感兴趣、也在焦虑 AI 冲击，希望这些笔记能让你少走弯路。
-4. **连接同路人**：欢迎 Issue / PR / 邮件交流，一起学习、组队打黑客松。
+| Section | What's inside |
+|---|---|
+| [**Start**](./docs/start/index.md) | Introduction, how to use this wiki, learning principles |
+| [**Fundamentals**](./docs/fundamentals/core-concepts.md) | Core concept dictionary + jargon mapping |
+| [**Field Notes**](./docs/field-notes/pitch-night.md) | Conference notes and ecosystem observations |
+| [**Handbook**](./docs/handbook/hackathon.md) | Hackathons, building this site, internships |
+| [**Roadmap**](./docs/roadmap/learning-path.md) | Learning roadmap, skills, profile, graduate study reference |
 
-## 怎么读这个 Wiki
+## Learning Path
 
-### 方式一：直接在 GitHub 上读（零门槛）
-
-按下面的「内容导航」点开 Markdown 文件即可，不需要装任何东西。
-
-### 方式二：在本地 / 网站上阅读（推荐，体验更好）
-
-本仓库已配置 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)，可以一键生成带搜索、带目录的个人网站，并免费部署到 GitHub Pages。搭建方法见 [《GitHub 与个人 IP 搭建指南》](./docs/05-playbooks/02-github-and-personal-ip.md)。
-
-```bash
-# 安装（只需一次）
-pip install mkdocs-material
-
-# 本地预览
-mkdocs serve
-# 然后浏览器打开 http://127.0.0.1:8000
+```text
+01 Foundations → 02 Onchain → 03 AI × Web3 → 04 Building → 05 Hackathons → 06 Career / Open Source
 ```
 
-## 内容导航
+## AI × Web3
 
-| 目录 | 内容 | 适合什么时候读 |
-|---|---|---|
-| [**00 从这里开始**](./docs/00-start-here/) | 这份 Wiki 的使用说明、学习心法 | 第一次来 |
-| [**01 会议精读**](./docs/01-meeting-notes/) | 行业活动 / 黑客松的逐项目小白解读 | 想了解真实行业在发生什么 |
-| [**02 小白词典**](./docs/02-glossary/) | Web3、AI Agent、DeFi 概念大白话解释 + 黑话对照表 | 遇到看不懂的词 |
-| [**03 四年路线图**](./docs/03-roadmap/) | 大一→申研的分学年计划 + 港新硕士项目清单 | 想知道现在该干嘛 |
-| [**04 技能与资源**](./docs/04-skills/) | 编程 / 金融技能树、免费课程、英语标化 | 开始系统学习 |
-| [**05 行动手册**](./docs/05-playbooks/) | 黑客松、GitHub 与个人 IP、实习求职 | 准备动手实践 |
+Focus areas include **AI agents, agent infrastructure, MCP, agent payments,
+onchain agents and AI + DeFi** — alongside DeFi, decentralized identity,
+real-world assets and developer tooling.
 
-## 我的定位（差异化）
+## Builder Notes
 
-- **学校**：广东外语外贸大学（语言类强校），发挥英语与跨文化沟通优势；
-- **方向**：AI Agent × Web3（重点关注 Agent 支付、DeFi、去中心化身份、RWA）；
-- **人设**：「语言 + 技术」的桥梁型学习者，主打华语 Builder 看世界——翻译信息差、沉淀学习笔记、连接东西方生态；
-- **节奏**：不焦虑、不投机、不碰看不懂的钱，靠四年持续积累。
+Hands-on playbooks for finding hackathons, choosing ideas, forming teams,
+building, deploying, debugging and shipping — plus guides to open source and
+building a public portfolio.
 
-## 更新日志
+## Running locally
 
-- **2026-09**：仓库初始化。整理两场行业活动（AI × Web3 项目路演、Monad 黑客松宣讲与 Agent 金融圆桌）的精读笔记，建立四年路线图与行动手册。
+The site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/):
 
-## 版权声明
+```bash
+# install once
+pip install mkdocs-material
 
-本仓库内容采用 [CC BY-NC-SA 4.0](./LICENSE) 协议开源：你可以自由转载、改编，但需**署名**、**不得用于商业用途**、**以相同协议共享**。若引用了第三方资料，版权归原作者所有，文中均会标注来源。
+# preview at http://127.0.0.1:8000
+mkdocs serve
+```
 
-## 联系我
+To publish to GitHub Pages:
 
-- GitHub Issue：欢迎提问、纠错、讨论；
-- （在此补充你的邮箱 / X / 个人网站）
+```bash
+mkdocs gh-deploy
+```
 
----
+## Contributing
 
-> **给三年后的自己**：如果这份 Wiki 真的陪你走到了港新的校园，请记得回来更新它，帮更多像你当年一样迷茫的人。
+Contributions are welcome — feel free to open an issue or pull request to:
+
+- correct factual errors, outdated information or broken links;
+- improve explanations or add sources and translations;
+- share better resources and tools.
+
+## License
+
+Content is licensed under [**CC BY-NC-SA 4.0**](./LICENSE): you may share and
+adapt it with attribution, for non-commercial purposes, under the same license.
+Third-party materials remain the property of their respective authors and are
+attributed where used.
+
+## Contact
+
+- Open a [GitHub issue](https://github.com/mia03ther/web3-learning-wiki/issues)
+  for questions, corrections or discussion.
