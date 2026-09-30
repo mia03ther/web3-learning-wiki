@@ -60,4 +60,3 @@ Open the online wiki, use browser `Save as` to export static web pages to local 
 ## License
 
 MIT
-```
