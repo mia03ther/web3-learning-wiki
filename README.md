@@ -1,4 +1,3 @@
-```markdown
 # Web3 Learning Wiki
 
 > **📖 Online Wiki：<[https://mia03ther.github.io/web3-learning-wiki/](https://mia03ther.github.io/web3-learning-wiki/)>**
