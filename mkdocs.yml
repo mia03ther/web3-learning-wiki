@@ -114,9 +114,12 @@ nav:
       - 黑客松参赛指南: handbook/hackathon.md
       - GitHub 与本站搭建: handbook/github-site.md
       - 实习与求职指南: handbook/internship.md
+      - 面经题库: handbook/interview.md
+      - 资料与手册: handbook/resources.md
   - Roadmap:
       - roadmap/index.md
       - 学习路线图: roadmap/learning-path.md
+      - 精选课程中心: roadmap/courses.md
       - 技能树与资源: roadmap/skills-resources.md
       - 标化与背景建设: roadmap/profile.md
       - 海外深造参考: roadmap/graduate-study.md
