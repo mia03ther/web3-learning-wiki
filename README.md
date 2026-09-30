@@ -1,91 +1,64 @@
+```markdown
 # Web3 Learning Wiki
 
-> An open learning archive documenting practical notes, experiments and
-> projects across AI × Web3.
+> **📖 Online Wiki：<[https://mia03ther.github.io/web3-learning-wiki/](https://mia03ther.github.io/web3-learning-wiki/)>**
+>
+> ✨ **General readers do NOT need to clone, download or install any software.**
+> Open the link above in your browser for full‑featured reading: sidebar navigation, full‑text search, formatted styles.
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](./LICENSE)
+This repository holds the source Markdown for an open‑source personal knowledge archive, focused on practical learning and experiments at the intersection of **AI × Web3**.
+Topics include blockchain basics, on‑chain AI Agents, hackathon practice, developer tooling and ecosystem research.
 
-A practical, public knowledge base for learning **Web3, AI agents, blockchain
-development, developer tools, hackathons and onchain applications** — written
-from a builder's first-person perspective, and updated continuously.
+> ⚠️ Note: Browsing raw `.md` source files directly on GitHub will discard website layout, styling and search functions. Always use the online wiki link for proper reading experience.
 
-## What is this?
+## What’s Inside
 
-This is a **personal learning archive** and an open knowledge base. It records
-the process of learning, building and experimenting across AI × Web3 — turning
-events, documentation and courses into structured notes, then validating them
-through projects and hackathons.
+- **Start Here**: Project introduction & usage guide for new builders
+- **Web3 Fundamentals**: Blockchain, wallets, smart contracts, transactions, gas, L2 and core protocol knowledge
+- **AI × Web3**: On‑chain Agents, Agent Payments, MCP, AI‑DeFi combination research and practice notes
+- **Builder Notes**: Hackathon playbook, GitHub workflow, deployment workflow, debugging tips & developer tools
+- **Field Notes**: Conference meeting records, ecosystem observations, protocol analysis and project reviews
+- **Roadmap**: Stage‑oriented learning path, curated course resources, skill checklist and interview handbook
 
-It is not a textbook; it is a working notebook:
+## Run Wiki Locally (Contributors & Editors Only)
 
-- after events and hackathons, the material is broken down in **Field Notes**;
-- unfamiliar terms are explained in plain language in **Fundamentals**;
-- long-term goals are organized into an actionable **Roadmap**;
-- curated free resources, tools and references are collected in **Skills**;
-- step-by-step playbooks cover hackathons, deploying this site and finding work.
+> ⚠️ Skip this whole section if you just want to read content.
+> These steps are only for people who want to modify source documents and preview site locally.
 
-## What You'll Find
-
-| Section | What's inside |
-|---|---|
-| [**Start**](./docs/start/index.md) | Introduction, how to use this wiki, learning principles |
-| [**Fundamentals**](./docs/fundamentals/core-concepts.md) | Core concept dictionary + jargon mapping |
-| [**Field Notes**](./docs/field-notes/pitch-night.md) | Conference notes and ecosystem observations |
-| [**Handbook**](./docs/handbook/hackathon.md) | Hackathons, building this site, internships |
-| [**Roadmap**](./docs/roadmap/learning-path.md) | Learning roadmap, skills, profile, graduate study reference |
-
-## Learning Path
-
-```text
-01 Foundations → 02 Onchain → 03 AI × Web3 → 04 Building → 05 Hackathons → 06 Career / Open Source
-```
-
-## AI × Web3
-
-Focus areas include **AI agents, agent infrastructure, MCP, agent payments,
-onchain agents and AI + DeFi** — alongside DeFi, decentralized identity,
-real-world assets and developer tooling.
-
-## Builder Notes
-
-Hands-on playbooks for finding hackathons, choosing ideas, forming teams,
-building, deploying, debugging and shipping — plus guides to open source and
-building a public portfolio.
-
-## Running locally
-
-The site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/):
+### System Requirement
+Python ≥ 3.11
 
 ```bash
-# install once
+# 1. Clone repository
+git clone [https://github.com/mia03ther/web3-learning-wiki.git](https://github.com/mia03ther/web3-learning-wiki.git)
+cd web3-learning-wiki
+
+# 2. Install mkdocs‑material theme
 pip install mkdocs-material
 
-# preview at http://127.0.0.1:8000
+# 3. Start local preview server
 mkdocs serve
 ```
 
-To publish to GitHub Pages:
+Visit preview site: `[http://127.0.0.1:8000](http://127.0.0.1:8000)`
 
-```bash
-mkdocs gh-deploy
-```
+### Offline Reading Without Python
+If you wish to read content offline without environment setup:
+Open the online wiki, use browser `Save as` to export static web pages to local disk.
+
+## Deployment Workflow
+
+- `main` branch：Store all markdown sources, configuration and static assets. **All edits must be committed here.**
+- `gh‑pages` branch：Static site artifacts auto‑generated by GitHub Actions CI.
+  > ❗ **Never manually edit gh‑pages branch**, manual changes will be overwritten on next push to `main`.
+- Every commit pushed to `main` triggers automatic build and GitHub‑Pages deployment.
 
 ## Contributing
 
-Contributions are welcome — feel free to open an issue or pull request to:
-
-- correct factual errors, outdated information or broken links;
-- improve explanations or add sources and translations;
-- share better resources and tools.
+- Submit an Issue for feedback, resource recommendation or content suggestions.
+- Pull requests for note improvement, supplement materials and typo fixes are highly welcome.
 
 ## License
 
-Content is licensed under [**CC BY-NC-SA 4.0**](./LICENSE): you may share and
-adapt it with attribution, for non-commercial purposes, under the same license.
-Third-party materials remain the property of their respective authors and are
-attributed where used.
-
-## Contact
-
-- Open a [GitHub issue](https://github.com/mia03ther/web3-learning-wiki/issues)
-  for questions, corrections or discussion.
+MIT
+```
