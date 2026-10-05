@@ -4,22 +4,46 @@
 
 ## 一、三条技能树总览
 
-```mermaid
-flowchart TB
-    ROOT[AI × Web3 复合人才] --> T1[技能树1 工程开发]
-    ROOT --> T2[技能树2 金融认知]
-    ROOT --> T3[技能树3 表达与连接]
+<div class="w3-skilltree" markdown="1">
 
-    T1 --> T1a[编程基础 Python/JS]
-    T1 --> T1b[智能合约 Solidity]
-    T1 --> T1c[全栈 + 安全]
-    T2 --> T2a[金融市场基础]
-    T2 --> T2b[DeFi 机制]
-    T2 --> T2c[监管与合规]
-    T3 --> T3a[英语 + 写作]
-    T3 --> T3b[社区运营 / DevRel]
-    T3 --> T3c[个人 IP]
-```
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg">
+  <g class="st-edge" data-from="root" data-to="t1"><path d="M 360 62 L 120 96" fill="none"/></g>
+  <g class="st-edge" data-from="root" data-to="t2"><path d="M 360 62 L 360 96" fill="none"/></g>
+  <g class="st-edge" data-from="root" data-to="t3"><path d="M 360 62 L 600 96" fill="none"/></g>
+  <g class="st-edge" data-from="t1" data-to="t1a"><path d="M 120 140 L 120 186" fill="none"/></g>
+  <g class="st-edge" data-from="t1a" data-to="t1b"><path d="M 120 230 L 120 266" fill="none"/></g>
+  <g class="st-edge" data-from="t1b" data-to="t1c"><path d="M 120 310 L 120 346" fill="none"/></g>
+  <g class="st-edge" data-from="t2" data-to="t2a"><path d="M 360 140 L 360 186" fill="none"/></g>
+  <g class="st-edge" data-from="t2a" data-to="t2b"><path d="M 360 230 L 360 266" fill="none"/></g>
+  <g class="st-edge" data-from="t2b" data-to="t2c"><path d="M 360 310 L 360 346" fill="none"/></g>
+  <g class="st-edge" data-from="t3" data-to="t3a"><path d="M 600 140 L 600 186" fill="none"/></g>
+  <g class="st-edge" data-from="t3a" data-to="t3b"><path d="M 600 230 L 600 266" fill="none"/></g>
+  <g class="st-edge" data-from="t3b" data-to="t3c"><path d="M 600 310 L 600 346" fill="none"/></g>
+
+  <g class="st-node" data-id="root"><rect x="260" y="18" width="200" height="44" rx="8"/><text x="360" y="40" text-anchor="middle" dominant-baseline="central">AI × Web3 复合人才</text></g>
+
+  <g class="st-node" data-id="t1"><rect x="20" y="96" width="200" height="44" rx="8"/><text x="120" y="118" text-anchor="middle" dominant-baseline="central">技能树1 · 工程开发</text></g>
+  <g class="st-node" data-id="t1a"><rect x="20" y="186" width="200" height="44" rx="8"/><text x="120" y="208" text-anchor="middle" dominant-baseline="central">编程基础 Python/JS</text></g>
+  <g class="st-node" data-id="t1b"><rect x="20" y="266" width="200" height="44" rx="8"/><text x="120" y="288" text-anchor="middle" dominant-baseline="central">智能合约 Solidity</text></g>
+  <g class="st-node" data-id="t1c"><rect x="20" y="346" width="200" height="44" rx="8"/><text x="120" y="368" text-anchor="middle" dominant-baseline="central">全栈 + 安全</text></g>
+
+  <g class="st-node" data-id="t2"><rect x="260" y="96" width="200" height="44" rx="8"/><text x="360" y="118" text-anchor="middle" dominant-baseline="central">技能树2 · 金融认知</text></g>
+  <g class="st-node" data-id="t2a"><rect x="260" y="186" width="200" height="44" rx="8"/><text x="360" y="208" text-anchor="middle" dominant-baseline="central">金融市场基础</text></g>
+  <g class="st-node" data-id="t2b"><rect x="260" y="266" width="200" height="44" rx="8"/><text x="360" y="288" text-anchor="middle" dominant-baseline="central">DeFi 机制</text></g>
+  <g class="st-node" data-id="t2c"><rect x="260" y="346" width="200" height="44" rx="8"/><text x="360" y="368" text-anchor="middle" dominant-baseline="central">监管与合规</text></g>
+
+  <g class="st-node" data-id="t3"><rect x="500" y="96" width="200" height="44" rx="8"/><text x="600" y="118" text-anchor="middle" dominant-baseline="central">技能树3 · 表达连接</text></g>
+  <g class="st-node" data-id="t3a"><rect x="500" y="186" width="200" height="44" rx="8"/><text x="600" y="208" text-anchor="middle" dominant-baseline="central">英语 + 写作</text></g>
+  <g class="st-node" data-id="t3b"><rect x="500" y="266" width="200" height="44" rx="8"/><text x="600" y="288" text-anchor="middle" dominant-baseline="central">社区运营 / DevRel</text></g>
+  <g class="st-node" data-id="t3c"><rect x="500" y="346" width="200" height="44" rx="8"/><text x="600" y="368" text-anchor="middle" dominant-baseline="central">个人 IP</text></g>
+</svg>
+
+<div class="st-legend">
+  <span><i class="lg-todo"></i> 待学习</span>
+  <span><i class="lg-done"></i> 已掌握（点击标记）</span>
+  <span>点击任意节点可标记 / 取消掌握状态，进度保存在本地。</span>
+</div>
+</div>
 
 - 走**技术路线**：重点攻技能树 1，技能树 2 做业务理解；
 - 走**非技术路线**（运营 / 市场 / 投研 / 合规 / DevRel）：重点攻技能树 2、3，技能树 1 学到「能看懂、能对话」。
@@ -90,6 +114,33 @@ flowchart TB
 | Coursera 金融 / 经济学入门课 | 金融市场基础 |
 | 可汗学院（Khan Academy） | 经济金融零基础 |
 
+### 官方学习资源直达
+
+<div class="w3-resources" markdown="1">
+
+<a class="w3-res" href="https://cs50.harvard.edu/" target="_blank" rel="noopener"><span><span class="rt">CS50</span><br><span class="rs">哈佛计算机科学导论</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://www.freecodecamp.org/" target="_blank" rel="noopener"><span><span class="rt">freeCodeCamp</span><br><span class="rs">免费项目驱动学习</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://www.theodinproject.com/" target="_blank" rel="noopener"><span><span class="rt">The Odin Project</span><br><span class="rs">全栈 Web 开发路径</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://developer.mozilla.org/" target="_blank" rel="noopener"><span><span class="rt">MDN Web Docs</span><br><span class="rs">Web 技术权威文档</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://cryptozombies.io/" target="_blank" rel="noopener"><span><span class="rt">CryptoZombies</span><br><span class="rs">Solidity 游戏化入门</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://updraft.cyfrin.io/" target="_blank" rel="noopener"><span><span class="rt">Cyfrin Updraft</span><br><span class="rs">区块链全流程课程</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://solidity-by-example.org/" target="_blank" rel="noopener"><span><span class="rt">Solidity by Example</span><br><span class="rs">合约范例学习</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://book.getfoundry.sh/" target="_blank" rel="noopener"><span><span class="rt">Foundry Book</span><br><span class="rs">合约开发框架文档</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://remix.ethereum.org/" target="_blank" rel="noopener"><span><span class="rt">Remix IDE</span><br><span class="rs">在线写合约</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://ethereum.org/" target="_blank" rel="noopener"><span><span class="rt">ethereum.org</span><br><span class="rs">以太坊官方文档</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://ethernaut.openzeppelin.com/" target="_blank" rel="noopener"><span><span class="rt">Ethernaut</span><br><span class="rs">合约漏洞闯关</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://docs.openzeppelin.com/" target="_blank" rel="noopener"><span><span class="rt">OpenZeppelin</span><br><span class="rs">标准安全组件库</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://speech.ee.ntu.edu.tw/~hylee/ml" target="_blank" rel="noopener"><span><span class="rt">李宏毅 ML</span><br><span class="rs">中文 AI 最佳入门</span></span><span class="tag">课程</span></a>
+<a class="w3-res" href="https://www.deeplearning.ai/" target="_blank" rel="noopener"><span><span class="rt">DeepLearning.AI</span><br><span class="rs">吴恩达 AI 短课</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://modelcontextprotocol.io/" target="_blank" rel="noopener"><span><span class="rt">MCP</span><br><span class="rs">Model Context 协议</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://www.investopedia.com/" target="_blank" rel="noopener"><span><span class="rt">Investopedia</span><br><span class="rs">金融术语百科</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://finematics.com/" target="_blank" rel="noopener"><span><span class="rt">Finematics</span><br><span class="rs">DeFi 机制科普</span></span><span class="tag">YouTube</span></a>
+<a class="w3-res" href="https://docs.uniswap.org/" target="_blank" rel="noopener"><span><span class="rt">Uniswap Docs</span><br><span class="rs">头部 DEX 文档</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://docs.aave.com/" target="_blank" rel="noopener"><span><span class="rt">Aave Docs</span><br><span class="rs">头部借贷协议文档</span></span><span class="tag">官方</span></a>
+<a class="w3-res" href="https://defillama.com/" target="_blank" rel="noopener"><span><span class="rt">DefiLlama</span><br><span class="rs">TVL 数据</span></span><span class="tag">数据</span></a>
+
+</div>
+
 ---
 
 ## 四、日常信息源（培养「行业体感」）
@@ -141,7 +192,24 @@ flowchart TB
 4. **别用真金白银练手**：测试网、模拟盘先行；
 5. **别孤军奋战**：进社区、找队友、多提问、多线下见人。
 
-## 我的学习打卡（建议复制使用）
+## 学习打卡
+
+<div class="w3-checkin">
+  <div class="w3-checkin-head">
+    <h3>每日学习打卡</h3>
+    <button class="w3-btn w3-btn--sm w3-checkin-btn">🔥 今日打卡</button>
+  </div>
+  <div class="w3-checkin-stats">
+    <div class="w3-checkin-stat"><div class="v" data-stat="streak">0</div><div class="l">连续天数</div></div>
+    <div class="w3-checkin-stat"><div class="v" data-stat="total">0</div><div class="l">累计打卡</div></div>
+    <div class="w3-checkin-stat"><div class="v" data-stat="month">0</div><div class="l">本月打卡</div></div>
+  </div>
+  <p class="w3-checkin-note" style="font-size:0.8rem;color:var(--w3-fg-muted);margin:0 0 1rem">点击打卡，记录今天的学习。</p>
+  <div class="w3-heatmap"></div>
+  <p style="font-size:0.68rem;color:var(--w3-fg-faint);margin:0.8rem 0 0">打卡数据保存在浏览器本地，不跨设备同步。贡献热力图参考 GitHub 风格。</p>
+</div>
+
+**本周计划模板**（可复制使用）：
 
 - 本周主线课程：____
 - 本周产出（笔记 / 代码链接）：____

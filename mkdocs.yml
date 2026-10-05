@@ -7,16 +7,16 @@
 
 site_name: Web3 Learning Wiki
 site_description: >-
-  A practical open learning archive covering Web3, AI agents, blockchain
-  development, developer tools, hackathons and builder notes.
+  MIA_Ether 的个人开发者知识库 — 覆盖 Web3、AI Agents、区块链开发、
+  开发者工具、黑客松与 builder 笔记的开源学习档案。
 site_url: https://mia03ther.github.io/web3-learning-wiki/
-site_author: Web3 Learning Wiki
+site_author: MIA_Ether
 
 repo_url: https://github.com/mia03ther/web3-learning-wiki
 repo_name: mia03ther/web3-learning-wiki
 edit_uri: edit/main/docs/
 
-copyright: Licensed under CC BY-NC-SA 4.0
+copyright: MIA_Ether · Licensed under CC BY-NC-SA 4.0
 
 theme:
   name: material
@@ -58,7 +58,13 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/mia03ther/web3-learning-wiki
+      link: https://github.com/mia03ther
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/MIA03ther
+    - icon: fontawesome/solid/envelope
+      link: mailto:mia03ther@gmail.com
+    - icon: fontawesome/solid/link
+      link: https://mia03ther.github.io/
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -123,3 +129,5 @@ nav:
       - 技能树与资源: roadmap/skills-resources.md
       - 标化与背景建设: roadmap/profile.md
       - 海外深造参考: roadmap/graduate-study.md
+  - About:
+      - about/index.md

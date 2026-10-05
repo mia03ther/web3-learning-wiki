@@ -1,13 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0b0e14"/>
-  <g stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round" fill="none">
-    <line x1="18" y1="24" x2="46" y2="24"/>
-    <line x1="18" y1="24" x2="32" y2="46"/>
-    <line x1="46" y1="24" x2="32" y2="46"/>
+  <rect width="64" height="64" rx="15" fill="#0b0e14"/>
+  <rect width="64" height="64" rx="15" fill="url(#g)" opacity="0.5"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0e7490" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#0b0e14" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="12,50 12,14 32,42 52,14 52,50"/>
   </g>
   <g fill="#22d3ee">
-    <circle cx="18" cy="24" r="4.5"/>
-    <circle cx="46" cy="24" r="4.5"/>
-    <circle cx="32" cy="46" r="4.5"/>
+    <circle cx="12" cy="50" r="4.5"/>
+    <circle cx="12" cy="14" r="4.5"/>
+    <circle cx="32" cy="42" r="4.5"/>
+    <circle cx="52" cy="14" r="4.5"/>
+    <circle cx="52" cy="50" r="4.5"/>
   </g>
 </svg>
