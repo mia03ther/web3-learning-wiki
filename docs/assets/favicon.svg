@@ -1,20 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#0b0e14"/>
-  <rect width="64" height="64" rx="15" fill="url(#g)" opacity="0.5"/>
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0e7490" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#0b0e14" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <g stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <polyline points="12,50 12,14 32,42 52,14 52,50"/>
-  </g>
-  <g fill="#22d3ee">
-    <circle cx="12" cy="50" r="4.5"/>
-    <circle cx="12" cy="14" r="4.5"/>
-    <circle cx="32" cy="42" r="4.5"/>
-    <circle cx="52" cy="14" r="4.5"/>
-    <circle cx="52" cy="50" r="4.5"/>
-  </g>
+<!-- Favicon: solid hexagon block with a knowledge core punched out via evenodd,
+     so it reads correctly in both light and dark themes without any hard-coded colour. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     fill="none" role="img" aria-label="Web3 Learning Wiki">
+  <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+        d="M32 5.5 58 19v26L32 58.5 6 45V19L32 5.5Zm0 7.6L12.6 22.6v18.8L32 51.1l19.4-9.7V22.6L32 13.1ZM32 26a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" />
 </svg>

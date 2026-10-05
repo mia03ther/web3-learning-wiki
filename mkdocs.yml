@@ -1,14 +1,7 @@
-# ============================================================
-#  Web3 Learning Wiki — MkDocs Material configuration
-#  Local:  python -m mkdocs serve   -> http://127.0.0.1:8000
-#  Deploy: python -m mkdocs gh-deploy
-#  Docs:   https://squidfunk.github.io/mkdocs-material/
-# ============================================================
-
-site_name: Web3 Learning Wiki
+site_name: A Web3 Learning Wiki
 site_description: >-
-  MIA_Ether 的个人开发者知识库 — 覆盖 Web3、AI Agents、区块链开发、
-  开发者工具、黑客松与 builder 笔记的开源学习档案。
+  一个持续更新的公开 Web3 学习档案：区块链与智能合约基础、链上 AI Agent 与
+  MCP、开发者工具、黑客松实战、学习路线与技能树。由 MIA_Ether 维护。
 site_url: https://mia03ther.github.io/web3-learning-wiki/
 site_author: MIA_Ether
 
@@ -29,25 +22,29 @@ theme:
     - navigation.tabs.sticky      # 标签栏固定
     - navigation.sections         # 侧边栏分组
     - navigation.indexes          # 分组首页
+    - navigation.path             # 面包屑
     - navigation.top              # 回到顶部
     - navigation.footer           # 上一页 / 下一页
     - toc.follow                  # 右侧目录跟随
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - content.code.annotate
+    - content.action.edit         # 每页「在 GitHub 编辑此页」
+    - content.action.view
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: white
-      accent: cyan
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: cyan
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
@@ -57,15 +54,26 @@ theme:
 
 extra:
   generator: false
+  status:
+    - text: 持续更新
+      icon: material/refresh
+    - text: 开源共建
+      icon: material/source-branch
+    - text: CC BY-NC-SA 4.0
+      icon: material/license
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mia03ther
+      name: GitHub
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/MIA03ther
+      name: X
     - icon: fontawesome/solid/envelope
       link: mailto:mia03ther@gmail.com
-    - icon: fontawesome/solid/link
-      link: https://mia03ther.github.io/
+      name: Email
+    - icon: fontawesome/brands/discord
+      link: https://github.com/mia03ther/web3-learning-wiki/discussions
+      name: GitHub Discussions
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -78,57 +86,54 @@ plugins:
   - search:
       lang:
         - en
-        - ja
+        - zh
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - def_list
+  - md_in_html
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
   - pymdownx.inlinehilite
-  - attr_list
-  - md_in_html
-  - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_s
 
 nav:
   - Home: index.md
-  - Start:
+  - Introduction:
       - start/index.md
       - 如何使用本 Wiki: start/how-to-use.md
-  - Fundamentals:
-      - fundamentals/index.md
-      - 核心概念词典: fundamentals/core-concepts.md
-      - 黑话对照表: fundamentals/glossary.md
+  - Learning Path:
+      - roadmap/index.md
+      - 学习路线图: roadmap/learning-path.md
+      - 精选课程中心: roadmap/courses.md
+      - 海外深造参考: roadmap/graduate-study.md
+  - Skills:
+      - roadmap/skills-resources.md
+      - handbook/resources.md
   - Field Notes:
       - field-notes/index.md
       - 路演夜 · 四个 AI × Web3 项目: field-notes/pitch-night.md
       - Monad 黑客松与 Agent 金融: field-notes/monad-hackathon.md
+  - Fundamentals:
+      - fundamentals/index.md
+      - 核心概念词典: fundamentals/core-concepts.md
+      - 黑话对照表: fundamentals/glossary.md
   - Handbook:
       - handbook/index.md
       - 黑客松参赛指南: handbook/hackathon.md
       - GitHub 与本站搭建: handbook/github-site.md
       - 实习与求职指南: handbook/internship.md
       - 面经题库: handbook/interview.md
-      - 资料与手册: handbook/resources.md
-  - Roadmap:
-      - roadmap/index.md
-      - 学习路线图: roadmap/learning-path.md
-      - 精选课程中心: roadmap/courses.md
-      - 技能树与资源: roadmap/skills-resources.md
       - 标化与背景建设: roadmap/profile.md
-      - 海外深造参考: roadmap/graduate-study.md
   - About:
       - about/index.md
+      - 支持这个 Wiki: support/index.md

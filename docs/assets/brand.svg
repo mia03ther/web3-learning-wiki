@@ -1,12 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <g stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="12,50 12,14 32,42 52,14 52,50"/>
-  </g>
-  <g fill="#22d3ee">
-    <circle cx="12" cy="50" r="4.5"/>
-    <circle cx="12" cy="14" r="4.5"/>
-    <circle cx="32" cy="42" r="4.5"/>
-    <circle cx="52" cy="14" r="4.5"/>
-    <circle cx="52" cy="50" r="4.5"/>
-  </g>
+<!-- Web3 Learning Wiki mark: a hexagonal block node with linked peers.
+     Uses currentColor so it inherits the active theme automatically, and keeps a
+     soft accent core so it still reads as a mark at favicon sizes. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     fill="none" role="img" aria-label="Web3 Learning Wiki">
+  <style>
+    :root { color-scheme: light dark; }
+    .ring { stroke: currentColor; stroke-width: 3.5; stroke-linejoin: round; }
+    .link { stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; opacity: .55; }
+    .core { fill: currentColor; }
+    .dot { fill: currentColor; opacity: .8; }
+  </style>
+
+  <!-- peer links -->
+  <path class="link" d="M32 6.5 12.5 17.5v29L32 57.5l19.5-11v-29L32 6.5Z" />
+  <path class="link" d="M32 6.5v51M12.5 46.5 32 57.5l19.5-11" opacity=".32" />
+
+  <!-- primary block outline -->
+  <path class="ring" d="M32 15.5 17.5 24v18L32 50.5 46.5 42V24L32 15.5Z" />
+
+  <!-- knowledge core -->
+  <circle class="core" cx="32" cy="33" r="5.4" />
+  <circle class="dot" cx="32" cy="13.5" r="2.1" />
+  <circle class="dot" cx="15.6" cy="45.2" r="2.1" />
+  <circle class="dot" cx="48.4" cy="45.2" r="2.1" />
 </svg>
