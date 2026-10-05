@@ -20,6 +20,7 @@ copyright: MIA_Ether · Licensed under CC BY-NC-SA 4.0
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   logo: assets/brand.svg
   favicon: assets/favicon.svg

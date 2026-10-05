@@ -1,11 +1,22 @@
 # MkDocs 生成目录
 /site/
+.cache/
 
 # Python
 __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# 本地环境与密钥
+.env
+.env.*
+!.env.example
+*.log
+
+# 临时文件
+*.tmp
+*.bak
 
 # 操作系统
 .DS_Store

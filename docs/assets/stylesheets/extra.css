@@ -713,13 +713,36 @@ body {
 .w3-download .size { font-size: 0.7rem; color: var(--w3-fg-faint); font-weight: 400; }
 
 /* ---------- 15. Comments + contribution heatmap ---------- */
-.w3-comments { margin: 3rem 0 1rem; }
+.w3-comments {
+  margin: 3rem 0 1rem;
+  max-width: 100%;
+  overflow-x: clip;
+}
 .w3-comments-title {
   font-family: "JetBrains Mono", monospace; font-size: 0.72rem;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--w3-fg-faint);
   margin-bottom: 1rem;
 }
-.giscus { background: transparent !important; }
+.w3-comments .giscus,
+.w3-comments .giscus-frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  color-scheme: light;
+}
+[data-md-color-scheme="slate"] .w3-comments .giscus,
+[data-md-color-scheme="slate"] .w3-comments .giscus-frame {
+  color-scheme: dark;
+}
+.w3-comments .giscus-frame {
+  border-radius: var(--w3-radius-sm);
+  background: var(--w3-bg-elevated);
+}
+@media screen and (max-width: 44.984375em) {
+  .w3-comments { margin: 2.2rem 0 0.5rem; }
+  .w3-comments .giscus,
+  .w3-comments .giscus-frame { min-height: 12rem; }
+}
 
 .w3-checkin {
   margin: 2rem 0;

@@ -227,58 +227,23 @@ document$.subscribe(function () {
   render();
 });
 
-/* ---------- 6. Giscus comments (auto-inject on article pages) ---------- */
-document$.subscribe(function () {
-  var GISCUS_CONFIG = {
-    repo: "mia03ther/web3-learning-wiki",
-    repoId: "",              // TODO: 从 https://giscus.app 获取，填入后评论即生效
-    category: "General",
-    categoryId: "",          // TODO: 从 https://giscus.app 获取
-    mapping: "pathname",
-    reactionsEnabled: "1",
-    emitMetadata: "0",
-    inputPosition: "top",
-    theme: w3IsDark() ? "dark_dimmed" : "light",
-    lang: "zh-CN"
-  };
-  if (!GISCUS_CONFIG.repoId || !GISCUS_CONFIG.categoryId) return;
-
-  var content = document.querySelector(".md-content__inner");
-  if (!content) return;
-  if (document.querySelector(".w3-comments")) return;
-
-  var wrap = document.createElement("div");
-  wrap.className = "w3-comments";
-  wrap.innerHTML =
-    '<div class="w3-comments-title">Comments · 评论</div>' +
-    '<div class="giscus"></div>';
-
-  var script = document.createElement("script");
-  script.src = "https://giscus.app/client.js";
-  script.async = true;
-  script.crossOrigin = "anonymous";
-  Object.keys(GISCUS_CONFIG).forEach(function (k) {
-    script.setAttribute("data-" + k.replace(/([A-Z])/g, "-$1").toLowerCase(), GISCUS_CONFIG[k]);
-  });
-
-  content.appendChild(wrap);
-  wrap.appendChild(script);
-});
-
-/* ---------- 7. Theme sync for giscus on palette switch ---------- */
-var palette$ = document$.subscribe(function () {});
+/* ---------- 6. Giscus theme sync ----------
+   The comment box itself is injected by overrides/partials/comments.html,
+   so nothing here creates or configures the Giscus widget. Giscus boots with
+   data-theme="preferred_color_scheme"; this only pushes the Material palette
+   choice into the already-mounted iframe when the user flips the toggle. */
 document.addEventListener("click", function (e) {
-  if (e.target.closest("[data-md-color-primary]")) {
-    setTimeout(function () {
-      var iframe = document.querySelector(".giscus-frame");
-      if (iframe) {
-        iframe.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: w3IsDark() ? "dark_dimmed" : "light" } } },
-          "https://giscus.app"
-        );
-      }
-    }, 300);
-  }
+  if (!e.target.closest("[data-md-color-primary]")) return;
+  setTimeout(function () {
+    var frames = document.querySelectorAll(".giscus-frame");
+    for (var i = 0; i < frames.length; i++) {
+      if (!frames[i].contentWindow) continue;
+      frames[i].contentWindow.postMessage(
+        { giscus: { setConfig: { theme: w3IsDark() ? "dark_dimmed" : "light" } } },
+        "https://giscus.app"
+      );
+    }
+  }, 300);
 });
 
 /* ---------- 8. Edit + Suggest buttons (bottom of article) ---------- */

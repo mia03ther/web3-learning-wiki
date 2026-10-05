@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+
+  {% set og_title = page.meta.get("title", page.title ~ " · " ~ config.site_name) if page and page.meta else (config.site_name) %}
+  {% set og_desc = page.meta.get("description", config.site_description) if page and page.meta else config.site_description %}
+  {% set og_url = config.site_url ~ page.url if page and page.url else config.site_url %}
+  {% set og_image = config.site_url ~ "assets/og-image.svg" %}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ config.site_name }}" />
+  <meta property="og:title" content="{{ og_title }}" />
+  <meta property="og:description" content="{{ og_desc }}" />
+  <meta property="og:url" content="{{ og_url }}" />
+  <meta property="og:image" content="{{ og_image }}" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ og_title }}" />
+  <meta name="twitter:description" content="{{ og_desc }}" />
+  <meta name="twitter:image" content="{{ og_image }}" />
+  <meta name="twitter:site" content="@MIA03ther" />
+  <meta name="twitter:creator" content="@MIA03ther" />
+
+  <link rel="canonical" href="{{ og_url }}" />
+  <meta name="author" content="MIA_Ether" />
+{% endblock %}
