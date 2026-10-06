@@ -2,8 +2,16 @@
 REM ============================================================
 REM  Web3 Learning Wiki - one-click local preview (Windows)
 REM  Double-click this file, then open http://127.0.0.1:8000
+REM  Prefers the project venv if present, otherwise falls back
+REM  to the global Python.
 REM ============================================================
 cd /d "%~dp0"
+
+if exist ".venv\Scripts\python.exe" (
+  echo Using project venv (.venv) ...
+  ".venv\Scripts\python.exe" -m mkdocs serve %*
+  goto :eof
+)
 
 where python >nul 2>nul
 if %errorlevel%==0 (

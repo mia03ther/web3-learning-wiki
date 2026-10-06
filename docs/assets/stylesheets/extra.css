@@ -1,8 +1,8 @@
 /* ============================================================
-   A Web3 Learning Wiki — design system
-   Wide, calm, editorial. Every colour resolves through a token so
-   light and dark stay in lockstep. No hard-coded hex outside the
-   token blocks below.
+   Web3 Learning Wiki — design system
+   Wide, calm, documentation-first. Every colour resolves through a
+   token so light and dark stay in lockstep. No hard-coded hex outside
+   the token blocks below.
    ============================================================ */
 
 /* ---------- 1. Tokens: shape, motion, type ---------- */
@@ -13,9 +13,9 @@
   --w3-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
     Consolas, "Liberation Mono", monospace;
 
-  --w3-radius-sm: 10px;
-  --w3-radius: 14px;
-  --w3-radius-lg: 20px;
+  --w3-radius-sm: 8px;
+  --w3-radius: 12px;
+  --w3-radius-lg: 18px;
 
   /* One easing curve for the whole site: quick out, soft settle. */
   --w3-ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -27,7 +27,7 @@
   --w3-shell-max: 1760px;
   --w3-shell-pad: 2.4rem;
   --w3-rail: 17.5rem;
-  --w3-content-max: 62rem;
+  --w3-content-max: 64rem;
 
   --w3-signal: linear-gradient(92deg, var(--w3-accent) 0%, var(--w3-accent-2) 52%, var(--w3-accent-3) 100%);
 }
@@ -72,6 +72,13 @@
   --w3-shadow-lg: 0 24px 56px -26px rgba(19, 24, 32, 0.30);
   --w3-title-ink: #0d1420;
   --w3-title-ink-soft: #46566b;
+
+  /* Material palette hooks so theme chrome matches the design tokens. */
+  --md-primary-fg-color: #0a6f88;
+  --md-primary-fg-color--light: #0f5f8a;
+  --md-primary-fg-color--dark: #085a6f;
+  --md-accent-fg-color: #5b4bb8;
+  --md-accent-fg-color--transparent: rgba(91, 75, 184, 0.12);
 }
 
 [data-md-color-scheme="slate"] {
@@ -112,6 +119,12 @@
   --w3-shadow-lg: 0 28px 60px -28px rgba(0, 0, 0, 0.8);
   --w3-title-ink: #f2f6fb;
   --w3-title-ink-soft: #93a1b5;
+
+  --md-primary-fg-color: #5ad4e8;
+  --md-primary-fg-color--light: #7fe2f1;
+  --md-primary-fg-color--dark: #2ea9bd;
+  --md-accent-fg-color: #8ab4f8;
+  --md-accent-fg-color--transparent: rgba(138, 180, 248, 0.15);
 }
 
 /* ---------- 3. Base / typography ---------- */
@@ -145,7 +158,7 @@ body.w3-no-scroll { overflow: hidden; }
 
 .md-typeset h1 {
   font-weight: 800;
-  font-size: clamp(2rem, 1.35rem + 1.5vw, 2.7rem);
+  font-size: clamp(1.9rem, 1.3rem + 1.4vw, 2.5rem);
   letter-spacing: -0.032em;
   line-height: 1.14;
   color: var(--w3-fg);
@@ -153,15 +166,15 @@ body.w3-no-scroll { overflow: hidden; }
 }
 .md-typeset h2 {
   font-weight: 700;
-  font-size: clamp(1.3rem, 1.1rem + 0.55vw, 1.6rem);
+  font-size: clamp(1.25rem, 1.08rem + 0.5vw, 1.5rem);
   letter-spacing: -0.018em;
   color: var(--w3-fg);
-  margin-top: 3rem;
+  margin-top: 2.8rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--w3-border);
 }
-.md-typeset h3 { font-weight: 650; font-size: 1.2rem; letter-spacing: -0.008em; color: var(--w3-fg); margin-top: 2rem; }
-.md-typeset h4 { font-weight: 650; font-size: 1.02rem; color: var(--w3-fg); margin-top: 1.6rem; }
+.md-typeset h3 { font-weight: 650; font-size: 1.15rem; letter-spacing: -0.008em; color: var(--w3-fg); margin-top: 2rem; }
+.md-typeset h4 { font-weight: 650; font-size: 1rem; color: var(--w3-fg); margin-top: 1.6rem; }
 .md-typeset p { margin: 1.05rem 0; }
 .md-typeset strong { font-weight: 650; color: var(--w3-fg); }
 .md-typeset ul, .md-typeset ol { padding-left: 1.35rem; }
@@ -232,8 +245,8 @@ body.w3-no-scroll { overflow: hidden; }
 .md-header__button.md-logo img,
 .md-nav__button.md-logo img {
   fill: currentColor;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.7rem;
+  height: 1.7rem;
   filter: none;
 }
 .md-header__button.md-logo { color: var(--w3-accent); }
@@ -278,10 +291,46 @@ body.w3-no-scroll { overflow: hidden; }
 .md-tabs__link--active::after { transform: scaleX(1); }
 .md-tabs__item { display: flex; align-items: center; }
 
+/* ---------- 5b. Language selector ---------- */
+.md-header__option .md-select {
+  position: relative;
+}
+.md-header__option .md-select__inner {
+  background: var(--w3-bg-elevated);
+  border: 1px solid var(--w3-border);
+  border-radius: var(--w3-radius-sm);
+  box-shadow: var(--w3-shadow-lg);
+  min-width: 8.5rem;
+  overflow: hidden;
+}
+.md-header__option .md-select__list { padding: 0.3rem; margin: 0; }
+.md-header__option .md-select__item { margin: 0; }
+.md-header__option .md-select__link {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--w3-fg-muted);
+  text-decoration: none;
+  transition: color var(--w3-dur-fast) var(--w3-ease), background-color var(--w3-dur-fast) var(--w3-ease);
+}
+.md-header__option .md-select__link:hover {
+  color: var(--w3-accent);
+  background: var(--w3-accent-soft);
+  text-decoration: none;
+}
+.md-header__option .md-select__link.md-select__link--active {
+  color: var(--w3-accent);
+  background: var(--w3-accent-soft);
+}
+.md-header__option .md-select__link.md-select__link--active::before {
+  content: "✓";
+  margin-right: 0.45rem;
+  font-size: 0.72em;
+}
+
 /* ---------- 6. Sidebar nav ---------- */
-/* Material's lifted title is a filled plate whose colour comes from the
-   primary palette. Painting it with the surface colour (and keeping the text
-   on top) removes the "coloured block with no words" artefact entirely. */
 .md-nav--lifted .md-nav__title,
 .md-nav__title {
   background: var(--w3-bg);
@@ -336,18 +385,32 @@ body.w3-no-scroll { overflow: hidden; }
 .md-nav__item--section > .md-nav__link { font-weight: 600; color: var(--w3-fg); }
 
 /* ---------- 7. Right-hand TOC ---------- */
-.md-nav--secondary .md-nav__title { color: var(--w3-fg-muted); font-weight: 650; }
+.md-nav--secondary { padding-top: 1.2rem; }
+.md-nav--secondary .md-nav__title {
+  background: transparent;
+  border: none;
+  color: var(--w3-fg-faint);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  min-height: 0;
+  padding: 0 0.7rem 0.6rem;
+}
 .md-nav--secondary .md-nav__link {
   color: var(--w3-fg-muted);
-  border-left: 1px solid var(--w3-border);
-  padding: 0.24rem 0.7rem;
-  transition: color var(--w3-dur-fast) var(--w3-ease), border-color var(--w3-dur-fast) var(--w3-ease);
+  border: none;
+  border-radius: 6px;
+  padding: 0.28rem 0.7rem;
+  margin: 0.08rem 0;
+  font-size: 0.82rem;
+  transition: color var(--w3-dur-fast) var(--w3-ease), background-color var(--w3-dur-fast) var(--w3-ease);
 }
-.md-nav--secondary .md-nav__link:hover { color: var(--w3-accent); border-left-color: var(--w3-accent-medium); }
+.md-nav--secondary .md-nav__link:hover { color: var(--w3-accent); background: var(--w3-accent-soft); }
 .md-nav--secondary .md-nav__link--active {
   color: var(--w3-accent);
-  font-weight: 600;
-  border-left: 2px solid var(--w3-accent);
+  font-weight: 650;
+  background: var(--w3-accent-soft);
 }
 
 .md-breadcrumb { color: var(--w3-fg-faint); font-size: 0.8rem; }
@@ -490,6 +553,31 @@ body.w3-no-scroll { overflow: hidden; }
 .w3-btn--ghost { background: transparent; }
 .w3-btn--sm { padding: 0.45rem 0.9rem; font-size: 0.86rem; }
 
+/* Material's own buttons get the same contract-safe treatment. */
+.md-typeset .md-button {
+  color: var(--w3-accent);
+  border: 1px solid var(--w3-accent);
+  border-radius: var(--w3-radius-sm);
+  font-weight: 600;
+  transition: background-color var(--w3-dur-fast) var(--w3-ease), color var(--w3-dur-fast) var(--w3-ease);
+}
+.md-typeset .md-button:hover {
+  color: var(--w3-on-accent);
+  background: var(--w3-accent);
+  border-color: var(--w3-accent);
+  text-decoration: none;
+}
+.md-typeset .md-button--primary {
+  color: var(--w3-on-accent);
+  background: var(--w3-accent);
+  border-color: var(--w3-accent);
+}
+.md-typeset .md-button--primary:hover {
+  color: var(--w3-on-accent);
+  background: var(--w3-accent-hover);
+  border-color: var(--w3-accent-hover);
+}
+
 /* ---------- 12. Cards / tiles ---------- */
 .w3-card {
   display: block;
@@ -629,7 +717,7 @@ body.w3-no-scroll { overflow: hidden; }
 }
 .w3-course:hover .go { text-decoration: underline; text-underline-offset: 3px; }
 
-/* ---------- 14. Hero ---------- */
+/* ---------- 14. Hero (legacy pages) ---------- */
 .w3-hero {
   max-width: 62rem;
   padding: 3.4rem 0 1.4rem;
@@ -653,12 +741,11 @@ body.w3-no-scroll { overflow: hidden; }
   background: var(--w3-signal);
 }
 .w3-hero h1 {
-  font-size: clamp(2.6rem, 1.5rem + 3.2vw, 4.1rem);
+  font-size: clamp(2.2rem, 1.4rem + 2.4vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.042em;
-  line-height: 1.04;
+  line-height: 1.08;
   margin-bottom: 1.3rem;
-  /* Low-saturation ink gradient: reads as depth, not neon. */
   background: linear-gradient(168deg, var(--w3-title-ink) 8%, var(--w3-title-ink-soft) 92%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -672,7 +759,6 @@ body.w3-no-scroll { overflow: hidden; }
 }
 .w3-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 2.1rem 0 1rem; }
 
-/* Status chips are real links — each points at the page that proves it. */
 .w3-meta-row {
   display: flex;
   flex-wrap: wrap;
@@ -778,11 +864,37 @@ body.w3-no-scroll { overflow: hidden; }
 .w3-about-info h2 { border: none; margin-top: 0; }
 .w3-about-info .bio { color: var(--w3-fg-muted); font-size: 0.98rem; line-height: 1.75; max-width: 42rem; }
 
+/* Maintainer card (About This Wiki) */
+.w3-maintainer {
+  margin: 1.6rem 0 2rem;
+  border: 1px solid var(--w3-border);
+  border-radius: var(--w3-radius);
+  background: var(--w3-bg-elevated);
+  padding: 1.5rem 1.6rem;
+}
+.w3-maintainer h3 {
+  border: none;
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--w3-fg);
+}
+.w3-maintainer-row { display: flex; align-items: flex-start; gap: 1.2rem; flex-wrap: wrap; }
+.w3-maintainer .w3-avatar { width: 76px; height: 76px; }
+.w3-maintainer .w3-avatar svg { width: 44px; height: 44px; }
+.w3-maintainer-info { flex: 1; min-width: 16rem; }
+.w3-maintainer-info p { color: var(--w3-fg-muted); font-size: 0.94rem; line-height: 1.7; margin: 0.45rem 0 0; }
+
 .w3-socials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 0.8rem;
   margin: 1.6rem 0;
+}
+.w3-socials--compact {
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.65rem;
+  margin: 1.1rem 0 0;
 }
 .w3-social {
   display: flex;
@@ -877,7 +989,7 @@ body.w3-no-scroll { overflow: hidden; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   gap: 1.4rem;
-  max-width: 46rem;
+  max-width: 56rem;
 }
 .w3-support-card {
   display: flex;
@@ -899,6 +1011,8 @@ body.w3-no-scroll { overflow: hidden; }
   border-color: var(--w3-accent-medium);
   box-shadow: var(--w3-shadow-lg);
 }
+.w3-support-card--soon { cursor: default; }
+.w3-support-card--soon:hover { transform: none; border-color: var(--w3-border); box-shadow: var(--w3-shadow-sm); }
 .w3-support-qr {
   position: relative;
   border-radius: var(--w3-radius-sm);
@@ -914,7 +1028,7 @@ body.w3-no-scroll { overflow: hidden; }
   object-fit: cover;
   transition: transform var(--w3-dur-slow) var(--w3-ease), filter var(--w3-dur) var(--w3-ease);
 }
-.w3-support-card:hover .w3-support-qr img { transform: scale(1.03); }
+.w3-support-card:not(.w3-support-card--soon):hover .w3-support-qr img { transform: scale(1.03); }
 .w3-support-zoom {
   position: absolute;
   inset: auto 0 0 0;
@@ -928,11 +1042,35 @@ body.w3-no-scroll { overflow: hidden; }
   transform: translateY(100%);
   transition: opacity var(--w3-dur) var(--w3-ease), transform var(--w3-dur) var(--w3-ease);
 }
-.w3-support-card:hover .w3-support-zoom,
-.w3-support-card:focus-visible .w3-support-zoom { opacity: 1; transform: none; }
+.w3-support-card:not(.w3-support-card--soon):hover .w3-support-zoom,
+.w3-support-card:not(.w3-support-card--soon):focus-visible .w3-support-zoom { opacity: 1; transform: none; }
+.w3-support-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--w3-fg-faint);
+  background:
+    linear-gradient(var(--w3-bg-sunken), var(--w3-bg-sunken)) padding-box,
+    repeating-linear-gradient(45deg, var(--w3-border) 0 6px, transparent 6px 12px) border-box;
+  border: 2px dashed var(--w3-border-strong);
+  border-radius: var(--w3-radius-sm);
+}
 .w3-support-meta { display: flex; flex-direction: column; gap: 0.2rem; }
 .w3-support-name { font-weight: 650; font-size: 0.98rem; }
 .w3-support-hint { font-size: 0.8rem; color: var(--w3-fg-faint); }
+.w3-support-usage {
+  margin-top: 2.4rem;
+  max-width: 44rem;
+}
+.w3-support-usage h3 {
+  border: none;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--w3-fg);
+  margin-bottom: 0.8rem;
+}
 .w3-support-foot { margin-top: 2.2rem; font-size: 0.88rem; color: var(--w3-fg-muted); }
 .w3-support-foot a { color: var(--w3-accent); }
 
@@ -1017,8 +1155,6 @@ body.w3-no-scroll { overflow: hidden; }
   border-radius: var(--w3-radius-sm);
   background: var(--w3-bg-subtle);
 }
-/* Giscus defaults to the system UI stack; nudge it towards the site stack so
-   the widget inherits the same rhythm as the surrounding page. */
 .w3-comments .giscus-frame { font-family: var(--w3-font-sans); }
 .w3-comments .giscus-frame > div { min-height: 6rem; }
 
@@ -1186,6 +1322,7 @@ body.w3-no-scroll { overflow: hidden; }
   .w3-courses { grid-template-columns: 1fr; }
   .w3-actions .w3-btn { flex: 1 1 100%; justify-content: center; }
   .w3-about-hero { flex-direction: column; align-items: flex-start; }
+  .w3-maintainer-row { flex-direction: column; }
   .w3-comments { margin: 2.4rem 0 0.5rem; padding: 1.2rem 1.1rem 1rem; }
   .w3-comments .giscus, .w3-comments .giscus-frame { min-height: 12rem; }
   .w3-heatmap { grid-template-columns: repeat(26, 1fr); }

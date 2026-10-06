@@ -1,15 +1,13 @@
-site_name: A Web3 Learning Wiki
+site_name: Web3 Learning Wiki
 site_description: >-
-  一个持续更新的公开 Web3 学习档案：区块链与智能合约基础、链上 AI Agent 与
-  MCP、开发者工具、黑客松实战、学习路线与技能树。由 MIA_Ether 维护。
+  一个开源、持续更新的 Web3 学习知识库：区块链基础、智能合约、AI × Web3、
+  MCP 与 AI Agents、链上数据、开发者工具与 Builder 成长路径。由 MIA_Ether 维护。
 site_url: https://mia03ther.github.io/web3-learning-wiki/
 site_author: MIA_Ether
-
 repo_url: https://github.com/mia03ther/web3-learning-wiki
 repo_name: mia03ther/web3-learning-wiki
 edit_uri: edit/main/docs/
-
-copyright: MIA_Ether · Licensed under CC BY-NC-SA 4.0
+copyright: CC BY-NC-SA 4.0 · MIA_Ether · MIA03 Lab
 
 theme:
   name: material
@@ -17,22 +15,38 @@ theme:
   language: zh
   logo: assets/brand.svg
   favicon: assets/favicon.svg
+  icon:
+    alternate: material/translate
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/light-bulb-16
+      success: octicons/check-circle-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
   features:
-    - navigation.tabs             # 顶级标签栏
-    - navigation.tabs.sticky      # 标签栏固定
-    - navigation.sections         # 侧边栏分组
-    - navigation.indexes          # 分组首页
-    - navigation.path             # 面包屑
-    - navigation.top              # 回到顶部
-    - navigation.footer           # 上一页 / 下一页
-    - toc.follow                  # 右侧目录跟随
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
     - search.suggest
     - search.highlight
     - search.share
     - content.code.copy
     - content.code.annotate
-    - content.action.edit         # 每页「在 GitHub 编辑此页」
+    - content.action.edit
     - content.action.view
+    - content.tabs.link
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -54,46 +68,89 @@ theme:
 
 extra:
   generator: false
-  status:
-    - text: 持续更新
-      icon: material/refresh
-    - text: 开源共建
-      icon: material/source-branch
-    - text: CC BY-NC-SA 4.0
-      icon: material/license
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/mia03ther
+      link: https://github.com/mia03ther/web3-learning-wiki
       name: GitHub
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/MIA03ther
-      name: X
-    - icon: fontawesome/solid/envelope
-      link: mailto:mia03ther@gmail.com
-      name: Email
-    - icon: fontawesome/brands/discord
+    - icon: fontawesome/regular/comments
       link: https://github.com/mia03ther/web3-learning-wiki/discussions
       name: GitHub Discussions
 
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/home.css
 
 extra_javascript:
-  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - assets/javascripts/extra.js
+
+validation:
+  omitted_files: info
+  absolute_links: warn
+  unrecognized_links: warn
 
 plugins:
   - search:
       lang:
-        - en
         - zh
+        - en
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      languages:
+        - locale: zh
+          name: 中文
+          default: true
+          build: true
+          link: /
+        - locale: en
+          name: English
+          build: true
+          link: /en/
+          nav_translations:
+            Home: Home
+            Learning Paths: Learning Paths
+            从这里开始: Start Here
+            如何使用本 Wiki: How to Use This Wiki
+            学习路线图总览: Roadmap Overview
+            学习路线图: Learning Roadmap
+            精选课程中心: Course Hub
+            技能树与资源: Skills & Resources
+            资源汇总: Resource Roundup
+            海外深造参考: Graduate Study
+            标化与背景建设: Profile Building
+            Blockchain: Blockchain
+            Blockchain Fundamentals: Blockchain Fundamentals
+            核心概念词典: Core Concepts
+            黑话对照表: Glossary
+            智能合约: Smart Contracts
+            链上数据: On-chain Data
+            AI × Web3: AI × Web3
+            MCP 与 AI Agents: MCP & AI Agents
+            Developer: Developer
+            开发者工具: Developer Tools
+            GitHub 与本站搭建: GitHub & This Site
+            实习与求职指南: Internships & Careers
+            面经题库: Interview Bank
+            Projects: Projects
+            黑客松参赛指南: Hackathon Guide
+            路演夜 · 四个 AI × Web3 项目: Pitch Night — Four AI × Web3 Projects
+            Monad 黑客松与 Agent 金融: Monad Hackathon & Agent Finance
+            Community: Community
+            支持这个 Wiki: Support This Wiki
+            About: About
 
 markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - footnotes
   - md_in_html
+  - tables
+  - toc:
+      permalink: true
   - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
@@ -108,33 +165,37 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Introduction:
-      - start/index.md
+  - Learning Paths:
+      - 从这里开始: start/index.md
       - 如何使用本 Wiki: start/how-to-use.md
-  - Learning Path:
-      - roadmap/index.md
+      - 学习路线图总览: roadmap/index.md
       - 学习路线图: roadmap/learning-path.md
       - 精选课程中心: roadmap/courses.md
+      - 技能树与资源: roadmap/skills-resources.md
+      - 资源汇总: handbook/resources.md
       - 海外深造参考: roadmap/graduate-study.md
-  - Skills:
-      - roadmap/skills-resources.md
-      - handbook/resources.md
-  - Field Notes:
-      - field-notes/index.md
-      - 路演夜 · 四个 AI × Web3 项目: field-notes/pitch-night.md
-      - Monad 黑客松与 Agent 金融: field-notes/monad-hackathon.md
-  - Fundamentals:
-      - fundamentals/index.md
+      - 标化与背景建设: roadmap/profile.md
+  - Blockchain:
+      - Blockchain Fundamentals: fundamentals/index.md
       - 核心概念词典: fundamentals/core-concepts.md
       - 黑话对照表: fundamentals/glossary.md
-  - Handbook:
+      - 智能合约: smart-contracts/index.md
+      - 链上数据: onchain-data/index.md
+  - AI × Web3:
+      - ai-web3/index.md
+      - MCP 与 AI Agents: ai-web3/mcp-agents.md
+  - Developer:
       - handbook/index.md
-      - 黑客松参赛指南: handbook/hackathon.md
+      - 开发者工具: devtools/index.md
       - GitHub 与本站搭建: handbook/github-site.md
       - 实习与求职指南: handbook/internship.md
       - 面经题库: handbook/interview.md
-      - 标化与背景建设: roadmap/profile.md
-  - About:
-      - about/index.md
+  - Projects:
+      - field-notes/index.md
+      - 黑客松参赛指南: handbook/hackathon.md
+      - 路演夜 · 四个 AI × Web3 项目: field-notes/pitch-night.md
+      - Monad 黑客松与 Agent 金融: field-notes/monad-hackathon.md
+  - Community:
+      - contributing.md
       - 支持这个 Wiki: support/index.md
-
+  - About: about/index.md

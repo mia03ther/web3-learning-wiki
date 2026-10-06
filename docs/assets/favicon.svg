@@ -1,7 +1,29 @@
-<!-- Favicon: solid hexagon block with a knowledge core punched out via evenodd,
-     so it reads correctly in both light and dark themes without any hard-coded colour. -->
+<!--
+  Favicon: filled mark on a deep slate tile so it stays visible on both
+  light and dark browser surfaces. Cyan block ring + light M node path.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
-     fill="none" role="img" aria-label="Web3 Learning Wiki">
-  <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
-        d="M32 5.5 58 19v26L32 58.5 6 45V19L32 5.5Zm0 7.6L12.6 22.6v18.8L32 51.1l19.4-9.7V22.6L32 13.1ZM32 26a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" />
+     role="img" aria-label="Web3 Learning Wiki">
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#0d1117"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 10 50 20.7V43.3L32 54 14 43.3V20.7L32 10Z" stroke="#22d3ee" stroke-width="3.6"/>
+    <path d="M32 10v6M50 20.7l-6 3.2M50 43.3l-6-3.2M32 54v-6M14 43.3l6-3.2M14 20.7l6 3.2"
+          stroke="#22d3ee" stroke-width="2.2" opacity=".45"/>
+    <path d="M22 47 28.6 29l3 5.3 3-5.3 7.4 18" stroke="#e6edf3" stroke-width="2.6" opacity=".92"/>
+  </g>
+  <g fill="#e6edf3">
+    <circle cx="22" cy="47" r="3.4"/>
+    <circle cx="28.6" cy="29" r="3.4"/>
+    <circle cx="31.6" cy="34.3" r="3.6" fill="#22d3ee"/>
+    <circle cx="34.6" cy="29" r="3.4"/>
+    <circle cx="42" cy="47" r="3.4"/>
+  </g>
+  <g fill="#22d3ee" opacity=".9">
+    <circle cx="32" cy="10" r="2.4"/>
+    <circle cx="50" cy="20.7" r="2.4"/>
+    <circle cx="50" cy="43.3" r="2.4"/>
+    <circle cx="32" cy="54" r="2.4"/>
+    <circle cx="14" cy="43.3" r="2.4"/>
+    <circle cx="14" cy="20.7" r="2.4"/>
+  </g>
 </svg>

@@ -1,37 +1,42 @@
 # About This Wiki
 
-**Web3 Learning Wiki** 是一个面向开发者、Builder 与 Web3 学习者的开放知识库：
-把区块链、智能合约、AI Agent 与开发者生态的知识，沉淀成可检索、可长期复用的结构。
+**Web3 Learning Wiki** is an open knowledge base for developers, builders and Web3
+learners: it distills knowledge of blockchain, smart contracts, AI agents and the
+developer ecosystem into a searchable, reusable structure.
 
-本文档回答三个问题：**为什么存在、怎么学习、如何参与**。
+This page answers three questions: **why it exists, how it learns, and how to join**.
 
 ## Why this Wiki exists
 
-在消化一手行业活动与官方文档时，常见两个问题：
+Digesting first-hand industry events and official documentation usually hits two problems:
 
-1. **术语密度高**——初学者很容易在「黑话」面前掉队；
-2. **资料分散**——很难同时做到「讲人话」与「跟得上当前生态」。
+1. **Dense jargon** — beginners lose their footing in "black talk" easily;
+2. **Scattered material** — hard to be both plain-spoken and current.
 
-于是把每一次学习、构建与复盘都写成结构化笔记：既强迫自己真正理解，也希望为同样在入门的人省下一点爬坡的时间。**学习 → 构建 → 验证 → 输出 → 文档**，这个循环就是这个 Wiki 存在的方式。
+So every learning session, build and retrospective becomes a structured note: it
+forces real understanding, and saves some climbing time for others starting out.
+**Learn → Build → Validate → Ship → Document** — this loop is how the Wiki exists.
 
 ## Learning Philosophy
 
-- **Output over input**：看十小时资料，不如写一小时笔记、做一个能跑的小东西；
-- **Project-driven, not course-driven**：学一点基础 → 立刻动手 → 遇到不懂再回来补；
-- **Build on a differentiated edge**：跨语言、跨生态的信息差是长期存在的机会；
-- **Don't touch money you don't understand**：学习阶段优先测试网、小额与模拟环境；
-- **Public by default**：每一条笔记、每一个 commit 都是公开可验证的记录。
+- **Output over input**: ten hours of reading is worth less than one hour of notes and one small running thing;
+- **Project-driven, not course-driven**: learn a little → build → come back for what you missed;
+- **Build on a differentiated edge**: the cross-language, cross-ecosystem information gap is a long-term opportunity;
+- **Don't touch money you don't understand**: prefer testnets, small amounts and simulators while learning;
+- **Public by default**: every note and commit is a verifiable public record.
 
 ## Open Source
 
-- 所有内容以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 开源；
-- 代码与配置托管在 [GitHub](https://github.com/mia03ther/web3-learning-wiki)，欢迎 fork 与 PR；
-- 每一页都有 **Edit on GitHub** 入口，修正错误、补充来源都很简单；
-- 想成为持续贡献者，可以先读 [贡献指南](../contributing.md)。
+- All content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/);
+- Code and configuration live on [GitHub](https://github.com/mia03ther/web3-learning-wiki) — fork and PR are welcome;
+- Every page has an **Edit on GitHub** entry; fixing errors and adding sources is simple;
+- Want to become a regular contributor? Start with the [Contribution Guide](../contributing.md).
 
 ## Builder Journey
 
-这个 Wiki 本身就是 Builder 旅程的一部分：从一个学习档案，长成面向社区的开放知识库。下一步永远是同一件事——**写完这一篇笔记，然后开始下一篇**。
+The Wiki is itself part of the Builder journey: it grew from a personal study
+archive into an open knowledge base for the community. The next step is always
+the same — **finish this note, then start the next one**.
 
 <div class="w3-maintainer" markdown="1">
 
@@ -59,8 +64,9 @@
 
 **MIA_Ether** · AI × Web3 Builder · Open Source Contributor
 
-在 AI 系统、Web3 基础设施与数据的交汇处工作，把研究变成能跑的软件。
-关注 Agent 信任、MCP、链上数据质量与 AI × 金融。Building in public。
+Working at the intersection of AI systems, Web3 infrastructure and data — turning
+research into running software. Focused on agent trust, MCP, on-chain data quality
+and AI × finance. Building in public.
 
 </div>
 
@@ -92,9 +98,9 @@
 
 </div>
 
-## 参与共建
+## Get involved
 
-* 发现错误或过时信息 → 在 [GitHub Issues](https://github.com/mia03ther/web3-learning-wiki/issues) 提出；
-* 想直接改进内容 → 在任意页面点击 **✏️ Edit on GitHub** 提交 PR；
-* 有新知识点 / 课程建议 → 欢迎在 [Discussions](https://github.com/mia03ther/web3-learning-wiki/discussions) 讨论；
-* 想支持这个 Wiki 的持续维护 → 见 [支持这个 Wiki](../support/index.md)。
+* Found an error or outdated info? Open a [GitHub Issue](https://github.com/mia03ther/web3-learning-wiki/issues);
+* Want to improve content directly? Click **✏️ Edit on GitHub** on any page and send a PR;
+* Have new topics or course suggestions? Discuss them in [Discussions](https://github.com/mia03ther/web3-learning-wiki/discussions);
+* Want to support continued maintenance? See [Support This Wiki](../support/index.md).

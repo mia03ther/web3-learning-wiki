@@ -25,10 +25,10 @@ and Builder journey.
 </div>
 
 <div class="w3-home-stats">
-  <div class="st"><b>32</b><span>篇结构化笔记</span></div>
-  <div class="st"><b>7</b><span>条学习路径</span></div>
-  <div class="st"><b>2</b><span>种语言 · 持续翻译</span></div>
-  <div class="st"><b>100%</b><span>开源 · CC BY-NC-SA</span></div>
+  <div class="st"><b>32</b><span>structured notes</span></div>
+  <div class="st"><b>7</b><span>learning tracks</span></div>
+  <div class="st"><b>2</b><span>languages · WIP</span></div>
+  <div class="st"><b>100%</b><span>open source · CC BY-NC-SA</span></div>
 </div>
 
 </div>
@@ -39,17 +39,19 @@ and Builder journey.
 
 ## What is this Wiki
 
-这是一个由 **MIA_Ether** 维护、面向开发者 / Builder / Web3 学习者的**开放知识库**：
+An **open knowledge base** maintained by **MIA_Ether** for developers, builders and
+Web3 learners:
 
-- **学习笔记** —— 把区块链、智能合约、AI Agent 的复杂概念讲成「人话」；
-- **实践沉淀** —— 黑客松、开源项目与真实构建过程的可验证记录；
-- **生态地图** —— 一手活动笔记（Field Notes）+ 路线图 + 资源清单，持续更新。
+- **Study notes** — complex blockchain, smart-contract and AI-agent concepts, explained in plain language;
+- **Build logs** — verifiable records of hackathons, open-source projects and real building processes;
+- **Ecosystem map** — first-hand Field Notes, learning roadmaps and resource lists, continuously updated.
 
-每一条内容都来自真实的学习与构建过程，而不是转述。贡献方式很简单：任意页面右上角的 **Edit on GitHub** 即可提交修正。
+Every entry comes from real learning and building — not from second-hand summaries.
+Contributing is simple: use the **Edit on GitHub** button on any page.
 
 <div class="w3-home-links">
-  <a href="start/">从零开始 →</a>
-  <a href="field-notes/">看一手 Field Notes →</a>
+  <a href="start/">Start from zero →</a>
+  <a href="field-notes/">Read first-hand field notes →</a>
 </div>
 
 </div>
@@ -87,13 +89,13 @@ and Builder journey.
 
 <div class="w3-home-path">
 
-<div class="w3-path-head">Learning Path · 四阶段</div>
+<div class="w3-path-head">Learning Path · Four Phases</div>
 
 <ol class="w3-path">
-  <li><b>Phase 1</b><span>打地基 · 建习惯</span></li>
-  <li><b>Phase 2</b><span>出成果 · 首次实战</span></li>
-  <li><b>Phase 3</b><span>攒硬货 · 定方向</span></li>
-  <li><b>Phase 4</b><span>申请与过渡</span></li>
+  <li><b>Phase 1</b><span>Foundations &amp; habits</span></li>
+  <li><b>Phase 2</b><span>First build &amp; ships</span></li>
+  <li><b>Phase 3</b><span>Depth &amp; direction</span></li>
+  <li><b>Phase 4</b><span>Applications &amp; transition</span></li>
 </ol>
 
 </div>
@@ -112,7 +114,7 @@ and Builder journey.
 
     ---
 
-    钱包、交易、Gas、L2 与核心协议概念，把行业术语翻译成「人话」。
+    Wallets, transactions, gas, L2 and core protocol concepts — industry jargon in plain language.
 
     [:octicons-arrow-right-24: Enter fundamentals](fundamentals/index.md)
 
@@ -120,7 +122,7 @@ and Builder journey.
 
     ---
 
-    智能合约的编写、测试与部署笔记：Solidity、Foundry 与合约安全。
+    Writing, testing and deploying smart contracts: Solidity, Foundry and contract security.
 
     [:octicons-arrow-right-24: Enter smart contracts](smart-contracts/index.md)
 
@@ -128,7 +130,7 @@ and Builder journey.
 
     ---
 
-    链上 AI Agent、Agent 支付、AI-DeFi 交叉研究与实践记录。
+    On-chain AI agents, agent payments and AI-DeFi: research and practice notes.
 
     [:octicons-arrow-right-24: Enter AI × Web3](ai-web3/index.md)
 
@@ -136,7 +138,7 @@ and Builder journey.
 
     ---
 
-    Model Context Protocol、Agent 工具调用与可信 Agent 基础设施。
+    Model Context Protocol, agent tool-calling and trusted agent infrastructure.
 
     [:octicons-arrow-right-24: Enter MCP & agents](ai-web3/mcp-agents.md)
 
@@ -144,7 +146,7 @@ and Builder journey.
 
     ---
 
-    链上数据质量、Dune 查询与数据分析工作流，从原始数据到洞察。
+    Data quality, Dune queries and analysis workflows — from raw logs to insights.
 
     [:octicons-arrow-right-24: Enter on-chain data](onchain-data/index.md)
 
@@ -152,7 +154,7 @@ and Builder journey.
 
     ---
 
-    从 Git 到部署：Builder 日常使用的工具链、工作流与最佳实践。
+    From Git to deployment: the toolchains, workflows and best practices builders use daily.
 
     [:octicons-arrow-right-24: Enter dev tools](devtools/index.md)
 
@@ -160,7 +162,7 @@ and Builder journey.
 
     ---
 
-    黑客松参赛指南与真实项目复盘：从选题、组队到路演与提交。
+    The hackathon playbook and real project write-ups: ideation, teaming, demo and submission.
 
     [:octicons-arrow-right-24: Enter hackathons](handbook/hackathon.md)
 
@@ -170,14 +172,14 @@ and Builder journey.
 
 | Date | Update |
 | ---- | ------ |
-| 2026-10-06 | 重构为文档站布局：三栏阅读、双语站点、新品牌视觉。 |
-| 2026-10-05 | 首页与导航重排为 Documentation 结构。 |
+| 2026-10-06 | Refactored into a documentation layout: three-column reading, bilingual site, new brand. |
+| 2026-10-05 | Homepage and navigation reorganised into a documentation structure. |
 
-完整历史：[commit log](https://github.com/mia03ther/web3-learning-wiki/commits/main/){ target=_blank }。
+Full history: [commit log](https://github.com/mia03ther/web3-learning-wiki/commits/main/){ target=_blank }.
 
 ## Contribute
 
-这个 Wiki 完全开源，编辑入口就在每一页的右上角。无论是修错别字、补充来源还是新增笔记，都欢迎：
+This wiki is fully open source; the edit entry is in the top-right corner of every page. Typos, corrections and new notes are all welcome:
 
 - [Read the contribution guide](contributing.md)
 - [Open an issue](https://github.com/mia03ther/web3-learning-wiki/issues){ target=_blank }

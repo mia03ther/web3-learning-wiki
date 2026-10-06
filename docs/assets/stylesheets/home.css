@@ -1,0 +1,263 @@
+/* ============================================================
+   Homepage-only styling (registered after extra.css).
+   The homepage is a documentation entry, not a marketing hero:
+   dense, left-aligned, built from the same tokens as the rest.
+   ============================================================ */
+
+/* ---------- Hero: title block (not a banner) ---------- */
+.w3-home-hero {
+  padding: 2.4rem 0 1.6rem;
+  border-bottom: 1px solid var(--w3-border);
+  margin-bottom: 2.2rem;
+}
+.w3-home-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--w3-font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--w3-accent);
+  margin-bottom: 1rem;
+}
+.w3-home-eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--w3-signal);
+  flex-shrink: 0;
+}
+.w3-home-hero h1 {
+  font-size: clamp(2.1rem, 1.4rem + 2.2vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin: 0 0 0.9rem;
+  color: var(--w3-fg);
+}
+.w3-home-tagline {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--w3-fg-muted);
+  max-width: 46rem;
+  margin: 0 0 1.6rem;
+}
+
+/* Actions: clear contrast in both themes (see tokens in extra.css) */
+.w3-home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0 0 1.6rem;
+}
+
+/* Stats strip: monospace numbers, doc-site feel */
+.w3-home-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 2.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--w3-border);
+}
+.w3-home-stats .st {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.w3-home-stats .st b {
+  font-family: var(--w3-font-mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--w3-accent);
+  letter-spacing: -0.02em;
+}
+.w3-home-stats .st span {
+  font-size: 0.76rem;
+  color: var(--w3-fg-faint);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Split: intro (left) + knowledge graph (right) ---------- */
+.w3-home-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 2.4rem;
+  align-items: start;
+  margin-bottom: 2.4rem;
+}
+.w3-home-intro h2,
+.w3-home-graph h2 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border: none;
+  padding-bottom: 0.4rem;
+  margin: 0 0 0.9rem;
+  color: var(--w3-fg);
+}
+.w3-home-intro p { color: var(--w3-fg-muted); font-size: 0.95rem; line-height: 1.78; }
+.w3-home-intro ul {
+  padding-left: 1.2rem;
+  color: var(--w3-fg-muted);
+  font-size: 0.95rem;
+}
+.w3-home-intro li { margin: 0.4rem 0; }
+.w3-home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin-top: 1.1rem;
+}
+.w3-home-links a {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--w3-accent);
+}
+.w3-home-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Graph card */
+.w3-graph-card {
+  border: 1px solid var(--w3-border);
+  border-radius: var(--w3-radius);
+  background: var(--w3-bg-elevated);
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+}
+.w3-graph-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Learning path strip */
+.w3-home-path { border: 1px solid var(--w3-border); border-radius: var(--w3-radius); padding: 0.9rem 1.05rem 1rem; background: var(--w3-bg-elevated); }
+.w3-path-head {
+  font-family: var(--w3-font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--w3-fg-faint);
+  margin-bottom: 0.7rem;
+}
+.w3-path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.w3-path li {
+  position: relative;
+  border: 1px solid var(--w3-border);
+  border-radius: var(--w3-radius-sm);
+  padding: 0.55rem 0.65rem;
+  background: var(--w3-bg-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.w3-path li b {
+  font-family: var(--w3-font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--w3-accent);
+  letter-spacing: 0.05em;
+}
+.w3-path li span { font-size: 0.78rem; color: var(--w3-fg-muted); line-height: 1.4; }
+.w3-path li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -0.62rem;
+  width: 0.6rem;
+  height: 1px;
+  background: var(--w3-border-strong);
+}
+.w3-path li:last-child::after { display: none; }
+
+/* ---------- Documentation entry cards (Material grid cards) ---------- */
+.w3-doc-cards.grid.cards > ul,
+.w3-doc-cards.grid.cards > ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 0.9rem;
+  padding: 0;
+}
+.w3-doc-cards.grid.cards > ul > li,
+.w3-doc-cards.grid.cards > ol > li {
+  border: 1px solid var(--w3-border);
+  border-radius: var(--w3-radius);
+  background: var(--w3-bg-elevated);
+  padding: 1.15rem 1.25rem 1.05rem;
+  margin: 0;
+  box-shadow: none;
+  transition: transform var(--w3-dur) var(--w3-ease),
+    border-color var(--w3-dur) var(--w3-ease),
+    box-shadow var(--w3-dur) var(--w3-ease);
+}
+.w3-doc-cards.grid.cards > ul > li:hover,
+.w3-doc-cards.grid.cards > ol > li:hover {
+  border-color: var(--w3-accent-medium);
+  transform: translateY(-3px);
+  box-shadow: var(--w3-shadow);
+}
+.w3-doc-cards.grid.cards > ul > li p,
+.w3-doc-cards.grid.cards > ol > li p {
+  margin: 0.45rem 0 0.8rem;
+  color: var(--w3-fg-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+.w3-doc-cards.grid.cards > ul > li hr,
+.w3-doc-cards.grid.cards > ol > li hr {
+  border-bottom: 1px solid var(--w3-border);
+  margin: 0.7rem 0;
+}
+.w3-doc-cards.grid.cards > ul > li > p:first-child,
+.w3-doc-cards.grid.cards > ol > li > p:first-child {
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: -0.012em;
+  color: var(--w3-fg);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.w3-doc-cards.grid.cards .twemoji { color: var(--w3-accent); }
+.w3-doc-cards.grid.cards .md-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--w3-accent);
+  border: none;
+  background: transparent;
+  padding: 0.15rem 0;
+  margin: 0;
+}
+.w3-doc-cards.grid.cards .md-button:hover {
+  color: var(--w3-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 60em) {
+  .w3-home-split { grid-template-columns: 1fr; gap: 1.8rem; }
+  .w3-path { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .w3-path li::after { display: none; }
+}
+@media screen and (max-width: 44.984em) {
+  .w3-home-hero { padding: 1.8rem 0 1.2rem; }
+  .w3-home-actions .w3-btn { flex: 1 1 100%; justify-content: center; }
+  .w3-home-stats { gap: 0.9rem 1.6rem; }
+  .w3-path { grid-template-columns: 1fr 1fr; }
+  .w3-doc-cards.grid.cards > ul,
+  .w3-doc-cards.grid.cards > ol { grid-template-columns: 1fr; }
+}

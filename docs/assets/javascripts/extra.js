@@ -207,6 +207,46 @@ when JS is unavailable.
     });
   }
 
+  // -------------------------------------------------- language switcher
+  // Material renders the alternate selector from `extra.alternate`, but the
+  // hrefs are resolved at build time and cannot know the GitHub Pages base
+  // path. Rewrite them at runtime to correct relative sibling URLs, so
+  // 中文 <-> English navigation works from any page depth.
+  function initLanguageSwitcher() {
+    var links = $$(".md-select__link");
+    if (!links.length) return;
+
+    var path = (document.location.pathname || "/")
+      .replace(/\/index\.html$/, "/")
+      .replace(/\/+$/, "/");
+    // Site base path (GitHub Pages project root). Kept in one constant; if the
+    // repo is renamed, update only this line.
+    var base = "/web3-learning-wiki";
+    if (base && path.indexOf(base) === 0) path = path.slice(base.length).replace(/^\/+/, "");
+
+    var rel = path;                       // "" = zh home, "en/start/" etc.
+    var lang = rel.indexOf("en/") === 0 ? "en" : "zh";
+    var rest = lang === "en" ? rel.slice(3) : rel;
+    var segs = rel.split("/").filter(Boolean);
+
+    function siblingHref(targetLang) {
+      var target = targetLang === "en" ? "en/" + rest : rest;
+      var up;
+      if (target === "") up = segs.length;                    // root homepage
+      else up = Math.max(0, segs.length - 1);                 // normal pages
+      return new Array(up + 1).join("../") + target;
+    }
+
+    links.forEach(function (a) {
+      var targetLang = (a.getAttribute("hreflang") || "").toLowerCase();
+      a.setAttribute("href", siblingHref(targetLang));
+      if (targetLang === lang) {
+        a.classList.add("md-select__link--active");
+        a.setAttribute("aria-current", "true");
+      }
+    });
+  }
+
   // ------------------------------------------------------------ per-page boot
   eachPage(function () {
     initProgress();
@@ -217,6 +257,7 @@ when JS is unavailable.
     syncGiscusTheme();
     updateProgress();
     initThemeSync();
+    initLanguageSwitcher();
   });
 
   var ticking = false;
