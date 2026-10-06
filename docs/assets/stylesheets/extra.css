@@ -1347,3 +1347,11 @@ body.w3-no-scroll { overflow: hidden; }
   .md-header, .md-tabs, .md-sidebar, .w3-progress, .w3-comments, .w3-lightbox { display: none !important; }
   .md-content__inner { max-width: none; padding: 0; }
 }
+
+/* w3-avatar 图片样式（About页面头像） */
+.w3-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
