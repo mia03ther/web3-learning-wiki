@@ -24,7 +24,7 @@
 ### Maintainer
 <div class="w3-maintainer-row">
 <div class="w3-avatar">
-  <img src="/assets/avatar/main.png" alt="MIA_Ether 头像" loading="lazy" width="56" height="56" />
+  <img src="assets/avatar/main.png" alt="MIA_Ether 头像" loading="lazy" width="56" height="56" />
 </div>
 <div class="w3-maintainer-info" markdown="1">
 ### MIA_Ether · AI × Web3 Builder · Open Source Contributor
