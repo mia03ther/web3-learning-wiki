@@ -33,7 +33,7 @@ and Builder journey.
 
 </div>
 
-<div class="w3-home-split">
+<div class="w3-home-split" markdown="1">
 
 <div class="w3-home-intro" markdown="1">
 
@@ -63,7 +63,7 @@ Contributing is simple: use the **Edit on GitHub** button on any page.
 <div class="w3-graph-card">
 
 <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web3 Learning Wiki knowledge graph">
-  <g stroke="var(--w3-border-strong)" stroke-width="1.5">
+  <g style="stroke: var(--w3-border-strong)" stroke-width="1.5">
     <path d="M210 145 90 60"/>
     <path d="M210 145 330 60"/>
     <path d="M210 145 90 160"/>
@@ -74,14 +74,14 @@ Contributing is simple: use the **Edit on GitHub** button on any page.
     <path d="M90 110 90 210"/>
     <path d="M330 110 330 210"/>
   </g>
-  <g font-family="var(--w3-font-sans)" font-size="12" font-weight="600" text-anchor="middle">
-    <g><rect x="30" y="40" width="120" height="40" rx="10" fill="var(--w3-node-fill)" stroke="var(--w3-node-stroke)"/><text x="90" y="64" fill="var(--w3-node-text)">Blockchain</text></g>
-    <g><rect x="270" y="40" width="120" height="40" rx="10" fill="var(--w3-node-fill)" stroke="var(--w3-node-stroke)"/><text x="330" y="64" fill="var(--w3-node-text)">Smart Contracts</text></g>
-    <g><rect x="150" y="40" width="120" height="40" rx="10" fill="var(--w3-accent-soft)" stroke="var(--w3-accent)"/><text x="210" y="64" fill="var(--w3-accent)">Web3 Builder</text></g>
-    <g><rect x="20" y="140" width="140" height="40" rx="10" fill="var(--w3-node-fill)" stroke="var(--w3-node-stroke)"/><text x="90" y="164" fill="var(--w3-node-text)">AI × Web3</text></g>
-    <g><rect x="260" y="140" width="140" height="40" rx="10" fill="var(--w3-node-fill)" stroke="var(--w3-node-stroke)"/><text x="330" y="164" fill="var(--w3-node-text)">Dev Tools</text></g>
-    <g><rect x="70" y="230" width="160" height="40" rx="10" fill="var(--w3-node-fill)" stroke="var(--w3-node-stroke)"/><text x="150" y="254" fill="var(--w3-node-text)">MCP &amp; AI Agents</text></g>
-    <g><rect x="220" y="230" width="160" height="40" rx="10" fill="var(--w3-node-fill)" stroke="var(--w3-node-stroke)"/><text x="300" y="254" fill="var(--w3-node-text)">On-chain Data</text></g>
+  <g style="font-family: var(--w3-font-sans)" font-size="12" font-weight="600" text-anchor="middle">
+    <g><rect x="30" y="40" width="120" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="90" y="64" style="fill: var(--w3-node-text)">Blockchain</text></g>
+    <g><rect x="270" y="40" width="120" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="330" y="64" style="fill: var(--w3-node-text)">Smart Contracts</text></g>
+    <g><rect x="150" y="40" width="120" height="40" rx="10" style="fill: var(--w3-accent-soft); stroke: var(--w3-accent)"/><text x="210" y="64" style="fill: var(--w3-accent)">Web3 Builder</text></g>
+    <g><rect x="20" y="140" width="140" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="90" y="164" style="fill: var(--w3-node-text)">AI × Web3</text></g>
+    <g><rect x="260" y="140" width="140" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="330" y="164" style="fill: var(--w3-node-text)">Dev Tools</text></g>
+    <g><rect x="70" y="230" width="160" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="150" y="254" style="fill: var(--w3-node-text)">MCP &amp; AI Agents</text></g>
+    <g><rect x="220" y="230" width="160" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="300" y="254" style="fill: var(--w3-node-text)">On-chain Data</text></g>
   </g>
 </svg>
 
