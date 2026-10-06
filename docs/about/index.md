@@ -7,7 +7,7 @@
 
 ## Why this Wiki exists
 
-在消化一手行业活动与官方文档时，常见两个问题：
+我在消化一手行业活动与官方文档时，常见两个问题：
 
 1. **术语密度高**——初学者很容易在「黑话」面前掉队；
 2. **资料分散**——很难同时做到「讲人话」与「跟得上当前生态」。
@@ -16,11 +16,11 @@
 
 ## Learning Philosophy
 
-- **Output over input**：看十小时资料，不如写一小时笔记、做一个能跑的小东西；
-- **Project-driven, not course-driven**：学一点基础 → 立刻动手 → 遇到不懂再回来补；
-- **Build on a differentiated edge**：跨语言、跨生态的信息差是长期存在的机会；
-- **Don't touch money you don't understand**：学习阶段优先测试网、小额与模拟环境；
-- **Public by default**：每一条笔记、每一个 commit 都是公开可验证的记录。
+- **Output over input**：看十小时资料，不如写一小时笔记、做一个能跑的小东西，这也是为什么计算机学科课本附录存在大量的练习题方便巩固；
+- **Project-driven, not course-driven**：学一点基础 → 立刻动手 → 遇到不懂再回来补。我很喜欢3:7的某理论————你完全可以在掌握某行业30%的情况下入局，用实践补足剩下的70%；
+- **Build on a differentiated edge**：跨语言、跨生态的信息差是长期存在的机会。尝试跳出舒适圈，找到适合你的多个方向交叉性发展；
+- **Don't touch money you don't understand**：学习阶段优先测试网、小额与模拟环境（例如Sepolia/Base）；
+- **Public by default**：每一条笔记、每一个 commit 都是公开可验证的记录，鼓励大家使用GitHub作为原生态进行push食用与改进，这与链上去中心化主义与公开透明理念不谋而合。
 
 ## Open Source
 
