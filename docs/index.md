@@ -19,7 +19,7 @@ and Builder journey.
 </p>
 
 <div class="w3-home-actions">
-  <a class="w3-btn w3-btn--primary" href="start/">Start Learning</a>
+  <a class="w3-btn w3-btn--primary" href="start/" style="color:white;">Start Learning</a>
   <a class="w3-btn w3-btn--ghost" href="roadmap/learning-path/">Explore Knowledge Map</a>
   <a class="w3-btn w3-btn--ghost" href="contributing/">Contribute</a>
 </div>
