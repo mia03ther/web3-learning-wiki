@@ -23,14 +23,7 @@ hide:
         <span><b class="w3-num lp-red">No.16</b>　Leclerc · Singapore GP 2025</span>
         <a href="https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Ferrari_-_Charles_Leclerc_-_FP2.jpg">Photo: Liauzh · CC BY-SA 4.0</a>
       </figcaption>
-      <svg class="lp-sticker" viewBox="0 0 120 120" role="img" aria-label="FC Bayern sticker: Mia san mia">
-        <circle cx="60" cy="60" r="60" fill="#fff"/>
-        <circle cx="60" cy="60" r="56" fill="#dc052d"/>
-        <circle cx="60" cy="60" r="50" fill="none" stroke="#fff" stroke-width="1.2"/>
-        <text x="60" y="50" text-anchor="middle" font-size="15" letter-spacing="1.5">MIA SAN</text>
-        <text x="60" y="81" text-anchor="middle" font-size="34" letter-spacing="1">MIA</text>
-        <text x="60" y="98" text-anchor="middle" font-size="10" letter-spacing="2.5">1900</text>
-      </svg>
+      <img class="lp-sticker" src="../assets/fcb/fc-bayern-munchen-logo.svg" alt="FC Bayern München crest" width="96" height="96" decoding="async">
     </figure>
   </div>
 </section>
