@@ -11,7 +11,8 @@ hide:
   <div class="lp-wrap lp-hero__grid">
     <div class="lp-hero__text">
       <h1 class="lp-hero__title" id="lp-title">MIA 的<br>Web3 <span class="lp-red">×</span> AI 笔记本</h1>
-      <p class="lp-hero__sub">去听的活动、读过的文档、踩过的坑，都整理在这里。主要写给群友看，写错了或者想补充，随时来改。</p>
+      <p class="lp-hero__sub">我是 MIA，08 年 8 月出生。去听的活动、读过的文档、踩过的坑，都整理在这里。主要写给群友看，写错了或者想补充，随时来改。</p>
+      <p class="lp-hero__now"><span>最近在筹划</span>寒假的香港访学活动 · Consensus Hong Kong 2027</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">从入门开始读</a>
         <a class="lp-link" href="changelog/">v3.2.1 更新了什么</a>
@@ -81,11 +82,16 @@ hide:
 </section>
 
 <section class="lp-section lp-section--alt" aria-labelledby="lp-edit">
-  <div class="lp-wrap">
+  <div class="lp-wrap lp-join">
     <header class="lp-head">
       <h2 class="lp-h2" id="lp-edit">这个本子谁都能改</h2>
       <p class="lp-lede">看到写错的、过时的，或者你也去了哪场活动想补两句：点任意页面右上角的 ✏️，在 GitHub 上改完提交就行，我看到就合并。不会用 GitHub 也没关系，群里说一声，我来改。</p>
       <p class="lp-links"><a class="lp-link" href="contributing/">贡献指南</a><a class="lp-link" href="https://github.com/mia03ther/web3-learning-wiki">GitHub 仓库</a></p>
     </header>
+    <aside class="lp-qr" aria-labelledby="lp-qr-title">
+      <img src="assets/contact/wechat-qr.png" alt="MIA_Ether 的微信二维码，扫码加好友" width="512" height="512" loading="lazy">
+      <p class="lp-qr__title" id="lp-qr-title">免费学习小群</p>
+      <p class="lp-qr__text">Wiki 更新会第一时间发在群里，平时也聊聊活动和学习进度。扫码加我微信，备注「Wiki」，我拉你进群。</p>
+    </aside>
   </div>
 </section>

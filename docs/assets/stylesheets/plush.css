@@ -299,6 +299,65 @@ body:has(#lp) .lp {
   font-weight: 400;
 }
 
+/* Home: a small "planning" line under the intro, and the study-group QR card
+   beside the invitation to edit. */
+.lp-hero__now {
+  color: var(--book-muted);
+  font-size: .7rem;
+  line-height: 1.8;
+  margin-top: .8rem;
+}
+
+.lp-hero__now span {
+  border: 1px dashed var(--book-thread);
+  border-radius: .4rem;
+  color: var(--book-red);
+  margin-right: .5rem;
+  padding: .05rem .4rem;
+}
+
+.lp-join {
+  align-items: center;
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 13rem);
+}
+
+.lp-join .lp-head {
+  margin-bottom: 0;
+}
+
+.lp-qr {
+  background: var(--book-paper);
+  border: 1px dashed var(--book-thread);
+  border-radius: .8rem;
+  box-shadow: 0 2px 0 var(--book-paper-edge);
+  padding: .8rem .8rem 1rem;
+  text-align: center;
+}
+
+.lp-qr img {
+  border-radius: .4rem;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.lp-qr__title {
+  color: var(--book-ink);
+  font-family: var(--book-serif);
+  font-size: .9rem;
+  margin-top: .6rem;
+}
+
+.lp-qr__text {
+  color: var(--book-muted);
+  font-size: .65rem;
+  line-height: 1.7;
+  margin-top: .3rem;
+}
+
 /* The navigation is the fabric binding; it never textures the article text. */
 .md-sidebar--primary,
 .md-sidebar--primary .md-nav,
@@ -592,6 +651,15 @@ body:not(:has(#lp)) .md-sidebar--secondary .md-nav--secondary {
 
   .lp-hero__text {
     padding: 0;
+  }
+
+  .lp-join {
+    gap: 1.6rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lp-qr {
+    max-width: 15rem;
   }
 
   .lp-hero__title {

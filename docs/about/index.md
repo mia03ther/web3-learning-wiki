@@ -37,7 +37,9 @@ description: Web3 Learning Wiki 的来历、学习理念、维护者 MIA_Ether �
 <div class="w3-maintainer-info" markdown>
 ### MIA_Ether
 
-AI × Web3 Builder · 开源贡献者。在 AI 系统、Web3 基础设施与数据的交汇处，把研究变成能跑的软件；关注 Agent 信任、MCP、链上数据质量与 AI × 金融。Building in public。
+08 年 8 月出生。AI × Web3 Builder · 开源贡献者。在 AI 系统、Web3 基础设施与数据的交汇处，把研究变成能跑的软件；关注 Agent 信任、MCP、链上数据质量与 AI × 金融。Building in public。
+
+目前在筹划：寒假的香港访学活动，以及 Consensus Hong Kong 2027。
 </div>
 </div>
 <div class="w3-socials">
@@ -46,6 +48,23 @@ AI × Web3 Builder · 开源贡献者。在 AI 系统、Web3 基础设施与数�
 <a class="w3-social" href="mailto:mia03ther@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 2 9 5.7L21 7v12H3V7Z"/></svg>Email</a>
 <a class="w3-social" href="https://github.com/mia03ther/web3-learning-wiki/discussions" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0-9 9c0 1.7.47 3.3 1.3 4.7L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/></svg>Discussions</a>
 </div>
+</div>
+
+### 加入学习小群
+
+我自己有个**免费**的学习小群，Wiki 更新会第一时间发在里面，平时也聊聊活动和学习进度。想进的扫码加我微信，备注「Wiki」，我拉你进群。
+
+<div class="w3-support-grid w3-join-grid">
+  <a class="w3-support-card" href="../assets/contact/wechat-qr.png" target="_blank" rel="noopener" aria-label="放大 MIA_Ether 的微信二维码">
+    <div class="w3-support-qr">
+      <img src="../assets/contact/wechat-qr.png" alt="MIA_Ether 的微信二维码，扫码加好友" loading="lazy" width="512" height="512" />
+      <span class="w3-support-zoom" aria-hidden="true">点击放大</span>
+    </div>
+    <div class="w3-support-meta">
+      <div class="w3-support-name">微信 · MIA_Ether</div>
+      <div class="w3-support-hint">扫码加好友，备注「Wiki」</div>
+    </div>
+  </a>
 </div>
 
 ### 正在做的项目

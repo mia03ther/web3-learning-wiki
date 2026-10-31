@@ -1965,6 +1965,11 @@ body {
   margin: 1.6rem 0 2.4rem;
 }
 
+/* A single QR card (About page) keeps a QR-sized column. */
+.md-typeset .w3-join-grid {
+  grid-template-columns: minmax(0, 12rem);
+}
+
 .md-typeset .w3-support-card {
   background: var(--w3-surface);
   border-radius: var(--w3-r-xl);

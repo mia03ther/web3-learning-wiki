@@ -11,7 +11,8 @@ hide:
   <div class="lp-wrap lp-hero__grid">
     <div class="lp-hero__text">
       <h1 class="lp-hero__title" id="lp-title">MIA's<br>Web3 <span class="lp-red">×</span> AI notebook</h1>
-      <p class="lp-hero__sub">Events I went to, docs I read, mistakes I made, all written up here. The notes are in Chinese and written for my group chat; this English side is a skeleton.</p>
+      <p class="lp-hero__sub">I'm MIA, born in August 2008. Events I went to, docs I read, mistakes I made, all written up here. The notes are in Chinese and written for my group chat; this English side is a skeleton.</p>
+      <p class="lp-hero__now"><span>Planning</span>A winter-break study visit to Hong Kong · Consensus Hong Kong 2027</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">Start reading</a>
         <a class="lp-link" href="changelog/">What changed in v3.2.1</a>
@@ -81,11 +82,16 @@ hide:
 </section>
 
 <section class="lp-section lp-section--alt" aria-labelledby="lp-edit">
-  <div class="lp-wrap">
+  <div class="lp-wrap lp-join">
     <header class="lp-head">
       <h2 class="lp-h2" id="lp-edit">Anyone can edit this notebook</h2>
       <p class="lp-lede">Found something wrong or out of date, or went to one of these events and want to add a line? Click the ✏️ at the top right of any page, make the change on GitHub and open a pull request.</p>
       <p class="lp-links"><a class="lp-link" href="contributing/">Contributing guide</a><a class="lp-link" href="https://github.com/mia03ther/web3-learning-wiki">GitHub repository</a></p>
     </header>
+    <aside class="lp-qr" aria-labelledby="lp-qr-title">
+      <img src="../assets/contact/wechat-qr.png" alt="WeChat QR code to add MIA_Ether as a friend" width="512" height="512" loading="lazy">
+      <p class="lp-qr__title" id="lp-qr-title">A free study group</p>
+      <p class="lp-qr__text">Wiki updates land in the group first, and we talk about events and what we are learning (in Chinese). Scan to add me on WeChat, mention “Wiki”, and I will add you.</p>
+    </aside>
   </div>
 </section>

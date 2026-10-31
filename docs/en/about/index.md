@@ -35,13 +35,32 @@ and gives me somewhere to return when I need it again.
 <div class="w3-maintainer-info" markdown>
 ### MIA_Ether
 
-AI × Web3 builder and open-source contributor. Interested in agent trust, MCP,
+Born in August 2008. AI × Web3 builder and open-source contributor. Interested in agent trust, MCP,
 on-chain data quality and AI × finance. Building in public.
+
+Currently planning a winter-break study visit to Hong Kong and Consensus Hong Kong 2027.
 </div>
 </div>
 </div>
 
 [GitHub](https://github.com/mia03ther) · [X / Twitter](https://x.com/MIA03ther) · [Email](mailto:mia03ther@gmail.com)
+
+### Join the study group
+
+I run a **free** study group on WeChat (in Chinese). Wiki updates land there first, and we talk about events and what we are learning. Scan the code to add me, mention “Wiki”, and I will add you to the group.
+
+<div class="w3-support-grid w3-join-grid">
+  <a class="w3-support-card" href="../../assets/contact/wechat-qr.png" target="_blank" rel="noopener" aria-label="Enlarge MIA_Ether's WeChat QR code">
+    <div class="w3-support-qr">
+      <img src="../../assets/contact/wechat-qr.png" alt="WeChat QR code to add MIA_Ether as a friend" loading="lazy" width="512" height="512" />
+      <span class="w3-support-zoom" aria-hidden="true">Click to enlarge</span>
+    </div>
+    <div class="w3-support-meta">
+      <div class="w3-support-name">WeChat · MIA_Ether</div>
+      <div class="w3-support-hint">Scan to add me, mention “Wiki”</div>
+    </div>
+  </a>
+</div>
 
 ### Current projects
 
