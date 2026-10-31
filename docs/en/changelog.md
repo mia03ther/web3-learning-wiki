@@ -15,6 +15,24 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>Version 3.1</b><span>A burgundy reading room</span></div>
+  <span class="w3-release__ver">v3.1.0</span>
+  <span class="w3-release__date">2026-10-31</span>
+</div>
+
+- Reading pages now use a persistent burgundy contents rail, paper-like light mode and a warm dark theme, taking layout cues from Protocol Wiki.
+- Refined typography, summaries, tables and on-page navigation for long notes.
+- Reorganized the Chinese and English knowledge indexes into Basics, Build and Explore.
+- Improved keyboard and focus handling for the mobile home menu, sidebar search and QR previews.
+- Added primary references to the ETHShenzhen security note and clarified reporting attribution.
+- Kept the homepage's Leclerc postcard, Bayern crest and the story behind the two reds.
+</div>
+
+## Previous releases
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>Version 3.0.1</b><span>English entry pages and contribution guides</span></div>
   <span class="w3-release__ver">v3.0.1</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -25,8 +43,6 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 - **Contributing**: documented how to add an event note and publish a release in both languages; updated the README and local preview instructions.
 - **Fixed**: the home page now keeps the theme selected on reading pages; corrected the Bayern sticker hover style.
 </div>
-
-## Previous releases
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

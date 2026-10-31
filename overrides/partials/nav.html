@@ -1,0 +1,31 @@
+{% import "partials/nav-item.html" as item with context %}
+{% set is_en = page and page.url and page.url.startswith("en/") %}
+{% set home_url = nav.homepage.url | url %}
+<nav class="md-nav md-nav--primary" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <div class="w3-doc-brand">
+    <a href="{{ home_url }}" class="w3-doc-brand__link" aria-label="{{ config.site_name }}">
+      <img src="{{ config.theme.logo | url }}" alt="" width="40" height="40">
+      <span><b>MIA's notebook<span aria-hidden="true">.</span></b><small>WEB3 / AI / LIFE</small></span>
+    </a>
+    <button class="w3-doc-close md-icon" type="button" data-w3-close-nav aria-label="{{ 'Close navigation' if is_en else '关闭导航' }}">
+      {% include ".icons/material/close.svg" %}
+    </button>
+  </div>
+  <button class="w3-doc-search" type="button" data-w3-search>
+    <span class="md-icon">{% include ".icons/material/magnify.svg" %}</span>
+    <span>{{ 'Search this notebook' if is_en else '搜一搜这个本子' }}</span>
+    <kbd>/</kbd>
+  </button>
+  <div class="w3-doc-nav-label">{{ 'CONTENTS' if is_en else '本子目录' }}</div>
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav.items %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+  <div class="w3-doc-colophon">
+    <span class="w3-doc-colophon__line">Rosso Corsa <i>×</i> Bayern Rot</span>
+    <a href="{{ ('en/contributing/' if is_en else 'contributing/') | url }}">{{ 'Write a page with me' if is_en else '这个本子，一起写' }} <span aria-hidden="true">↗</span></a>
+    <small>Mia san mia.</small>
+  </div>
+</nav>

@@ -6,7 +6,7 @@ description: Vitalik 谈 AI 时代的以太坊安全、Winderica 讲链上隐私
 # Day 2 上午：AI 时代的安全、隐私与路线图
 
 <p class="w3-lead">
-主会场第一天上午的四段内容，全部围绕一个问题：<b>在 AI 越来越强的时代，以太坊靠什么保持安全和隐私？</b>
+主会场上午的四段内容，全部围绕一个问题：<b>在 AI 越来越强的时代，以太坊靠什么保持安全和隐私？</b>
 Vitalik 从密码学讲到你自己的钱包，Winderica 拆解「查一次余额会泄露什么」，Nym 讲网络层的匿名，最后一场圆桌把镜头拉回到路线图和去中心化之争。
 </p>
 
@@ -105,7 +105,7 @@ Vitalik 的解释是：椭圆曲线、格这些结构「数学性质太丰富」
 
 ### 1.5 第二层风险：客户端代码
 
-- **短期：用 AI 找漏洞。** Vitalik 提到执行客户端团队 Nethermind 已经申请了 Anthropic 10 月新推出的开源漏洞扫描服务 [OSS Scanner](https://thecurrencyanalytics.com/technology/anthropics-oss-scanner-draws-nethermind-zeus-as-crypto-attacks-multiply-301674)，用 AI 给整个代码库挖洞。按他的说法，目前挖出来的大多是低优先级问题，严重漏洞不多，至少短期是好消息。
+- **短期：用 AI 找漏洞。** Vitalik 提到执行客户端团队 Nethermind 申请了 Anthropic 的开源漏洞扫描服务 [OSS Scanner](https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source)，[报名 PR](https://github.com/anthropics/oss-scanner/pull/38) 的范围覆盖整个代码仓库。按他在现场的说法，目前挖出来的大多是低优先级问题，严重漏洞不多，至少短期是好消息。
 - **客户端多样性。** 以太坊有 5 个主流执行客户端，一个出 bug，只要其他客户端加起来超过 2/3，链照常确认。2016 年上海 Devcon 期间的 DoS 攻击就是例子：当时只有 Geth 和 Parity 两个客户端，一个被打挂时另一个顶住了。
 - **长期：形式化验证。** 用 Lean 这类工具从数学上证明代码正确，正在 zkEVM、递归 STARK 等方向推进，AI 能让这件事快很多。
 
@@ -114,7 +114,7 @@ Vitalik 的解释是：椭圆曲线、格这些结构「数学性质太丰富」
 - **合约语言反而没那么可怕了**：Solidity / Vyper 的安全性已经很高；Vitalik 更担心 **ZK**：越来越多应用依赖 ZK 的正确性，两年后它会像 Solidity 一样重要，但现在大家对它的安全关注远远不够。
 - **前端 / UI 攻击**：Safe 前端被篡改导致巨额被盗这类事件之后，Vitalik 自己开始尽量不用别人做的 UI，而是**用本地 AI 给自己写命令行小工具**。
 - **钱包：多签。** 他最认可的方式是大部分资产放多签，比如 **2-of-3**：一把钥匙在电脑、一把在手机、一把交给可信的朋友。**最重要的一条规则：永远不要把两把钥匙放在同一个地方。**
-- **硬件钱包的供应链风险。** Vitalik 说的是 10 月刚曝光的真事：马来西亚经销商 CryptoBilis 卖出的一批**正品 Ledger** 被拆开植入了 eSIM 和 LTE 模块，用户设置钱包时屏幕上的助记词会被偷偷发给攻击者，前后损失约 8600 万到 9450 万美元（[BleepingComputer](https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/)、[Help Net Security](https://www.helpnetsecurity.com/2026/10/12/ledger-wallets-compromised-via-hardware-implant/)）。因为原装安全芯片没被动过，官方的真伪校验也照样能通过。他还提到有硬件钱包公司的客户名单泄露过。更微妙的一点：**你专门买一个硬件钱包，等于告诉整条供应链「我有很多币」**。
+- **硬件钱包的供应链风险。** Vitalik 提醒，硬件钱包也可能在供应链中被动过手脚；同期 [BleepingComputer 报道](https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/)，Ledger 确认一台涉及 CryptoBilis 用户损失事件的设备中存在未经授权的硬件植入物。[Tibane Labs 的拆解](https://www.tibane.net/research/ledger-nano-x-implant) 展示了技术细节：其样本中的植入物读取屏幕显示数据，在助记词出现时捕获文字，再经 LTE 和 eSIM 外传；原安全芯片没有被改动，设备仍能通过真伪校验。他还提到有硬件钱包公司的客户名单泄露过。更微妙的一点：**你专门买一个硬件钱包，等于告诉整条供应链「我有很多币」**。
 - **短期替代方案**：买一台旧款 Google Pixel，刷 **GrapheneOS**（很安全的安卓系统），装 **AirGap** 钱包，然后永久断网，当冷钱包用。
 - **长期愿景**：做真正安全的**通用**硬件——钱包只是它的功能之一，还能用来登录银行、社交等。功能越多，攻击者越猜不到你用它干什么，反而越安全。
 
@@ -297,4 +297,4 @@ Nym 的 Mixnet 已经升级到 **ML-KEM** 后量子加密。它的设计源自 N
 - [ ] 如果对协议开发感兴趣，去看看 [EPF 的学习资料](https://epf.wiki/)。
 
 !!! quote "说明"
-    嘉宾称呼和议程以 OpenBuild 官方回顾为准，OpenAC、OSS Scanner、Ledger 植入事件等细节按公开资料核实过（链接在正文里）。发现错误欢迎在群里指出。
+    嘉宾称呼和议程以 OpenBuild 官方回顾为准，相关官方资料和技术报告链接附在正文里。现场观点按个人理解整理，发现错误欢迎在群里指出。

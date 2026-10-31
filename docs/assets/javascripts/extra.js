@@ -14,6 +14,30 @@
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
   };
 
+  function trapTab(e, items) {
+    if (e.key !== "Tab" || !items.length) return;
+    var index = items.indexOf(document.activeElement);
+    if (e.shiftKey && index <= 0) {
+      e.preventDefault();
+      items[items.length - 1].focus();
+    } else if (!e.shiftKey && (index === -1 || index === items.length - 1)) {
+      e.preventDefault();
+      items[0].focus();
+    }
+  }
+
+  // Restore pre-existing inert/scroll state when an overlay closes.
+  function isolate(elements) {
+    var added = elements.filter(function (el) { return el && !el.hasAttribute("inert"); });
+    var wasLocked = document.body.classList.contains("w3-no-scroll");
+    added.forEach(function (el) { el.setAttribute("inert", ""); });
+    document.body.classList.add("w3-no-scroll");
+    return function () {
+      added.forEach(function (el) { el.removeAttribute("inert"); });
+      if (!wasLocked) document.body.classList.remove("w3-no-scroll");
+    };
+  }
+
   function store(key, value) {
     try {
       if (value === undefined) return JSON.parse(localStorage.getItem(key) || "null");
@@ -68,6 +92,24 @@
       if (a.host === location.host || a.target) return;
       a.target = "_blank";
       a.rel = "noopener noreferrer";
+    });
+  }
+
+  // Use Material's checkbox events so its overlay and focus state stay in sync.
+  // Material already provides the /, s and f search shortcuts.
+  function initDocNavigation() {
+    $$("[data-w3-close-nav], [data-w3-search]").forEach(function (button) {
+      if (button.dataset.w3Ready) return;
+      button.dataset.w3Ready = "1";
+      button.addEventListener("click", function () {
+        var drawer = $("#__drawer");
+        if (drawer && drawer.checked) drawer.click();
+        if (!button.hasAttribute("data-w3-search")) return;
+        var search = $("#__search");
+        if (search && !search.checked) search.click();
+        var input = $(".md-search__input");
+        if (input) input.focus();
+      });
     });
   }
 
@@ -174,39 +216,65 @@
   }
 
   // ------------------------------------------------------ QR lightbox
+  var lightbox = null;
   function initLightbox() {
     var cards = $$(".w3-support-card[href]");
     if (!cards.length) return;
-    var box = $("#w3-lightbox");
-    if (!box) {
-      box = document.createElement("div");
+    if (!lightbox) {
+      var box = document.createElement("div");
       box.className = "w3-lightbox";
       box.id = "w3-lightbox";
       box.setAttribute("role", "dialog");
       box.setAttribute("aria-modal", "true");
-      box.setAttribute("aria-label", "收款码预览");
       box.hidden = true;
       box.innerHTML =
-        '<button class="w3-lightbox-close" type="button" aria-label="关闭">&times;</button>' +
+        '<button class="w3-lightbox-close" type="button">&times;</button>' +
         '<img class="w3-lightbox-img" src="" alt="" />' +
         '<p class="w3-lightbox-cap"></p>';
       document.body.appendChild(box);
+      var img = $(".w3-lightbox-img", box);
+      var cap = $(".w3-lightbox-cap", box);
+      var closeButton = $(".w3-lightbox-close", box);
+      var lastFocus = null;
+      var restore = null;
+
+      function close() {
+        if (box.hidden) return;
+        box.hidden = true;
+        img.removeAttribute("src");
+        if (restore) { restore(); restore = null; }
+        if (lastFocus && lastFocus.isConnected) lastFocus.focus();
+      }
+
       box.addEventListener("click", function (e) {
         if (e.target === box || e.target.closest(".w3-lightbox-close")) close();
       });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && !box.hidden) close();
+      box.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") { e.preventDefault(); close(); }
+        else trapTab(e, [closeButton]);
       });
-    }
-    var img = $(".w3-lightbox-img", box);
-    var cap = $(".w3-lightbox-cap", box);
-    var lastFocus = null;
+      document.addEventListener("focusin", function (e) {
+        if (!box.hidden && !box.contains(e.target)) closeButton.focus();
+      });
 
-    function close() {
-      box.hidden = true;
-      img.removeAttribute("src");
-      document.body.classList.remove("w3-no-scroll");
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
+      lightbox = {
+        open: function (card) {
+          var source = $("img", card);
+          if (!source || !source.src) return;
+          var english = document.documentElement.lang.indexOf("en") === 0;
+          var name = $(".w3-support-name", card);
+          var title = name ? name.textContent.trim() : (english ? "Payment QR code" : "收款码");
+          lastFocus = document.activeElement;
+          img.src = source.src;
+          img.alt = title;
+          cap.textContent = title + (english ? " · Click outside to close" : " · 点击空白处关闭");
+          box.setAttribute("aria-label", english ? "Payment QR code preview" : "收款码预览");
+          closeButton.setAttribute("aria-label", english ? "Close preview" : "关闭预览");
+          restore = isolate(Array.prototype.filter.call(document.body.children, function (el) { return el !== box; }));
+          box.hidden = false;
+          closeButton.focus();
+        }
+      };
     }
 
     cards.forEach(function (card) {
@@ -214,16 +282,7 @@
       card.dataset.w3Ready = "1";
       card.addEventListener("click", function (e) {
         e.preventDefault();
-        var src = ($("img", card) || {}).src;
-        if (!src) return;
-        var name = $(".w3-support-name", card);
-        lastFocus = document.activeElement;
-        img.src = src;
-        img.alt = name ? name.textContent.trim() : "收款码";
-        cap.textContent = (name ? name.textContent.trim() : "收款码") + " · 点击空白处关闭";
-        box.hidden = false;
-        document.body.classList.add("w3-no-scroll");
-        window.setTimeout(function () { $(".w3-lightbox-close", box).focus(); }, 30);
+        lightbox.open(card);
       });
     });
   }
@@ -286,19 +345,27 @@
     var toggle = $("[data-lp-toggle]");
     var menu = $("[data-lp-menu]");
     if (!toggle || !menu) return;
+    var links = $$("a[href]", menu);
+    var wide = window.matchMedia("(min-width: 52.0625em)");
+    var isOpen = false;
+    var restore = null;
 
     function setMenu(open) {
+      if (open === isOpen) return;
+      isOpen = open;
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      document.body.classList.toggle("w3-no-scroll", open);
+      toggle.setAttribute("aria-label", toggle.getAttribute(open ? "data-lp-close-label" : "data-lp-open-label"));
       if (open) {
         menu.hidden = false;
         void menu.offsetWidth;
         menu.classList.add("is-open");
+        restore = isolate([lp, $(".lp-footer"), $(".lp-nav__brand"), $(".lp-nav__links")]);
+        (links[0] || toggle).focus();
       } else {
         menu.classList.remove("is-open");
-        window.setTimeout(function () {
-          if (!menu.classList.contains("is-open")) menu.hidden = true;
-        }, 300);
+        menu.hidden = true;
+        if (restore) { restore(); restore = null; }
+        (wide.matches ? $(".lp-nav__brand") : toggle).focus();
       }
     }
 
@@ -309,10 +376,14 @@
       if (e.target.closest("a")) setMenu(false);
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") setMenu(false);
+      if (!isOpen) return;
+      if (e.key === "Escape") { e.preventDefault(); setMenu(false); }
+      else trapTab(e, [toggle].concat(links));
+    });
+    document.addEventListener("focusin", function (e) {
+      if (isOpen && e.target !== toggle && !menu.contains(e.target)) (links[0] || toggle).focus();
     });
     // Close it when the window grows past the mobile breakpoint.
-    var wide = window.matchMedia("(min-width: 52.0625em)");
     if (wide.addEventListener) {
       wide.addEventListener("change", function (e) { if (e.matches) setMenu(false); });
     }
@@ -323,6 +394,7 @@
     initLanding();
     initProgress();
     initExternalLinks();
+    initDocNavigation();
     initSkillTree();
     initCheckin();
     initLightbox();

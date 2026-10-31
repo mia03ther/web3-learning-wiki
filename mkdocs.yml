@@ -35,9 +35,6 @@ theme:
       quote: octicons/quote-16
   features:
     - announce.dismiss
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
     - navigation.indexes
     - navigation.path
     - navigation.top
@@ -78,6 +75,7 @@ extra:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/home.css
+  - assets/stylesheets/reading.css
 
 extra_javascript:
   - assets/javascripts/extra.js

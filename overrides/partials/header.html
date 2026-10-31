@@ -1,0 +1,39 @@
+{% set is_en = page and page.url and page.url.startswith("en/") %}
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <a href="{{ nav.homepage.url | url }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="{{ 'Open navigation' if is_en else '打开导航' }}">
+      {% include ".icons/material/menu.svg" %}
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic"><span class="md-ellipsis">{{ config.site_name }}</span></div>
+        <div class="md-header__topic" data-md-component="header-topic"><span class="md-ellipsis">{{ page.meta.title if page and page.meta and page.meta.title else page.title }}</span></div>
+      </div>
+    </div>
+    <div class="w3-doc-topnav">
+      {% for nav_item in nav.items if nav_item.children %}
+        {% set first = nav_item.children | first %}
+        {% if first %}
+          <a href="{{ first.url | url }}"{% if nav_item.active %} aria-current="true"{% endif %}>{{ nav_item.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if config.theme.palette and not config.theme.palette is mapping %}
+      {% include "partials/palette.html" %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+    {% if config.extra.alternate %}{% include "partials/alternate.html" %}{% endif %}
+    {% if "material/search" in config.plugins and config.plugins["material/search"].config.enabled %}
+      <label class="md-header__button md-icon" for="__search" aria-label="{{ lang.t('search') }}">
+        {% include ".icons/material/magnify.svg" %}
+      </label>
+      {% include "partials/search.html" %}
+    {% endif %}
+    <a href="{{ config.repo_url }}" class="w3-doc-github md-header__button md-icon" aria-label="GitHub">
+      {% include ".icons/fontawesome/brands/github.svg" %}
+    </a>
+  </nav>
+</header>

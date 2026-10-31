@@ -14,7 +14,7 @@ hide:
       <p class="lp-hero__sub">Events I went to, docs I read, mistakes I made, all written up here. The notes are in Chinese and written for my group chat; this English side is a skeleton.</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">Start reading</a>
-        <a class="lp-link" href="changelog/">What changed in v3.0.1</a>
+        <a class="lp-link" href="changelog/">What changed in v3.1</a>
       </div>
     </div>
     <figure class="lp-postcard">

@@ -36,7 +36,9 @@
         <li><a href="{{ home() }}about/">{{ t('关于', 'About') }}</a></li>
       </ul>
       <button class="lp-nav__toggle" type="button" aria-expanded="false" aria-controls="lp-menu"
-              aria-label="{{ t('打开菜单', 'Open menu') }}" data-lp-toggle>
+              aria-label="{{ t('打开菜单', 'Open menu') }}"
+              data-lp-open-label="{{ t('打开菜单', 'Open menu') }}"
+              data-lp-close-label="{{ t('关闭菜单', 'Close menu') }}" data-lp-toggle>
         <span></span><span></span>
       </button>
     </nav>
