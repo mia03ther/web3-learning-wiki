@@ -3,25 +3,20 @@
    --------------------------------------------------------------------------
    "A Web3 season notebook for the group chat": white paper, ink type, the
    events laid out as rounds of a season, one Ferrari red for actions and
-   marks, and a single F1 photo tucked in like a postcard. Content leads;
-   the motorsport bits are decoration. Tokens come from extra.css.
+   marks. The things MIA likes sit on the cover as decoration only: a Leclerc
+   postcard with a Bayern sticker slapped on its corner. Content leads.
+   Tokens come from extra.css.
    ========================================================================== */
 
 [data-md-color-scheme="default"] {
   --lp-alt: #f5f5f5;
   --lp-card: #ffffff;
-  --lp-nav-bg: rgba(255, 255, 255, .78);
-  --lp-nav-bg-solid: rgba(255, 255, 255, .94);
-  --lp-nav-line: rgba(0, 0, 0, .08);
   --lp-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 24px 48px -28px rgba(0, 0, 0, .38);
 }
 
 [data-md-color-scheme="slate"] {
   --lp-alt: #181818;
   --lp-card: #232323;
-  --lp-nav-bg: rgba(28, 28, 28, .78);
-  --lp-nav-bg-solid: rgba(28, 28, 28, .94);
-  --lp-nav-line: rgba(255, 255, 255, .1);
   --lp-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 24px 48px -28px rgba(0, 0, 0, .9);
 }
 
@@ -56,17 +51,14 @@ body:has(#lp) .md-main {
   padding: 0 1.6rem;
 }
 
-/* Floating nav ---------------------------------------------------------- */
-/* Centred without transform so the fixed mobile menu inside it is laid out
-   against the viewport, not against the nav. */
+/* Top bar ---------------------------------------------------------------- */
 .lp-nav {
-  left: .8rem;
-  margin: 0 auto;
-  max-width: calc(100% - 1.6rem);
+  background: var(--w3-bg);
+  border-bottom: 1px solid var(--w3-line-soft);
+  left: 0;
   position: fixed;
-  right: .8rem;
-  top: .6rem;
-  width: max-content;
+  right: 0;
+  top: 0;
   z-index: 40;
 }
 
@@ -76,31 +68,23 @@ body:has(#lp) .md-main {
 
 .lp-nav__bar {
   align-items: center;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  background: var(--lp-nav-bg);
-  border-radius: 9999px;
-  box-shadow: inset 0 0 0 1px var(--lp-nav-line);
   color: var(--w3-text);
   display: flex;
-  gap: .2rem;
-  height: 2.2rem;
-  padding: 0 .3rem;
-  transition: background-color .3s var(--w3-ease);
-}
-
-.lp-nav.is-scrolled .lp-nav__bar {
-  background: var(--lp-nav-bg-solid);
+  gap: 1.4rem;
+  height: 3rem;
+  margin: 0 auto;
+  max-width: 54rem;
+  padding: 0 1.6rem;
 }
 
 .lp-nav__brand {
   align-items: center;
   color: var(--w3-text);
   display: flex;
-  font-size: .7rem;
-  font-weight: 600;
-  gap: .4rem;
-  padding: 0 .6rem 0 0;
+  font-size: .75rem;
+  font-weight: 700;
+  gap: .5rem;
+  margin-right: auto;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -115,58 +99,35 @@ body:has(#lp) .md-main {
 
 .lp-nav__links {
   display: flex;
+  gap: 1.4rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .lp-nav__links a {
-  border-radius: 9999px;
   color: var(--w3-text-2);
-  display: block;
   font-size: .7rem;
-  padding: .3rem .6rem;
-  text-decoration: none;
-  transition: color .3s var(--w3-ease), background-color .3s var(--w3-ease);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .6em;
+  transition: color .3s var(--w3-ease), text-decoration-color .3s var(--w3-ease);
   white-space: nowrap;
 }
 
 .lp-nav__links a:hover,
 .lp-nav__links a:focus-visible {
-  background: var(--w3-surface);
   color: var(--w3-text);
-}
-
-.lp-nav__cta {
-  background: var(--w3-action);
-  border-radius: 9999px;
-  color: var(--w3-on-action);
-  font-size: .7rem;
-  font-weight: 600;
-  margin-left: .2rem;
-  padding: .3rem .8rem;
-  text-decoration: none;
-  transition: background-color .3s var(--w3-ease), transform .5s var(--w3-ease);
-  white-space: nowrap;
-}
-
-.lp-nav__cta:hover {
-  background: var(--w3-action-hover);
-}
-
-.lp-nav__cta:active,
-.lp-btn:active {
-  transform: scale(.98);
+  text-decoration-color: var(--w3-red);
 }
 
 .lp-nav__toggle {
   background: transparent;
   border: 0;
-  border-radius: 9999px;
   cursor: pointer;
   display: none;
   height: 1.8rem;
-  margin-left: auto;
   position: relative;
   width: 1.8rem;
 }
@@ -175,10 +136,10 @@ body:has(#lp) .md-main {
   background: var(--w3-text);
   border-radius: 1px;
   height: 1.5px;
-  left: .5rem;
+  left: .4rem;
   margin-top: -.75px;
   position: absolute;
-  right: .5rem;
+  right: .4rem;
   top: 50%;
   transition: transform .5s var(--w3-ease);
 }
@@ -199,10 +160,9 @@ body:has(#lp) .md-main {
   transform: rotate(-45deg);
 }
 
+/* Mobile menu: a plain sheet under the bar (z-index -1 inside the header) */
 .lp-menu {
-  -webkit-backdrop-filter: saturate(180%) blur(24px);
-  backdrop-filter: saturate(180%) blur(24px);
-  background: var(--lp-nav-bg-solid);
+  background: var(--w3-bg);
   inset: 0;
   opacity: 0;
   padding: 4.8rem 1.6rem 2.4rem;
@@ -220,29 +180,23 @@ body:has(#lp) .md-main {
 }
 
 .lp-menu ul {
+  border-top: 2px solid var(--w3-text);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .lp-menu li {
-  opacity: 0;
-  transform: translateY(1.2rem);
-  transition: opacity .5s var(--w3-ease), transform .5s var(--w3-ease);
-}
-
-.lp-menu.is-open li {
-  opacity: 1;
-  transform: none;
+  border-bottom: 1px solid var(--w3-line-soft);
 }
 
 .lp-menu a {
   color: var(--w3-text);
   display: block;
   font-family: var(--w3-font-display);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  padding: .4rem 0;
+  padding: .7rem 0;
   text-decoration: none;
 }
 
@@ -255,18 +209,10 @@ body:has(#lp) .md-main {
   display: inline-flex;
   font-size: .8rem;
   font-weight: 600;
-  gap: .4rem;
   line-height: 1.5;
   padding: .5rem 1.2rem;
   text-decoration: none;
   transition: background-color .3s var(--w3-ease), transform .5s var(--w3-ease);
-}
-
-.lp-btn::after,
-.lp-link::after {
-  content: "→";
-  display: inline-block;
-  transition: transform .5s var(--w3-ease);
 }
 
 .lp-btn:hover,
@@ -275,9 +221,8 @@ body:has(#lp) .md-main {
   color: var(--w3-on-action);
 }
 
-.lp-btn:hover::after,
-.lp-link:hover::after {
-  transform: translateX(.2rem);
+.lp-btn:active {
+  transform: scale(.98);
 }
 
 .lp-link {
@@ -292,8 +237,11 @@ body:has(#lp) .md-main {
 }
 
 .lp-link::after {
+  content: "→";
+  display: inline-block;
   margin-left: .3rem;
   text-decoration: none;
+  transition: transform .5s var(--w3-ease);
 }
 
 .lp-link:hover,
@@ -302,9 +250,13 @@ body:has(#lp) .md-main {
   text-decoration-color: var(--w3-red);
 }
 
+.lp-link:hover::after {
+  transform: translateX(.2rem);
+}
+
 /* Hero ------------------------------------------------------------------- */
 .lp-hero {
-  padding: 8rem 0 4.8rem;
+  padding: 7.2rem 0 4.8rem;
 }
 
 .lp-hero__grid {
@@ -341,17 +293,6 @@ body:has(#lp) .md-main {
   margin-top: 1.6rem;
 }
 
-.lp-hero__meta {
-  color: var(--w3-faint);
-  font-size: .7rem;
-  margin-top: 2.4rem;
-}
-
-.lp-hero__meta .w3-num {
-  font-size: .8rem;
-  font-weight: 700;
-}
-
 /* The postcard: a small photo tucked in at an angle, straightens on hover */
 .lp-postcard {
   background: var(--lp-card);
@@ -359,6 +300,7 @@ body:has(#lp) .md-main {
   box-shadow: var(--lp-shadow);
   justify-self: end;
   padding: .5rem .5rem .6rem;
+  position: relative;
   transform: rotate(-2.5deg);
   transition: transform .6s var(--w3-ease);
   width: min(100%, 22rem);
@@ -402,6 +344,29 @@ body:has(#lp) .md-main {
   color: var(--w3-red);
 }
 
+/* The Bayern sticker on the postcard's corner. "Mia san mia" is the club
+   motto, and it happens to carry the name MIA. White die-cut edge, FCB red. */
+.lp-sticker {
+  filter: drop-shadow(0 .15rem .25rem rgba(0, 0, 0, .22));
+  height: 4.8rem;
+  position: absolute;
+  right: -1.4rem;
+  top: -1.8rem;
+  transform: rotate(12deg);
+  transition: transform .6s var(--w3-ease);
+  width: 4.8rem;
+}
+
+.lp-postcard:hover .lp-sticker {
+  transform: rotate(4deg);
+}
+
+.lp-sticker text {
+  fill: #fff;
+  font-family: var(--w3-font-display);
+  font-weight: 700;
+}
+
 /* Sections ---------------------------------------------------------------- */
 .lp-section {
   background: var(--w3-bg);
@@ -417,10 +382,8 @@ body:has(#lp) .md-main {
   max-width: 32rem;
 }
 
-.lp-head--center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.lp-head:only-child {
+  margin-bottom: 0;
 }
 
 .lp-h2 {
@@ -446,11 +409,6 @@ body:has(#lp) .md-main {
   flex-wrap: wrap;
   gap: .6rem 1.6rem;
   margin-top: 1.2rem;
-}
-
-.lp-links--center {
-  justify-content: center;
-  margin-top: 2.4rem;
 }
 
 /* Latest round: the event on the left, its four reports on the right */
@@ -480,17 +438,20 @@ body:has(#lp) .md-main {
   font-weight: 700;
 }
 
-.lp-reports {
+.lp-reports,
+.lp-list {
   border-top: 2px solid var(--w3-text);
   list-style: none;
   padding: 0;
 }
 
-.lp-reports li {
+.lp-reports li,
+.lp-list li {
   border-bottom: 1px solid var(--w3-line-soft);
 }
 
-.lp-reports a {
+.lp-reports a,
+.lp-list a {
   color: var(--w3-text);
   display: grid;
   gap: .2rem;
@@ -499,7 +460,8 @@ body:has(#lp) .md-main {
   text-decoration: none;
 }
 
-.lp-reports a::after {
+.lp-reports a::after,
+.lp-list a::after {
   color: var(--w3-faint);
   content: "→";
   position: absolute;
@@ -509,7 +471,8 @@ body:has(#lp) .md-main {
   transition: transform .5s var(--w3-ease), color .3s var(--w3-ease);
 }
 
-.lp-reports a:hover::after {
+.lp-reports a:hover::after,
+.lp-list a:hover::after {
   color: var(--w3-red);
   transform: translate(.2rem, -50%);
 }
@@ -520,45 +483,23 @@ body:has(#lp) .md-main {
   font-weight: 700;
 }
 
-.lp-reports__t {
+.lp-reports__t,
+.lp-list__t {
   font-size: 1rem;
   font-weight: 600;
   transition: color .3s var(--w3-ease);
 }
 
-.lp-reports a:hover .lp-reports__t {
+.lp-reports a:hover .lp-reports__t,
+.lp-list a:hover .lp-list__t {
   color: var(--w3-red);
 }
 
-.lp-reports__d {
+.lp-reports__d,
+.lp-list__d {
   color: var(--w3-muted);
   font-size: .7rem;
   line-height: 1.6;
-}
-
-/* Tagline: words light up one by one as you scroll */
-.lp-tagline {
-  background: var(--w3-bg);
-  padding: 3.2rem 0 6.4rem;
-}
-
-.lp-tagline__text {
-  color: var(--w3-text);
-  font-family: var(--w3-font-display);
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.3;
-  max-width: 36rem;
-  text-wrap: balance;
-}
-
-.lp-js .lp-tagline__text span {
-  color: color-mix(in srgb, var(--w3-text) 22%, transparent);
-  transition: color .5s var(--w3-ease);
-}
-
-.lp-js .lp-tagline__text span.is-lit {
-  color: var(--w3-text);
 }
 
 /* Season calendar */
@@ -627,115 +568,10 @@ body:has(#lp) .md-main {
   top: 4.8rem;
 }
 
-.lp-list {
-  border-top: 2px solid var(--w3-text);
-  list-style: none;
-  padding: 0;
-}
-
-.lp-list li {
-  border-bottom: 1px solid var(--w3-line-soft);
-}
-
-.lp-list a {
-  color: var(--w3-text);
-  display: grid;
-  gap: .2rem;
-  padding: 1rem 2rem 1rem 0;
-  position: relative;
-  text-decoration: none;
-}
-
-.lp-list a::after {
-  color: var(--w3-faint);
-  content: "→";
-  position: absolute;
-  right: .2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform .5s var(--w3-ease), color .3s var(--w3-ease);
-}
-
-.lp-list a:hover::after {
-  color: var(--w3-red);
-  transform: translate(.2rem, -50%);
-}
-
-.lp-list__t {
-  font-size: 1rem;
-  font-weight: 600;
-  transition: color .3s var(--w3-ease);
-}
-
-.lp-list a:hover .lp-list__t {
-  color: var(--w3-red);
-}
-
-.lp-list__d {
-  color: var(--w3-muted);
-  font-size: .7rem;
-  line-height: 1.6;
-}
-
-/* What's new */
-.lp-appicon {
-  border-radius: .7rem;
-  box-shadow: 0 0 0 1px var(--w3-line-soft);
-  display: block;
-  height: 3.2rem;
-  margin: 0 auto 1.2rem;
-  object-fit: cover;
-  width: 3.2rem;
-}
-
-.lp-cols {
-  border-top: 2px solid var(--w3-text);
-  display: grid;
-  gap: 2.4rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding-top: 1.6rem;
-}
-
-.lp-cols h3 {
-  color: var(--w3-text);
-  font-family: var(--w3-font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: .4rem;
-}
-
-.lp-cols p {
-  color: var(--w3-muted);
-  font-size: .8rem;
-  line-height: 1.75;
-  text-wrap: pretty;
-}
-
-/* Closing call */
-.lp-final {
-  background: var(--w3-bg);
-  padding: 4.8rem 0;
-  text-align: center;
-}
-
-.lp-final__title {
-  font-family: var(--w3-font-display);
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.12;
-  text-wrap: balance;
-}
-
-.lp-final__sub {
-  color: var(--w3-muted);
-  font-size: .9rem;
-  line-height: 1.6;
-  margin: .8rem 0 1.6rem;
-}
-
 /* Footer ------------------------------------------------------------------- */
 .lp-footer {
   background: var(--lp-alt);
+  border-top: 1px solid var(--w3-line);
   color: var(--w3-muted);
   font-family: var(--w3-font);
   font-size: .6rem;
@@ -752,10 +588,29 @@ body:has(#lp) .md-main {
   color: var(--w3-red);
 }
 
-.lp-footer__note {
+/* Colophon: the two reds the palette is made of */
+.lp-footer__colophon {
   border-bottom: 1px solid var(--w3-line);
   margin: 0;
   padding-bottom: 1.2rem;
+}
+
+.lp-swatch {
+  background: #d40000;
+  border-radius: 9999px;
+  display: inline-block;
+  height: .55rem;
+  vertical-align: -.05rem;
+  width: .55rem;
+}
+
+.lp-swatch--fcb {
+  background: #dc052d;
+  margin: 0 .4rem 0 .15rem;
+}
+
+.lp-footer__colophon i {
+  color: var(--w3-text);
 }
 
 .lp-footer__dir {
@@ -791,35 +646,13 @@ body:has(#lp) .md-main {
   padding-top: 1.2rem;
 }
 
-/* Scroll reveal: visible by default, JS opts in to the motion */
-.lp-js .lp-reveal {
-  opacity: 0;
-  transform: translateY(1.6rem);
-  transition: opacity .8s var(--w3-ease), transform .8s var(--w3-ease);
-}
-
-.lp-js .lp-reveal.is-in {
-  opacity: 1;
-  transform: none;
-}
-
-.lp-js .lp-postcard.lp-reveal.is-in {
-  transform: rotate(-2.5deg);
-}
-
-.lp-js .lp-postcard.lp-reveal.is-in:hover {
-  transform: rotate(0deg) translateY(-.2rem);
-}
-
 /* Responsive -------------------------------------------------------------- */
 @media screen and (max-width: 66.75em) {
   .lp-hero__title {
     font-size: 2.4rem;
   }
 
-  .lp-h2,
-  .lp-tagline__text,
-  .lp-final__title {
+  .lp-h2 {
     font-size: 1.8rem;
   }
 
@@ -829,12 +662,7 @@ body:has(#lp) .md-main {
 }
 
 @media screen and (max-width: 52em) {
-  .lp-nav {
-    width: auto;
-  }
-
-  .lp-nav__links,
-  .lp-nav__cta {
+  .lp-nav__links {
     display: none;
   }
 
@@ -867,7 +695,8 @@ body:has(#lp) .md-main {
 }
 
 @media screen and (max-width: 45.875em) {
-  .lp-wrap {
+  .lp-wrap,
+  .lp-nav__bar {
     padding: 0 1.2rem;
   }
 
@@ -880,24 +709,16 @@ body:has(#lp) .md-main {
   }
 
   .lp-hero__sub,
-  .lp-lede,
-  .lp-final__sub {
+  .lp-lede {
     font-size: .8rem;
   }
 
-  .lp-h2,
-  .lp-tagline__text,
-  .lp-final__title {
+  .lp-h2 {
     font-size: 1.5rem;
   }
 
-  .lp-section,
-  .lp-final {
+  .lp-section {
     padding: 3.2rem 0;
-  }
-
-  .lp-tagline {
-    padding: 2.4rem 0 4rem;
   }
 
   .lp-round,
@@ -905,9 +726,11 @@ body:has(#lp) .md-main {
     gap: 1.6rem;
   }
 
-  .lp-cols {
-    gap: 1.6rem;
-    grid-template-columns: minmax(0, 1fr);
+  .lp-sticker {
+    height: 4rem;
+    right: -.4rem;
+    top: -1.4rem;
+    width: 4rem;
   }
 
   .lp-footer__dir {
@@ -916,14 +739,11 @@ body:has(#lp) .md-main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lp-js .lp-reveal,
   .lp-postcard,
-  .lp-js .lp-postcard.lp-reveal.is-in {
-    opacity: 1;
-    transform: none;
-  }
-
-  .lp-js .lp-tagline__text span {
-    color: var(--w3-text);
+  .lp-sticker,
+  .lp-menu,
+  .lp-btn,
+  .lp-link::after {
+    transition: none;
   }
 }

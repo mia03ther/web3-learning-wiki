@@ -9,35 +9,42 @@ hide:
 
 <section class="lp-hero" aria-labelledby="lp-title">
   <div class="lp-wrap lp-hero__grid">
-    <div class="lp-hero__text lp-reveal">
-      <h1 class="lp-hero__title" id="lp-title">把 Web3 × AI<br>讲成人话。</h1>
-      <p class="lp-hero__sub">MIA 的学习笔记本。去听的活动、读过的文档、踩过的坑，都嚼碎了写在这里，先写给群友看。</p>
+    <div class="lp-hero__text">
+      <h1 class="lp-hero__title" id="lp-title">MIA 的<br>Web3 <span class="lp-red">×</span> AI 笔记本</h1>
+      <p class="lp-hero__sub">去听的活动、读过的文档、踩过的坑，都整理在这里。主要写给群友看，写错了或者想补充，随时来改。</p>
       <div class="lp-hero__actions">
-        <a class="lp-btn" href="start/">进入 Wiki</a>
-        <a class="lp-link" href="field-notes/">最新的现场笔记</a>
+        <a class="lp-btn" href="start/">从入门开始读</a>
+        <a class="lp-link" href="changelog/">v3.0 更新了什么</a>
       </div>
-      <p class="lp-hero__meta"><span class="w3-num lp-red">v3.0</span>　2026.10.30 更新　·　3 场活动　·　7 篇现场笔记</p>
     </div>
-    <figure class="lp-postcard lp-reveal">
+    <figure class="lp-postcard">
       <img src="assets/f1/leclerc-singapore-2025.jpg" alt="法拉利 16 号赛车在 2025 年新加坡大奖赛夜间练习赛中驶过赛道" width="1200" height="675" decoding="async">
       <figcaption>
         <span><b class="w3-num lp-red">No.16</b>　Leclerc · Singapore GP 2025</span>
         <a href="https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Ferrari_-_Charles_Leclerc_-_FP2.jpg">Photo: Liauzh · CC BY-SA 4.0</a>
       </figcaption>
+      <svg class="lp-sticker" viewBox="0 0 120 120" role="img" aria-label="拜仁慕尼黑贴纸：Mia san mia">
+        <circle cx="60" cy="60" r="60" fill="#fff"/>
+        <circle cx="60" cy="60" r="56" fill="#dc052d"/>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#fff" stroke-width="1.2"/>
+        <text x="60" y="50" text-anchor="middle" font-size="15" letter-spacing="1.5">MIA SAN</text>
+        <text x="60" y="81" text-anchor="middle" font-size="34" letter-spacing="1">MIA</text>
+        <text x="60" y="98" text-anchor="middle" font-size="10" letter-spacing="2.5">1900</text>
+      </svg>
     </figure>
   </div>
 </section>
 
 <section class="lp-section" aria-labelledby="lp-latest">
   <div class="lp-wrap lp-round">
-    <header class="lp-round__head lp-reveal">
+    <header class="lp-round__head">
       <p class="lp-round__no w3-num">R03</p>
       <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
       <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　深圳　·　500+ 人　·　28 个黑客松项目</p>
       <p class="lp-lede">当 AI 遇上 Ethereum。Vitalik 聊 AI 会不会破解密码学，以太坊基金会讲链上隐私，Builder 们争论 Agent 该拿多大的权限。</p>
       <p class="lp-links"><a class="lp-link" href="field-notes/ethshenzhen-2026/">专题总览</a></p>
     </header>
-    <ol class="lp-reports lp-reveal">
+    <ol class="lp-reports">
       <li><a href="field-notes/ethshenzhen-2026/day2-morning/"><span class="lp-reports__k w3-num">DAY 2 · AM</span><span class="lp-reports__t">安全、隐私与路线图</span><span class="lp-reports__d">Vitalik，Winderica，Nym，Strawmap 路线图圆桌</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">DAY 2 · PM</span><span class="lp-reports__t">AI 开发与 Agent 的边界</span><span class="lp-reports__d">Qi Zhou 的 AI Coding 规矩，数据上链，信任边界圆桌，获奖项目</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day1-workshops/"><span class="lp-reports__k w3-num">DAY 1 · WORKSHOP</span><span class="lp-reports__t">硬件钱包与 Vibecoding</span><span class="lp-reports__d">OSKey 现场 DIY 硬件钱包，Tiny 熊从大模型讲到 Agent</span></a></li>
@@ -46,19 +53,13 @@ hide:
   </div>
 </section>
 
-<section class="lp-tagline" aria-label="为什么写这个 Wiki">
-  <div class="lp-wrap">
-    <p class="lp-tagline__text" data-lp-words><span>听过的东西，</span><span>写下来，</span><span>才算真的懂。</span><span>写到群友</span><span>也能看懂，</span><span>才算真的</span><span>写完。</span></p>
-  </div>
-</section>
-
 <section class="lp-section lp-section--alt" aria-labelledby="lp-season">
   <div class="lp-wrap">
-    <header class="lp-head lp-reveal">
+    <header class="lp-head">
       <h2 class="lp-h2" id="lp-season">2026 赛季</h2>
       <p class="lp-lede">每场活动算一站，跑完的都在这里。</p>
     </header>
-    <ol class="lp-calendar lp-reveal">
+    <ol class="lp-calendar">
       <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 篇</span></a></li>
       <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis 深圳</span><span class="lp-calendar__type">黑客松宣讲 · 路演</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 篇</span></a></li>
       <li><a href="field-notes/ai-web3-meetup/"><span class="lp-calendar__r w3-num">R01</span><span class="lp-calendar__name">AI × Web3 产业创新交流会</span><span class="lp-calendar__type">交流会</span><span class="lp-calendar__date w3-num">09.19</span><span class="lp-calendar__n">1 篇</span></a></li>
@@ -68,12 +69,12 @@ hide:
 
 <section class="lp-section" aria-labelledby="lp-topics">
   <div class="lp-wrap lp-split">
-    <header class="lp-head lp-reveal">
+    <header class="lp-head">
       <h2 class="lp-h2" id="lp-topics">按主题读</h2>
       <p class="lp-lede">笔记里反复出现的概念，都按主题收好了。读到卡住的地方，就来这里查。</p>
       <p class="lp-links"><a class="lp-link" href="knowledge/">知识库总览</a></p>
     </header>
-    <ul class="lp-list lp-reveal">
+    <ul class="lp-list">
       <li><a href="security/"><span class="lp-list__t">安全与隐私</span><span class="lp-list__d">钱包怎么放，AI 时代的密码学，链上隐私的四个层次</span></a></li>
       <li><a href="devtools/ai-coding/"><span class="lp-list__t">AI 辅助开发</span><span class="lp-list__d">大模型的五个缺陷，Agent 与 Harness，可以直接抄的 AGENTS.md</span></a></li>
       <li><a href="ai-web3/mcp-agents/"><span class="lp-list__t">MCP 与 AI Agents</span><span class="lp-list__d">Agent 怎么调用工具、怎么付钱、怎么被管住</span></a></li>
@@ -85,35 +86,12 @@ hide:
   </div>
 </section>
 
-<section class="lp-section lp-section--alt" aria-labelledby="lp-new">
+<section class="lp-section lp-section--alt" aria-labelledby="lp-edit">
   <div class="lp-wrap">
-    <header class="lp-head lp-head--center lp-reveal">
-      <img class="lp-appicon" src="assets/avatar/logo.jpg" alt="" width="96" height="96" loading="lazy">
-      <h2 class="lp-h2" id="lp-new">版本 <span class="w3-num">3.0</span></h2>
-      <p class="lp-lede">10 月 30 日更新。整个 Wiki 从里到外重做了一遍。</p>
+    <header class="lp-head">
+      <h2 class="lp-h2" id="lp-edit">这个本子谁都能改</h2>
+      <p class="lp-lede">看到写错的、过时的，或者你也去了哪场活动想补两句：点任意页面右上角的 ✏️，在 GitHub 上改完提交就行，我看到就合并。不会用 GitHub 也没关系，群里说一声，我来改。</p>
+      <p class="lp-links"><a class="lp-link" href="contributing/">贡献指南</a><a class="lp-link" href="https://github.com/mia03ther/web3-learning-wiki">GitHub 仓库</a></p>
     </header>
-    <div class="lp-cols lp-reveal">
-      <div>
-        <h3>新内容</h3>
-        <p>ETHShenzhen 2026 两天四篇现场笔记，一场 AI × Web3 交流会，还有两个新专题：安全与隐私、AI 辅助开发。</p>
-      </div>
-      <div>
-        <h3>更好读</h3>
-        <p>新的入口页和阅读页。每篇笔记都按同一个结构写，有时间线，也能按主题找。国内打开更快。</p>
-      </div>
-      <div>
-        <h3>修好了</h3>
-        <p>图表、技能树、学习打卡和收款码放大，之前一直没生效，现在都能用了。</p>
-      </div>
-    </div>
-    <p class="lp-links lp-links--center lp-reveal"><a class="lp-link" href="changelog/">版本发布记录</a></p>
-  </div>
-</section>
-
-<section class="lp-final" aria-labelledby="lp-final-title">
-  <div class="lp-wrap lp-reveal">
-    <h2 class="lp-final__title" id="lp-final-title">准备好了，就进来。</h2>
-    <p class="lp-final__sub">从「从这里开始」读起，十分钟就知道这里有什么。</p>
-    <a class="lp-btn" href="start/">进入 Wiki</a>
   </div>
 </section>

@@ -2,8 +2,8 @@
 
 {#-
   Entrance page template (docs/index.md, docs/en/index.md use
-  `template: landing.html`). Full-bleed sections with their own floating nav
-  and directory footer; none of the wiki chrome (tabs, sidebars, banner).
+  `template: landing.html`). Full-bleed sections with their own top bar and
+  directory footer; none of the wiki chrome (tabs, sidebars, banner).
   Page content is plain HTML written in the Markdown file; styles live in
   assets/stylesheets/home.css, behaviour in assets/javascripts/extra.js.
 -#}
@@ -32,7 +32,6 @@
         <li><a href="{{ home() }}handbook/">{{ t('成长', 'Grow') }}</a></li>
         <li><a href="{{ home() }}about/">{{ t('关于', 'About') }}</a></li>
       </ul>
-      <a class="lp-nav__cta" href="{{ home() }}start/">{{ t('进入 Wiki', 'Open the wiki') }}</a>
       <button class="lp-nav__toggle" type="button" aria-expanded="false" aria-controls="lp-menu"
               aria-label="{{ t('打开菜单', 'Open menu') }}" data-lp-toggle>
         <span></span><span></span>
@@ -65,9 +64,10 @@
 {% block footer %}
   <footer class="lp-footer">
     <div class="lp-wrap">
-      <p class="lp-footer__note">
-        {{ t('笔记大多来自现场录音转写，没把握的地方都标了「待核实」。发现错误，欢迎在群里说，或者在页面上直接改。',
-             'Most notes come from transcribed recordings; anything uncertain is marked as unverified. Spotted a mistake? Edit the page on GitHub.') }}
+      <p class="lp-footer__colophon">
+        <span class="lp-swatch" aria-hidden="true"></span><span class="lp-swatch lp-swatch--fcb" aria-hidden="true"></span>
+        {{ t('这里的红，一半是法拉利的 Rosso Corsa，一半是拜仁红。<i>Mia san mia</i>，拜仁的口号，巴伐利亚话「我们就是我们」。',
+             'The red here is half Ferrari Rosso Corsa, half FC Bayern red. <i>Mia san mia</i>: the club motto, Bavarian for “we are who we are”.') }}
       </p>
       <nav class="lp-footer__dir" aria-label="{{ t('站点目录', 'Directory') }}">
         <div>

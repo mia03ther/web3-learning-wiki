@@ -276,70 +276,13 @@
   });
 
   // ------------------------------------------------------ entrance page
-  // Everything below only runs on the landing template (#lp). Content is
-  // visible without JS; the "lp-js" class opts the page into the motion.
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
+  // The landing template (#lp) is plain HTML and CSS; only the mobile menu
+  // needs script.
   function initLanding() {
     var lp = $("#lp");
     if (!lp || lp.dataset.w3Ready) return;
     lp.dataset.w3Ready = "1";
-    if (!reduceMotion) document.documentElement.classList.add("lp-js");
 
-    // Scroll reveal: rise and fade in once, siblings stagger 60ms (max 400ms).
-    var reveals = $$(".lp-reveal");
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      reveals.forEach(function (el) { el.classList.add("is-in"); });
-    } else {
-      reveals.forEach(function (el) {
-        var siblings = $$(":scope > .lp-reveal", el.parentNode);
-        var i = siblings.indexOf(el);
-        if (i > 0) el.style.transitionDelay = Math.min(i * 60, 400) + "ms";
-      });
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        });
-      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
-      reveals.forEach(function (el) { io.observe(el); });
-    }
-
-    // Tagline: each word lights up as it crosses 62% of the viewport height.
-    var words = $$("[data-lp-words] span");
-    var art = $("[data-lp-parallax]");
-    var nav = $("[data-lp-nav]");
-    var queued = false;
-
-    function frame() {
-      queued = false;
-      var h = window.innerHeight;
-      if (!reduceMotion) {
-        var trigger = h * 0.62;
-        words.forEach(function (w) {
-          var r = w.getBoundingClientRect();
-          w.classList.toggle("is-lit", r.top + r.height / 2 < trigger);
-        });
-        if (art) {
-          var y = Math.min(window.scrollY, h);
-          art.style.transform = "translate3d(0," + (y * 0.12).toFixed(1) + "px,0)";
-        }
-      }
-      if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 8);
-    }
-
-    function queue() {
-      if (queued) return;
-      queued = true;
-      window.requestAnimationFrame(frame);
-    }
-
-    window.addEventListener("scroll", queue, { passive: true });
-    window.addEventListener("resize", queue, { passive: true });
-    frame();
-
-    // Mobile menu: full-height panel, links arrive one after another.
     var toggle = $("[data-lp-toggle]");
     var menu = $("[data-lp-menu]");
     if (!toggle || !menu) return;
@@ -349,9 +292,6 @@
       document.body.classList.toggle("w3-no-scroll", open);
       if (open) {
         menu.hidden = false;
-        $$("li", menu).forEach(function (li, i) {
-          li.style.transitionDelay = Math.min(i * 60, 400) + "ms";
-        });
         void menu.offsetWidth;
         menu.classList.add("is-open");
       } else {
@@ -371,6 +311,11 @@
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") setMenu(false);
     });
+    // Close it when the window grows past the mobile breakpoint.
+    var wide = window.matchMedia("(min-width: 52.0625em)");
+    if (wide.addEventListener) {
+      wide.addEventListener("change", function (e) { if (e.matches) setMenu(false); });
+    }
   }
 
   // ---------------------------------------------------------- boot
