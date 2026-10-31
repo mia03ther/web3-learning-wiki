@@ -76,6 +76,7 @@ extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/home.css
   - assets/stylesheets/reading.css
+  - assets/stylesheets/plush.css
 
 extra_javascript:
   - assets/javascripts/extra.js

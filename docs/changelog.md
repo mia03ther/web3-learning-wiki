@@ -15,6 +15,26 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>版本 3.2</b><span>毛绒手账</span></div>
+  <span class="w3-release__ver">v3.2.0</span>
+  <span class="w3-release__date">2026-10-31</span>
+</div>
+
+<p class="w3-release__summary">把这本笔记换成毛绒布面、奶油纸页的手账样子。熟悉的红、照片和队徽继续留在这里。</p>
+
+- **阅读界面**：首页和正文采用毛绒布面与奶油纸页的视觉，保留红色作为重点色。
+- **手账细节**：用缝线、布贴和柔软的边缘区分封面、目录与正文。
+- **字体**：标题和正文采用古典衬线字，代码保持等宽字。
+- **个人元素**：保留首页的勒克莱尔照片和拜仁队徽，沿用 F1 与拜仁的红。
+- **适配设计**：这套视觉同时为手机阅读和深色模式提供对应样式。
+- **本次范围**：纯视觉更新，没有新增活动，已有笔记正文保持原样。
+</div>
+
+## 历史版本
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.1</b><span>酒红色阅读室</span></div>
   <span class="w3-release__ver">v3.1.0</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -29,8 +49,6 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 - **资料完善**：ETHShenzhen 安全笔记补上 Anthropic 和 Nethermind 的一手资料，区分供应链事件报道与技术拆解。
 - 首页的 F1 明信片、拜仁队徽，以及那句「这里的红，一半是法拉利的 Rosso Corsa，一半是拜仁红」都保留。
 </div>
-
-## 历史版本
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

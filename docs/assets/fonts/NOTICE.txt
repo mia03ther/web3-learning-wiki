@@ -1,0 +1,27 @@
+Notebook Serif Regular
+======================
+
+Modified character subset of Noto Serif CJK SC Regular, Version 2.003;hotconv 1.1.1;makeotfexe 2.6.0.
+Distributed under SIL Open Font License 1.1; see LICENSE-NotoSerifCJK.txt.
+
+Original copyright notice from font metadata:
+© 2017-2024 Adobe (http://www.adobe.com/).
+
+Official source font: https://github.com/notofonts/noto-cjk/raw/refs/heads/main/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Regular.otf
+Official license: https://raw.githubusercontent.com/notofonts/noto-cjk/refs/heads/main/Serif/LICENSE
+Source SHA-256: 2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca
+
+Modifications: static Regular weight 400, normal style; subset to all 7445
+GB2312 characters (including 6763 Han characters), all supported characters
+in docs/ and overrides/, ASCII, general/CJK punctuation and fullwidth forms.
+7740 encoded Unicode characters retained; all current document Han
+characters are covered. Unsupported emoji/scripts use system fallback fonts.
+Unused glyphs, hinting and layout features removed; kerning and common
+ligatures retained. Outlines were not redesigned. Converted to WOFF2 with
+fontTools/Brotli and renamed to Notebook Serif as a derivative webfont.
+
+No Claude proprietary font is included. Georgia is not redistributed; it
+may be selected from the reader's locally installed system fonts.
+
+Output size: 1536392 bytes
+Output SHA-256: dbc2f6a53846a708686b2d345708d0210d2ae582729d50d2ab9fb419f0d0d3fc

@@ -15,6 +15,26 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>Version 3.2</b><span>A plush notebook</span></div>
+  <span class="w3-release__ver">v3.2.0</span>
+  <span class="w3-release__date">2026-10-31</span>
+</div>
+
+<p class="w3-release__summary">A soft fabric cover and cream paper for the notebook, keeping the familiar red, photos and crest.</p>
+
+- **Reading pages**: a plush fabric and cream-paper visual treatment across the home page and articles, with red accents.
+- **Notebook details**: stitched edges, fabric patches and softer borders for the cover, contents and reading area.
+- **Typography**: classical serif type for headings and body text, with monospaced type for code.
+- **Personal touches**: the Leclerc cover photo, Bayern crest and the two reds remain.
+- **Design support**: corresponding styles for mobile reading and dark mode.
+- **Scope**: a visual update only. No new events or changes to the existing article text.
+</div>
+
+## Previous releases
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>Version 3.1</b><span>A burgundy reading room</span></div>
   <span class="w3-release__ver">v3.1.0</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -27,8 +47,6 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 - Added primary references to the ETHShenzhen security note and clarified reporting attribution.
 - Kept the homepage's Leclerc postcard, Bayern crest and the story behind the two reds.
 </div>
-
-## Previous releases
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">
