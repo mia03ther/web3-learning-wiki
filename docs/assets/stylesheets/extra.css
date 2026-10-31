@@ -274,10 +274,17 @@ body {
 }
 
 .md-header__button.md-logo img,
+.md-nav__button.md-logo img,
+.lp-nav .lp-nav__brand img,
+.w3-doc-brand .w3-doc-brand__link img {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.md-header__button.md-logo img,
 .md-nav__button.md-logo img {
-  border-radius: 9999px;
   height: 1.4rem;
-  object-fit: cover;
   width: 1.4rem;
 }
 
@@ -1534,7 +1541,8 @@ body {
 }
 
 .md-typeset .w3-release__icon {
-  border-radius: .6rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   box-shadow: 0 0 0 1px var(--w3-line-soft);
   flex: none;
   height: 2.8rem;
@@ -1543,10 +1551,11 @@ body {
 }
 
 .md-typeset .w3-release__icon img {
-  border-radius: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
 }
 
@@ -1617,7 +1626,8 @@ body {
 }
 
 .md-typeset .w3-avatar {
-  border-radius: 9999px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   flex: none;
   height: 3.2rem;
   overflow: hidden;
@@ -1630,10 +1640,11 @@ body {
 }
 
 .md-typeset .w3-avatar img {
-  border-radius: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
 }
 

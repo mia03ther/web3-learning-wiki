@@ -19,6 +19,12 @@
   --book-red: #a52f43;
   --book-red-soft: #f1c8c7;
   --book-shadow: 0 3px 7px #88533b16, 0 14px 32px -22px #6e382e66;
+  --book-page-width: 57rem;
+  --book-page-gutter: 3rem;
+  --book-page-radius: 1.1rem;
+  /* Fabric showing around the sheet, the same on every side and page. */
+  --book-margin: 1.6rem;
+  --book-sheet: min(calc(100% - 2 * var(--book-margin)), var(--book-page-width));
 }
 
 body[data-md-color-scheme="slate"] {
@@ -60,15 +66,42 @@ body[data-md-color-scheme]:not(:has(#lp)) {
   background-blend-mode: multiply;
 }
 
-/* A textile cover, a cream label and the photo tucked in with washi tape. */
+/* A textile cover with one sheet of cream paper on it. The top bar is the
+   sheet's top edge (it stays pinned while scrolling), the footer is its
+   bottom, and the photo is tucked in with washi tape. */
 body:has(#lp) .lp {
-  background: transparent;
+  background: var(--book-paper);
+  border: 1px solid var(--book-paper-edge);
+  border-top: 0;
+  border-radius: 0 0 var(--book-page-radius) var(--book-page-radius);
+  box-shadow: var(--book-shadow);
+  margin: 0 auto var(--book-margin);
+  width: var(--book-sheet);
+}
+
+.lp-wrap {
+  margin: 0;
+  max-width: none;
+  padding: 0 var(--book-page-gutter);
 }
 
 .lp-nav {
   background-color: var(--book-paper);
+  border: 1px solid var(--book-paper-edge);
   border-bottom: 1px dashed var(--book-thread);
-  box-shadow: 0 3px 0 color-mix(in srgb, var(--book-paper-edge) 45%, transparent);
+  border-radius: var(--book-page-radius) var(--book-page-radius) 0 0;
+  box-shadow: none;
+  left: auto;
+  margin: var(--book-margin) auto 0;
+  position: sticky;
+  right: auto;
+  top: 0;
+  width: var(--book-sheet);
+}
+
+.lp-nav__bar {
+  max-width: none;
+  padding: 0 var(--book-page-gutter);
 }
 
 .lp-nav__brand img {
@@ -82,20 +115,18 @@ body:has(#lp) .lp {
 }
 
 .lp-hero {
-  padding-top: 6.8rem;
-  padding-bottom: 4.2rem;
+  padding: 3rem 0;
 }
 
 .lp-hero__text {
-  background: var(--book-paper);
-  border: 1px solid var(--book-paper-edge);
-  border-radius: 1.1rem 1.4rem .9rem 1.3rem;
-  box-shadow: var(--book-shadow), 3px 4px 0 var(--book-paper-edge);
-  padding: 1.8rem 1.6rem;
-  position: relative;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: 0;
+  padding: 0;
 }
 
-.lp-hero__text::before,
 .lp-postcard::before {
   background: color-mix(in srgb, var(--book-red-soft) 78%, var(--book-paper));
   border-left: 1px dashed var(--book-thread);
@@ -185,20 +216,20 @@ body:has(#lp) .lp {
 }
 
 .lp-section {
-  background: var(--book-paper);
-  border-top: 1px solid var(--book-paper-edge);
-  margin: 0 auto;
-  max-width: 57rem;
-  padding: 3.4rem 0;
+  background: transparent;
+  border-top: 1px dashed var(--book-thread);
+  margin: 0;
+  max-width: none;
+  padding: 3rem 0;
 }
 
 .lp-hero + .lp-section {
-  border-radius: 1.5rem 1.5rem 0 0;
-  box-shadow: 0 -5px 0 var(--book-paper-edge);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .lp-section--alt {
-  background: var(--w3-surface);
+  background: transparent;
 }
 
 .lp-h2 {
@@ -241,11 +272,16 @@ body:has(#lp) .lp {
   padding: .15rem .4rem;
 }
 
+/* The footer lives inside the sheet, below a stitched line. */
 .lp-footer {
-  background: var(--book-paper);
+  background: transparent;
+  border: 0;
   border-top: 1px dashed var(--book-thread);
-  margin: 0 auto;
-  max-width: 57rem;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  max-width: none;
+  width: auto;
 }
 
 .lp-footer__colophon {
@@ -422,6 +458,71 @@ body:has(#lp) .lp {
   border-top: 1px dashed var(--book-thread);
 }
 
+/* Reading pages are the same single sheet as the home page: the banner, the
+   top bar, the article with its contents column and the footer share one
+   width and join without gaps, with the same fabric margin around them.
+   The article and the contents are no longer separate cards. */
+body:not(:has(#lp)) :is(.md-banner, .md-header, .md-main, .md-footer) {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--book-sheet);
+}
+
+body:not(:has(#lp)) .md-banner {
+  background: var(--w3-surface);
+  border: 1px solid var(--book-paper-edge);
+  border-bottom: 0;
+  border-radius: var(--book-page-radius) var(--book-page-radius) 0 0;
+  margin-top: var(--book-margin);
+}
+
+body:not(:has(#lp)) .md-header {
+  border-left: 1px solid var(--book-paper-edge);
+  border-right: 1px solid var(--book-paper-edge);
+  box-shadow: none;
+}
+
+/* Without the banner (dismissed), the top bar starts the sheet. */
+body:not(:has(#lp)) :is([data-md-component="announce"][hidden], [data-md-component="announce"]:not(:has(.md-banner))) + .md-header {
+  border-radius: var(--book-page-radius) var(--book-page-radius) 0 0;
+  border-top: 1px solid var(--book-paper-edge);
+  margin-top: var(--book-margin);
+}
+
+body:not(:has(#lp)) .md-main {
+  background: var(--book-paper);
+  border-left: 1px solid var(--book-paper-edge);
+  border-right: 1px solid var(--book-paper-edge);
+  box-shadow: var(--book-shadow);
+}
+
+body:not(:has(#lp)) .md-footer {
+  border: 1px solid var(--book-paper-edge);
+  border-top: 1px dashed var(--book-thread);
+  border-radius: 0 0 var(--book-page-radius) var(--book-page-radius);
+  box-shadow: var(--book-shadow);
+  margin-bottom: var(--book-margin);
+  overflow: hidden;
+}
+
+body:not(:has(#lp)) .md-content {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+body:not(:has(#lp)) .md-sidebar--secondary .md-nav--secondary {
+  background: transparent;
+  border: 0;
+  border-left: 1px dashed var(--book-thread);
+  border-radius: 0;
+  box-shadow: none;
+  padding: .2rem 0 .2rem .8rem;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-nav--primary .md-nav__link {
     border-radius: .55rem;
@@ -465,7 +566,7 @@ body:has(#lp) .lp {
   }
 
   .lp-hero__text {
-    max-width: 30rem;
+    max-width: none;
   }
 
   .lp-hero__title {
@@ -474,12 +575,23 @@ body:has(#lp) .lp {
 }
 
 @media screen and (max-width: 45.875em) {
+  :root {
+    --book-page-gutter: 1.1rem;
+    --book-page-radius: .8rem;
+    --book-margin: .6rem;
+  }
+
+  .lp-wrap,
+  .lp-nav__bar {
+    padding: 0 var(--book-page-gutter);
+  }
+
   .lp-hero {
-    padding: 5rem 0 2.8rem;
+    padding: 2.2rem 0;
   }
 
   .lp-hero__text {
-    padding: 1.5rem 1.1rem;
+    padding: 0;
   }
 
   .lp-hero__title {
@@ -491,8 +603,8 @@ body:has(#lp) .lp {
   }
 
   .lp-section {
-    padding-top: 2.6rem;
-    padding-bottom: 2.6rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
   }
 }
 

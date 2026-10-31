@@ -30,7 +30,7 @@ and gives me somewhere to return when I need it again.
 <div class="w3-maintainer" markdown>
 <div class="w3-maintainer-row" markdown>
 <div class="w3-avatar" markdown>
-![MIA_Ether](../../assets/avatar/main.png){ width="56" height="56" loading=lazy }
+![MIA_Ether](../../assets/avatar/logo.jpg){ width="56" height="56" loading=lazy }
 </div>
 <div class="w3-maintainer-info" markdown>
 ### MIA_Ether

@@ -14,7 +14,7 @@ hide:
       <p class="lp-hero__sub">去听的活动、读过的文档、踩过的坑，都整理在这里。主要写给群友看，写错了或者想补充，随时来改。</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">从入门开始读</a>
-        <a class="lp-link" href="changelog/">v3.2 更新了什么</a>
+        <a class="lp-link" href="changelog/">v3.2.1 更新了什么</a>
       </div>
     </div>
     <figure class="lp-postcard">

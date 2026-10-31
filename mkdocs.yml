@@ -13,7 +13,7 @@ theme:
   name: material
   custom_dir: overrides
   language: zh
-  # logo / favicon 都用 MIA 的头像（由 docs/assets/avatar/main.png 裁切生成）
+  # 头像用完整的原始正方形图（docs/assets/avatar/main.png 只缩小、不裁切），显示时用圆形遮罩
   logo: assets/avatar/logo.jpg
   favicon: assets/avatar/favicon.png
   # 不从 Google Fonts 加载字体（国内经常卡住首屏），改用系统字体栈，见 extra.css

@@ -10,10 +10,10 @@
   {% set is_en = page and page.url and page.url.startswith("en/") %}
   <div class="w3-banner">
     {% if is_en %}
-      <b>Version 3.2</b>: a plush notebook, with a fabric cover, cream paper and stitched details.
+      <b>Version 3.2.1</b>: the full avatar, and every page is one sheet of paper.
       <a href="{{ base_url.rstrip('/') }}/en/changelog/">See what's new ›</a>
     {% else %}
-      <b>版本 3.2</b>：毛绒手账，布面封皮、奶油纸页和缝线布贴。
+      <b>版本 3.2.1</b>：头像不再裁切，首页和文章页都统一成一张纸。
       <a href="{{ base_url.rstrip('/') }}/changelog/">看看更新了什么 ›</a>
     {% endif %}
   </div>

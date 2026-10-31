@@ -32,7 +32,7 @@ description: Web3 Learning Wiki 的来历、学习理念、维护者 MIA_Ether �
 <div class="w3-maintainer" markdown>
 <div class="w3-maintainer-row" markdown>
 <div class="w3-avatar" markdown>
-![MIA_Ether 头像](../assets/avatar/main.png){ width="56" height="56" loading=lazy }
+![MIA_Ether 头像](../assets/avatar/logo.jpg){ width="56" height="56" loading=lazy }
 </div>
 <div class="w3-maintainer-info" markdown>
 ### MIA_Ether

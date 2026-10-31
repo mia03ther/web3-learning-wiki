@@ -2,7 +2,7 @@
 
 [在线阅读](https://mia03ther.github.io/web3-learning-wiki/) · [版本发布](https://mia03ther.github.io/web3-learning-wiki/changelog/) · [贡献指南](docs/contributing.md)
 
-MIA_Ether 写给群友看的 Web3 × AI 学习笔记。v3.2 换上毛绒手账阅读界面：布面封皮、奶油纸页和缝线布贴，保留红色、F1 照片和拜仁队徽。内容分成入门、知识库、现场笔记、成长和关于五个板块。直接打开在线版就能阅读、搜索和切换明暗主题，不需要安装软件。
+MIA_Ether 写给群友看的 Web3 × AI 学习笔记。v3.2.1 采用毛绒手账阅读界面：布面封皮、奶油纸页和缝线布贴，保留红色、F1 照片和拜仁队徽。内容分成入门、知识库、现场笔记、成长和关于五个板块。直接打开在线版就能阅读、搜索和切换明暗主题，不需要安装软件。
 
 中文内容在 `docs/`，英文骨架在 `docs/en/`。英文页面会标明哪些正文仍是中文，尚未翻译的页面由 [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) 回退到中文内容。
 

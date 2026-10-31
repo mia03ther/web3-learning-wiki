@@ -15,6 +15,25 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>版本 3.2.1</b><span>完整头像 · 纸页对齐</span></div>
+  <span class="w3-release__ver">v3.2.1</span>
+  <span class="w3-release__date">2026-10-31</span>
+</div>
+
+<p class="w3-release__summary">头像不再裁切；首页和文章页都只剩一张纸，宽度和四周的布边统一。</p>
+
+- **头像**：用完整的原始正方形图，只缩小、不裁切，显示时加圆形遮罩；网页图标同样处理，文件也小了很多。
+- **首页**：导航成了纸页的顶边，滚动时吸在顶部；页脚收进纸页里。导航、正文、页脚同宽相接，上下左右露出的布边一样宽。
+- **文章页**：公告、顶栏、正文和页脚连成同一张纸；正文和目录不再是两张大小不一的卡片，目录用一条虚线隔开。
+- **保留风格**：古典衬线字体、毛绒布面、F1 照片和拜仁队徽继续保留。
+- **本次范围**：头像显示与版式调整，没有新增活动或改动笔记正文。
+</div>
+
+## 历史版本
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.2</b><span>毛绒手账</span></div>
   <span class="w3-release__ver">v3.2.0</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -29,8 +48,6 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 - **适配设计**：这套视觉同时为手机阅读和深色模式提供对应样式。
 - **本次范围**：纯视觉更新，没有新增活动，已有笔记正文保持原样。
 </div>
-
-## 历史版本
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

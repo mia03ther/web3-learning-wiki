@@ -58,15 +58,20 @@
 {% block tabs %}{% endblock %}
 {% block site_nav %}{% endblock %}
 
+{# One sheet of paper: the page content and the footer share #lp, and the top
+   bar sits flush on top of it, all at the same width. #}
 {% block hero %}
   <div class="lp" id="lp">
     {{ page.content }}
+    {{ lp_footer() }}
   </div>
 {% endblock %}
 
 {% block container %}{% endblock %}
 
-{% block footer %}
+{% block footer %}{% endblock %}
+
+{% macro lp_footer() %}
   <footer class="lp-footer">
     <div class="lp-wrap">
       <p class="lp-footer__colophon">
@@ -126,4 +131,4 @@
       </div>
     </div>
   </footer>
-{% endblock %}
+{% endmacro %}

@@ -15,6 +15,25 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>Version 3.2.1</b><span>Full avatar · aligned pages</span></div>
+  <span class="w3-release__ver">v3.2.1</span>
+  <span class="w3-release__date">2026-10-31</span>
+</div>
+
+<p class="w3-release__summary">The avatar is no longer cropped, and every page is now a single sheet of paper with the same width and the same fabric margin all round.</p>
+
+- **Avatar**: the whole original square image, scaled down rather than cropped, shown with a round mask; the favicon gets the same treatment and the files are much smaller.
+- **Home page**: the top bar is now the top edge of the sheet and stays pinned while scrolling; the footer sits inside the sheet. Bar, content and footer share one width with an even fabric margin.
+- **Reading pages**: the banner, top bar, article and footer join into one sheet; the article and its contents are no longer two cards of different sizes, just a dashed line between them.
+- **Style retained**: classical serif type, plush fabric, the F1 photo and Bayern crest remain.
+- **Scope**: avatar display and layout adjustments only. No new events or changes to the existing article text.
+</div>
+
+## Previous releases
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>Version 3.2</b><span>A plush notebook</span></div>
   <span class="w3-release__ver">v3.2.0</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -29,8 +48,6 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 - **Design support**: corresponding styles for mobile reading and dark mode.
 - **Scope**: a visual update only. No new events or changes to the existing article text.
 </div>
-
-## Previous releases
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">
