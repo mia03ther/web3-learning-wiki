@@ -514,8 +514,13 @@ body {
     margin-top: 1.2rem;
   }
 
-  .md-nav--primary .md-nav__item--section > .md-nav {
-    margin-left: 0;
+  /* A section with an index page wraps its link in a container that also
+     carries .md-nav__link; keep the padding on the inner link only so the
+     section lines up with its siblings. */
+  .md-nav--primary .md-nav__container,
+  .md-nav--primary .md-nav__container:hover {
+    background: none;
+    padding: 0;
   }
 }
 

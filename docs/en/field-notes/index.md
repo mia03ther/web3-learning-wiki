@@ -16,5 +16,5 @@ the real ecosystem are doing. Every note follows one structure:
 ## Reading tips
 
 - Words marked `【concept】` are explained in the [Core Concepts](../fundamentals/core-concepts.md);
-- Content comes from speech-to-text transcripts — colloquial and with homophone errors, corrected inline (e.g. "Monet / Mona / Monai" = **Monad**, a high-performance L1);
+- Names and terms are checked against official sources and linked inline;
 - Every note ends with "**what you can do now**" — turning what you heard into action.

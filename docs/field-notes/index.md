@@ -65,13 +65,13 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
     <div class="w3-timeline__date"><b class="w3-round w3-num">R02</b>09.26<small>Monad Metropolis · 深圳</small></div>
     <div class="w3-timeline__items">
       <a class="w3-note" href="monad-hackathon/">
-        <div class="w3-note__meta"><span class="w3-chip">黑客松宣讲</span><span>约 179 分钟录音</span></div>
+        <div class="w3-note__meta"><span class="w3-chip">黑客松宣讲</span><span>宣讲 · 圆桌 · Demo</span></div>
         <p class="w3-note__title">Monad 黑客松宣讲与 Agent 金融圆桌</p>
         <p class="w3-note__desc">Monad 为什么快的四个技术创新、全球黑客松参赛指南、SignalPlus 的 AI 交易系统、VC 圆桌谈 Agent 如何改变金融、三个 Demo。</p>
         <div class="w3-tags"><span>#Monad</span><span>#并行执行</span><span>#AI交易</span><span>#VC</span></div>
       </a>
       <a class="w3-note" href="pitch-night/">
-        <div class="w3-note__meta"><span class="w3-chip">路演夜</span><span>约 37 分钟录音</span></div>
+        <div class="w3-note__meta"><span class="w3-chip">路演夜</span><span>四个项目 Demo</span></div>
         <p class="w3-note__title">路演夜：四个 AI × Web3 项目</p>
         <p class="w3-note__desc">给 AI 发「零花钱」的钱包、浏览器里的果蝇数字员工、多 Agent 预算控制 Text Permit、完全去中心化的扑克协议。</p>
         <div class="w3-tags"><span>#Agent支付</span><span>#MCP</span><span>#预算控制</span><span>#ZK</span></div>
@@ -109,6 +109,6 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
 ## 阅读提示
 
 - 笔记里的概念，大多能在 [核心概念词典](../fundamentals/core-concepts.md) 和 [安全与隐私](../security/index.md) 里查到人话解释；
-- 内容来自录音转写，专有名词经常被听错，笔记里都已经查证并改成正确写法；
+- 人名、项目名和专有名词都按官方资料查证过；
 - 讲者提到的产品、论文、事件都尽量查证过并附了链接；发现错误欢迎在群里说，或者点右上角 ✏️ 直接改。
 - **关于图片**：活动海报和现场照片都采自各活动的官方公众号，版权归主办方和摄影师所有，只用于学习记录和非商业分享，不适用本站的 CC BY-NC-SA 协议；照片里人物的肖像权归本人所有。如果你是版权方或照片里的人，不希望出现在这里，在群里说一声或在 GitHub 提 Issue，我会尽快删除或打码。

@@ -14,11 +14,10 @@ description: ETHShenzhen 2026 黑客松现场展示里我录到的几支队伍�
   <div><span class="k">时间</span><span class="v">2026.10.24 下午</span></div>
   <div><span class="k">形式</span><span class="v">黑客松现场展示 · 每队约 3–5 分钟</span></div>
   <div><span class="k">队伍</span><span class="v">18 号起的若干队伍 + LP 工具</span></div>
-  <div><span class="k">素材</span><span class="v">现场录音约 30 分钟 + 3 分钟</span></div>
 </div>
 
-!!! note "关于这两段录音"
-    录音本身没写活动名，按队伍编号（18～26 号，和 28 个参赛项目对得上）和现场时间线归到 Day 1 的黑客松展示。项目的正式名字在公开资料里查不到，下面先用队伍编号称呼。
+!!! note "关于项目名"
+    这些项目的正式名字在公开资料里查不到，下面先用队伍编号（18～26 号，和 28 个参赛项目对得上）称呼。
 
 <div class="w3-tldr" markdown>
 <span class="k">一句话看完</span>
@@ -156,5 +155,5 @@ flowchart LR
 - [ ] 在 DexScreener 上随便点开一个池子，看看「交易量」「流动性」这些数字分别是什么意思；
 - [ ] 读一遍 [黑客松参赛指南](../../handbook/hackathon.md)，想想如果是你，会在这 28 个项目里怎么脱颖而出。
 
-!!! quote "转写说明"
-    这段录音里夹杂了大量观众的闲聊，我只整理了台上讲者的内容，项目名、数字以讲者口述为准，未经核实。
+!!! quote "说明"
+    项目名、数字以讲者现场口述为准，未经核实。

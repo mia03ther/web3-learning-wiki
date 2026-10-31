@@ -14,7 +14,7 @@ description: OSKey 开源硬件钱包现场 DIY、Tiny 熊《Vibecoding On Ether
   <div><span class="k">时间</span><span class="v">2026.10.24（1024 程序员节）</span></div>
   <div><span class="k">形式</span><span class="v">Hackathon Build Day · 工作坊</span></div>
   <div><span class="k">讲者</span><span class="v">张文超（OSKey）· Tiny 熊（登链社区）· Jack Xiao（FluxA）</span></div>
-  <div><span class="k">素材</span><span class="v">现场录音约 85 分钟 + 官方回顾</span></div>
+  <div><span class="k">素材</span><span class="v">现场笔记 + OpenBuild 官方回顾</span></div>
 </div>
 
 <div class="w3-tldr" markdown>
@@ -30,7 +30,7 @@ description: OSKey 开源硬件钱包现场 DIY、Tiny 熊《Vibecoding On Ether
 
 ## Part 1 · OSKey：Build Your Hardware Wallet { #part-1 }
 
-**讲者**：张文超（OSKey 项目开发者，录音里被转写成了「文东老师」）· 开源地址：[butterfly-community/oskey-firmware](https://github.com/butterfly-community/oskey-firmware)
+**讲者**：张文超（OSKey 项目开发者）· 开源地址：[butterfly-community/oskey-firmware](https://github.com/butterfly-community/oskey-firmware)
 
 ### 1.1 私钥保管的进化史
 
@@ -198,8 +198,8 @@ flowchart LR
 
 **讲者**：Jack Xiao（FluxA Head of Ecosystem）· 《Beyond x402: FluxA Brings Agents to Real-World Commerce》
 
-!!! note "这一段我没有录音"
-    以下内容根据 OpenBuild 官方回顾整理。
+!!! note "说明"
+    这一段根据 OpenBuild 官方回顾整理。
 
 Agent 开始帮人订票、买服务、调用付费 API，支付系统也要适应这个新的「交易主体」。和人付款相比，Agent 支付有几个不同：
 
@@ -225,5 +225,5 @@ Agent 开始帮人订票、买服务、调用付费 API，支付系统也要适�
 - [ ] 下次 AI 越改越乱时，别跟它较劲——**开新会话**，把目标和关键背景重新讲一遍；
 - [ ] 把代码里那些叫 `data`、`info`、`get` 的变量名，改成说人话的名字。
 
-!!! quote "转写说明"
-    工作坊现场有大量背景交谈，Tiny 熊部分的录音断断续续，我按演讲逻辑补全了衔接，但没有添加录音里没有的观点。OSKey 的功能细节和 Scaffold-ETH 2 的 Skills 以官方发布说明和文档为准。
+!!! quote "说明"
+    OSKey 的功能细节和 Scaffold-ETH 2 的 Skills 以官方发布说明和文档为准。

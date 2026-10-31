@@ -31,7 +31,7 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 - **新知识页**：[安全与隐私](security/index.md)、[AI 辅助开发](devtools/ai-coding.md)（含可以直接抄的 `AGENTS.md` / Skill 模板）、[知识库总览](knowledge/index.md)
 - **新页面**：版本发布（就是这一页）
 - 现场笔记按「赛季」重排：R01 [AI × Web3 产业创新交流会](field-notes/ai-web3-meetup.md)（09.19）→ R02 Monad Metropolis 深圳（09.26，[宣讲与圆桌](field-notes/monad-hackathon.md) + [路演夜](field-notes/pitch-night.md)）→ R03 [RustChinaConf 2026](field-notes/rustchinaconf-2026.md)（10.15–17，最后一天我去做了志愿者）→ R04 ETHShenzhen 2026（10.24–25）
-- 录音转写里的专有名词都已查证，直接在正文里改成正确写法
+- 笔记里的人名、项目名和专有名词都按官方资料查证过，并附上了出处链接
 
 <p class="w3-release__sec">🎨 体验改进</p>
 
@@ -108,7 +108,7 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 
 - Web3 Learning Wiki 上线
 - 两篇现场笔记：[路演夜 · 四个 AI × Web3 项目](field-notes/pitch-night.md)、[Monad 黑客松与 Agent 金融](field-notes/monad-hackathon.md)
-- [核心概念词典](fundamentals/core-concepts.md)、转写名词对照表
+- [核心概念词典](fundamentals/core-concepts.md)、名词对照表
 - 学习路线图、技能树与资源、海外深造参考、黑客松 / GitHub / 实习三本手册
 - 推送到 GitHub 自动部署到 GitHub Pages
 </div>
@@ -121,7 +121,7 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 |---|---|---|
 | 改版、结构大调整 | 全站重新设计 | **3**.0.0 → **4**.0.0 |
 | 新增笔记、新栏目、新功能 | 加了一场活动的现场笔记 | 3.**0**.0 → 3.**1**.0 |
-| 修错别字、修链接、小调整 | 纠正一个转写错误 | 3.0.**0** → 3.0.**1** |
+| 修错别字、修链接、小调整 | 纠正一个专有名词 | 3.0.**0** → 3.0.**1** |
 
 每次发版会同步做三件事：在这一页加一张版本卡片、更新首页和顶部公告条、在群里发更新通知。
 

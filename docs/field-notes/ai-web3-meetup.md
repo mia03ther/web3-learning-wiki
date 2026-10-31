@@ -14,7 +14,6 @@ description: 9 月 19 日深圳「AI × Web3 开发者与产业创新交流会�
   <div><span class="k">时间</span><span class="v">2026.09.19（周六）14:00–18:00 · 深圳（R01，这个赛季的第一站）</span></div>
   <div><span class="k">形式</span><span class="v">交流会 · 分享 + 现场演示 + 课程推介</span></div>
   <div><span class="k">议程</span><span class="v">AI 落地与 Agent SaaS · Web2 开发者的能力迁移 · Web2 企业怎么落地 Web3 产品 · 未来 3–5 年的投资与创业机会（几段课程介绍略过）</span></div>
-  <div><span class="k">素材</span><span class="v">现场录音约 150 分钟</span></div>
 </div>
 
 <div class="w3-tldr" markdown>
@@ -188,5 +187,5 @@ flowchart LR
 - [ ] 画一遍 Part 4.2 的 Rollup 组件图，能给别人讲清楚每个角色干什么；
 - [ ] 如果正在考虑报班：拿着上面的清单，逐条问清楚再决定。
 
-!!! quote "转写说明"
-    这场录音前半段比较清楚，后半段现场嘈杂、穿插大量私下聊天，我只整理了台上能听清的内容。机构与讲者信息已隐去，数字均为讲者口述、未经核实。
+!!! quote "说明"
+    机构与讲者信息已隐去，文中的数字都是讲者现场口述，未经核实。

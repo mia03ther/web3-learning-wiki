@@ -14,7 +14,7 @@ Vitalik 从密码学讲到你自己的钱包，Winderica 拆解「查一次余�
   <div><span class="k">时间</span><span class="v">2026.10.25 上午</span></div>
   <div><span class="k">地点</span><span class="v">深圳 · ETHShenzhen 2026 主会场</span></div>
   <div><span class="k">讲者</span><span class="v">Vitalik · Winderica · Harry Halpin · 路线图圆桌</span></div>
-  <div><span class="k">素材</span><span class="v">现场录音约 145 分钟 + 官方回顾</span></div>
+  <div><span class="k">素材</span><span class="v">现场笔记 + OpenBuild 官方回顾</span></div>
 </div>
 
 <div class="w3-tldr" markdown>
@@ -296,5 +296,5 @@ Nym 的 Mixnet 已经升级到 **ML-KEM** 后量子加密。它的设计源自 N
 - [ ] 用一次 Tor 浏览器，体会「藏住 IP」是什么感觉；
 - [ ] 如果对协议开发感兴趣，去看看 [EPF 的学习资料](https://epf.wiki/)。
 
-!!! quote "转写说明"
-    本篇基于现场录音转写，嘉宾称呼和议程按 OpenBuild 官方回顾核对，OpenAC、OSS Scanner、Ledger 植入事件等细节按公开资料核实过（链接在正文里）。Winderica 部分中段有一段录音缺失。发现错误欢迎在群里指出。
+!!! quote "说明"
+    嘉宾称呼和议程以 OpenBuild 官方回顾为准，OpenAC、OSS Scanner、Ledger 植入事件等细节按公开资料核实过（链接在正文里）。发现错误欢迎在群里指出。

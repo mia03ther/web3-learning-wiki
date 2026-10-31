@@ -10,7 +10,6 @@
   <div><span class="k">时间</span><span class="v">2026.09.26（周六）· 深圳</span></div>
   <div><span class="k">主题</span><span class="v">Agentic Finance × Trading × Global Payments</span></div>
   <div><span class="k">结构</span><span class="v">黑客松宣讲 → SignalPlus 分享 → VC 圆桌 → 三个 Demo</span></div>
-  <div><span class="k">素材</span><span class="v">现场录音约 179 分钟</span></div>
 </div>
 
 [Monad Metropolis](https://monad.xyz/developers/hackathons/metropolis) 是 Monad 的全球线上黑客松（9 月 1 日到 10 月 13 日），期间在中国办了两场线下 Hacker House：9 月 19 日杭州、9 月 26 日深圳。这篇记的是深圳站，主题是「Agent 开始拥有资金、策略和执行能力之后，下一代交易和支付产品长什么样」；同一天的项目路演见 [路演夜](pitch-night.md)。
@@ -25,7 +24,7 @@ flowchart TB
     D[三个 Demo<br/>协同平台 · 预言机 · DeFi] --> E
 ```
 
-**先纠正一个贯穿全文的转写问题**：录音里的「Monet / Mona / Monai / Monad foundation」指的都是 **Monad**——一条 2025 年主网上线的高性能 EVM 公链，是这场活动的主办方。下文统一写作 Monad。
+**先认识一下主角**：**Monad** 是一条 2025 年主网上线的高性能 EVM 公链，也是这场活动的主办方。
 
 ---
 
@@ -431,7 +430,7 @@ Agent 已从「对话」走到「执行（写代码、做视频、买东西）�
 
 # 第五部分：自由交流 —— 一位前辈给入门学习者的建议
 
-> 转写末尾，一位已工作的前辈（信息系统 / 数据分析背景）和一位同样在入门阶段的
+> 活动最后，一位已工作的前辈（信息系统 / 数据分析背景）和一位同样在入门阶段的
 > 学习者（数据 × 金融交叉方向，处境很有参考性）的对话，含金量很高。
 
 **前辈的建议整理：**

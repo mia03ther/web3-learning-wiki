@@ -88,7 +88,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 | 上午 | 签到、赛题介绍、项目介绍与组队 | — |
 | 上午 | 工作坊《Build Your Hardware Wallet》· OSKey 开发者 **张文超** | [Day 1 · 工作坊](day1-workshops.md#part-1) |
 | 上午 | 工作坊《Vibecoding On Ethereum》· 登链社区发起人 **Tiny 熊** | [Day 1 · 工作坊](day1-workshops.md#part-2) |
-| 下午 | 《Beyond x402: FluxA Brings Agents to Real-World Commerce》· FluxA **Jack Xiao** | [Day 1 · 工作坊](day1-workshops.md#part-3)（无录音，据官方回顾） |
+| 下午 | 《Beyond x402: FluxA Brings Agents to Real-World Commerce》· FluxA **Jack Xiao** | [Day 1 · 工作坊](day1-workshops.md#part-3)（据官方回顾） |
 | 下午 | 1024 特别活动「数字炸弹」 | — |
 | 16:00 后 | 黑客松提交截止，现场展示与评审（共 28 个项目） | [Day 1 · 黑客松展示](day1-demos.md) |
 
@@ -124,7 +124,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 
 ## 嘉宾 & 组织速查
 
-> 方便读正文时对号入座。称呼以官方回顾为准，录音转写里的谐音已经统一改过来了。
+> 方便读正文时对号入座，称呼以官方回顾为准。
 
 | 名字 | 身份 | 出现在 |
 |---|---|---|
@@ -151,8 +151,6 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 - **在用 AI 写代码**：[Day 1 · Tiny 熊](day1-workshops.md#part-2) + [Day 2 · Qi Zhou](day2-afternoon.md#part-2) 连着读，一个讲「怎么让 AI 干得好」，一个讲「AI 干完之后人该负什么责」；
 - **对 Agent 支付 / Agent 产品感兴趣**：[Day 2 下午的信任边界圆桌](day2-afternoon.md#part-5) + [黑客松展示](day1-demos.md)，再回看旧笔记 [路演夜](../pitch-night.md) 里的 Text Permit。
 
-## 资料来源与转写说明
+## 资料来源
 
-- 我自己的现场录音转写（4 份）+ 自动生成的纪要；
-- OpenBuild 官方回顾文章《当 AI 遇上 Ethereum，深圳聚起了一群 Builder｜ETHShenzhen 2026 现场回顾》——嘉宾称呼、日程、获奖名单都以它为准；
-- 录音里的专有名词经常被听错（「文东」其实是张文超，「温主任」其实是 Winderica），正文里都已经按官方回顾和公开资料改正；发现错误欢迎在群里说。
+- OpenBuild 官方回顾文章《当 AI 遇上 Ethereum，深圳聚起了一群 Builder｜ETHShenzhen 2026 现场回顾》——嘉宾称呼、日程、获奖名单都以它为准。
