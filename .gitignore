@@ -30,3 +30,6 @@ Thumbs.db
 # Obsidian（如果以后用 Obsidian 编辑）
 .obsidian/
 .trash/
+
+# Claude Code 本机配置
+.claude/

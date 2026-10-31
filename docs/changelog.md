@@ -17,7 +17,7 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.0</b><span>全新改版 · ETHShenzhen 2026 现场笔记</span></div>
   <span class="w3-release__ver">v3.0.0</span>
-  <span class="w3-release__date">2026-10-30</span>
+  <span class="w3-release__date">2026-10-31</span>
 </div>
 
 <p class="w3-release__summary">把整个 Wiki 从里到外重做了一遍：新设计、新导航、新专题，顺便修好了一堆一直没生效的功能。</p>
