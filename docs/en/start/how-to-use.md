@@ -22,7 +22,7 @@ flowchart LR
 | What you want to do | Where to go |
 |---|---|
 | Build basic concepts | [Core Concepts](../fundamentals/core-concepts.md) |
-| See what builders do in the field | [Field Notes](../field-notes/pitch-night.md) |
+| See what builders do in the field | [Field Notes](../field-notes/index.md) |
 | Plan long-term learning | [Learning Roadmap](../roadmap/learning-path.md) |
 | Find courses and tools | [Skills & Resources](../roadmap/skills-resources.md) |
 | Prepare for a hackathon | [Hackathon Guide](../handbook/hackathon.md) |
@@ -33,7 +33,7 @@ flowchart LR
 
 1. Read the two Start pages to understand the method and positioning;
 2. Skim [Core Concepts](../fundamentals/core-concepts.md) — build intuition, not memorisation;
-3. Pick one [Field Note](../field-notes/pitch-night.md) and see concepts land on real projects;
+3. Pick one [Field Note](../field-notes/index.md) and see concepts land on real projects (most notes are in Chinese);
 4. Follow the [Learning Roadmap](../roadmap/learning-path.md) and build your first small thing.
 
 ## How to contribute
@@ -42,16 +42,13 @@ This is an open-source learning project. Welcome to:
 
 - point out factual errors, outdated info or broken links;
 - add more precise explanations, sources or translations;
-- open an issue or pull request on GitHub (see the repo README's Contributing).
+- open an issue or pull request on GitHub (see the [Contributing Guide](../contributing.md)).
 
 ## A note on accuracy
 
-Content is personal study record and may contain misunderstandings or speech-to-text
-errors:
+These are personal study notes, so corrections are welcome. Names and external
+facts are checked against official sources where possible and linked inline.
+Personal observations are identified as such. Check the official pages for
+current project details and application requirements.
 
-- verifiable terms get their standard spelling (e.g. "Monet / Mona" = **Monad**);
-- uncertain content is explicitly marked "to be verified";
-- external facts try to carry source links; project data and application
-  requirements should always be checked against official pages.
-
-> Back to [Introduction](./index.md)
+> Back to [Start Here](./index.md)

@@ -10,11 +10,11 @@
   {% set is_en = page and page.url and page.url.startswith("en/") %}
   <div class="w3-banner">
     {% if is_en %}
-      <b>Version 3.0</b> is out: a redesigned wiki, plus field notes from ETHShenzhen 2026 and RustChinaConf 2026.
-      <a href="{{ base_url }}/en/changelog/">See what's new ›</a>
+      <b>Version 3.0.1</b>: English entry pages, contribution guides and theme fixes.
+      <a href="{{ base_url.rstrip('/') }}/en/changelog/">See what's new ›</a>
     {% else %}
-      <b>版本 3.0</b> 上线：全新设计，ETHShenzhen 2026 和 RustChinaConf 2026 现场笔记，安全与隐私、AI 辅助开发两个新专题。
-      <a href="{{ base_url }}/changelog/">看看更新了什么 ›</a>
+      <b>版本 3.0.1</b>：补齐英文入口和共建指南，修复首页主题切换。
+      <a href="{{ base_url.rstrip('/') }}/changelog/">看看更新了什么 ›</a>
     {% endif %}
   </div>
 {% endblock %}

@@ -1,66 +1,40 @@
-# Introduction
+---
+title: Start Here
+description: A quick guide to MIA's Web3 × AI notebook, its sections and where to start reading.
+---
 
-> Independent learner exploring AI × Web3 — documenting what I learn, build
-> and discover, in public.
+# Start Here
 
-## What this is
+<p class="w3-lead">
+Welcome! This is MIA's Web3 × AI notebook, put together for friends in a group chat.
+This English side provides navigation and a few translated guides. Most field notes and newer topics are in Chinese.
+</p>
 
-An **open learning archive**, continuously updated: from near-zero technical
-background, it records learning, experiments and project work in Web3, AI Agents,
-developer tools and on-chain applications.
+## What's here
 
-It plays three roles at once:
+- **Start**: learning paths, free courses, skills and resources.
+- **Knowledge**: explanations by topic, from blockchain basics to security and AI-assisted development.
+- **Field Notes**: events I went to, including ETHShenzhen, RustChinaConf and Monad Metropolis Shenzhen.
+- **Grow**: hackathons, internships, interviews, portfolios and further study.
+- **About**: who maintains the notebook, release notes and ways to contribute.
 
-1. **Study notes** — if you cannot explain it in plain words, you do not understand it yet;
-2. **Portfolio** — public projects, hackathons and docs are verifiable proof of ability;
-3. **Knowledge base** — scattered information distilled into a searchable, reusable structure.
+## Your first ten minutes
 
-## Why it exists
+1. Skim the [Core Concepts](../fundamentals/core-concepts.md). Get a rough idea of wallets, private keys, gas, smart contracts and L2; you can look things up later.
+2. Pick a [Field Note](../field-notes/index.md). The ETHShenzhen morning note covers wallet security; pitch night introduces four projects. The index has English summaries and identifies the Chinese notes.
+3. If you want to try a wallet, use a testnet and free test tokens. Keep the recovery phrase private and offline.
+4. Choose a route: [Learning Path](../roadmap/learning-path.md) for the basics, [Courses](../roadmap/courses.md) and the [Hackathon Guide](../handbook/hackathon.md) for building, or [Internships & Careers](../handbook/internship.md) for job preparation.
+5. Bookmark [Releases](../changelog.md) to see what changed.
 
-Consuming first-hand events and documentation exposes two recurring problems:
-industry jargon is dense and beginners fall behind easily; and material is
-scattered, so it is hard to be both plain-spoken and current.
+## How these notes are written
 
-So every learning session becomes a structured note: it forces understanding,
-and hopefully saves some climbing time for others starting out.
+- Names and external facts are checked against official sources where possible, with links for further reading.
+- Personal observations are identified as such. For current requirements and product details, follow the linked official pages.
+- Explanations use examples and plain language; official documentation is the place for precise definitions.
+- Every reading page has an **Edit on GitHub** action. Corrections and additions are welcome.
 
-## Learning principles
+## Need a hand?
 
-### 1. Output over input
+For an unfamiliar term, start with the [Core Concepts](../fundamentals/core-concepts.md). For an error or broken link, open an [issue](https://github.com/mia03ther/web3-learning-wiki/issues) or tell me in the group chat. To add something yourself, see the [Contributing Guide](../contributing.md).
 
-Ten hours of reading is worth less than one hour of notes and one small running
-thing. **Every learning session leaves a public trace**: a note, a commit, a summary.
-
-### 2. Project-driven, not course-driven
-
-Do not wait until "all the basics are done" — that day never comes. The path is:
-**learn a little → build something small → come back for what you missed**.
-Hackathons are the best accelerator.
-
-### 3. Focus on what you can control
-
-Tech cycles, market conditions and policy are out of your control; today's
-practice, English, projects and notes are in it. Put attention where it counts.
-
-### 4. Build on a differentiated edge
-
-Instead of competing where you are weak, play the **"language + technology"
-bridge** position:
-
-- read English first-hand material fast and produce Chinese explainers;
-- translate and connect information between languages and ecosystems;
-- the cross-language, cross-ecosystem information gap is a long-term opportunity.
-
-### 5. Don't touch money you don't understand
-
-The industry is full of speculative narratives. Rules: **no coin speculation, no
-leverage, no projects with unclear revenue sources**. Be the one who builds the
-railroad — use testnets, small amounts and simulators while learning.
-
-## Long-term direction
-
-> A long-term learning roadmap toward advanced study and a career in global
-> Web3 ecosystems — built one note, one project at a time.
-
-Next: read [How to Use This Wiki](./how-to-use.md), or jump straight into the
-[Core Concepts](../fundamentals/core-concepts.md).
+Next: [How to Use This Wiki](how-to-use.md). For the maintainer and projects, see [About](../about/index.md).

@@ -15,6 +15,24 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>版本 3.0.1</b><span>英文入口与共建指南补齐</span></div>
+  <span class="w3-release__ver">v3.0.1</span>
+  <span class="w3-release__date">2026-10-31</span>
+</div>
+
+<p class="w3-release__summary">把改版后的几个入口接好，也把一起写笔记、发布更新的方法写清楚。</p>
+
+- **内容完善**：AI × Web3 和 MCP 页面补上 FluxA、Text Permit、Agent 信任边界和 Computer Use 的现场案例入口；清理旧笔记中没有依据的名称，补充官方技术资料。
+- **英文入口**：更新 Start、使用说明和 About，与现在的导航、头像和个人项目介绍对应。
+- **一起维护**：中英文贡献指南新增「怎么加活动笔记」「怎么发版本」，README 同步四站笔记和本地预览方法。
+- **问题修复**：阅读页选过深色后，回到首页会保留主题；修复拜仁队徽贴纸的悬停样式。
+</div>
+
+## 历史版本
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.0</b><span>全新改版 · ETHShenzhen 2026 现场笔记</span></div>
   <span class="w3-release__ver">v3.0.0</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -54,8 +72,6 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 - Logo 在深色模式下看不见
 - 本地一键预览（`serve.bat`）在虚拟环境失效时直接报错，现在会自动改用系统 Python
 </div>
-
-## 历史版本
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

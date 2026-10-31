@@ -19,6 +19,9 @@
 {% block announce %}{% endblock %}
 
 {% block header %}
+  {# Keep Material's saved theme in sync with the reading pages. #}
+  <div hidden>{% include "partials/palette.html" %}</div>
+  {% include "partials/javascripts/palette.html" %}
   <header class="lp-nav" data-md-component="header" data-lp-nav>
     <nav class="lp-nav__bar" aria-label="{{ t('主导航', 'Main') }}">
       <a class="lp-nav__brand" href="{{ home() }}">

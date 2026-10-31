@@ -1,80 +1,80 @@
 # Web3 Learning Wiki
 
-> **📖 在线阅读 / Online Wiki：<https://mia03ther.github.io/web3-learning-wiki/>**
->
-> **中文** 内容位于 `docs/`，**English** 翻译位于 `docs/en/`，右上角可随时切换语言。
-> 普通读者无需 clone 或安装任何软件，直接打开上面的链接即可获得完整阅读体验
-> （侧边导航、全文搜索、明暗主题）。
+[在线阅读](https://mia03ther.github.io/web3-learning-wiki/) · [版本发布](https://mia03ther.github.io/web3-learning-wiki/changelog/) · [贡献指南](docs/contributing.md)
 
-An open-source, continuously updated **Web3 learning knowledge base** maintained by
-**MIA_Ether** — covering blockchain basics, smart contracts, **AI × Web3**, MCP &
-AI agents, on-chain data, developer tooling and the Builder journey.
+MIA_Ether 写给群友看的 Web3 × AI 学习笔记。v3.0 有了独立入口页，内容分成入门、知识库、现场笔记、成长和关于五个板块。直接打开在线版就能阅读、搜索和切换明暗主题，不需要安装软件。
 
-> ⚠️ 直接在 GitHub 上浏览 `.md` 源文件会丢失排版、导航与搜索功能，请始终使用在线阅读链接。
+中文内容在 `docs/`，英文骨架在 `docs/en/`。英文页面会标明哪些正文仍是中文，尚未翻译的页面由 [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) 回退到中文内容。
 
-## What's Inside
+## 里面有什么
 
-- **Learning Paths**: getting started, staged roadmap, curated courses, skill trees and resources
-- **Blockchain**: fundamentals, core concepts, smart contracts, on-chain data
-- **AI × Web3**: on-chain agents, agent payments, MCP & AI agents
-- **Developer**: builder handbook, developer tools, GitHub workflow, internships, interview bank
-- **Projects**: hackathon guide and first-hand field notes
-- **Community**: contribution guide, about, support
+- 入门路线、精选课程、技能树和学习打卡。
+- 区块链基础、智能合约、链上数据、AI × Web3、安全与隐私、AI 辅助开发。
+- 四站现场笔记：R01 AI × Web3 产业创新交流会（09.19）、R02 Monad Metropolis 深圳（09.26）、R03 RustChinaConf 2026（10.15–17）、R04 ETHShenzhen 2026（10.24–25）。
+- 黑客松、GitHub、实习求职等手册，以及持续更新的版本记录。
 
-## Structure
+## 目录
 
-```
+```text
 docs/
-├── index.md               # Homepage (中文 · default language)
-├── start/ roadmap/ fundamentals/ smart-contracts/ ai-web3/
-├── onchain-data/ devtools/ handbook/ field-notes/
+├── index.md                 # 中文入口页：最近一站、赛历、主题入口
+├── start/ roadmap/          # 入门和学习路线
+├── knowledge/               # 知识库索引
+├── fundamentals/ smart-contracts/ onchain-data/
+├── ai-web3/ security/ devtools/
+├── field-notes/
+│   ├── index.md             # 时间线和主题索引
+│   ├── ai-web3-meetup.md    # R01 · 产业创新交流会
+│   ├── monad-hackathon.md   # R02 · 宣讲与圆桌
+│   ├── pitch-night.md       # R02 · 项目路演
+│   ├── rustchinaconf-2026.md # R03 · 志愿者见闻和展位交流
+│   └── ethshenzhen-2026/    # R04 · 总览和四篇正文
+├── handbook/                # Builder、黑客松、求职等手册
 ├── about/ support/ contributing.md
-├── en/                    # English translations (same structure)
-└── assets/                # Shared brand, styles, scripts, support QR codes
+├── changelog.md             # 带版本号的发布记录
+├── en/                      # 英文骨架和已有译文
+└── assets/
+    ├── posters/             # 活动海报和现场照片
+    ├── avatar/ f1/ fcb/     # 头像和个人兴趣元素
+    └── stylesheets/ javascripts/
+overrides/
+├── landing.html             # 独立入口页模板
+└── main.html                # 正文模板和版本公告条
+mkdocs.yml                   # 导航、主题、语言等配置
+serve.bat                    # Windows 一键预览
 ```
 
-Internationalisation uses [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n):
-`docs/` is the default language (zh); translations live under `docs/en/`.
-Untranslated pages fall back to the default language until translated.
+## 本地预览
 
-## Run Locally (Contributors & Editors Only)
-
-> 只想阅读内容可以跳过本节。以下仅面向需要修改文档并在本地预览的人。
-
-Requires Python 3.11+.
+需要 Python 3.11+。第一次使用先安装依赖：
 
 ```bash
 git clone https://github.com/mia03ther/web3-learning-wiki.git
 cd web3-learning-wiki
-
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-source .venv/bin/activate        # macOS / Linux
-
-pip install -r requirements.txt
-mkdocs serve
 ```
 
-Preview at <http://127.0.0.1:8000>. On Windows you can also double-click `serve.bat`.
-
-### Strict build (used by CI)
+激活环境：Windows PowerShell 使用 `.\.venv\Scripts\Activate.ps1`，macOS / Linux 使用 `source .venv/bin/activate`。然后运行：
 
 ```bash
-mkdocs build --strict
+python -m pip install -r requirements.txt
+python -m mkdocs serve
 ```
 
-## Deployment Workflow
+打开终端提示的地址，默认为 [本地预览](http://127.0.0.1:8000/web3-learning-wiki/)。保存文件后页面会自动刷新。Windows 也可以双击 `serve.bat`；虚拟环境不可用时，它会尝试系统 Python，缺包时会显示安装命令。
 
-- `main` branch：全部源码与内容，**所有编辑必须提交到这里**。
-- `gh-pages` branch：由 GitHub Actions 自动生成，**请勿手动编辑**。
-- 每次 push 到 `main` 触发构建与部署；PR 会先跑 `mkdocs build --strict`。
+提交前运行与 CI 相同的严格构建，确保没有警告：
 
-## Contributing
+```bash
+python -m mkdocs build --strict
+```
 
-- 每一页右上角都有 **Edit on GitHub**，点击即可提交 PR；
-- 纠错、补充来源、新增笔记均欢迎 → [Issues](https://github.com/mia03ther/web3-learning-wiki/issues) / [Discussions](https://github.com/mia03ther/web3-learning-wiki/discussions)；
-- 想成为持续贡献者？参见 [Contribution Guide](docs/contributing.md)。
+## 一起改
 
-## License
+看到错误、过时信息，或想补一篇自己的活动笔记，随时欢迎。页面右上角的 **Edit on GitHub** 可以直接发起 PR；也可以提 [Issue](https://github.com/mia03ther/web3-learning-wiki/issues)，或者在群里 @我。新增笔记和发布版本的步骤见[贡献指南](docs/contributing.md)。
 
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)（内容）· Code: MIT（代码与配置）。
+源码和内容都在 `main`。PR 会先跑严格构建；合并或推送到 `main` 后，GitHub Actions 自动构建并发布 GitHub Pages。`gh-pages` 和本地 `site/` 都是生成内容，不手动修改。
+
+## 许可
+
+原创内容采用 [CC BY-NC-SA 4.0](LICENSE)。活动照片、海报、F1 照片和队徽等第三方素材以各自的来源说明及许可为准。

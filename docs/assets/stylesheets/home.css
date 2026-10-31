@@ -361,7 +361,7 @@ body:has(#lp) .md-main {
   width: 4.6rem;
 }
 
-.lp-postcard:hover .lp-postcard .lp-sticker {
+.lp-postcard:hover .lp-sticker {
   transform: rotate(4deg);
 }
 
