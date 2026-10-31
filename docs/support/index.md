@@ -16,10 +16,10 @@ hide:
 </div>
 </div>
 <div class="w3-support-grid">
-  <a class="w3-support-card" href="/assets/support/alipay.png" target="_blank"
+  <a class="w3-support-card" href="../assets/support/alipay.png" target="_blank"
      rel="noopener noreferrer" aria-label="放大查看支付宝收款码">
     <div class="w3-support-qr">
-      <img src="/assets/support/alipay.png" alt="支付宝收款码，点击放大" loading="lazy" width="640" height="640" />
+      <img src="../assets/support/alipay.png" alt="支付宝收款码，点击放大" loading="lazy" width="640" height="640" />
       <span class="w3-support-zoom" aria-hidden="true">点击放大</span>
     </div>
     <div class="w3-support-meta">
@@ -27,10 +27,10 @@ hide:
       <div class="w3-support-hint">扫码或点击图片放大</div>
     </div>
   </a>
-  <a class="w3-support-card" href="/assets/support/wechat.png" target="_blank"
+  <a class="w3-support-card" href="../assets/support/wechat.png" target="_blank"
      rel="noopener noreferrer" aria-label="放大查看微信收款码">
     <div class="w3-support-qr">
-      <img src="/assets/support/wechat.png" alt="微信收款码，点击放大" loading="lazy" width="640" height="640" />
+      <img src="../assets/support/wechat.png" alt="微信收款码，点击放大" loading="lazy" width="640" height="640" />
       <span class="w3-support-zoom" aria-hidden="true">点击放大</span>
     </div>
     <div class="w3-support-meta">

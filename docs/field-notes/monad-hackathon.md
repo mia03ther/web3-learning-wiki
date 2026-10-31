@@ -1,7 +1,14 @@
 # Monad 黑客松宣讲与 Agent 金融圆桌 · 精读
 
-> 来源：《Monai 黑客松宣讲与 Agent 金融应用探讨》现场录音（约 179 分钟，39 页转写稿）
-> 活动结构：黑客松宣讲 → SignalPlus 主题分享 → VC 圆桌 → 三个项目 Demo → 自由交流。
+<div class="w3-meta">
+  <div><span class="k">活动</span><span class="v">Monad Metropolis 深圳站「会管钱、能交易的 AI」（R02）</span></div>
+  <div><span class="k">时间</span><span class="v">2026.09.26（周六）· 深圳</span></div>
+  <div><span class="k">主题</span><span class="v">Agentic Finance × Trading × Global Payments</span></div>
+  <div><span class="k">结构</span><span class="v">黑客松宣讲 → SignalPlus 分享 → VC 圆桌 → 三个 Demo</span></div>
+  <div><span class="k">素材</span><span class="v">现场录音约 179 分钟</span></div>
+</div>
+
+[Monad Metropolis](https://monad.xyz/developers/hackathons/metropolis) 是 Monad 的全球线上黑客松（9 月 1 日到 10 月 13 日），期间在中国办了两场线下 Hacker House：9 月 19 日杭州、9 月 26 日深圳。这篇记的是深圳站，主题是「Agent 开始拥有资金、策略和执行能力之后，下一代交易和支付产品长什么样」；同一天的项目路演见 [路演夜](pitch-night.md)。
 
 ## 这场活动讲了什么（全局地图）
 
@@ -104,16 +111,16 @@ Monad 主打的性能数字：
 ### 基本信息
 
 - Monad 迄今最大的**线上**黑客松，持续约 6 周；
-- 截止时间原定 **10 月 13 日**（可能延长，以官网为准），11 月 3 日公布奖项；
+- **10 月 13 日**截止提交，10 月 14–27 日评审，**11 月 3 日**公布获奖项目（以官网为准）；
 - 前期已在 34 个城市办 50 多场线下活动、2500+ 人到场；
-- **总奖金 25 万美元**。
+- **奖金和资源合计 25 万美元以上**。
 
 ### 四大赛道（Track）
 
-1. **链上金融与交易**（DeFi / Trading）；
-2. **消费级产品**（Consumer，普通人用的应用）；
-3. **社交 / 注意力 / 文化**（Social）；
-4. **可信身份与 AI / 技术架构**（Identity & AI）。
+1. **链上金融与交易**（DeFi、交易）；
+2. **消费产品与支付**（普通人用的应用、支付）；
+3. **社交、注意力与文化**；
+4. **信任、身份与 AI 基础设施**。
 
 官网每个赛道都有推荐 Idea 和评审关注点；不知道做什么可以直接去看推荐方向。
 

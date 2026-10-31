@@ -22,7 +22,6 @@ flowchart LR
 | What you want to do | Where to go |
 |---|---|
 | Build basic concepts | [Core Concepts](../fundamentals/core-concepts.md) |
-| Look up a term / slang | [Glossary](../fundamentals/glossary.md) |
 | See what builders do in the field | [Field Notes](../field-notes/pitch-night.md) |
 | Plan long-term learning | [Learning Roadmap](../roadmap/learning-path.md) |
 | Find courses and tools | [Skills & Resources](../roadmap/skills-resources.md) |

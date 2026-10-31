@@ -4,7 +4,6 @@ The basics section for Web3 and AI × Web3 — industry jargon translated into
 plain language, intuition first.
 
 - [**Core Concepts**](./core-concepts.md): 40+ concepts sorted by "blockchain basics → finance (DeFi) → AI agents → security & proofs → ecosystem", with analogies and self-test questions;
-- [**Glossary**](./glossary.md): homophones and colloquial terms from event transcripts, mapped to standard spelling with verification status.
 
 ## How to use
 

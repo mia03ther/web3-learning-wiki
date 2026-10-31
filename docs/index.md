@@ -1,184 +1,119 @@
 ---
 title: Web3 Learning Wiki
-description: An open-source knowledge base exploring Web3, AI Agents, Blockchain infrastructure, and the Builder journey.
+description: MIA_Ether 的 Web3 × AI 学习笔记本。活动现场笔记、按主题整理的知识库和成长路线，先写给群友，也欢迎每一个正在入门的人。
+template: landing.html
 hide:
+  - navigation
   - toc
 ---
 
-<div class="w3-home" markdown="1">
-
-<div class="w3-home-hero" markdown="1">
-
-<div class="w3-home-eyebrow">MIA03 Lab · Open Knowledge Base</div>
-
-# Web3 Learning Wiki
-
-<p class="w3-home-tagline">
-An open-source knowledge base exploring Web3, AI Agents, Blockchain infrastructure,
-and Builder journey.
-</p>
-
-<div class="w3-home-actions">
-  <a class="w3-btn w3-btn--primary" href="start/" style="color:white;">Start Learning</a>
-  <a class="w3-btn w3-btn--ghost" href="roadmap/learning-path/">Explore Knowledge Map</a>
-  <a class="w3-btn w3-btn--ghost" href="contributing/">Contribute</a>
-</div>
-
-<div class="w3-home-stats">
-  <div class="st"><b>32</b><span>篇结构化笔记</span></div>
-  <div class="st"><b>7</b><span>条学习路径</span></div>
-  <div class="st"><b>2</b><span>种语言 · 持续翻译</span></div>
-  <div class="st"><b>100%</b><span>开源 · CC BY-NC-SA</span></div>
-</div>
-
-</div>
-
-<div class="w3-home-split" markdown="1">
-
-<div class="w3-home-intro" markdown="1">
-
-## What is this Wiki
-
-这是一个由 **MIA_Ether** 维护、面向开发者 / Builder / Web3 学习者的**开放知识库**：
-
-- **学习笔记** —— 把区块链、智能合约、AI Agent 的复杂概念讲成「人话」；
-- **实践沉淀** —— 黑客松、开源项目与真实构建过程的可验证记录；
-- **生态地图** —— 一手活动笔记（Field Notes）+ 路线图 + 资源清单，持续更新。
-
-每一条内容都来自真实的学习与构建过程，而不是转述。贡献方式很简单：任意页面右上角的 **Edit on GitHub** 即可提交修正。
-
-<div class="w3-home-links">
-  <a href="start/">从零开始 →</a>
-  <a href="field-notes/">看一手 Field Notes →</a>
-</div>
-
-</div>
-
-<div class="w3-home-graph" markdown="1">
-
-### Knowledge Graph
-
-<div class="w3-graph-card">
-
-<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web3 Learning Wiki knowledge graph">
-  <g style="stroke: var(--w3-border-strong)" stroke-width="1.5">
-    <path d="M210 145 90 60"/>
-    <path d="M210 145 330 60"/>
-    <path d="M210 145 90 160"/>
-    <path d="M210 145 330 160"/>
-    <path d="M210 145 150 250"/>
-    <path d="M210 145 300 250"/>
-    <path d="M150 60 210 60"/>
-    <path d="M90 110 90 210"/>
-    <path d="M330 110 330 210"/>
-  </g>
-  <g style="font-family: var(--w3-font-sans)" font-size="12" font-weight="600" text-anchor="middle">
-    <g><rect x="30" y="40" width="120" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="90" y="64" style="fill: var(--w3-node-text)">Blockchain</text></g>
-    <g><rect x="270" y="40" width="120" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="330" y="64" style="fill: var(--w3-node-text)">Smart Contracts</text></g>
-    <g><rect x="150" y="40" width="120" height="40" rx="10" style="fill: var(--w3-accent-soft); stroke: var(--w3-accent)"/><text x="210" y="64" style="fill: var(--w3-accent)">Web3 Builder</text></g>
-    <g><rect x="20" y="140" width="140" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="90" y="164" style="fill: var(--w3-node-text)">AI × Web3</text></g>
-    <g><rect x="260" y="140" width="140" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="330" y="164" style="fill: var(--w3-node-text)">Dev Tools</text></g>
-    <g><rect x="70" y="230" width="160" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="150" y="254" style="fill: var(--w3-node-text)">MCP &amp; AI Agents</text></g>
-    <g><rect x="220" y="230" width="160" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="300" y="254" style="fill: var(--w3-node-text)">On-chain Data</text></g>
-  </g>
-</svg>
-
-</div>
-
-<div class="w3-home-path">
-
-<div class="w3-path-head">Learning Path · 四阶段</div>
-
-<ol class="w3-path">
-  <li><b>Phase 1</b><span>打地基 · 建习惯</span></li>
-  <li><b>Phase 2</b><span>出成果 · 首次实战</span></li>
-  <li><b>Phase 3</b><span>攒硬货 · 定方向</span></li>
-  <li><b>Phase 4</b><span>申请与过渡</span></li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-## Learning Paths
-
-<div class="grid cards w3-doc-cards" markdown>
-
--   :material-cube-outline: **Blockchain Fundamentals**
-
-    ---
-
-    钱包、交易、Gas、L2 与核心协议概念，把行业术语翻译成「人话」。
-
-    [:octicons-arrow-right-24: Enter fundamentals](fundamentals/index.md)
-
--   :material-file-code-outline: **Smart Contracts**
-
-    ---
-
-    智能合约的编写、测试与部署笔记：Solidity、Foundry 与合约安全。
-
-    [:octicons-arrow-right-24: Enter smart contracts](smart-contracts/index.md)
-
--   :material-robot-outline: **AI × Web3**
-
-    ---
-
-    链上 AI Agent、Agent 支付、AI-DeFi 交叉研究与实践记录。
-
-    [:octicons-arrow-right-24: Enter AI × Web3](ai-web3/index.md)
-
--   :material-connection: **MCP & AI Agents**
-
-    ---
-
-    Model Context Protocol、Agent 工具调用与可信 Agent 基础设施。
-
-    [:octicons-arrow-right-24: Enter MCP & agents](ai-web3/mcp-agents.md)
-
--   :material-database-outline: **On-chain Data**
-
-    ---
-
-    链上数据质量、Dune 查询与数据分析工作流，从原始数据到洞察。
-
-    [:octicons-arrow-right-24: Enter on-chain data](onchain-data/index.md)
-
--   :material-tools: **Developer Tools**
-
-    ---
-
-    从 Git 到部署：Builder 日常使用的工具链、工作流与最佳实践。
-
-    [:octicons-arrow-right-24: Enter dev tools](devtools/index.md)
-
--   :material-trophy-outline: **Hackathon Projects**
-
-    ---
-
-    黑客松参赛指南与真实项目复盘：从选题、组队到路演与提交。
-
-    [:octicons-arrow-right-24: Enter hackathons](handbook/hackathon.md)
-
-</div>
-
-## Latest Updates
-
-| Date | Update |
-| ---- | ------ |
-| 2026-10-06 | 重构为文档站布局：三栏阅读、双语站点、新品牌视觉。 |
-| 2026-10-05 | 首页与导航重排为 Documentation 结构。 |
-
-完整历史：[commit log](https://github.com/mia03ther/web3-learning-wiki/commits/main/){ target=_blank }。
-
-## Contribute
-
-这个 Wiki 完全开源，编辑入口就在每一页的右上角。无论是修错别字、补充来源还是新增笔记，都欢迎：
-
-- [Read the contribution guide](contributing.md)
-- [Open an issue](https://github.com/mia03ther/web3-learning-wiki/issues){ target=_blank }
-- [Join the discussion](https://github.com/mia03ther/web3-learning-wiki/discussions){ target=_blank }
+<section class="lp-hero" aria-labelledby="lp-title">
+  <div class="lp-wrap lp-hero__grid">
+    <div class="lp-hero__text lp-reveal">
+      <h1 class="lp-hero__title" id="lp-title">把 Web3 × AI<br>讲成人话。</h1>
+      <p class="lp-hero__sub">MIA 的学习笔记本。去听的活动、读过的文档、踩过的坑，都嚼碎了写在这里，先写给群友看。</p>
+      <div class="lp-hero__actions">
+        <a class="lp-btn" href="start/">进入 Wiki</a>
+        <a class="lp-link" href="field-notes/">最新的现场笔记</a>
+      </div>
+      <p class="lp-hero__meta"><span class="w3-num lp-red">v3.0</span>　2026.10.30 更新　·　3 场活动　·　7 篇现场笔记</p>
+    </div>
+    <figure class="lp-postcard lp-reveal">
+      <img src="assets/f1/leclerc-singapore-2025.jpg" alt="法拉利 16 号赛车在 2025 年新加坡大奖赛夜间练习赛中驶过赛道" width="1200" height="675" decoding="async">
+      <figcaption>
+        <span><b class="w3-num lp-red">No.16</b>　Leclerc · Singapore GP 2025</span>
+        <a href="https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Ferrari_-_Charles_Leclerc_-_FP2.jpg">Photo: Liauzh · CC BY-SA 4.0</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="lp-section" aria-labelledby="lp-latest">
+  <div class="lp-wrap lp-round">
+    <header class="lp-round__head lp-reveal">
+      <p class="lp-round__no w3-num">R03</p>
+      <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
+      <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　深圳　·　500+ 人　·　28 个黑客松项目</p>
+      <p class="lp-lede">当 AI 遇上 Ethereum。Vitalik 聊 AI 会不会破解密码学，以太坊基金会讲链上隐私，Builder 们争论 Agent 该拿多大的权限。</p>
+      <p class="lp-links"><a class="lp-link" href="field-notes/ethshenzhen-2026/">专题总览</a></p>
+    </header>
+    <ol class="lp-reports lp-reveal">
+      <li><a href="field-notes/ethshenzhen-2026/day2-morning/"><span class="lp-reports__k w3-num">DAY 2 · AM</span><span class="lp-reports__t">安全、隐私与路线图</span><span class="lp-reports__d">Vitalik，Winderica，Nym，Strawmap 路线图圆桌</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">DAY 2 · PM</span><span class="lp-reports__t">AI 开发与 Agent 的边界</span><span class="lp-reports__d">Qi Zhou 的 AI Coding 规矩，数据上链，信任边界圆桌，获奖项目</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day1-workshops/"><span class="lp-reports__k w3-num">DAY 1 · WORKSHOP</span><span class="lp-reports__t">硬件钱包与 Vibecoding</span><span class="lp-reports__d">OSKey 现场 DIY 硬件钱包，Tiny 熊从大模型讲到 Agent</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day1-demos/"><span class="lp-reports__k w3-num">DAY 1 · HACKATHON</span><span class="lp-reports__t">黑客松现场展示</span><span class="lp-reports__d">消费语义，可复现的漏洞验证，给 Agent 打榜</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="lp-tagline" aria-label="为什么写这个 Wiki">
+  <div class="lp-wrap">
+    <p class="lp-tagline__text" data-lp-words><span>听过的东西，</span><span>写下来，</span><span>才算真的懂。</span><span>写到群友</span><span>也能看懂，</span><span>才算真的</span><span>写完。</span></p>
+  </div>
+</section>
+
+<section class="lp-section lp-section--alt" aria-labelledby="lp-season">
+  <div class="lp-wrap">
+    <header class="lp-head lp-reveal">
+      <h2 class="lp-h2" id="lp-season">2026 赛季</h2>
+      <p class="lp-lede">每场活动算一站，跑完的都在这里。</p>
+    </header>
+    <ol class="lp-calendar lp-reveal">
+      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 篇</span></a></li>
+      <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis 深圳</span><span class="lp-calendar__type">黑客松宣讲 · 路演</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 篇</span></a></li>
+      <li><a href="field-notes/ai-web3-meetup/"><span class="lp-calendar__r w3-num">R01</span><span class="lp-calendar__name">AI × Web3 产业创新交流会</span><span class="lp-calendar__type">交流会</span><span class="lp-calendar__date w3-num">09.19</span><span class="lp-calendar__n">1 篇</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="lp-section" aria-labelledby="lp-topics">
+  <div class="lp-wrap lp-split">
+    <header class="lp-head lp-reveal">
+      <h2 class="lp-h2" id="lp-topics">按主题读</h2>
+      <p class="lp-lede">笔记里反复出现的概念，都按主题收好了。读到卡住的地方，就来这里查。</p>
+      <p class="lp-links"><a class="lp-link" href="knowledge/">知识库总览</a></p>
+    </header>
+    <ul class="lp-list lp-reveal">
+      <li><a href="security/"><span class="lp-list__t">安全与隐私</span><span class="lp-list__d">钱包怎么放，AI 时代的密码学，链上隐私的四个层次</span></a></li>
+      <li><a href="devtools/ai-coding/"><span class="lp-list__t">AI 辅助开发</span><span class="lp-list__d">大模型的五个缺陷，Agent 与 Harness，可以直接抄的 AGENTS.md</span></a></li>
+      <li><a href="ai-web3/mcp-agents/"><span class="lp-list__t">MCP 与 AI Agents</span><span class="lp-list__d">Agent 怎么调用工具、怎么付钱、怎么被管住</span></a></li>
+      <li><a href="ai-web3/"><span class="lp-list__t">AI × Web3</span><span class="lp-list__d">Agent 支付，链上 Agent，AI 交易与数据资产</span></a></li>
+      <li><a href="fundamentals/"><span class="lp-list__t">区块链基础</span><span class="lp-list__d">40 多个概念的人话解释，从钱包、Gas 到 L2</span></a></li>
+      <li><a href="smart-contracts/"><span class="lp-list__t">智能合约</span><span class="lp-list__d">Solidity、Foundry 和合约安全的入口</span></a></li>
+      <li><a href="onchain-data/"><span class="lp-list__t">链上数据</span><span class="lp-list__d">数据从哪来、怎么查、怎么判断它靠不靠谱</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="lp-section lp-section--alt" aria-labelledby="lp-new">
+  <div class="lp-wrap">
+    <header class="lp-head lp-head--center lp-reveal">
+      <img class="lp-appicon" src="assets/avatar/logo.jpg" alt="" width="96" height="96" loading="lazy">
+      <h2 class="lp-h2" id="lp-new">版本 <span class="w3-num">3.0</span></h2>
+      <p class="lp-lede">10 月 30 日更新。整个 Wiki 从里到外重做了一遍。</p>
+    </header>
+    <div class="lp-cols lp-reveal">
+      <div>
+        <h3>新内容</h3>
+        <p>ETHShenzhen 2026 两天四篇现场笔记，一场 AI × Web3 交流会，还有两个新专题：安全与隐私、AI 辅助开发。</p>
+      </div>
+      <div>
+        <h3>更好读</h3>
+        <p>新的入口页和阅读页。每篇笔记都按同一个结构写，有时间线，也能按主题找。国内打开更快。</p>
+      </div>
+      <div>
+        <h3>修好了</h3>
+        <p>图表、技能树、学习打卡和收款码放大，之前一直没生效，现在都能用了。</p>
+      </div>
+    </div>
+    <p class="lp-links lp-links--center lp-reveal"><a class="lp-link" href="changelog/">版本发布记录</a></p>
+  </div>
+</section>
+
+<section class="lp-final" aria-labelledby="lp-final-title">
+  <div class="lp-wrap lp-reveal">
+    <h2 class="lp-final__title" id="lp-final-title">准备好了，就进来。</h2>
+    <p class="lp-final__sub">从「从这里开始」读起，十分钟就知道这里有什么。</p>
+    <a class="lp-btn" href="start/">进入 Wiki</a>
+  </div>
+</section>

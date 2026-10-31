@@ -15,7 +15,7 @@ AI agents, on-chain data, developer tooling and the Builder journey.
 ## What's Inside
 
 - **Learning Paths**: getting started, staged roadmap, curated courses, skill trees and resources
-- **Blockchain**: fundamentals, core concepts, glossary, smart contracts, on-chain data
+- **Blockchain**: fundamentals, core concepts, smart contracts, on-chain data
 - **AI × Web3**: on-chain agents, agent payments, MCP & AI agents
 - **Developer**: builder handbook, developer tools, GitHub workflow, internships, interview bank
 - **Projects**: hackathon guide and first-hand field notes

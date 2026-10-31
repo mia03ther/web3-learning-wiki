@@ -22,7 +22,6 @@ flowchart LR
 | 你想做什么 | 去哪里 |
 |---|---|
 | 建立基础概念 | [核心概念词典](../fundamentals/core-concepts.md) |
-| 查一个术语 / 谐音黑话 | [黑话对照表](../fundamentals/glossary.md) |
 | 看真实行业里的人在做什么 | [Field Notes](../field-notes/pitch-night.md) |
 | 规划长期学习 | [学习路线图](../roadmap/learning-path.md) |
 | 找课程与工具 | [技能树与资源](../roadmap/skills-resources.md) |

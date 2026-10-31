@@ -27,10 +27,10 @@ support goes to **servers, domains and API costs**, giving me more time to keep 
 
 <div class="w3-support-grid">
 
-  <a class="w3-support-card" href="./assets/support/alipay.png" target="_blank"
+  <a class="w3-support-card" href="../../assets/support/alipay.png" target="_blank"
      rel="noopener noreferrer" aria-label="View the Alipay QR code">
     <div class="w3-support-qr">
-      <img src="./assets/support/alipay.png" alt="Alipay QR code — click to enlarge" loading="lazy" width="640" height="640" />
+      <img src="../../assets/support/alipay.png" alt="Alipay QR code — click to enlarge" loading="lazy" width="640" height="640" />
       <span class="w3-support-zoom" aria-hidden="true">Click to enlarge</span>
     </div>
     <div class="w3-support-meta">
@@ -39,10 +39,10 @@ support goes to **servers, domains and API costs**, giving me more time to keep 
     </div>
   </a>
 
-  <a class="w3-support-card" href="./assets/support/wechat.png" target="_blank"
+  <a class="w3-support-card" href="../../assets/support/wechat.png" target="_blank"
      rel="noopener noreferrer" aria-label="View the WeChat Pay QR code">
     <div class="w3-support-qr">
-      <img src="./assets/support/wechat.png" alt="WeChat Pay QR code — click to enlarge" loading="lazy" width="640" height="640" />
+      <img src="../../assets/support/wechat.png" alt="WeChat Pay QR code — click to enlarge" loading="lazy" width="640" height="640" />
       <span class="w3-support-zoom" aria-hidden="true">Click to enlarge</span>
     </div>
     <div class="w3-support-meta">

@@ -1,0 +1,123 @@
+{% extends "main.html" %}
+
+{#-
+  Entrance page template (docs/index.md, docs/en/index.md use
+  `template: landing.html`). Full-bleed sections with their own floating nav
+  and directory footer; none of the wiki chrome (tabs, sidebars, banner).
+  Page content is plain HTML written in the Markdown file; styles live in
+  assets/stylesheets/home.css, behaviour in assets/javascripts/extra.js.
+-#}
+
+{% macro t(zh, en) -%}
+  {%- if page and page.url and page.url.startswith("en/") -%}{{ en }}{%- else -%}{{ zh }}{%- endif -%}
+{%- endmacro %}
+
+{% macro home() -%}
+  {{ base_url }}/{% if page and page.url and page.url.startswith("en/") %}en/{% endif %}
+{%- endmacro %}
+
+{% block announce %}{% endblock %}
+
+{% block header %}
+  <header class="lp-nav" data-md-component="header" data-lp-nav>
+    <nav class="lp-nav__bar" aria-label="{{ t('主导航', 'Main') }}">
+      <a class="lp-nav__brand" href="{{ home() }}">
+        <img src="{{ config.theme.logo | url }}" alt="" width="64" height="64" decoding="async">
+        <span>Web3 Learning Wiki</span>
+      </a>
+      <ul class="lp-nav__links">
+        <li><a href="{{ home() }}start/">{{ t('入门', 'Start') }}</a></li>
+        <li><a href="{{ home() }}knowledge/">{{ t('知识库', 'Knowledge') }}</a></li>
+        <li><a href="{{ home() }}field-notes/">{{ t('现场笔记', 'Field Notes') }}</a></li>
+        <li><a href="{{ home() }}handbook/">{{ t('成长', 'Grow') }}</a></li>
+        <li><a href="{{ home() }}about/">{{ t('关于', 'About') }}</a></li>
+      </ul>
+      <a class="lp-nav__cta" href="{{ home() }}start/">{{ t('进入 Wiki', 'Open the wiki') }}</a>
+      <button class="lp-nav__toggle" type="button" aria-expanded="false" aria-controls="lp-menu"
+              aria-label="{{ t('打开菜单', 'Open menu') }}" data-lp-toggle>
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="lp-menu" id="lp-menu" data-lp-menu hidden>
+      <ul>
+        <li><a href="{{ home() }}start/">{{ t('入门', 'Start') }}</a></li>
+        <li><a href="{{ home() }}knowledge/">{{ t('知识库', 'Knowledge') }}</a></li>
+        <li><a href="{{ home() }}field-notes/">{{ t('现场笔记', 'Field Notes') }}</a></li>
+        <li><a href="{{ home() }}handbook/">{{ t('成长', 'Grow') }}</a></li>
+        <li><a href="{{ home() }}about/">{{ t('关于', 'About') }}</a></li>
+        <li><a href="{{ home() }}changelog/">{{ t('版本发布', 'Releases') }}</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+{% block site_nav %}{% endblock %}
+
+{% block hero %}
+  <div class="lp" id="lp">
+    {{ page.content }}
+  </div>
+{% endblock %}
+
+{% block container %}{% endblock %}
+
+{% block footer %}
+  <footer class="lp-footer">
+    <div class="lp-wrap">
+      <p class="lp-footer__note">
+        {{ t('笔记大多来自现场录音转写，没把握的地方都标了「待核实」。发现错误，欢迎在群里说，或者在页面上直接改。',
+             'Most notes come from transcribed recordings; anything uncertain is marked as unverified. Spotted a mistake? Edit the page on GitHub.') }}
+      </p>
+      <nav class="lp-footer__dir" aria-label="{{ t('站点目录', 'Directory') }}">
+        <div>
+          <h3>{{ t('入门', 'Start') }}</h3>
+          <ul>
+            <li><a href="{{ home() }}start/">{{ t('从这里开始', 'Start here') }}</a></li>
+            <li><a href="{{ home() }}roadmap/learning-path/">{{ t('学习路线图', 'Learning path') }}</a></li>
+            <li><a href="{{ home() }}roadmap/courses/">{{ t('精选课程中心', 'Course hub') }}</a></li>
+            <li><a href="{{ home() }}roadmap/skills-resources/">{{ t('技能树与资源', 'Skills & resources') }}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ t('知识库', 'Knowledge') }}</h3>
+          <ul>
+            <li><a href="{{ home() }}fundamentals/">{{ t('区块链基础', 'Blockchain basics') }}</a></li>
+            <li><a href="{{ home() }}security/">{{ t('安全与隐私', 'Security & privacy') }}</a></li>
+            <li><a href="{{ home() }}devtools/ai-coding/">{{ t('AI 辅助开发', 'AI-assisted development') }}</a></li>
+            <li><a href="{{ home() }}ai-web3/mcp-agents/">{{ t('MCP 与 AI Agents', 'MCP & AI agents') }}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ t('现场笔记', 'Field Notes') }}</h3>
+          <ul>
+            <li><a href="{{ home() }}field-notes/ethshenzhen-2026/">ETHShenzhen 2026</a></li>
+            <li><a href="{{ home() }}field-notes/ai-web3-meetup/">{{ t('AI × Web3 产业创新交流会', 'AI × Web3 meetup') }}</a></li>
+            <li><a href="{{ home() }}field-notes/monad-hackathon/">{{ t('Monad 黑客松', 'Monad hackathon') }}</a></li>
+            <li><a href="{{ home() }}field-notes/pitch-night/">{{ t('路演夜', 'Pitch night') }}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ t('关于', 'About') }}</h3>
+          <ul>
+            <li><a href="{{ home() }}about/">{{ t('关于这个 Wiki', 'About this wiki') }}</a></li>
+            <li><a href="{{ home() }}changelog/">{{ t('版本发布', 'Releases') }}</a></li>
+            <li><a href="{{ home() }}contributing/">{{ t('贡献指南', 'Contributing') }}</a></li>
+            <li><a href="{{ home() }}support/">{{ t('支持这个 Wiki', 'Support') }}</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="lp-footer__legal">
+        <span>CC BY-NC-SA 4.0 · MIA_Ether</span>
+        <span>
+          <a href="{{ config.repo_url }}">GitHub</a>
+          {% if page and page.url and page.url.startswith("en/") %}
+            · <a href="{{ base_url }}/">中文</a>
+          {% else %}
+            · <a href="{{ base_url }}/en/">English</a>
+          {% endif %}
+        </span>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

@@ -1,5 +1,24 @@
 {% extends "base.html" %}
 
+{#-
+  Announcement bar. Bump the version + copy here on every release (see
+  docs/changelog.md); the `announce.dismiss` feature keys the "closed" state on
+  this block's content, so a new message reappears for readers who dismissed
+  the previous one.
+-#}
+{% block announce %}
+  {% set is_en = page and page.url and page.url.startswith("en/") %}
+  <div class="w3-banner">
+    {% if is_en %}
+      <b>Version 3.0</b> is out: a redesigned wiki and full ETHShenzhen 2026 field notes.
+      <a href="{{ base_url }}/en/changelog/">See what's new ›</a>
+    {% else %}
+      <b>版本 3.0</b> 上线：全新设计，ETHShenzhen 2026 两天现场笔记，安全与隐私、AI 辅助开发两个新专题。
+      <a href="{{ base_url }}/changelog/">看看更新了什么 ›</a>
+    {% endif %}
+  </div>
+{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
 
@@ -25,4 +44,7 @@
 
   <link rel="canonical" href="{{ og_url }}" />
   <meta name="author" content="MIA_Ether" />
+  <link rel="apple-touch-icon" href="{{ 'assets/avatar/apple-touch-icon.png' | url }}" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
 {% endblock %}

@@ -1,7 +1,13 @@
 # 路演夜精读：四个 AI × Web3 项目
 
-> 来源：《AI 与 Web3 三项目路演进展与需求》现场录音（约 37 分钟）
-> 形式：四位 Builder 依次上台 Demo 自己的项目，最后留微信招人 / 找合作。
+<div class="w3-meta">
+  <div><span class="k">活动</span><span class="v">Monad Metropolis 深圳站「会管钱、能交易的 AI」（R02）</span></div>
+  <div><span class="k">时间</span><span class="v">2026.09.26（周六）· 深圳</span></div>
+  <div><span class="k">形式</span><span class="v">四位 Builder 上台 Demo，最后留微信招人、找合作</span></div>
+  <div><span class="k">素材</span><span class="v">现场录音约 37 分钟</span></div>
+</div>
+
+这是 [Monad Metropolis](https://monad.xyz/developers/hackathons/metropolis) 全球黑客松深圳站 Hacker House 的路演环节；同一天的宣讲和圆桌见 [Monad 黑客松与 Agent 金融](monad-hackathon.md)。
 
 ## 这场活动一句话总结
 

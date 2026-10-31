@@ -1,140 +1,59 @@
-# MIA_Ether
-
-<div class="hero">
-
-## AI × Web3 Builder
-
-Building at the intersection of  
-**Artificial Intelligence · Web3 · Open Source**
-
-公开记录我的学习路径、Hackathon 实战、开源贡献与 Builder 实验。
-
-<div class="hero-buttons">
-
-[🚀 Explore Knowledge](roadmap/learning-path.md)
-
-[🛠 View Projects](field-notes/index.md)
-
-</div>
-
-</div>
-
-
+---
+title: 从这里开始
+description: 第一次来 Web3 Learning Wiki？10 分钟了解这里有什么、怎么读、从哪一页开始。
 ---
 
-## Currently Building
+# 从这里开始
 
-<div class="grid cards">
+<p class="w3-lead">
+欢迎！这是我（MIA）的 Web3 × AI 学习笔记本，主要整理给群友看。如果你是第一次来，花 10 分钟按下面五步走一遍，
+就知道这里有什么、该从哪读起了。
+</p>
 
-- :material-robot-outline:
+## 这里有什么
 
-    ## AI Agents & MCP
+| 板块 | 里面是什么 | 适合什么时候看 |
+|---|---|---|
+| **入门** | 路线图、免费课程、技能树、资源汇总 | 想规划长期学习时 |
+| **知识库** | 按主题整理的概念解释：区块链基础、安全与隐私、AI 辅助开发…… | 读笔记卡住了、想系统补一块时 |
+| **现场笔记** | 我去听的活动，嚼碎了写成笔记（ETHShenzhen 2026、Monad 黑客松……） | 想知道行业里的人在做什么 |
+| **成长** | 黑客松、实习求职、面经、作品集、深造 | 准备动手做事、找机会时 |
+| **关于** | 这个 Wiki 的来历、版本发布、怎么参与 | 想知道更新了什么时 |
 
-    Exploring autonomous agents, MCP ecosystem and AI-native workflows.
+## 10 分钟上手
 
+<ol class="w3-steps" markdown>
+<li markdown>**扫一遍 [核心概念词典](../fundamentals/core-concepts.md)**
 
-- :material-cube-outline:
+不用记，只要知道「钱包、私钥、Gas、智能合约、L2」这些词大概是什么意思，以后遇到了回来查。</li>
+<li markdown>**读一篇现场笔记**
 
-    ## Web3 Infrastructure
+推荐先读 [ETHShenzhen · Day 2 上午](../field-notes/ethshenzhen-2026/day2-morning.md) 的 Vitalik 部分——后半段讲怎么保管自己的钱包，现在就用得上。想轻松一点，就读 [路演夜](../field-notes/pitch-night.md)，四个项目都很好懂。</li>
+<li markdown>**准备一个测试钱包**
 
-    Smart contracts, wallets, protocols and decentralized applications.
+装一个 MetaMask 或 Rabby 浏览器钱包，**只连测试网、绝不充值**，去水龙头（Faucet）领点免费测试币，体验一次转账。助记词手抄在纸上，不截图、不发给任何人。</li>
+<li markdown>**选一条适合你的路线**
 
+完全零基础 → [学习路线图](../roadmap/learning-path.md)；想动手做东西 → [精选课程中心](../roadmap/courses.md) + [黑客松参赛指南](../handbook/hackathon.md)；想找实习 → [实习与求职指南](../handbook/internship.md)。</li>
+<li markdown>**收藏 [版本发布](../changelog.md)**
 
-- :material-source-branch:
+每次更新都会写在那里，群里也会同步发通知。</li>
+</ol>
 
-    ## Open Source
+!!! warning "安全第一"
+    学习阶段**不要碰你看不懂的钱**：先测试网、再小额。任何让你「先转一笔钱」「把助记词发过来」「点这个链接领空投」的，几乎都是骗局。更多见 [安全与隐私](../security/index.md)。
 
-    Learning through building, contributing and sharing.
+## 这个 Wiki 的几个约定
 
+- **有出处**：讲者提到的产品、论文、事件都尽量查证过并附了链接，查不到的会写明是讲者自己的说法；
+- **名词以官方为准**：录音转写会把专有名词听错（比如把 Monad 听成「Monet」），笔记里都已经改成查证后的正确写法；
+- **人话优先**：解释尽量用类比和例子，严谨定义以官方文档为准；
+- **每页都能改**：右上角 ✏️ 可以直接在 GitHub 上修改，发现错误也可以在群里说。
 
-</div>
+## 遇到问题怎么办
 
+- 读不懂某个概念：先查 [核心概念词典](../fundamentals/core-concepts.md)，再把问题丢给 AI，让它用例子给你讲；
+- 内容有错、链接失效：在群里说，或者在页面底部评论区留言；
+- 想一起写：看 [贡献指南](../contributing.md)。
 
----
-
-# Builder Dashboard
-
-
-<div class="stats">
-
-
-| | |
-|-|-|
-| 🚀 Projects | AI × Web3 Experiments |
-| 🏆 Hackathons | ETHOnline · Monad |
-| 🌎 Community | OpenBuild · MoleDAO |
-| 💻 Open Source | GitHub Contributions |
-| 📝 Writing | Learning Notes |
-
-
-</div>
-
-
-
----
-
-# Featured Projects
-
-
-<div class="grid cards">
-
-
-- ## VeritasOS
-
-    AI Agent Passport & Reputation Layer.
-
-    Exploring:
-    
-    - ERC-8004
-    - Agent Identity
-    - On-chain Reputation
-
-
-- ## Arbitera
-
-    AI-powered Escrow Court.
-
-    Exploring:
-
-    - AI Judge
-    - MCP
-    - The Graph
-    - Smart Contract Automation
-
-
-- ## YutuHub
-
-    AI-powered campus knowledge platform.
-
-    Exploring:
-
-    - Full-stack Development
-    - Community Product
-    - AI Applications
-
-
-</div>
-
-
----
-
-# Learning Roadmap
-
-
-```mermaid
-timeline
-    title MIA_Ether Learning Journey
-
-    2025
-        Python
-        Data Analysis
-        Web Development
-
-    2026
-        AI Agent
-        MCP
-        Web3 Infrastructure
-
-    Future
-        Global Developer Ecosystem
-        AI × Web3 Research
+> 下一步 → [如何使用本 Wiki](how-to-use.md)
