@@ -11,6 +11,11 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 这一页是整个系列的目录，四篇正文按时间顺序排在下面。
 </p>
 
+<figure class="w3-poster" markdown>
+![ETHShenzhen 2026 主视觉：Beyond Blocks — Ethereum in Motion，10.24–10.25](../../assets/posters/r04-ethshenzhen-2026.jpg){ width="1600" height="900" loading="lazy" }
+<figcaption>ETHShenzhen 2026 主视觉（主办：OpenBuild × ETHTAO × 深大链协；图源：活动官方公众号）</figcaption>
+</figure>
+
 <div class="w3-meta">
   <div><span class="k">时间</span><span class="v">2026.10.24 – 10.25</span></div>
   <div><span class="k">地点</span><span class="v">深圳 · 自贸时代中心</span></div>
@@ -24,6 +29,25 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 1. **AI 同时在加强「攻」和「守」。** Vitalik 担心 AI 会加速破解密码学，但形式化验证也因为 AI 提速了上百倍。以太坊的对策很朴素：能用哈希的地方就用哈希，其他地方把参数调得更保守。
 2. **隐私要分层做。** 「读」（查余额）、「写」（发交易）、「证明」（证明我满 18 岁）三层都会泄露信息，再往下还有网络层（IP、时间、频率）——Winderica 和 Nym 分别讲了上面三层和网络层。
 3. **Agent 进入真实世界，卡在「钱」和「权限」。** 共识是：只给完成任务所需的最小数据，把预算 / 对象 / 时限写死在链上或程序里，最后付款那一步留给人确认。
+</div>
+
+<div class="w3-gallery w3-gallery--3" markdown>
+<figure markdown>
+![ETHShenzhen 2026 主舞台的大屏，屏幕上是活动主视觉](../../assets/posters/r04-ethshenzhen-stage.jpg){ width="1280" height="853" loading="lazy" }
+<figcaption>主舞台</figcaption>
+</figure>
+<figure markdown>
+![开场前的会场：铺着白桌布的长桌对着主舞台大屏](../../assets/posters/r04-ethshenzhen-hall.jpg){ width="1280" height="853" loading="lazy" }
+<figcaption>开场前的会场</figcaption>
+</figure>
+<figure markdown>
+![挂满三角旗的展厅里，参会者坐在沙发和椅子上听分享](../../assets/posters/r04-ethshenzhen-venue.jpg){ width="1280" height="853" loading="lazy" }
+<figcaption>听分享的参会者</figcaption>
+</figure>
+<figure class="w3-gallery__wide" markdown>
+![参会者举着 ETHShenzhen 2026 的牌子在主舞台前合影](../../assets/posters/r04-ethshenzhen-group.jpg){ width="1280" height="586" loading="lazy" }
+<figcaption>合影。以上照片都来自 ETHShenzhen 官方公众号；照片里的人如果不希望出现在这里，告诉我就删。</figcaption>
+</figure>
 </div>
 
 ## 四篇正文

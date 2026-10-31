@@ -1,5 +1,10 @@
 # Monad 黑客松宣讲与 Agent 金融圆桌 · 精读
 
+<figure class="w3-poster" markdown>
+![Monad Metropolis 黑客松主视觉：深色背景上的 METROPOLIS 字样，四周是彩色的立体方块](../assets/posters/r02-monad-metropolis.jpg){ width="1080" height="608" loading="lazy" }
+<figcaption>Monad Metropolis 主视觉（图源：活动官方公众号）</figcaption>
+</figure>
+
 <div class="w3-meta">
   <div><span class="k">活动</span><span class="v">Monad Metropolis 深圳站「会管钱、能交易的 AI」（R02）</span></div>
   <div><span class="k">时间</span><span class="v">2026.09.26（周六）· 深圳</span></div>

@@ -2093,3 +2093,71 @@ body {
     display: none !important;
   }
 }
+
+/* Event posters and photos in field notes --------------------------------- */
+.md-typeset .w3-poster,
+.md-typeset .w3-gallery figure {
+  display: block;
+  margin: 1.2em 0 1.6em;
+  max-width: 100%;
+  text-align: left;
+  width: auto;
+}
+
+.md-typeset .w3-poster p,
+.md-typeset .w3-gallery p {
+  margin: 0;
+}
+
+.md-typeset .w3-poster img,
+.md-typeset .w3-gallery img {
+  border-radius: .3rem;
+  box-shadow: 0 0 0 1px var(--w3-line-soft);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.md-typeset .w3-poster figcaption,
+.md-typeset .w3-gallery figcaption {
+  color: var(--w3-muted);
+  font-size: .64rem;
+  font-style: normal;
+  margin: .5em 0 0;
+  max-width: none;
+  text-align: left;
+}
+
+.md-typeset .w3-gallery {
+  display: grid;
+  gap: 1rem .8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.2em 0 1.6em;
+}
+
+.md-typeset .w3-gallery figure {
+  margin: 0;
+}
+
+.md-typeset .w3-gallery img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.md-typeset .w3-gallery .w3-gallery__wide {
+  grid-column: 1 / -1;
+}
+
+.md-typeset .w3-gallery .w3-gallery__wide img {
+  aspect-ratio: auto;
+}
+
+.md-typeset .w3-gallery--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 30em) {
+  .md-typeset .w3-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

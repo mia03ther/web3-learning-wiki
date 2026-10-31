@@ -26,9 +26,11 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 
 - **ETHShenzhen 2026 系列专题**：[专题总览](field-notes/ethshenzhen-2026/index.md) + 四篇正文——[Day 1 工作坊](field-notes/ethshenzhen-2026/day1-workshops.md)（OSKey 硬件钱包、Tiny 熊讲 LLM 与 Agent）、[Day 1 黑客松展示](field-notes/ethshenzhen-2026/day1-demos.md)、[Day 2 上午](field-notes/ethshenzhen-2026/day2-morning.md)（Vitalik、Winderica、Nym、路线图圆桌）、[Day 2 下午](field-notes/ethshenzhen-2026/day2-afternoon.md)（Qi Zhou、数据上链、Agent 边界、获奖项目）
 - **新笔记**：[AI × Web3 产业创新交流会](field-notes/ai-web3-meetup.md)（09.19 · 深圳），附一份付费培训避坑清单
+- **新笔记**：[RustChinaConf 2026](field-notes/rustchinaconf-2026.md)，展区里谁在用 Rust、招聘墙名单，还有在 Kimi 展位听到的 AI 岗位与求职建议
+- R02–R04 的笔记都配上了活动海报，ETHShenzhen 和 RustChinaConf 还有现场照片
 - **新知识页**：[安全与隐私](security/index.md)、[AI 辅助开发](devtools/ai-coding.md)（含可以直接抄的 `AGENTS.md` / Skill 模板）、[知识库总览](knowledge/index.md)
 - **新页面**：版本发布（就是这一页）
-- 现场笔记按「赛季」重排：R01 [AI × Web3 产业创新交流会](field-notes/ai-web3-meetup.md)（09.19）→ R02 Monad Metropolis 深圳（09.26，[宣讲与圆桌](field-notes/monad-hackathon.md) + [路演夜](field-notes/pitch-night.md)）→ R03 ETHShenzhen 2026（10.24–25）
+- 现场笔记按「赛季」重排：R01 [AI × Web3 产业创新交流会](field-notes/ai-web3-meetup.md)（09.19）→ R02 Monad Metropolis 深圳（09.26，[宣讲与圆桌](field-notes/monad-hackathon.md) + [路演夜](field-notes/pitch-night.md)）→ R03 [RustChinaConf 2026](field-notes/rustchinaconf-2026.md)（10.15–17，最后一天我去做了志愿者）→ R04 ETHShenzhen 2026（10.24–25）
 - 录音转写里的专有名词都已查证，直接在正文里改成正确写法
 
 <p class="w3-release__sec">🎨 体验改进</p>

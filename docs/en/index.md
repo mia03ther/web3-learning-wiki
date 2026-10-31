@@ -1,186 +1,98 @@
 ---
 title: Web3 Learning Wiki
-description: An open-source knowledge base exploring Web3, AI Agents, Blockchain infrastructure, and the Builder journey.
+description: MIA_Ether's Web3 × AI notebook. Field notes from events, a topic-based knowledge base and growth guides, written for a group chat of friends who are learning too.
+template: landing.html
 hide:
+  - navigation
   - toc
 ---
 
-<div class="w3-home" markdown="1">
-
-<div class="w3-home-hero" markdown="1">
-
-<div class="w3-home-eyebrow">MIA03 Lab · Open Knowledge Base</div>
-
-# Web3 Learning Wiki
-
-<p class="w3-home-tagline">
-An open-source knowledge base exploring Web3, AI Agents, Blockchain infrastructure,
-and Builder journey.
-</p>
-
-<div class="w3-home-actions">
-  <a class="w3-btn w3-btn--primary" href="start/">Start Learning</a>
-  <a class="w3-btn w3-btn--ghost" href="roadmap/learning-path/">Explore Knowledge Map</a>
-  <a class="w3-btn w3-btn--ghost" href="contributing/">Contribute</a>
-</div>
-
-<div class="w3-home-stats">
-  <div class="st"><b>32</b><span>structured notes</span></div>
-  <div class="st"><b>7</b><span>learning tracks</span></div>
-  <div class="st"><b>2</b><span>languages · WIP</span></div>
-  <div class="st"><b>100%</b><span>open source · CC BY-NC-SA</span></div>
-</div>
-
-</div>
-
-<div class="w3-home-split" markdown="1">
-
-<div class="w3-home-intro" markdown="1">
-
-## What is this Wiki
-
-An **open knowledge base** maintained by **MIA_Ether** for developers, builders and
-Web3 learners:
-
-- **Study notes** — complex blockchain, smart-contract and AI-agent concepts, explained in plain language;
-- **Build logs** — verifiable records of hackathons, open-source projects and real building processes;
-- **Ecosystem map** — first-hand Field Notes, learning roadmaps and resource lists, continuously updated.
-
-Every entry comes from real learning and building — not from second-hand summaries.
-Contributing is simple: use the **Edit on GitHub** button on any page.
-
-<div class="w3-home-links">
-  <a href="start/">Start from zero →</a>
-  <a href="field-notes/">Read first-hand field notes →</a>
-</div>
-
-</div>
-
-<div class="w3-home-graph" markdown="1">
-
-### Knowledge Graph
-
-<div class="w3-graph-card">
-
-<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web3 Learning Wiki knowledge graph">
-  <g style="stroke: var(--w3-border-strong)" stroke-width="1.5">
-    <path d="M210 145 90 60"/>
-    <path d="M210 145 330 60"/>
-    <path d="M210 145 90 160"/>
-    <path d="M210 145 330 160"/>
-    <path d="M210 145 150 250"/>
-    <path d="M210 145 300 250"/>
-    <path d="M150 60 210 60"/>
-    <path d="M90 110 90 210"/>
-    <path d="M330 110 330 210"/>
-  </g>
-  <g style="font-family: var(--w3-font-sans)" font-size="12" font-weight="600" text-anchor="middle">
-    <g><rect x="30" y="40" width="120" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="90" y="64" style="fill: var(--w3-node-text)">Blockchain</text></g>
-    <g><rect x="270" y="40" width="120" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="330" y="64" style="fill: var(--w3-node-text)">Smart Contracts</text></g>
-    <g><rect x="150" y="40" width="120" height="40" rx="10" style="fill: var(--w3-accent-soft); stroke: var(--w3-accent)"/><text x="210" y="64" style="fill: var(--w3-accent)">Web3 Builder</text></g>
-    <g><rect x="20" y="140" width="140" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="90" y="164" style="fill: var(--w3-node-text)">AI × Web3</text></g>
-    <g><rect x="260" y="140" width="140" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="330" y="164" style="fill: var(--w3-node-text)">Dev Tools</text></g>
-    <g><rect x="70" y="230" width="160" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="150" y="254" style="fill: var(--w3-node-text)">MCP &amp; AI Agents</text></g>
-    <g><rect x="220" y="230" width="160" height="40" rx="10" style="fill: var(--w3-node-fill); stroke: var(--w3-node-stroke)"/><text x="300" y="254" style="fill: var(--w3-node-text)">On-chain Data</text></g>
-  </g>
-</svg>
-
-</div>
-
-<div class="w3-home-path">
-
-<div class="w3-path-head">Learning Path · Four Phases</div>
-
-<ol class="w3-path">
-  <li><b>Phase 1</b><span>Foundations &amp; habits</span></li>
-  <li><b>Phase 2</b><span>First build &amp; ships</span></li>
-  <li><b>Phase 3</b><span>Depth &amp; direction</span></li>
-  <li><b>Phase 4</b><span>Applications &amp; transition</span></li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-## Learning Paths
-
-<div class="grid cards w3-doc-cards" markdown>
-
--   :material-cube-outline: **Blockchain Fundamentals**
-
-    ---
-
-    Wallets, transactions, gas, L2 and core protocol concepts — industry jargon in plain language.
-
-    [:octicons-arrow-right-24: Enter fundamentals](fundamentals/index.md)
-
--   :material-file-code-outline: **Smart Contracts**
-
-    ---
-
-    Writing, testing and deploying smart contracts: Solidity, Foundry and contract security.
-
-    [:octicons-arrow-right-24: Enter smart contracts](smart-contracts/index.md)
-
--   :material-robot-outline: **AI × Web3**
-
-    ---
-
-    On-chain AI agents, agent payments and AI-DeFi: research and practice notes.
-
-    [:octicons-arrow-right-24: Enter AI × Web3](ai-web3/index.md)
-
--   :material-connection: **MCP & AI Agents**
-
-    ---
-
-    Model Context Protocol, agent tool-calling and trusted agent infrastructure.
-
-    [:octicons-arrow-right-24: Enter MCP & agents](ai-web3/mcp-agents.md)
-
--   :material-database-outline: **On-chain Data**
-
-    ---
-
-    Data quality, Dune queries and analysis workflows — from raw logs to insights.
-
-    [:octicons-arrow-right-24: Enter on-chain data](onchain-data/index.md)
-
--   :material-tools: **Developer Tools**
-
-    ---
-
-    From Git to deployment: the toolchains, workflows and best practices builders use daily.
-
-    [:octicons-arrow-right-24: Enter dev tools](devtools/index.md)
-
--   :material-trophy-outline: **Hackathon Projects**
-
-    ---
-
-    The hackathon playbook and real project write-ups: ideation, teaming, demo and submission.
-
-    [:octicons-arrow-right-24: Enter hackathons](handbook/hackathon.md)
-
-</div>
-
-## Latest Updates
-
-| Date | Update |
-| ---- | ------ |
-| 2026-10-06 | Refactored into a documentation layout: three-column reading, bilingual site, new brand. |
-| 2026-10-05 | Homepage and navigation reorganised into a documentation structure. |
-
-Full history: [commit log](https://github.com/mia03ther/web3-learning-wiki/commits/main/){ target=_blank }.
-
-## Contribute
-
-This wiki is fully open source; the edit entry is in the top-right corner of every page. Typos, corrections and new notes are all welcome:
-
-- [Read the contribution guide](contributing.md)
-- [Open an issue](https://github.com/mia03ther/web3-learning-wiki/issues){ target=_blank }
-- [Join the discussion](https://github.com/mia03ther/web3-learning-wiki/discussions){ target=_blank }
+<section class="lp-hero" aria-labelledby="lp-title">
+  <div class="lp-wrap lp-hero__grid">
+    <div class="lp-hero__text">
+      <h1 class="lp-hero__title" id="lp-title">MIA's<br>Web3 <span class="lp-red">×</span> AI notebook</h1>
+      <p class="lp-hero__sub">Events I went to, docs I read, mistakes I made, all written up here. The notes are in Chinese and written for my group chat; this English side is a skeleton.</p>
+      <div class="lp-hero__actions">
+        <a class="lp-btn" href="start/">Start reading</a>
+        <a class="lp-link" href="changelog/">What changed in v3.0</a>
+      </div>
+    </div>
+    <figure class="lp-postcard">
+      <img src="../assets/f1/leclerc-singapore-2025.jpg" alt="Ferrari car number 16 on track during night practice at the 2025 Singapore Grand Prix" width="1200" height="675" decoding="async">
+      <figcaption>
+        <span><b class="w3-num lp-red">No.16</b>　Leclerc · Singapore GP 2025</span>
+        <a href="https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Ferrari_-_Charles_Leclerc_-_FP2.jpg">Photo: Liauzh · CC BY-SA 4.0</a>
+      </figcaption>
+      <svg class="lp-sticker" viewBox="0 0 120 120" role="img" aria-label="FC Bayern sticker: Mia san mia">
+        <circle cx="60" cy="60" r="60" fill="#fff"/>
+        <circle cx="60" cy="60" r="56" fill="#dc052d"/>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#fff" stroke-width="1.2"/>
+        <text x="60" y="50" text-anchor="middle" font-size="15" letter-spacing="1.5">MIA SAN</text>
+        <text x="60" y="81" text-anchor="middle" font-size="34" letter-spacing="1">MIA</text>
+        <text x="60" y="98" text-anchor="middle" font-size="10" letter-spacing="2.5">1900</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section class="lp-section" aria-labelledby="lp-latest">
+  <div class="lp-wrap lp-round">
+    <header class="lp-round__head">
+      <p class="lp-round__no w3-num">R04</p>
+      <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
+      <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　Shenzhen　·　500+ people　·　28 hackathon projects</p>
+      <p class="lp-lede">When AI meets Ethereum. Vitalik on whether AI threatens cryptography, the Ethereum Foundation on on-chain privacy, builders arguing over how much power an agent should get.</p>
+      <p class="lp-links"><a class="lp-link" href="field-notes/ethshenzhen-2026/">Series overview</a></p>
+    </header>
+    <ol class="lp-reports">
+      <li><a href="field-notes/ethshenzhen-2026/day2-morning/"><span class="lp-reports__k w3-num">DAY 2 · AM</span><span class="lp-reports__t">Security, privacy and the roadmap</span><span class="lp-reports__d">Vitalik, Winderica, Nym, the Strawmap roundtable</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">DAY 2 · PM</span><span class="lp-reports__t">AI development and agent boundaries</span><span class="lp-reports__d">Rules for AI coding, data on-chain, the trust roundtable, winning projects</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day1-workshops/"><span class="lp-reports__k w3-num">DAY 1 · WORKSHOP</span><span class="lp-reports__t">Hardware wallets and vibecoding</span><span class="lp-reports__d">Building an OSKey wallet on a dev board, from LLMs to agents</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day1-demos/"><span class="lp-reports__k w3-num">DAY 1 · HACKATHON</span><span class="lp-reports__t">Hackathon demos</span><span class="lp-reports__d">Payment semantics, reproducible exploit checks, agent leaderboards</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="lp-section lp-section--alt" aria-labelledby="lp-season">
+  <div class="lp-wrap">
+    <header class="lp-head">
+      <h2 class="lp-h2" id="lp-season">2026 season</h2>
+      <p class="lp-lede">Every event is a round. These are the ones done so far.</p>
+    </header>
+    <ol class="lp-calendar">
+      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">Conference · hackathon</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 notes</span></a></li>
+      <li><a href="field-notes/rustchinaconf-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">RustChinaConf 2026</span><span class="lp-calendar__type">Conference · volunteer</span><span class="lp-calendar__date w3-num">10.15 – 17</span><span class="lp-calendar__n">1 note</span></a></li>
+      <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis Shenzhen</span><span class="lp-calendar__type">Hackathon talks · demos</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 notes</span></a></li>
+      <li><a href="field-notes/ai-web3-meetup/"><span class="lp-calendar__r w3-num">R01</span><span class="lp-calendar__name">AI × Web3 Industry Meetup</span><span class="lp-calendar__type">Meetup</span><span class="lp-calendar__date w3-num">09.19</span><span class="lp-calendar__n">1 note</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="lp-section" aria-labelledby="lp-topics">
+  <div class="lp-wrap lp-split">
+    <header class="lp-head">
+      <h2 class="lp-h2" id="lp-topics">Read by topic</h2>
+      <p class="lp-lede">Concepts that keep coming up in the notes, collected by topic. Stuck on a word? Look it up here.</p>
+      <p class="lp-links"><a class="lp-link" href="knowledge/">Knowledge overview</a></p>
+    </header>
+    <ul class="lp-list">
+      <li><a href="security/"><span class="lp-list__t">Security and privacy</span><span class="lp-list__d">Where to keep a wallet, cryptography in the AI era, four layers of on-chain privacy</span></a></li>
+      <li><a href="devtools/ai-coding/"><span class="lp-list__t">AI-assisted development</span><span class="lp-list__d">Five weaknesses of LLMs, agents and harnesses, an AGENTS.md you can copy</span></a></li>
+      <li><a href="ai-web3/mcp-agents/"><span class="lp-list__t">MCP and AI agents</span><span class="lp-list__d">How agents call tools, pay, and get kept in check</span></a></li>
+      <li><a href="ai-web3/"><span class="lp-list__t">AI × Web3</span><span class="lp-list__d">Agent payments, on-chain agents, AI trading and data assets</span></a></li>
+      <li><a href="fundamentals/"><span class="lp-list__t">Blockchain basics</span><span class="lp-list__d">Forty-odd concepts in plain words, from wallets and gas to L2</span></a></li>
+      <li><a href="smart-contracts/"><span class="lp-list__t">Smart contracts</span><span class="lp-list__d">Where to start with Solidity, Foundry and contract security</span></a></li>
+      <li><a href="onchain-data/"><span class="lp-list__t">On-chain data</span><span class="lp-list__d">Where data comes from, how to query it, how far to trust it</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="lp-section lp-section--alt" aria-labelledby="lp-edit">
+  <div class="lp-wrap">
+    <header class="lp-head">
+      <h2 class="lp-h2" id="lp-edit">Anyone can edit this notebook</h2>
+      <p class="lp-lede">Found something wrong or out of date, or went to one of these events and want to add a line? Click the ✏️ at the top right of any page, make the change on GitHub and open a pull request.</p>
+      <p class="lp-links"><a class="lp-link" href="contributing/">Contributing guide</a><a class="lp-link" href="https://github.com/mia03ther/web3-learning-wiki">GitHub repository</a></p>
+    </header>
+  </div>
+</section>

@@ -208,9 +208,10 @@ nav:
           - Day 1 · 黑客松现场展示: field-notes/ethshenzhen-2026/day1-demos.md
           - Day 2 · 安全、隐私与路线图: field-notes/ethshenzhen-2026/day2-morning.md
           - Day 2 · AI 开发与 Agent 边界: field-notes/ethshenzhen-2026/day2-afternoon.md
-      - AI × Web3 产业创新交流会: field-notes/ai-web3-meetup.md
+      - RustChinaConf 2026: field-notes/rustchinaconf-2026.md
       - Monad 黑客松与 Agent 金融: field-notes/monad-hackathon.md
       - 路演夜 · 四个 AI × Web3 项目: field-notes/pitch-night.md
+      - AI × Web3 产业创新交流会: field-notes/ai-web3-meetup.md
   - 成长:
       - handbook/index.md
       - 黑客松参赛指南: handbook/hackathon.md

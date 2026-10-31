@@ -1,6 +1,6 @@
 ---
 title: 现场笔记 · Field Notes
-description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Monad Metropolis 深圳、AI × Web3 产业创新交流会，按时间线和主题索引。
+description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、RustChinaConf 2026、Monad Metropolis 深圳、AI × Web3 产业创新交流会，按时间线和主题索引。
 ---
 
 # 现场笔记
@@ -14,8 +14,8 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Mon
 
 <div class="w3-timeline">
 
-  <div class="w3-timeline__group" id="r03">
-    <div class="w3-timeline__date"><b class="w3-round w3-num">R03</b>10.24–25<small>ETHShenzhen · 深圳</small></div>
+  <div class="w3-timeline__group" id="r04">
+    <div class="w3-timeline__date"><b class="w3-round w3-num">R04</b>10.24–25<small>ETHShenzhen · 深圳</small></div>
     <div class="w3-timeline__items">
       <a class="w3-note" href="ethshenzhen-2026/">
         <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">系列专题</span><span>ETHShenzhen 2026 · 4 篇</span></div>
@@ -45,6 +45,18 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Mon
         <p class="w3-note__title">黑客松现场展示 + LP 工具 Demo</p>
         <p class="w3-note__desc">支付的「消费语义」、可复现的 AI 漏洞验证、Agent 打榜、旅行凭证核销、开源作者感谢墙，以及一个帮新手做 LP 的小工具。</p>
         <div class="w3-tags"><span>#黑客松</span><span>#Agent支付</span><span>#安全</span><span>#DeFi</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="w3-timeline__group" id="r03">
+    <div class="w3-timeline__date"><b class="w3-round w3-num">R03</b>10.15–17<small>RustChinaConf · 深圳</small></div>
+    <div class="w3-timeline__items">
+      <a class="w3-note" href="rustchinaconf-2026/">
+        <div class="w3-note__meta"><span class="w3-chip">大会 · 志愿者</span><span>10.17 现场</span></div>
+        <p class="w3-note__title">RustChinaConf 2026：Rust × AI，和一次展位上的求职课</p>
+        <p class="w3-note__desc">展区里谁在生产环境用 Rust、招聘墙上的 12 家公司，以及在 Kimi 展位听到的：AI 公司的两类岗位、比「熟悉某某大模型」更有用的简历、让 AI 点鼠标到底高不高效。</p>
+        <div class="w3-tags"><span>#Rust</span><span>#求职</span><span>#AI岗位</span><span>#开源</span></div>
       </a>
     </div>
   </div>
@@ -91,10 +103,12 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Mon
 | **用 AI 写代码** | [Day 1 · Tiny 熊](ethshenzhen-2026/day1-workshops.md#part-2) · [Day 2 下午 · Qi Zhou](ethshenzhen-2026/day2-afternoon.md#part-2) |
 | **公链性能与路线图** | [Monad 黑客松](monad-hackathon.md) · [Day 2 上午 · 路线图圆桌](ethshenzhen-2026/day2-morning.md#part-4) |
 | **项目长什么样、怎么参赛** | [黑客松现场展示](ethshenzhen-2026/day1-demos.md) · [获奖项目](ethshenzhen-2026/day2-afternoon.md#part-7) · [路演夜](pitch-night.md) |
-| **求职和避坑** | [交流会 · 培训避坑清单](ai-web3-meetup.md#training-checklist) |
+| **Rust、开源和 AI 公司求职** | [RustChinaConf 2026](rustchinaconf-2026.md) · [Kimi 展位聊天](rustchinaconf-2026.md#part-3) |
+| **求职和避坑** | [交流会 · 培训避坑清单](ai-web3-meetup.md#training-checklist) · [RustChinaConf · 比「熟悉某某大模型」更有用的东西](rustchinaconf-2026.md#part-3) |
 
 ## 阅读提示
 
 - 笔记里的概念，大多能在 [核心概念词典](../fundamentals/core-concepts.md) 和 [安全与隐私](../security/index.md) 里查到人话解释；
 - 内容来自录音转写，专有名词经常被听错，笔记里都已经查证并改成正确写法；
 - 讲者提到的产品、论文、事件都尽量查证过并附了链接；发现错误欢迎在群里说，或者点右上角 ✏️ 直接改。
+- **关于图片**：活动海报和现场照片都采自各活动的官方公众号，版权归主办方和摄影师所有，只用于学习记录和非商业分享，不适用本站的 CC BY-NC-SA 协议；照片里人物的肖像权归本人所有。如果你是版权方或照片里的人，不希望出现在这里，在群里说一声或在 GitHub 提 Issue，我会尽快删除或打码。

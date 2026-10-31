@@ -38,7 +38,7 @@ hide:
 <section class="lp-section" aria-labelledby="lp-latest">
   <div class="lp-wrap lp-round">
     <header class="lp-round__head">
-      <p class="lp-round__no w3-num">R03</p>
+      <p class="lp-round__no w3-num">R04</p>
       <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
       <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　深圳　·　500+ 人　·　28 个黑客松项目</p>
       <p class="lp-lede">当 AI 遇上 Ethereum。Vitalik 聊 AI 会不会破解密码学，以太坊基金会讲链上隐私，Builder 们争论 Agent 该拿多大的权限。</p>
@@ -60,7 +60,8 @@ hide:
       <p class="lp-lede">每场活动算一站，跑完的都在这里。</p>
     </header>
     <ol class="lp-calendar">
-      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 篇</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 篇</span></a></li>
+      <li><a href="field-notes/rustchinaconf-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">RustChinaConf 2026</span><span class="lp-calendar__type">大会 · 志愿者</span><span class="lp-calendar__date w3-num">10.15 – 17</span><span class="lp-calendar__n">1 篇</span></a></li>
       <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis 深圳</span><span class="lp-calendar__type">黑客松宣讲 · 路演</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 篇</span></a></li>
       <li><a href="field-notes/ai-web3-meetup/"><span class="lp-calendar__r w3-num">R01</span><span class="lp-calendar__name">AI × Web3 产业创新交流会</span><span class="lp-calendar__type">交流会</span><span class="lp-calendar__date w3-num">09.19</span><span class="lp-calendar__n">1 篇</span></a></li>
     </ol>
