@@ -10,7 +10,7 @@ hide:
 <section class="lp-hero" aria-labelledby="lp-title">
   <div class="lp-wrap lp-hero__grid">
     <div class="lp-hero__text">
-      <h1 class="lp-hero__title" id="lp-title">MIA 的<br>Web3 <span class="lp-red">×</span> AI 笔记本</h1>
+      <h1 class="lp-hero__title" id="lp-title">MIA_Ether 的<br>Web3 <span class="lp-red">×</span> AI 笔记本</h1>
       <p class="lp-hero__sub">这里是MIA_Ether，08 年 8 月出生。主要探索Web3 x AI交叉方向，专业/base目前苟在泥粤某不知名双非信管考虑转-->深入cs/区块链，港三新二筹划ing。这本记录主要写给自己看（自娱自乐这块啊），能帮助到群u是莫大荣幸！其实我是乐子人，生活也就图一乐ovo。LIFE IS SOOOO SHORT</p>
       <p class="lp-hero__now"><span>最近在筹划</span>寒假的香港访学活动 · Consensus Hong Kong 2027</p>
       <div class="lp-hero__actions">
