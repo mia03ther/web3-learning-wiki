@@ -1,0 +1,31 @@
+<!--
+  MIA03 Lab · Web3 Learning Wiki — brand mark
+  A knowledge graph drawn inside a blockchain block:
+  - hexagon ring = chain / block link
+  - node path in the shape of "M" = MIA · data structure · neural network
+  - corner dots = open-source network peers
+  Uses currentColor only, so the mark inherits the active theme (light / dark)
+  and stays legible in the navbar at any size.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     fill="none" role="img" aria-label="Web3 Learning Wiki">
+  <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 6.5 54 19.2v25.6L32 57.5 10 44.8V19.2L32 6.5Z" stroke-width="3" opacity=".92"/>
+    <path d="M32 6.5v7.5M54 19.2l-7 3.8M54 44.8l-7-3.8M32 57.5V50M10 44.8l7-3.8M10 19.2l7 3.8"
+          stroke-width="2.2" opacity=".42"/>
+    <path d="M19 46 27 26l5 9 5-9 8 20" stroke-width="2.4" opacity=".85"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="19" cy="46" r="3.2"/>
+    <circle cx="27" cy="26" r="3.2"/>
+    <circle cx="32" cy="35" r="3.6"/>
+    <circle cx="37" cy="26" r="3.2"/>
+    <circle cx="45" cy="46" r="3.2"/>
+    <circle cx="32" cy="6.5" r="2.4" opacity=".85"/>
+    <circle cx="54" cy="19.2" r="2.4" opacity=".85"/>
+    <circle cx="54" cy="44.8" r="2.4" opacity=".85"/>
+    <circle cx="32" cy="57.5" r="2.4" opacity=".85"/>
+    <circle cx="10" cy="44.8" r="2.4" opacity=".85"/>
+    <circle cx="10" cy="19.2" r="2.4" opacity=".85"/>
+  </g>
+</svg>

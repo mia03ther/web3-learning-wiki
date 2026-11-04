@@ -1,0 +1,2777 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ETHShenzhen 2026 Vitalik 分享详解：密码学假设、哈希签名、客户端多样性、形式化验证，以及多签与设备隔离。">
+      
+      
+        <meta name="author" content="MIA_Ether">
+      
+      
+        <link rel="canonical" href="https://mia03ther.github.io/web3-learning-wiki/field-notes/ethshenzhen-2026/vitalik-ai-security/">
+      
+      
+        <link rel="prev" href="../day1-demos/">
+      
+      
+        <link rel="next" href="../day2-morning/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../../en/field-notes/ethshenzhen-2026/vitalik-ai-security/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/avatar/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Vitalik：以太坊如何在 AI 网络安全危机中幸存 - Web3 Learning Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%201.5c-2.363%200-4%201.69-4%203.75%200%20.984.424%201.625.984%202.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621%201.49a.75.75%200%200%201-1.484.211c-.04-.282-.163-.547-.37-.847a9%209%200%200%200-.542-.68q-.126-.149-.268-.32C3.201%207.75%202.5%206.766%202.5%205.25%202.5%202.31%204.863%200%208%200s5.5%202.31%205.5%205.25c0%201.516-.701%202.5-1.328%203.259q-.142.172-.268.319c-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751%200%200%201-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848q.113-.133.213-.253c.561-.679.985-1.32.985-2.304%200-2.06-1.637-3.75-4-3.75M5.75%2012h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M6%2015.25a.75.75%200%200%201%20.75-.75h2.5a.75.75%200%200%201%200%201.5h-2.5a.75.75%200%200%201-.75-.75%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m1.5%200a6.5%206.5%200%201%200%2013%200%206.5%206.5%200%200%200-13%200m10.28-1.72-4.5%204.5a.75.75%200%200%201-1.06%200l-2-2a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018l1.47%201.47%203.97-3.97a.75.75%200%200%201%201.042.018.75.75%200%200%201%20.018%201.042%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/reading.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/plush.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web3 Learning Wiki" />
+  <meta property="og:title" content="Vitalik：以太坊如何在 AI 网络安全危机中幸存" />
+  <meta property="og:description" content="ETHShenzhen 2026 Vitalik 分享详解：密码学假设、哈希签名、客户端多样性、形式化验证，以及多签与设备隔离。" />
+  <meta property="og:url" content="https://mia03ther.github.io/web3-learning-wiki/field-notes/ethshenzhen-2026/vitalik-ai-security/" />
+  <meta property="og:image" content="https://mia03ther.github.io/web3-learning-wiki/assets/og-image.svg" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vitalik：以太坊如何在 AI 网络安全危机中幸存" />
+  <meta name="twitter:description" content="ETHShenzhen 2026 Vitalik 分享详解：密码学假设、哈希签名、客户端多样性、形式化验证，以及多签与设备隔离。" />
+  <meta name="twitter:image" content="https://mia03ther.github.io/web3-learning-wiki/assets/og-image.svg" />
+  <meta name="twitter:site" content="@MIA03ther" />
+  <meta name="twitter:creator" content="@MIA03ther" />
+
+  <link rel="canonical" href="https://mia03ther.github.io/web3-learning-wiki/field-notes/ethshenzhen-2026/vitalik-ai-security/" />
+  <meta name="author" content="MIA_Ether" />
+  <link rel="apple-touch-icon" href="../../../assets/avatar/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vitalik以太坊如何在-ai-网络安全危机中幸存" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="不再显示此消息">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  
+  <div class="w3-banner">
+    
+      <b>版本 3.3</b>：Vitalik 安全分享更新了，三层风险展开讲。
+      <a href="../../../field-notes/ethshenzhen-2026/vitalik-ai-security/">打开专篇 ›</a>
+    
+  </div>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." class="md-header__button md-logo" aria-label="Web3 Learning Wiki" data-md-component="logo">
+      <img src="../../../assets/avatar/logo.jpg" alt="MIA_Ether" width="96" height="96" decoding="async" />
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="打开导航">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic"><span class="md-ellipsis">Web3 Learning Wiki</span></div>
+        <div class="md-header__topic" data-md-component="header-topic"><span class="md-ellipsis">Vitalik：以太坊如何在 AI 网络安全危机中幸存</span></div>
+      </div>
+    </div>
+    <div class="w3-doc-topnav">
+      
+        
+        
+          <a href="../../../start/">入门</a>
+        
+      
+        
+        
+          <a href="../../../knowledge/">知识库</a>
+        
+      
+        
+        
+          <a href="../../" aria-current="true">现场笔记</a>
+        
+      
+        
+        
+          <a href="../../../handbook/">成长</a>
+        
+      
+        
+        
+          <a href="../../../about/">关于</a>
+        
+      
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/field-notes/ethshenzhen-2026/vitalik-ai-security/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+      <label class="md-header__button md-icon" for="__search" aria-label="查找">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <a href="https://github.com/mia03ther/web3-learning-wiki" class="w3-doc-github md-header__button md-icon" aria-label="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <div class="w3-doc-brand">
+    <a href="../../.." class="w3-doc-brand__link" aria-label="Web3 Learning Wiki">
+      <img src="../../../assets/avatar/logo.jpg" alt="" width="40" height="40">
+      <span><b>MIA's notebook<span aria-hidden="true">.</span></b><small>WEB3 / AI / LIFE</small></span>
+    </a>
+    <button class="w3-doc-close md-icon" type="button" data-w3-close-nav aria-label="关闭导航">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </div>
+  <button class="w3-doc-search" type="button" data-w3-search>
+    <span class="md-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg></span>
+    <span>搜一搜这个本子</span>
+    <kbd>/</kbd>
+  </button>
+  <div class="w3-doc-nav-label">本子目录</div>
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../start/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    入门
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start/how-to-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何使用本 Wiki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    路线图总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习路线图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/courses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    精选课程中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/skills-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    技能树与资源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资源汇总
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../knowledge/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知识库
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    知识库
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    区块链基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentals/core-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核心概念词典
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../smart-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能合约
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../onchain-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    链上数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI × Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai-web3/mcp-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP 与 AI Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全与隐私
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../devtools/ai-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 辅助开发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../devtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发者工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    现场笔记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    现场笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ETHShenzhen 2026
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ETHShenzhen 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day1-workshops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 1 · 硬件钱包与 Vibecoding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day1-demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 1 · 黑客松现场展示
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vitalik · AI 与以太坊安全
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vitalik · AI 与以太坊安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 先把三种危险分开
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 「抗 AI」究竟在担心什么？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 「抗 AI」究竟在担心什么？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#不同构造依赖不同假设" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不同构造，依赖不同假设
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么他更偏爱哈希" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么他更偏爱哈希
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 新算法出现后，系统可能先变贵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 新算法出现后，系统可能先变贵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#把投影片里的分解例子算一遍" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        把投影片里的分解例子算一遍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 哈希怎样变成签名和证明？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 哈希怎样变成签名和证明？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#哈希链公开终点出示中间值" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        哈希链：公开终点，出示中间值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stark证明计算与交易签名是两件事" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STARK：证明计算，与交易签名是两件事
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 客户端代码：找漏洞，也要控制共同故障
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 客户端代码：找漏洞，也要控制共同故障">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-找到的报告还需要证据" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 找到的报告，还需要证据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#客户端多样性看份额也看共同依赖" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        客户端多样性：看份额，也看共同依赖
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formal-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 形式化验证：把「正确」写成能检查的命题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 用户层：把钥匙和出错机会分开
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 用户层：把钥匙和出错机会分开">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#多签最怕的是几把钥匙其实共享一处风险" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多签最怕的，是几把钥匙其实共享一处风险
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#签名设备操作系统隔离与更新" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        签名设备：操作系统、隔离与更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 我带走的结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        资料与继续阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day2-morning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2 · 安全、隐私与路线图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day2-afternoon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2 · AI 开发与 Agent 边界
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rustchinaconf-2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RustChinaConf 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monad-hackathon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monad 黑客松与 Agent 金融
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pitch-night/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    路演夜 · 四个 AI × Web3 项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-web3-meetup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI × Web3 产业创新交流会
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../handbook/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    成长
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    成长
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/hackathon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    黑客松参赛指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/internship/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实习与求职指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面经题库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../handbook/github-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 与本站搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/graduate-study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    海外深造参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标化与背景建设
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../about/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    关于
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本发布
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贡献指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    支持这个 Wiki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+  <div class="w3-doc-colophon">
+    <span class="w3-doc-colophon__line">Rosso Corsa <i>×</i> Bayern Rot</span>
+    <a href="../../../contributing/">这个本子，一起写 <span aria-hidden="true">↗</span></a>
+    <small>Mia san mia.</small>
+  </div>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 先把三种危险分开
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 「抗 AI」究竟在担心什么？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 「抗 AI」究竟在担心什么？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#不同构造依赖不同假设" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不同构造，依赖不同假设
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么他更偏爱哈希" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么他更偏爱哈希
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 新算法出现后，系统可能先变贵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 新算法出现后，系统可能先变贵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#把投影片里的分解例子算一遍" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        把投影片里的分解例子算一遍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 哈希怎样变成签名和证明？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 哈希怎样变成签名和证明？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#哈希链公开终点出示中间值" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        哈希链：公开终点，出示中间值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stark证明计算与交易签名是两件事" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STARK：证明计算，与交易签名是两件事
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 客户端代码：找漏洞，也要控制共同故障
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 客户端代码：找漏洞，也要控制共同故障">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-找到的报告还需要证据" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 找到的报告，还需要证据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#客户端多样性看份额也看共同依赖" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        客户端多样性：看份额，也看共同依赖
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formal-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 形式化验证：把「正确」写成能检查的命题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 用户层：把钥匙和出错机会分开
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 用户层：把钥匙和出错机会分开">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#多签最怕的是几把钥匙其实共享一处风险" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多签最怕的，是几把钥匙其实共享一处风险
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#签名设备操作系统隔离与更新" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        签名设备：操作系统、隔离与更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 我带走的结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        资料与继续阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    现场笔记
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    ETHShenzhen 2026
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/mia03ther/web3-learning-wiki/edit/main/docs/field-notes/ethshenzhen-2026/vitalik-ai-security.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="vitalik以太坊如何在-ai-网络安全危机中幸存">Vitalik：以太坊如何在 AI 网络安全危机中幸存<a class="headerlink" href="#vitalik以太坊如何在-ai-网络安全危机中幸存" title="Permanent link">&para;</a></h1>
+<p class="w3-lead">AI 更会做数学、更会读代码之后，以太坊的安全边界会发生什么变化？Vitalik 在 ETHShenzhen 把这个问题拆成了三层：密码学假设、客户端代码，以及最后握着私钥的人。沿着这三层看，才能理解他为什么反复讲哈希、形式化验证和多签。</p>
+
+<div class="w3-meta">
+  <div><span class="k">场次</span><span class="v">ETHShenzhen 2026 · 10.25 上午</span></div>
+  <div><span class="k">讲者</span><span class="v">Vitalik Buterin · 以太坊联合创始人</span></div>
+  <div><span class="k">更新</span><span class="v">2026.11.04 · 结合投影片完善内容</span></div>
+  <div><span class="k">系列</span><span class="v"><a href="../">R04 专题总览</a> · <a href="../day2-morning/#part-1">上午场笔记</a></span></div>
+</div>
+
+<div class="w3-tldr">
+<p><span class="k">先读这几句</span></p>
+<ul>
+<li><strong>数学假设可能需要重新评估。</strong> 讲者倾向于少依赖复杂代数结构，多采用基于哈希的构造；实际安全性仍需逐个方案分析。</li>
+<li><strong>代码层要让攻击更难扩散。</strong> AI 辅助找漏洞，多种独立客户端分散共同故障，形式化验证检查明确写出的性质。</li>
+<li><strong>用户层要把失败隔开。</strong> 多签的价值取决于签名设备是否独立；几把钥匙都在同一台电脑上，门槛只是表面上的。</li>
+<li><strong>他的长期判断偏乐观。</strong> 软件、硬件和证明工具都能变得更可靠，但迁移、实现和日常操作仍需要认真对待。</li>
+</ul>
+</div>
+<p>本文结合现场投影片整理，解释性补充标为「补充」，并附上技术资料，方便继续读下去。</p>
+<h2 id="three-layers">1. 先把三种危险分开<a class="headerlink" href="#three-layers" title="Permanent link">&para;</a></h2>
+<p>演讲开头先列出三个入口。它们会相互影响，但修复方式不同：</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>真正担心什么</th>
+<th>对应的防线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>协议的密码学假设</strong></td>
+<td>原来被认为很难的数学问题，出现了更有效的攻击</td>
+<td>重新评估假设、选择构造和参数、准备迁移</td>
+</tr>
+<tr>
+<td><strong>客户端代码</strong></td>
+<td>密码学原理没坏，实现、网络处理或依赖库却出了错</td>
+<td>找漏洞、测试、独立实现、形式化验证</td>
+</tr>
+<tr>
+<td><strong>用户层</strong></td>
+<td>网页、设备、签名流程或人自己出问题</td>
+<td>多签、设备隔离、可信显示与恢复流程</td>
+</tr>
+</tbody>
+</table>
+<p>一个钱包被钓鱼网站骗签，并不说明椭圆曲线被破解；某个客户端崩溃，也不等于共识规则本身失效。排查时先认清是哪一层，才知道要换算法、修代码，还是重做签名流程。</p>
+<h2 id="crypto-assumptions">2. 「抗 AI」究竟在担心什么？<a class="headerlink" href="#crypto-assumptions" title="Permanent link">&para;</a></h2>
+<p>以前谈长期密码学安全，常见问题是「量子计算机会不会把它打破」。这场分享又加了一个问题：<strong>AI 会不会帮助人类更快地发现数学算法，削弱现有安全假设？</strong></p>
+<p>密码学依赖的通常是经过明确描述的计算困难性；如果解题方法变快，原来选定的参数未必还提供足够的安全余量。</p>
+<h3 id="不同构造依赖不同假设">不同构造，依赖不同假设<a class="headerlink" href="#不同构造依赖不同假设" title="Permanent link">&para;</a></h3>
+<p>投影片把哈希、AES、椭圆曲线、配对和格放在同一张图里比较，并明确写着「这是我的个人观点」。读这张图时，需要把两列分开：</p>
+<table>
+<thead>
+<tr>
+<th>构造</th>
+<th>关于量子攻击的背景</th>
+<th>本场对 AI 风险的讨论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>哈希、对称加密</strong></td>
+<td>通常可以通过合适的参数抵御已知通用量子攻击，不能省略参数条件</td>
+<td>讲者相对更信任，倾向于减少对复杂代数结构的依赖</td>
+</tr>
+<tr>
+<td><strong>椭圆曲线签名</strong>，如 ECDSA</td>
+<td>足够强的量子计算机可用 Shor 算法攻击其离散对数问题</td>
+<td>担心未来出现更有效的数学攻击；没有宣告现有签名已失效</td>
+</tr>
+<tr>
+<td><strong>椭圆曲线配对</strong>，如 BLS、Groth16 中的相关构造</td>
+<td>同样面对量子威胁</td>
+<td>讲者对其丰富结构尤其谨慎</td>
+</tr>
+<tr>
+<td><strong>格密码</strong>，如 ML-DSA，以及部分 FHE 构造</td>
+<td>某些具体方案已成为后量子标准，安全性依赖各自问题和参数</td>
+<td>对 AI 能带来的新进展保留不确定性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>补充：目前没有一个通用、标准化的「抗 AI」认证。</strong> NIST 的后量子标准针对的是包含量子攻击的威胁模型，也不保证未来不会出现新的经典数学攻击。<a href="https://csrc.nist.gov/projects/post-quantum-cryptography">NIST 后量子密码学项目</a></p>
+<p><strong>SNARK 的具体构造也有差别。</strong> Groth16 使用配对；PLONK 的具体安全假设还取决于采用的承诺方案。评估时要问：<strong>你用的那套证明系统，具体依赖什么假设？</strong> <a href="https://eprint.iacr.org/2019/953">PLONK 原始论文</a></p>
+<h3 id="为什么他更偏爱哈希">为什么他更偏爱哈希<a class="headerlink" href="#为什么他更偏爱哈希" title="Permanent link">&para;</a></h3>
+<p>投影片用「结构丰富」与「没有结构」来对比椭圆曲线和哈希。椭圆曲线有群运算，能研究点数，也能在特定曲线上构造配对；这些性质让密码协议很高效，同时也给数学分析提供了入口。</p>
+<p><strong>我的理解</strong>：他希望把更多安全依赖放在经过充分分析的哈希构造上，减少额外的代数假设。这里的「没有结构」是演讲中的简化表达；哈希也有内部设计，也可能被攻击。具体函数、使用方式和参数一样要审查。</p>
+<h2 id="factorization">3. 新算法出现后，系统可能先变贵<a class="headerlink" href="#factorization" title="Permanent link">&para;</a></h2>
+<p>演讲用<strong>整数分解</strong>打了一个比方：从逐个尝试因子，到二次筛法，再到数域筛法，攻击算法的进步会改变达到同等安全水平所需的参数。</p>
+<p>他关心的一种可能后果是：<strong>更快的攻击迫使系统扩大参数，承担更多通信、存储和验证成本。</strong> 椭圆曲线会不会出现类似进展，仍是开放的研究问题；参数升级能否补救，也要看新攻击到底削弱了什么。</p>
+<h3 id="把投影片里的分解例子算一遍">把投影片里的分解例子算一遍<a class="headerlink" href="#把投影片里的分解例子算一遍" title="Permanent link">&para;</a></h3>
+<p>开头的小例子是 <code>351 = 13 × 27</code>，完整的素因子分解为 <code>351 = 3³ × 13</code>。后面二次筛法的例子更有意思：</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>N = 15347
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>124² − N = 29
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>127² − N = 782   = 2 × 17 × 23
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>195² − N = 22678 = 2 × 17 × 23 × 29
+</span></code></pre></div>
+<p>把右边三行相乘，每个素因子的指数都变成偶数，所以乘积是一个平方：</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>29 × 782 × 22678 = 22678²
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>124 × 127 × 195 = 3070860
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>3070860² ≡ 22678²  (mod 15347)
+</span></code></pre></div>
+<p>于是 <code>N</code> 整除两个平方的差，接下来计算最大公约数：</p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gcd(3070860 − 22678, 15347) = 103
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>gcd(3070860 + 22678, 15347) = 149
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>15347 = 103 × 149
+</span></code></pre></div>
+<p>这段演示的重点是<strong>怎样把分解问题改写成寻找平方关系</strong>。将素因子指数对 2 取模，写成矩阵，就能用线性代数寻找哪些关系相乘后会凑出偶数指数。这让“算法进步”这件抽象的事变得具体：换一种组织问题的方法，搜索过程就可能大幅改变。</p>
+<h2 id="hash-based">4. 哈希怎样变成签名和证明？<a class="headerlink" href="#hash-based" title="Permanent link">&para;</a></h2>
+<p>投影片列出了三组方向：<strong>leanWOTS / leanSPHINCS 签名、STARK 证明，以及其他基于哈希的密码学构造</strong>。它们承担不同任务。</p>
+<h3 id="哈希链公开终点出示中间值">哈希链：公开终点，出示中间值<a class="headerlink" href="#哈希链公开终点出示中间值" title="Permanent link">&para;</a></h3>
+<p>可以先把 Winternitz 一次性签名理解为若干条哈希链。选一个秘密起点 <code>x</code>，重复计算哈希，公开终点 <code>Y</code>。签名时，根据消息摘要中的数值，公开链上对应位置的值 <code>s</code>；验证者再往前计算剩余步数，检查能否到达 <code>Y</code>。</p>
+<pre class="mermaid"><code>flowchart TB
+    X["秘密起点 x"] --&gt;|"多次哈希"| S["签名公开 s"]
+    S --&gt;|"剩余哈希"| Y["公开终点 Y"]</code></pre>
+<p>完整方案还需要多条链、消息编码和校验机制。<strong>一次性签名尤其不能随便复用同一把密钥</strong>；如何安全地签多次、管理状态或组织签名树，是完整方案需要解决的问题。<a href="https://www.rfc-editor.org/rfc/rfc8391.html">RFC 8391：WOTS+ 与 XMSS</a></p>
+<p><strong>补充：研究方案与标准要分清。</strong> NIST 标准 <strong>SLH-DSA</strong> 基于 SPHINCS+；现场提到的 leanWOTS、leanSPHINCS 不能直接当作它的别名，也不能由此认定已部署到以太坊主网。<a href="https://csrc.nist.gov/pubs/fips/205/final">FIPS 205：SLH-DSA</a> · <a href="https://github.com/leanEthereum/sig.golf-dev">leanSPHINCS 研究草案</a></p>
+<h3 id="stark证明计算与交易签名是两件事">STARK：证明计算，与交易签名是两件事<a class="headerlink" href="#stark证明计算与交易签名是两件事" title="Permanent link">&para;</a></h3>
+<p>签名回答「谁授权了这条消息」，证明系统回答「某个计算是否符合约束」。STARK 的承诺构造通常依赖哈希，能够减少对椭圆曲线离散对数假设的依赖；但完整系统仍有算术约束、随机挑战、参数和实现等安全条件。<a href="https://eprint.iacr.org/2018/046">STARK 原始论文</a></p>
+<p>所以「用哈希」只是安全分析的开头。还要看证明的是不是需要的命题、验证器是否正确，以及最终验证有没有再包一层依赖其他假设的证明。</p>
+<h2 id="clients">5. 客户端代码：找漏洞，也要控制共同故障<a class="headerlink" href="#clients" title="Permanent link">&para;</a></h2>
+<p>投影片第 7 页把应对分成短期与长期。短期已经在用 AI 找漏洞，同时依靠多个客户端降低单个实现出问题的影响；长期则把更多性质交给形式化验证。</p>
+<h3 id="ai-找到的报告还需要证据">AI 找到的报告，还需要证据<a class="headerlink" href="#ai-找到的报告还需要证据" title="Permanent link">&para;</a></h3>
+<p>模型读代码、列攻击面、写测试，都可以帮助安全工作。但“像漏洞”的输出要经过复现和判断：是否真的能触发、攻击者需要什么条件、影响的是局部进程还是网络，以及修复有没有造成新问题。</p>
+<p><strong>补充</strong>：以太坊基金会 Protocol Security 团队的公开实践也强调了这条链路，尤其是报告筛选、复现与人工判断。把 AI 接到仓库上，不等于完成了审计。<a href="https://blog.ethereum.org/2026/07/09/triage-is-the-product">EF：The triage is the product</a></p>
+<h3 id="客户端多样性看份额也看共同依赖">客户端多样性：看份额，也看共同依赖<a class="headerlink" href="#客户端多样性看份额也看共同依赖" title="Permanent link">&para;</a></h3>
+<p>多个团队独立实现同一协议，能降低一个 bug 同时打倒所有节点的风险。<strong>关键是使用份额与独立程度</strong>：五种实现都存在、绝大多数验证者却用同一种，仍然有集中风险；共享依赖也可能带来共同故障。</p>
+<p>补充到当前 PoS 语境，最终确定性通常需要至少三分之二的质押权重参与正确投票。某一故障实现影响超过三分之一的权重，就可能阻断最终确定性；超过三分之二的故障还有更严重的错误最终确定风险。这里算的是<strong>受影响的验证者权重</strong>，不能用“客户端个数”或公开节点数量替代。<a href="https://ethereum.org/developers/docs/nodes-and-clients/client-diversity/">ethereum.org：客户端多样性</a></p>
+<h2 id="formal-verification">6. 形式化验证：把「正确」写成能检查的命题<a class="headerlink" href="#formal-verification" title="Permanent link">&para;</a></h2>
+<p>现场长期目标的表述很有气势：「形式化验证一切」。投影片同时列了较近的目标——zk-EVM、递归 STARK、leanWOTS 与 SPHINCS，并给出 <a href="https://github.com/Verified-zkEVM/ArkLib">Verified-zkEVM / ArkLib</a>。</p>
+<p>可以把这项工作拆成三步理解：</p>
+<ol>
+<li><strong>先写清楚规格。</strong> 程序应该接受什么、拒绝什么，依赖哪些假设。</li>
+<li><strong>构造证明。</strong> 证明程序、算法或协议在这些条件下满足指定性质。</li>
+<li><strong>由证明检查器核验。</strong> AI 可以协助写证明，人也仍要审查规格与建模是否覆盖真实需求。</li>
+</ol>
+<p>ArkLib 是用 Lean 形式化证明系统的一项基础工作，覆盖范围要看具体的定理与实现。数学模型、规格、源码、编译产物和真实设备之间，仍需要逐段建立可信联系；规格本身也要准确表达应用需要的安全性质。</p>
+<p>我觉得这一段和前面的担忧正好接上：AI 可能加快攻击算法的研究，也可能让寻找 bug、完善规格和写证明更容易。最终有用的是经过检查的结果，单凭模型一句“安全”还不够。</p>
+<h2 id="wallets">7. 用户层：把钥匙和出错机会分开<a class="headerlink" href="#wallets" title="Permanent link">&para;</a></h2>
+<p>最后两页落到了普通人能理解的东西：操作系统、签名设备、多签和私钥。这里的重点是<strong>独立的防线</strong>。</p>
+<h3 id="多签最怕的是几把钥匙其实共享一处风险">多签最怕的，是几把钥匙其实共享一处风险<a class="headerlink" href="#多签最怕的是几把钥匙其实共享一处风险" title="Permanent link">&para;</a></h3>
+<p>投影片写得很直接：「用多签名钱包，不要把多个私钥放在一个电脑上！」</p>
+<p>以 <code>2-of-3</code> 为例，需要三名签名者中的任意两名授权。若两把私钥都在同一台电脑，恶意软件拿到这台电脑后，可能一次获得满足门槛的权限。两台设备如果同步到同一个云盘、同一处备份或同一个恢复账户，也可能重新汇合到同一风险上。</p>
+<p>三名独立签名者 A、B、C 中，<code>A + B</code>、<code>A + C</code> 或 <code>B + C</code> 都能满足 <code>2-of-3</code>；只有 A 一名签名者则不足以授权。设备与备份的安排，要能承受其中一处丢失或泄露。</p>
+<p><strong>我的操作提醒</strong>：先用测试网或小额练习转账、拒签和恢复；每个签名者核对同一笔交易的目标、金额与调用内容。多签不会自动识别恶意交易，几个人一起盲签仍然可能一起出错。<a href="https://ethereum.org/developers/docs/smart-contracts/#multisig">ethereum.org：多签钱包</a></p>
+<h3 id="签名设备操作系统隔离与更新">签名设备：操作系统、隔离与更新<a class="headerlink" href="#签名设备操作系统隔离与更新" title="Permanent link">&para;</a></h3>
+<p>投影片第 9 页提到更安全的操作系统与沙盒，并举了 <strong>Pixel + GrapheneOS + AirGap</strong> 的隔离设备例子；长期还需要更好的硬件验证和主流系统安全。</p>
+<p><strong>补充</strong>：GrapheneOS 对设备有支持周期，选型要检查是否仍有完整安全更新；AirGap 的离线签名也需要正确的初始化、备份和传递交易流程。断网减少了网络攻击面，可信初始化、设备完整性与签名核对则需要另外保证。<a href="https://grapheneos.org/faq#device-support">GrapheneOS 支持设备</a> · <a href="https://support.airgap.it/">AirGap 文档</a></p>
+<h2 id="takeaways">8. 我带走的结论<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
+<p>演讲最后写的是：<strong>网络安全的长期未来是光明的</strong>，未来软件和硬件会更安全，也会更清楚哪些密码学值得信任。这是讲者的长期判断，不是已经完成的工程状态。</p>
+<p>我的理解是，三层风险各有一件需要持续做的事：</p>
+<ul>
+<li><strong>做协议和密码学的人</strong>：把依赖的假设列清楚，持续分析，并给参数和算法迁移留位置。</li>
+<li><strong>做软件的人</strong>：把漏洞报告变成可复现证据，把“正确”变成明确规格，减少共同依赖造成的故障。</li>
+<li><strong>用钱包的人</strong>：让设备、私钥和备份有真实隔离，重要签名慢一点，恢复流程提前练。</li>
+</ul>
+<p>“将来会更安全”需要这些具体工作一点点兑现。对我这样的学习者，先把每种方案保护了哪一层、还剩哪些假设讲清楚，就已经比背一串安全术语有用。</p>
+<h2 id="sources">资料与继续阅读<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>本场内容</strong>：Vitalik 在 ETHShenzhen 2026 的分享与投影片。日程与活动信息见 <a href="../">ETHShenzhen 专题总览</a>。</li>
+<li><strong>密码学背景</strong>：<a href="https://csrc.nist.gov/projects/post-quantum-cryptography">NIST 后量子密码学项目</a> · <a href="https://csrc.nist.gov/pubs/fips/205/final">SLH-DSA 标准 FIPS 205</a> · <a href="https://eprint.iacr.org/2018/046">STARK 原始论文</a>。</li>
+<li><strong>软件与验证</strong>：<a href="https://ethereum.org/developers/docs/nodes-and-clients/client-diversity/">客户端多样性</a> · <a href="https://blog.ethereum.org/2026/07/09/triage-is-the-product">EF 的 AI 安全研究实践</a> · <a href="https://github.com/Verified-zkEVM/ArkLib">ArkLib</a>。</li>
+<li><strong>设备与钱包</strong>：<a href="https://grapheneos.org/faq#device-support">GrapheneOS FAQ</a> · <a href="https://support.airgap.it/">AirGap 文档</a> · <a href="https://ethereum.org/developers/docs/smart-contracts/#multisig">多签钱包介绍</a>。</li>
+</ul>
+<p>接着读：<a href="../day2-morning/#part-2">Winderica 与 Nym：链上和网络层的隐私</a> · <a href="../day2-afternoon/#part-2">Qi Zhou：AI 写完之后，谁来负责？</a> · <a href="../../../security/">安全与隐私知识页</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  <div class="w3-comments">
+    <div class="w3-comments-title">Comments · 评论</div>
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="mia03ther/web3-learning-wiki"
+      data-repo-id="R_kgDOUyAX6A"
+      data-category="Announcements"
+      data-category-id="DIC_kwDOUyAX6M4DHFFH"
+      data-mapping="pathname"
+      data-strict="1"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </div>
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../day1-demos/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Day 1 · 黑客松现场展示">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Day 1 · 黑客松现场展示
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../day2-morning/" class="md-footer__link md-footer__link--next" aria-label="下一页: Day 2 · 安全、隐私与路线图">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Day 2 · 安全、隐私与路线图
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-NC-SA 4.0 · MIA_Ether
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/mia03ther/web3-learning-wiki" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/mia03ther/web3-learning-wiki/discussions" target="_blank" rel="noopener" title="GitHub Discussions" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M76.2 258.7c6.1-15.2 4-32.6-5.6-45.9C56.1 192.7 48 169.1 48 144c0-66.8 60.5-128 144-128s144 61.2 144 128-60.5 128-144 128c-15.9 0-31.1-2.3-45.3-6.5-10.3-3.1-21.4-2.5-31.4 1.5l-50.4 20.2 11.4-28.5zM0 144c0 35.8 11.6 69.1 31.7 96.8L1.9 315.2c-1.3 3.2-1.9 6.6-1.9 10C0 340 12 352 26.8 352c3.4 0 6.8-.7 10-1.9l96.3-38.5c18.6 5.5 38.4 8.4 58.9 8.4 106 0 192-78.8 192-176S298-32 192-32 0 46.8 0 144m384 368c20.6 0 40.3-3 58.9-8.4l96.3 38.5c3.2 1.3 6.6 1.9 10 1.9 14.8 0 26.8-12 26.8-26.8 0-3.4-.7-6.8-1.9-10l-29.7-74.4c20-27.8 31.7-61.1 31.7-96.8 0-82.4-61.7-151.5-145-170.7-1.6 16.3-5.1 31.9-10.1 46.9 63.9 14.8 107.2 67.3 107.2 123.9 0 25.1-8.1 48.7-22.6 68.8-9.6 13.3-11.7 30.6-5.6 45.9l11.4 28.5-50.4-20.2c-10-4-21.1-4.5-31.4-1.5-14.2 4.2-29.4 6.5-45.3 6.5-72.2 0-127.1-45.7-140.7-101.2-15.6 3.2-31.7 5-48.1 5.2 16.4 81.9 94.7 144 188.8 144z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.indexes", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.action.edit", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

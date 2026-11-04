@@ -1,0 +1,747 @@
+/* ==========================================================================
+   Entrance page (template: landing.html)
+   --------------------------------------------------------------------------
+   "A Web3 season notebook for the group chat": white paper, ink type, the
+   events laid out as rounds of a season, one Ferrari red for actions and
+   marks. The things MIA likes sit on the cover as decoration only: a Leclerc
+   postcard with a Bayern sticker slapped on its corner. Content leads.
+   Tokens come from extra.css.
+   ========================================================================== */
+
+[data-md-color-scheme="default"] {
+  --lp-alt: #f5f5f5;
+  --lp-card: #ffffff;
+  --lp-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 24px 48px -28px rgba(0, 0, 0, .38);
+}
+
+[data-md-color-scheme="slate"] {
+  --lp-alt: #181818;
+  --lp-card: #232323;
+  --lp-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 24px 48px -28px rgba(0, 0, 0, .9);
+}
+
+body:has(#lp) {
+  background: var(--w3-bg);
+}
+
+body:has(#lp) .md-main {
+  display: none;
+}
+
+.lp {
+  color: var(--w3-text);
+  font-family: var(--w3-font);
+}
+
+.lp :where(h1, h2, h3, p, figure, ol, ul) {
+  margin: 0;
+}
+
+.lp a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lp-red {
+  color: var(--w3-red);
+}
+
+.lp-wrap {
+  margin: 0 auto;
+  max-width: 54rem;
+  padding: 0 1.6rem;
+}
+
+/* Top bar ---------------------------------------------------------------- */
+.lp-nav {
+  background: var(--w3-bg);
+  border-bottom: 1px solid var(--w3-line-soft);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 40;
+}
+
+.lp-nav.md-header--shadow {
+  box-shadow: none;
+}
+
+.lp-nav__bar {
+  align-items: center;
+  color: var(--w3-text);
+  display: flex;
+  gap: 1.4rem;
+  height: 3rem;
+  margin: 0 auto;
+  max-width: 54rem;
+  padding: 0 1.6rem;
+}
+
+.lp-nav__brand {
+  align-items: center;
+  color: var(--w3-text);
+  display: flex;
+  font-size: .75rem;
+  font-weight: 700;
+  gap: .5rem;
+  margin-right: auto;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lp-nav__brand img {
+  border-radius: 9999px;
+  display: block;
+  height: 1.6rem;
+  object-fit: cover;
+  width: 1.6rem;
+}
+
+.lp-nav__links {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-nav__links a {
+  color: var(--w3-text-2);
+  font-size: .7rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .6em;
+  transition: color .3s var(--w3-ease), text-decoration-color .3s var(--w3-ease);
+  white-space: nowrap;
+}
+
+.lp-nav__links a:hover,
+.lp-nav__links a:focus-visible {
+  color: var(--w3-text);
+  text-decoration-color: var(--w3-red);
+}
+
+.lp-nav__toggle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  height: 1.8rem;
+  position: relative;
+  width: 1.8rem;
+}
+
+.lp-nav__toggle span {
+  background: var(--w3-text);
+  border-radius: 1px;
+  height: 1.5px;
+  left: .4rem;
+  margin-top: -.75px;
+  position: absolute;
+  right: .4rem;
+  top: 50%;
+  transition: transform .5s var(--w3-ease);
+}
+
+.lp-nav__toggle span:first-child {
+  transform: translateY(-3px);
+}
+
+.lp-nav__toggle span:last-child {
+  transform: translateY(3px);
+}
+
+.lp-nav__toggle[aria-expanded="true"] span:first-child {
+  transform: rotate(45deg);
+}
+
+.lp-nav__toggle[aria-expanded="true"] span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Mobile menu: a plain sheet under the bar (z-index -1 inside the header) */
+.lp-menu {
+  background: var(--w3-bg);
+  inset: 0;
+  opacity: 0;
+  padding: 4.8rem 1.6rem 2.4rem;
+  position: fixed;
+  transition: opacity .3s var(--w3-ease);
+  z-index: -1;
+}
+
+.lp-menu.is-open {
+  opacity: 1;
+}
+
+.lp-menu[hidden] {
+  display: none;
+}
+
+.lp-menu ul {
+  border-top: 2px solid var(--w3-text);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-menu li {
+  border-bottom: 1px solid var(--w3-line-soft);
+}
+
+.lp-menu a {
+  color: var(--w3-text);
+  display: block;
+  font-family: var(--w3-font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: .7rem 0;
+  text-decoration: none;
+}
+
+/* Buttons and links -------------------------------------------------------- */
+.lp-btn {
+  align-items: center;
+  background: var(--w3-action);
+  border-radius: 9999px;
+  color: var(--w3-on-action);
+  display: inline-flex;
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: .5rem 1.2rem;
+  text-decoration: none;
+  transition: background-color .3s var(--w3-ease), transform .5s var(--w3-ease);
+}
+
+.lp-btn:hover,
+.lp-btn:focus-visible {
+  background: var(--w3-action-hover);
+  color: var(--w3-on-action);
+}
+
+.lp-btn:active {
+  transform: scale(.98);
+}
+
+.lp-link {
+  color: var(--w3-text);
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--w3-red-line);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: .28em;
+  transition: color .3s var(--w3-ease), text-decoration-color .3s var(--w3-ease);
+}
+
+.lp-link::after {
+  content: "→";
+  display: inline-block;
+  margin-left: .3rem;
+  text-decoration: none;
+  transition: transform .5s var(--w3-ease);
+}
+
+.lp-link:hover,
+.lp-link:focus-visible {
+  color: var(--w3-red);
+  text-decoration-color: var(--w3-red);
+}
+
+.lp-link:hover::after {
+  transform: translateX(.2rem);
+}
+
+/* Hero ------------------------------------------------------------------- */
+.lp-hero {
+  padding: 7.2rem 0 4.8rem;
+}
+
+.lp-hero__grid {
+  align-items: center;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr);
+}
+
+.lp-hero__title {
+  color: var(--w3-text);
+  font-family: var(--w3-font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.lp-hero__sub {
+  color: var(--w3-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-top: 1.2rem;
+  max-width: 28rem;
+  text-wrap: pretty;
+}
+
+.lp-hero__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem 1.6rem;
+  margin-top: 1.6rem;
+}
+
+/* The postcard: a small photo tucked in at an angle, straightens on hover */
+.lp-postcard {
+  background: var(--lp-card);
+  border-radius: .4rem;
+  box-shadow: var(--lp-shadow);
+  justify-self: end;
+  padding: .5rem .5rem .6rem;
+  position: relative;
+  transform: rotate(-2.5deg);
+  transition: transform .6s var(--w3-ease);
+  width: min(100%, 22rem);
+}
+
+.lp-postcard:hover {
+  transform: rotate(0deg) translateY(-.2rem);
+}
+
+.lp-postcard img {
+  aspect-ratio: 16 / 9;
+  border-radius: .2rem;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.lp-postcard figcaption {
+  align-items: baseline;
+  color: var(--w3-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .6rem;
+  gap: .2rem .8rem;
+  justify-content: space-between;
+  margin-top: .6rem;
+}
+
+.lp-postcard b {
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.lp-postcard a {
+  color: var(--w3-faint);
+  text-decoration: none;
+}
+
+.lp-postcard a:hover {
+  color: var(--w3-red);
+}
+
+/* The FC Bayern crest stuck on the postcard's corner like a sticker:
+   white die-cut edge, slight tilt. */
+.lp-postcard .lp-sticker {
+  background: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  filter: drop-shadow(0 .15rem .25rem rgba(0, 0, 0, .22));
+  height: 4.6rem;
+  padding: .2rem;
+  position: absolute;
+  right: -1.4rem;
+  top: -1.8rem;
+  transform: rotate(12deg);
+  transition: transform .6s var(--w3-ease);
+  width: 4.6rem;
+}
+
+.lp-postcard:hover .lp-sticker {
+  transform: rotate(4deg);
+}
+
+/* Sections ---------------------------------------------------------------- */
+.lp-section {
+  background: var(--w3-bg);
+  padding: 4.8rem 0;
+}
+
+.lp-section--alt {
+  background: var(--lp-alt);
+}
+
+.lp-head {
+  margin-bottom: 2.4rem;
+  max-width: 32rem;
+}
+
+.lp-head:only-child {
+  margin-bottom: 0;
+}
+
+.lp-h2 {
+  color: var(--w3-text);
+  font-family: var(--w3-font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.lp-lede {
+  color: var(--w3-muted);
+  font-size: .9rem;
+  line-height: 1.75;
+  margin-top: .8rem;
+  text-wrap: pretty;
+}
+
+.lp-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.6rem;
+  margin-top: 1.2rem;
+}
+
+/* Latest round: the event on the left, its four reports on the right */
+.lp-round {
+  align-items: start;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+}
+
+.lp-round__no {
+  color: var(--w3-red);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: .9;
+  margin-bottom: .6rem;
+}
+
+.lp-round__when {
+  color: var(--w3-text-2);
+  font-size: .7rem;
+  margin-top: .6rem;
+}
+
+.lp-round__when .w3-num {
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.lp-reports,
+.lp-list {
+  border-top: 2px solid var(--w3-text);
+  list-style: none;
+  padding: 0;
+}
+
+.lp-reports li,
+.lp-list li {
+  border-bottom: 1px solid var(--w3-line-soft);
+}
+
+.lp-reports a,
+.lp-list a {
+  color: var(--w3-text);
+  display: grid;
+  gap: .2rem;
+  padding: 1rem 2rem 1rem 0;
+  position: relative;
+  text-decoration: none;
+}
+
+.lp-reports a::after,
+.lp-list a::after {
+  color: var(--w3-faint);
+  content: "→";
+  position: absolute;
+  right: .2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform .5s var(--w3-ease), color .3s var(--w3-ease);
+}
+
+.lp-reports a:hover::after,
+.lp-list a:hover::after {
+  color: var(--w3-red);
+  transform: translate(.2rem, -50%);
+}
+
+.lp-reports__k {
+  color: var(--w3-faint);
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.lp-reports__t,
+.lp-list__t {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color .3s var(--w3-ease);
+}
+
+.lp-reports a:hover .lp-reports__t,
+.lp-list a:hover .lp-list__t {
+  color: var(--w3-red);
+}
+
+.lp-reports__d,
+.lp-list__d {
+  color: var(--w3-muted);
+  font-size: .7rem;
+  line-height: 1.6;
+}
+
+/* Season calendar */
+.lp-calendar {
+  border-top: 2px solid var(--w3-text);
+  list-style: none;
+  padding: 0;
+}
+
+.lp-calendar li {
+  border-bottom: 1px solid var(--w3-line);
+}
+
+.lp-calendar a {
+  align-items: baseline;
+  color: var(--w3-text);
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 3.2rem minmax(0, 1fr) 7rem 5rem 3rem;
+  padding: 1rem .4rem;
+  text-decoration: none;
+  transition: background-color .3s var(--w3-ease);
+}
+
+.lp-calendar a:hover {
+  background: var(--lp-card);
+}
+
+.lp-calendar__r {
+  color: var(--w3-red);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.lp-calendar__name {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.lp-calendar__type,
+.lp-calendar__n {
+  color: var(--w3-muted);
+  font-size: .7rem;
+}
+
+.lp-calendar__date {
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.lp-calendar__n {
+  text-align: right;
+}
+
+/* Topic list beside a sticky heading */
+.lp-split {
+  align-items: start;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+}
+
+.lp-split .lp-head {
+  margin-bottom: 0;
+  position: sticky;
+  top: 4.8rem;
+}
+
+/* Footer ------------------------------------------------------------------- */
+.lp-footer {
+  background: var(--lp-alt);
+  border-top: 1px solid var(--w3-line);
+  color: var(--w3-muted);
+  font-family: var(--w3-font);
+  font-size: .6rem;
+  line-height: 1.7;
+  padding: 1.6rem 0 2.4rem;
+}
+
+.lp-footer a {
+  color: var(--w3-muted);
+  text-decoration: none;
+}
+
+.lp-footer a:hover {
+  color: var(--w3-red);
+}
+
+/* Colophon: the two reds the palette is made of */
+.lp-footer__colophon {
+  border-bottom: 1px solid var(--w3-line);
+  margin: 0;
+  padding-bottom: 1.2rem;
+}
+
+.lp-swatch {
+  background: #d40000;
+  border-radius: 9999px;
+  display: inline-block;
+  height: .55rem;
+  vertical-align: -.05rem;
+  width: .55rem;
+}
+
+.lp-swatch--fcb {
+  background: #dc052d;
+  margin: 0 .4rem 0 .15rem;
+}
+
+.lp-footer__colophon i {
+  color: var(--w3-text);
+}
+
+.lp-footer__dir {
+  border-bottom: 1px solid var(--w3-line);
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 1.6rem 0;
+}
+
+.lp-footer__dir h3 {
+  color: var(--w3-text);
+  font-size: .6rem;
+  font-weight: 700;
+  margin: 0 0 .6rem;
+}
+
+.lp-footer__dir ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-footer__dir li {
+  margin: 0 0 .4rem;
+}
+
+.lp-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.2rem;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+}
+
+/* Responsive -------------------------------------------------------------- */
+@media screen and (max-width: 66.75em) {
+  .lp-hero__title {
+    font-size: 2.4rem;
+  }
+
+  .lp-h2 {
+    font-size: 1.8rem;
+  }
+
+  .lp-round__no {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 52em) {
+  .lp-nav__links {
+    display: none;
+  }
+
+  .lp-nav__toggle {
+    display: block;
+  }
+
+  .lp-hero__grid,
+  .lp-round,
+  .lp-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lp-postcard {
+    justify-self: start;
+  }
+
+  .lp-split .lp-head {
+    position: static;
+  }
+
+  .lp-calendar a {
+    grid-template-columns: 2.6rem minmax(0, 1fr) 4.4rem;
+  }
+
+  .lp-calendar__type,
+  .lp-calendar__n {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 45.875em) {
+  .lp-wrap,
+  .lp-nav__bar {
+    padding: 0 1.2rem;
+  }
+
+  .lp-hero {
+    padding: 5.6rem 0 3.2rem;
+  }
+
+  .lp-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .lp-hero__sub,
+  .lp-lede {
+    font-size: .8rem;
+  }
+
+  .lp-h2 {
+    font-size: 1.5rem;
+  }
+
+  .lp-section {
+    padding: 3.2rem 0;
+  }
+
+  .lp-round,
+  .lp-split {
+    gap: 1.6rem;
+  }
+
+  .lp-postcard .lp-sticker {
+    height: 4rem;
+    right: -.4rem;
+    top: -1.4rem;
+    width: 4rem;
+  }
+
+  .lp-footer__dir {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-postcard,
+  .lp-postcard .lp-sticker,
+  .lp-menu,
+  .lp-btn,
+  .lp-link::after {
+    transition: none;
+  }
+}

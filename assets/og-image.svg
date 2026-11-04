@@ -1,0 +1,75 @@
+<!-- Social share image (1200x630). Static palette on purpose: crawlers do not
+     run the site CSS, so these colours must not depend on theme tokens. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630"
+     role="img" aria-label="Web3 Learning Wiki — open-source knowledge base">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e14"/>
+      <stop offset="1" stop-color="#141b26"/>
+    </linearGradient>
+    <linearGradient id="sig" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f2f6fb"/>
+      <stop offset="1" stop-color="#9fb3c8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g opacity=".06" stroke="#8fa0b6" stroke-width="1">
+    <path d="M0 105H1200M0 210H1200M0 315H1200M0 420H1200M0 525H1200"/>
+    <path d="M100 0V630M300 0V630M500 0V630M700 0V630M900 0V630M1100 0V630"/>
+  </g>
+
+  <!-- knowledge-graph decoration, top right -->
+  <g fill="none" stroke="#22d3ee" stroke-width="1.6" opacity=".5">
+    <path d="M862 150 938 106l76 44v88l-76 44-76-44v-88Z"/>
+    <path d="M938 106v88M862 194l76 44 76-44" opacity=".3"/>
+  </g>
+  <g fill="#22d3ee" opacity=".7">
+    <circle cx="862" cy="150" r="6"/>
+    <circle cx="938" cy="106" r="6"/>
+    <circle cx="1014" cy="150" r="6"/>
+    <circle cx="938" cy="194" r="6"/>
+  </g>
+  <g fill="none" stroke="#a78bfa" stroke-width="1.4" opacity=".5">
+    <path d="M862 392l22 14v28l-22 14-22-14v-28l22-14Z" transform="translate(76 0)"/>
+    <path d="M1004 320 1032 350v46l-28 30-28-30v-46l28-30Z"/>
+  </g>
+
+  <!-- mark -->
+  <g transform="translate(96 118) scale(1.5)" fill="none" stroke="url(#sig)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M32 6.5 54 19.2v25.6L32 57.5 10 44.8V19.2L32 6.5Z" stroke-width="3"/>
+    <path d="M32 6.5v7.5M54 19.2l-7 3.8M54 44.8l-7-3.8M32 57.5V50M10 44.8l7-3.8M10 19.2l7 3.8" stroke-width="2.2" opacity=".42"/>
+    <path d="M19 46 27 26l5 9 5-9 8 20" stroke-width="2.4"/>
+  </g>
+  <g transform="translate(96 118) scale(1.5)" fill="#22d3ee">
+    <circle cx="19" cy="46" r="3.2"/>
+    <circle cx="27" cy="26" r="3.2"/>
+    <circle cx="32" cy="35" r="3.6"/>
+    <circle cx="37" cy="26" r="3.2"/>
+    <circle cx="45" cy="46" r="3.2"/>
+    <circle cx="32" cy="6.5" r="2.4" opacity=".85"/>
+    <circle cx="54" cy="19.2" r="2.4" opacity=".85"/>
+    <circle cx="54" cy="44.8" r="2.4" opacity=".85"/>
+    <circle cx="32" cy="57.5" r="2.4" opacity=".85"/>
+    <circle cx="10" cy="44.8" r="2.4" opacity=".85"/>
+    <circle cx="10" cy="19.2" r="2.4" opacity=".85"/>
+  </g>
+
+  <g font-family="'SF Mono','JetBrains Mono',ui-monospace,Menlo,Consolas,monospace">
+    <text x="96" y="332" font-size="19" letter-spacing="7" fill="#5ad4e8">MIA03 LAB · OPEN KNOWLEDGE BASE</text>
+  </g>
+  <g font-family="'Inter','SF Pro Display',-apple-system,'Segoe UI',sans-serif">
+    <text x="94" y="408" font-size="72" font-weight="800" fill="url(#ink)">Web3 Learning Wiki</text>
+    <text x="98" y="478" font-size="26" fill="#9fb3c8">
+      <tspan x="98" dy="0">An open-source knowledge base exploring Web3, AI Agents,</tspan>
+      <tspan x="98" dy="40">Blockchain infrastructure, and the Builder journey.</tspan>
+    </text>
+    <text x="98" y="586" font-size="19" fill="#5c6b80">mia03ther.github.io/web3-learning-wiki</text>
+    <text x="1012" y="586" font-size="17" fill="#5c6b80" text-anchor="end">CC BY-NC-SA 4.0</text>
+  </g>
+</svg>
