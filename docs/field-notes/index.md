@@ -18,9 +18,14 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
     <div class="w3-timeline__date"><b class="w3-round w3-num">R04</b>10.24–25<small>ETHShenzhen · 深圳</small></div>
     <div class="w3-timeline__items">
       <a class="w3-note" href="ethshenzhen-2026/">
-        <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">系列专题</span><span>ETHShenzhen 2026 · 4 篇</span></div>
+        <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">系列专题</span><span>ETHShenzhen 2026 · 5 篇</span></div>
         <p class="w3-note__title">ETHShenzhen 2026：当 AI 遇上 Ethereum</p>
-        <p class="w3-note__desc">两天、500+ 人、28 个黑客松项目。专题总览里有日程、嘉宾速查和获奖项目，下面四篇是正文。</p>
+        <p class="w3-note__desc">两天、500+ 人、28 个黑客松项目。专题总览里有日程、嘉宾速查和获奖项目，另有四篇场次笔记和一篇 Vitalik 安全专篇。</p>
+      </a>
+      <a class="w3-note" href="ethshenzhen-2026/vitalik-ai-security/">
+        <div class="w3-note__meta"><span class="w3-chip">11.04 更新</span><span>Vitalik · 安全详解</span></div>
+        <p class="w3-note__title">以太坊如何在 AI 网络安全危机中幸存</p>
+        <p class="w3-note__desc">结合投影片内容，串起密码学假设、客户端代码与用户安全。哈希签名怎样工作，形式化验证证明什么，多签怎样真正分散风险。</p>
       </a>
       <a class="w3-note" href="ethshenzhen-2026/day2-morning/">
         <div class="w3-note__meta"><span class="w3-chip">Day 2 · 上午</span><span>安全 · 隐私 · 路线图</span></div>
@@ -98,7 +103,7 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
 | 我想了解…… | 去这几篇 |
 |---|---|
 | **Agent 怎么花钱、怎么被管住** | [路演夜 · Text Permit](pitch-night.md) · [Day 2 下午 · 信任边界圆桌](ethshenzhen-2026/day2-afternoon.md#part-5) · [Day 1 · FluxA](ethshenzhen-2026/day1-workshops.md#part-3) |
-| **钱包和资产安全** | [Day 2 上午 · Vitalik](ethshenzhen-2026/day2-morning.md#part-1) · [Day 1 · OSKey](ethshenzhen-2026/day1-workshops.md#part-1) · [获奖项目 Nokia Wallet](ethshenzhen-2026/day2-afternoon.md#part-7) |
+| **钱包和资产安全** | [Vitalik 专篇 · 多签与设备隔离](ethshenzhen-2026/vitalik-ai-security.md#wallets) · [Day 1 · OSKey](ethshenzhen-2026/day1-workshops.md#part-1) · [获奖项目 Nokia Wallet](ethshenzhen-2026/day2-afternoon.md#part-7) |
 | **链上隐私** | [Day 2 上午 · Winderica & Nym](ethshenzhen-2026/day2-morning.md#part-2) |
 | **用 AI 写代码** | [Day 1 · Tiny 熊](ethshenzhen-2026/day1-workshops.md#part-2) · [Day 2 下午 · Qi Zhou](ethshenzhen-2026/day2-afternoon.md#part-2) |
 | **公链性能与路线图** | [Monad 黑客松](monad-hackathon.md) · [Day 2 上午 · 路线图圆桌](ethshenzhen-2026/day2-morning.md#part-4) |
@@ -111,4 +116,4 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
 - 笔记里的概念，大多能在 [核心概念词典](../fundamentals/core-concepts.md) 和 [安全与隐私](../security/index.md) 里查到人话解释；
 - 人名、项目名和专有名词都按官方资料查证过；
 - 讲者提到的产品、论文、事件都尽量查证过并附了链接；发现错误欢迎在群里说，或者点右上角 ✏️ 直接改。
-- **关于图片**：活动海报和现场照片都采自各活动的官方公众号，版权归主办方和摄影师所有，只用于学习记录和非商业分享，不适用本站的 CC BY-NC-SA 协议；照片里人物的肖像权归本人所有。如果你是版权方或照片里的人，不希望出现在这里，在群里说一声或在 GitHub 提 Issue，我会尽快删除或打码。
+- **关于图片**：活动海报和照片的来源见各图图注；官方图片版权归主办方和摄影师所有，个人现场摄影署名 MIA_Ether，投影片内容归演讲者所有，只用于学习记录和非商业分享，不适用本站的 CC BY-NC-SA 协议；照片里人物的肖像权归本人所有。如果你是版权方或照片里的人，不希望出现在这里，在群里说一声或在 GitHub 提 Issue，我会尽快删除或打码。

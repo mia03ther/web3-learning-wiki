@@ -18,9 +18,14 @@ Notes from events I went to, written up for friends in a group chat. Every event
     <div class="w3-timeline__date"><b class="w3-round w3-num">R04</b>10.24–25<small>ETHShenzhen · Shenzhen</small></div>
     <div class="w3-timeline__items">
       <a class="w3-note" href="ethshenzhen-2026/">
-        <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">Series</span><span>ETHShenzhen 2026 · 4 notes</span></div>
+        <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">Series</span><span>ETHShenzhen 2026 · 5 notes</span></div>
         <p class="w3-note__title">ETHShenzhen 2026: when AI meets Ethereum</p>
-        <p class="w3-note__desc">Two days, 500+ people, 28 hackathon projects. The overview has the schedule, speakers and winners; the four notes follow.</p>
+        <p class="w3-note__desc">Two days, 500+ people, 28 hackathon projects. The overview has the schedule, speakers and winners; four session notes and a dedicated Vitalik explainer follow.</p>
+      </a>
+      <a class="w3-note" href="../../field-notes/ethshenzhen-2026/vitalik-ai-security/">
+        <div class="w3-note__meta"><span class="w3-chip">Nov 4 update</span><span>In Chinese · security explained</span></div>
+        <p class="w3-note__title">Vitalik: Ethereum security in the age of AI</p>
+        <p class="w3-note__desc">A dedicated explainer based on the talk: cryptographic assumptions, hash-based signatures, client diversity, formal verification and independent signing devices.</p>
       </a>
       <a class="w3-note" href="ethshenzhen-2026/day2-morning/">
         <div class="w3-note__meta"><span class="w3-chip">Day 2 · AM</span><span>Security · privacy · roadmap</span></div>

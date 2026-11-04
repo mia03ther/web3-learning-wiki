@@ -15,6 +15,26 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>Version 3.3</b><span>Vitalik's security talk, explained</span></div>
+  <span class="w3-release__ver">v3.3.0</span>
+  <span class="w3-release__date">2026-11-04</span>
+</div>
+
+<p class="w3-release__summary">A dedicated Chinese note on Vitalik's ETHShenzhen security talk, with technical context, primary references and explanations of the three layers of risk.</p>
+
+- **New note**: [Vitalik on Ethereum security in the AI era](field-notes/ethshenzhen-2026/vitalik-ai-security.md), covering cryptographic assumptions, client code, and users and wallets.
+- **Technical explanations**: hash-based signatures, a worked integer-factorization example, formal verification and client diversity, with the problems each approach addresses.
+- **Technical context**: distinguishes quantum threats from AI-related risks and separates research directions from deployed capabilities, with links to primary references in the article.
+- **Practical reading**: relates multisig, device separation and signature checks to the risks they address.
+- **Sources**: links to the [NIST hash-based signature standard](https://csrc.nist.gov/pubs/fips/205/final) and [ArkLib formal verification project](https://github.com/Verified-zkEVM/ArkLib) for further reading.
+- **Discovery**: links from the home page, event overview and announcement bar lead to the new note. Corrections and additions are welcome.
+</div>
+
+## Previous releases
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>Version 3.2.1</b><span>Full avatar · aligned pages</span></div>
   <span class="w3-release__ver">v3.2.1</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -28,8 +48,6 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 - **Style retained**: classical serif type, plush fabric, the F1 photo and Bayern crest remain.
 - **Scope**: avatar display and layout adjustments only. No new events or changes to the existing article text.
 </div>
-
-## Previous releases
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

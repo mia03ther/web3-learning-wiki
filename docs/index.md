@@ -15,7 +15,7 @@ hide:
       <p class="lp-hero__now"><span>最近在筹划</span>寒假的香港访学活动 · Consensus Hong Kong 2027</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">从入门到入土喵</a>
-        <a class="lp-link" href="changelog/">v3.2.1 更新了什么？？</a>
+        <a class="lp-link" href="changelog/">v3.3 更新了什么？？</a>
       </div>
     </div>
     <figure class="lp-postcard">
@@ -35,10 +35,11 @@ hide:
       <p class="lp-round__no w3-num">R04</p>
       <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
       <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　深圳　·　500+ 人　·　28 个黑客松项目</p>
-      <p class="lp-lede">当 AI 遇上 Ethereum。Vitalik 聊 AI 会不会破解密码学，以太坊基金会讲链上隐私，Builder 们争论 Agent 该拿多大的权限。</p>
+      <p class="lp-lede">11 月 4 日补了一篇 Vitalik 分享详解，展开 AI 给密码学、客户端和钱包带来的挑战，附技术说明和一手资料。这一站的隐私分享、开发经验和黑客松笔记也都在下面。</p>
       <p class="lp-links"><a class="lp-link" href="field-notes/ethshenzhen-2026/">专题总览</a></p>
     </header>
     <ol class="lp-reports">
+      <li><a href="field-notes/ethshenzhen-2026/vitalik-ai-security/"><span class="lp-reports__k w3-num">11.04 · UPDATED</span><span class="lp-reports__t">Vitalik：AI 时代的以太坊安全</span><span class="lp-reports__d">三层风险详解：密码学假设、客户端代码、用户与钱包</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day2-morning/"><span class="lp-reports__k w3-num">DAY 2 · AM</span><span class="lp-reports__t">安全、隐私与路线图</span><span class="lp-reports__d">Vitalik，Winderica，Nym，Strawmap 路线图圆桌</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">DAY 2 · PM</span><span class="lp-reports__t">AI 开发与 Agent 的边界</span><span class="lp-reports__d">Qi Zhou 的 AI Coding 规矩，数据上链，信任边界圆桌，获奖项目</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day1-workshops/"><span class="lp-reports__k w3-num">DAY 1 · WORKSHOP</span><span class="lp-reports__t">硬件钱包与 Vibecoding</span><span class="lp-reports__d">OSKey 现场 DIY 硬件钱包，Tiny 熊从大模型讲到 Agent</span></a></li>
@@ -54,7 +55,7 @@ hide:
       <p class="lp-lede">每场活动算一站，跑完的都在这里。</p>
     </header>
     <ol class="lp-calendar">
-      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 篇</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">5 篇</span></a></li>
       <li><a href="field-notes/rustchinaconf-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">RustChinaConf 2026</span><span class="lp-calendar__type">大会 · 志愿者</span><span class="lp-calendar__date w3-num">10.15 – 17</span><span class="lp-calendar__n">1 篇</span></a></li>
       <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis 深圳</span><span class="lp-calendar__type">黑客松宣讲 · 路演</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 篇</span></a></li>
       <li><a href="field-notes/ai-web3-meetup/"><span class="lp-calendar__r w3-num">R01</span><span class="lp-calendar__name">AI × Web3 产业创新交流会</span><span class="lp-calendar__type">交流会</span><span class="lp-calendar__date w3-num">09.19</span><span class="lp-calendar__n">1 篇</span></a></li>

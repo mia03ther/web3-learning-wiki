@@ -15,7 +15,7 @@ hide:
       <p class="lp-hero__now"><span>Planning</span>A winter-break study visit to Hong Kong · Consensus Hong Kong 2027</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">Start reading</a>
-        <a class="lp-link" href="changelog/">What changed in v3.2.1</a>
+        <a class="lp-link" href="changelog/">What changed in v3.3</a>
       </div>
     </div>
     <figure class="lp-postcard">
@@ -35,10 +35,11 @@ hide:
       <p class="lp-round__no w3-num">R04</p>
       <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
       <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　Shenzhen　·　500+ people　·　28 hackathon projects</p>
-      <p class="lp-lede">When AI meets Ethereum. Vitalik on whether AI threatens cryptography, the Ethereum Foundation on on-chain privacy, builders arguing over how much power an agent should get.</p>
+      <p class="lp-lede">Updated November 4: a detailed Chinese note on Vitalik's talk, explaining AI-related risks to cryptography, client code and wallets with technical context and primary references. The privacy talks, development notes and hackathon demos are here too.</p>
       <p class="lp-links"><a class="lp-link" href="field-notes/ethshenzhen-2026/">Series overview</a></p>
     </header>
     <ol class="lp-reports">
+      <li><a href="../field-notes/ethshenzhen-2026/vitalik-ai-security/"><span class="lp-reports__k w3-num">11.04 · UPDATED</span><span class="lp-reports__t">Vitalik: Ethereum security in the AI era</span><span class="lp-reports__d">Three layers explained in Chinese: cryptographic assumptions, client code, users and wallets</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day2-morning/"><span class="lp-reports__k w3-num">DAY 2 · AM</span><span class="lp-reports__t">Security, privacy and the roadmap</span><span class="lp-reports__d">Vitalik, Winderica, Nym, the Strawmap roundtable</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">DAY 2 · PM</span><span class="lp-reports__t">AI development and agent boundaries</span><span class="lp-reports__d">Rules for AI coding, data on-chain, the trust roundtable, winning projects</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/day1-workshops/"><span class="lp-reports__k w3-num">DAY 1 · WORKSHOP</span><span class="lp-reports__t">Hardware wallets and vibecoding</span><span class="lp-reports__d">Building an OSKey wallet on a dev board, from LLMs to agents</span></a></li>
@@ -54,7 +55,7 @@ hide:
       <p class="lp-lede">Every event is a round. These are the ones done so far.</p>
     </header>
     <ol class="lp-calendar">
-      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">Conference · hackathon</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">4 notes</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">Conference · hackathon</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">5 notes</span></a></li>
       <li><a href="field-notes/rustchinaconf-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">RustChinaConf 2026</span><span class="lp-calendar__type">Conference · volunteer</span><span class="lp-calendar__date w3-num">10.15 – 17</span><span class="lp-calendar__n">1 note</span></a></li>
       <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis Shenzhen</span><span class="lp-calendar__type">Hackathon talks · demos</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 notes</span></a></li>
       <li><a href="field-notes/ai-web3-meetup/"><span class="lp-calendar__r w3-num">R01</span><span class="lp-calendar__name">AI × Web3 Industry Meetup</span><span class="lp-calendar__type">Meetup</span><span class="lp-calendar__date w3-num">09.19</span><span class="lp-calendar__n">1 note</span></a></li>

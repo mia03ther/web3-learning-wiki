@@ -10,11 +10,11 @@
   {% set is_en = page and page.url and page.url.startswith("en/") %}
   <div class="w3-banner">
     {% if is_en %}
-      <b>Version 3.2.1</b>: the full avatar, and every page is one sheet of paper.
-      <a href="{{ base_url.rstrip('/') }}/en/changelog/">See what's new ›</a>
+      <b>Version 3.3</b>: Vitalik's security talk, explained in three layers.
+      <a href="{{ base_url.rstrip('/') }}/field-notes/ethshenzhen-2026/vitalik-ai-security/">Read the Chinese note ›</a>
     {% else %}
-      <b>版本 3.2.1</b>：头像不再裁切，首页和文章页都统一成一张纸。
-      <a href="{{ base_url.rstrip('/') }}/changelog/">看看更新了什么 ›</a>
+      <b>版本 3.3</b>：Vitalik 安全分享更新了，三层风险展开讲。
+      <a href="{{ base_url.rstrip('/') }}/field-notes/ethshenzhen-2026/vitalik-ai-security/">打开专篇 ›</a>
     {% endif %}
   </div>
 {% endblock %}

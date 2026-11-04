@@ -8,7 +8,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 <p class="w3-lead">
 两天、500+ 人、28 个黑客松项目。第一天是程序员节，大家在现场组装硬件钱包、用 AI 写代码、赶黑客松；
 第二天 Vitalik、以太坊基金会和一群 Builder 聊了密码学、隐私、路线图，以及 Agent 到底该拿多大的权限。
-这一页是整个系列的目录，四篇正文按时间顺序排在下面。
+这一页是整个系列的目录，四篇场次笔记按时间排列，另有一篇 Vitalik 安全分享详解。
 </p>
 
 <figure class="w3-poster" markdown>
@@ -26,7 +26,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 <div class="w3-tldr" markdown>
 <span class="k">我的三句话总结</span>
 
-1. **AI 同时在加强「攻」和「守」。** Vitalik 担心 AI 会加速破解密码学，但形式化验证也因为 AI 提速了上百倍。以太坊的对策很朴素：能用哈希的地方就用哈希，其他地方把参数调得更保守。
+1. **AI 同时在加强「攻」和「守」。** Vitalik 讨论 AI 可能加速数学攻击，也可能帮助找漏洞、写形式化证明。他倾向于采用更保守的密码学构造，同时强调客户端与用户层的防线。
 2. **隐私要分层做。** 「读」（查余额）、「写」（发交易）、「证明」（证明我满 18 岁）三层都会泄露信息，再往下还有网络层（IP、时间、频率）——Winderica 和 Nym 分别讲了上面三层和网络层。
 3. **Agent 进入真实世界，卡在「钱」和「权限」。** 共识是：只给完成任务所需的最小数据，把预算 / 对象 / 时限写死在链上或程序里，最后付款那一步留给人确认。
 </div>
@@ -50,7 +50,11 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 </figure>
 </div>
 
-## 四篇正文
+## Vitalik 专篇 · 11.04 更新
+
+[以太坊如何在 AI 网络安全危机中幸存](vitalik-ai-security.md)：按密码学、客户端、用户三层重新整理，结合投影片核对内容。补充哈希链、二次筛法、形式化验证与多签的解释，并把研究判断和已完成的工程状态分开。
+
+## 四篇场次笔记
 
 <div class="w3-cards">
   <a class="w3-card" href="day1-workshops/">
@@ -62,7 +66,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
   <a class="w3-card" href="day1-demos/">
     <span class="w3-chip w3-chip--accent">Day 1 · 10.24 · 黑客松</span>
     <p class="w3-card__title">黑客松现场展示</p>
-    <p class="w3-card__desc">我录到的几支队伍：支付的「消费语义」、可复现的 AI 漏洞验证、Agent 打榜、旅行凭证核销、开源作者感谢墙，外加一个 LP 小工具。</p>
+    <p class="w3-card__desc">现场展示的几支队伍：支付的「消费语义」、可复现的 AI 漏洞验证、Agent 打榜、旅行凭证核销、开源作者感谢墙，外加一个 LP 小工具。</p>
     <span class="w3-card__foot"><span>18 / 19 / 22 / 23 号等</span><span>→</span></span>
   </a>
   <a class="w3-card" href="day2-morning/">
@@ -97,7 +101,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 | 时间段 | 内容 | 我的笔记 |
 |---|---|---|
 | 上午 | 欢迎辞 · ETHtao **Leo**、OpenBuild **Ian** | [Day 2 上午](day2-morning.md#part-0) |
-| 上午 | Opening Remark · **Vitalik Buterin** | [Day 2 上午](day2-morning.md#part-1) |
+| 上午 | Opening Remark · **Vitalik Buterin** | [分享详解专篇](vitalik-ai-security.md) · [上午场摘要](day2-morning.md#part-1) |
 | 上午 | 《Privacy as a First-Class Citizen on Ethereum》· 以太坊基金会 **Winderica** | [Day 2 上午](day2-morning.md#part-2) |
 | 上午 | 《The First Real-World Decentralized Mixnet for Anonymity》· Nym **Harry Halpin**（远程视频） | [Day 2 上午](day2-morning.md#part-3) |
 | 上午 | 圆桌「Ethereum 的下一次跃迁：未来路线图与升级」 | [Day 2 上午](day2-morning.md#part-4) |
@@ -147,7 +151,7 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
 
 ## 推荐阅读顺序
 
-- **完全零基础**：先读 [Day 2 上午](day2-morning.md) 的 Vitalik 部分（钱包安全那几条现在就能用上），再读 [Day 1 工作坊](day1-workshops.md) 的 LLM / Agent 原理；
+- **完全零基础**：先读 [Vitalik 专篇的多签与设备隔离](vitalik-ai-security.md#wallets)，再读 [Day 1 工作坊](day1-workshops.md) 的 LLM / Agent 原理；
 - **在用 AI 写代码**：[Day 1 · Tiny 熊](day1-workshops.md#part-2) + [Day 2 · Qi Zhou](day2-afternoon.md#part-2) 连着读，一个讲「怎么让 AI 干得好」，一个讲「AI 干完之后人该负什么责」；
 - **对 Agent 支付 / Agent 产品感兴趣**：[Day 2 下午的信任边界圆桌](day2-afternoon.md#part-5) + [黑客松展示](day1-demos.md)，再回看旧笔记 [路演夜](../pitch-night.md) 里的 Text Permit。
 

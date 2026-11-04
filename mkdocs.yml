@@ -127,6 +127,7 @@ plugins:
             ETHShenzhen 2026: ETHShenzhen 2026
             Day 1 · 硬件钱包与 Vibecoding: Day 1 · Hardware Wallets & Vibecoding
             Day 1 · 黑客松现场展示: Day 1 · Hackathon Demos
+            Vitalik · AI 与以太坊安全: Vitalik · AI & Ethereum Security
             Day 2 · 安全、隐私与路线图: Day 2 · Security, Privacy & Roadmap
             Day 2 · AI 开发与 Agent 边界: Day 2 · AI Dev & Agent Boundaries
             AI × Web3 产业创新交流会: AI × Web3 Industry Meetup
@@ -205,6 +206,7 @@ nav:
           - field-notes/ethshenzhen-2026/index.md
           - Day 1 · 硬件钱包与 Vibecoding: field-notes/ethshenzhen-2026/day1-workshops.md
           - Day 1 · 黑客松现场展示: field-notes/ethshenzhen-2026/day1-demos.md
+          - Vitalik · AI 与以太坊安全: field-notes/ethshenzhen-2026/vitalik-ai-security.md
           - Day 2 · 安全、隐私与路线图: field-notes/ethshenzhen-2026/day2-morning.md
           - Day 2 · AI 开发与 Agent 边界: field-notes/ethshenzhen-2026/day2-afternoon.md
       - RustChinaConf 2026: field-notes/rustchinaconf-2026.md

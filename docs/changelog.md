@@ -15,6 +15,26 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>版本 3.3</b><span>Vitalik 安全分享详解</span></div>
+  <span class="w3-release__ver">v3.3.0</span>
+  <span class="w3-release__date">2026-11-04</span>
+</div>
+
+<p class="w3-release__summary">把 Vitalik 在 ETHShenzhen 的安全分享单独整理成一篇，补上技术背景和一手资料，沿着三层风险读下去。</p>
+
+- **新增专篇**：[Vitalik：以太坊如何应对 AI 带来的安全挑战](field-notes/ethshenzhen-2026/vitalik-ai-security.md)，从密码学假设、客户端代码、用户与钱包三层展开。
+- **技术详解**：补充哈希签名、质因数分解算例、形式化验证与客户端多样性，解释它们分别解决什么问题。
+- **概念补充**：区分抗量子与应对 AI 的风险，解释基于哈希的密码学为何值得关注，也说明研究方向与已部署能力的区别。
+- **读完能用**：把多签、设备隔离和签名检查等建议放到具体风险里，方便对照自己的钱包使用习惯。
+- **资料补充**：连到 [NIST 哈希签名标准](https://csrc.nist.gov/pubs/fips/205/final)和 [ArkLib 形式化验证项目](https://github.com/Verified-zkEVM/ArkLib)，方便继续读原始资料。
+- **入口更新**：首页、活动专题和公告条直达专篇，欢迎继续补充和纠错。
+</div>
+
+## 历史版本
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.2.1</b><span>完整头像 · 纸页对齐</span></div>
   <span class="w3-release__ver">v3.2.1</span>
   <span class="w3-release__date">2026-10-31</span>
@@ -28,8 +48,6 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 - **保留风格**：古典衬线字体、毛绒布面、F1 照片和拜仁队徽继续保留。
 - **本次范围**：头像显示与版式调整，没有新增活动或改动笔记正文。
 </div>
-
-## 历史版本
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

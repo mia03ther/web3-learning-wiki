@@ -1,6 +1,6 @@
 ---
 title: 安全与隐私
-description: Web3 安全与隐私入门：钱包自保清单、AI 时代的密码学风险分级、软件层安全、链上隐私的四个层次、Agent 的权限边界，以及概念速查。
+description: Web3 安全与隐私入门：钱包安全、AI 时代的密码学假设、客户端多样性与形式化验证、链上隐私的四个层次，以及 Agent 的权限边界。
 ---
 
 # 安全与隐私
@@ -15,7 +15,7 @@ description: Web3 安全与隐私入门：钱包自保清单、AI 时代的密�
 
 1. **助记词离线手抄**，永远不拍照、不存云端、不发给任何人（包括「客服」）；
 2. **大额资产用多签**，比如 2-of-3，**两把钥匙绝不放在同一个地方**；
-3. **转账前慢 10 秒**核对地址和金额——Vitalik 自己因手误丢的币比被黑客偷的还多；
+3. **转账前停一下**，核对地址、网络、金额和实际签名内容；
 4. **先测试网、再小额**，看不懂的合约和链接不签、不点；
 5. 给 AI / Agent 授权时：**最小数据、硬边界、关键一步人来确认**。
 </div>
@@ -42,43 +42,37 @@ flowchart LR
     K3["钥匙 3<br/>可信的朋友 / 家人"] --> M
 ```
 
-丢了任意一把钥匙，资产还在；被偷了任意一把，资产也还在。前提是**两把钥匙绝不放在同一个地方**。
+在多签合约和配置正常的前提下，丢失一把钥匙仍可用另外两把操作；攻击者只拿到一把，也不足以转账。签名设备和备份要分开，避免一次设备入侵或备份泄露就凑齐门槛。
 
 ### 1.3 硬件钱包：好用，但不是万能
 
-- **好处**：私钥永远不碰联网设备；带屏幕的设备让你「看懂再签」；
-- **供应链风险**：有人在流通的硬件钱包里植入 SIM 卡，生成私钥后直接外发；也有厂商的客户名单泄露过。而且**专门买一个硬件钱包，本身就向整条供应链暴露了「我有很多币」**；
-- **开源固件**：像 [OSKey](https://github.com/butterfly-community/oskey-firmware) 这样，用通用开发板 + 自己刷开源固件，不必信任某一家厂商；
-- **低调的替代方案**：旧款 Google Pixel + GrapheneOS + AirGap 钱包，永久断网当冷钱包；黑客松冠军 Nokia Wallet 则把旧诺基亚改造成没人会怀疑的签名设备。
+- **好处**：把签名和联网电脑隔开，减少私钥暴露面；独立屏幕提供核对交易的机会，仍要看清它实际显示了什么。
+- **供应链风险**：设备来源、固件和屏幕显示都属于信任边界。独立签名设备仍需保证购买渠道、初始化和核对流程可信。
+- **开源固件**：像 [OSKey](https://github.com/butterfly-community/oskey-firmware) 这样，用通用开发板刷开源固件，便于检查实现；自行组装仍需信任硬件、构建工具、固件来源和安装过程。
+- **通用设备方案**：Vitalik 提到 Pixel + GrapheneOS + AirGap 的离线签名思路。实际选择要看设备是否仍获完整安全更新，不能把「旧手机能刷机」当成安全保证（[GrapheneOS 官方支持说明](https://grapheneos.org/faq#device-support)）。黑客松冠军 Nokia Wallet 是旧手机签名设备的探索，比赛获奖也不等于产品已经完成安全审计。
 
-> 出处：[Day 2 上午 · Vitalik](../field-notes/ethshenzhen-2026/day2-morning.md#part-1) · [Day 1 · OSKey](../field-notes/ethshenzhen-2026/day1-workshops.md#part-1) · [获奖项目](../field-notes/ethshenzhen-2026/day2-afternoon.md#part-7)
+> 出处：[Vitalik 专题 · 钱包与设备](../field-notes/ethshenzhen-2026/vitalik-ai-security.md#wallets) · [Day 1 · OSKey](../field-notes/ethshenzhen-2026/day1-workshops.md#part-1) · [获奖项目](../field-notes/ethshenzhen-2026/day2-afternoon.md#part-7)
 
 ## 2. AI 时代的密码学
 
-几乎所有密码学都建立在「**某个数学问题很难**」的假设上。AI 的数学能力越来越强，这些假设可能被削弱。Vitalik 的风险分级：
+密码学的安全依赖具体问题、算法和参数。AI 可能帮助发现新的攻击方法，**「抗 AI」目前没有通用认证**。Vitalik 在现场更偏好基于哈希的方案，这是一种风险判断，仍需要后续研究和攻击分析来检验。
 
-| 密码学 | 用在哪里 | 抗量子 | 抗 AI |
-|---|---|---|---|
-| 哈希函数、对称加密（AES） | 区块链接、STARK、承诺 | ✅ | ✅ 最稳 |
-| 普通椭圆曲线（ECDSA、Schnorr） | 钱包签名 | ❌ | ⚠️ 可能有问题 |
-| 椭圆曲线配对 | BLS 签名、大多数 SNARK | ❌ | ⚠️⚠️ 很可能有问题 |
-| 格密码（Lattice） | 后量子签名、全同态加密 | ✅ | ❓ 未知 |
+- **哈希和对称加密**：不依赖椭圆曲线离散对数或格难题；它们仍需抵抗碰撞、原像搜索或密钥搜索等攻击，并选择足够的安全参数。量子算法也会影响这些攻击的成本，安全余量需要结合参数评估。
+- **椭圆曲线与配对**：ECDSA、Schnorr、BLS，以及 Groth16、采用 KZG 承诺的 PLONK 实现等有各自的代数安全假设；不是所有 SNARK 都依赖配对。足够强的量子计算机能威胁这些传统椭圆曲线方案，AI 是否能带来实用的新攻击则是另一件事。
+- **格密码**：是后量子密码学的重要路线；抵抗已知量子攻击，不代表未来的数学进步不会改变安全评估。现场讨论的是这种不确定性，没有给出格密码已经被实用攻破的结论。
 
-两个关键结论：
+新攻击可能迫使方案扩大密钥或签名、降低效率，也可能要求更换算法，具体后果取决于攻击本身。以太坊正在研究哈希签名、STARK 等方向，[SLH-DSA 已有 NIST 标准](https://csrc.nist.gov/pubs/fips/205/final)，主网的迁移则涉及另外的协议与工程工作。加密内存池也有多种设计，各自依赖不同的技术和假设。
 
-- **出事的方式更可能是「变慢变大」而不是「一夜崩溃」**：比如签名从 64 字节变成 500 字节、密钥从 1 KB 变成 20 KB；
-- **能用哈希就用哈希**：哈希的数学结构最简单，最难找到「捷径」。以太坊正在把签名、证明、加密内存池都往基于哈希的方案迁移。
-
-> 出处：[Day 2 上午 · Vitalik](../field-notes/ethshenzhen-2026/day2-morning.md#part-1)
+> 出处：[Vitalik 专题 · 密码学假设](../field-notes/ethshenzhen-2026/vitalik-ai-security.md#crypto-assumptions)
 
 ## 3. 软件层：代码怎么才算安全
 
 | 做法 | 解决什么 | 出处 |
 |---|---|---|
-| **客户端多样性** | 一个客户端出 bug，其他客户端撑住网络 | [Vitalik](../field-notes/ethshenzhen-2026/day2-morning.md#part-1) |
-| **形式化验证** | 用数学证明代码正确，AI 让它快了上百倍 | [Vitalik / 圆桌](../field-notes/ethshenzhen-2026/day2-morning.md#part-4) |
-| **重视 ZK 电路安全** | 越来越多应用依赖 ZK，但大家对它的安全关注远远不够 | [Vitalik](../field-notes/ethshenzhen-2026/day2-morning.md#part-1) |
-| **警惕前端被篡改** | 合约没问题、网页被换掉一样会出事 | [Vitalik](../field-notes/ethshenzhen-2026/day2-morning.md#part-1) |
+| **客户端多样性** | 分散单个实现的故障风险；能否继续确认取决于故障性质和受影响的质押权重 | [Vitalik · 客户端](../field-notes/ethshenzhen-2026/vitalik-ai-security.md#clients) |
+| **形式化验证** | 在明确规范和假设下证明性质；AI 可辅助写证明，结果仍由证明检查器核验 | [Vitalik · 形式化验证](../field-notes/ethshenzhen-2026/vitalik-ai-security.md#formal-verification) |
+| **重视 ZK 电路安全** | 检查电路表达的条件、证明系统及实现，避免「证明通过」却未证明实际想要的事 | [Vitalik · 形式化验证](../field-notes/ethshenzhen-2026/vitalik-ai-security.md#formal-verification) |
+| **警惕前端被篡改** | 合约正常时，网页仍可能诱导你签署错误的交易 | [Vitalik · 钱包与设备](../field-notes/ethshenzhen-2026/vitalik-ai-security.md#wallets) |
 | **合约升级加冷却期 + 自动检查** | 升级权限被滥用或被盗 | [Upgrade Airlock](../field-notes/ethshenzhen-2026/day2-afternoon.md#part-7) |
 | **AI 写的代码必须人能解释、两人审核** | 区块链的损失是突发型的，99% 正确也不够 | [Qi Zhou](../field-notes/ethshenzhen-2026/day2-afternoon.md#part-2) |
 | **漏洞验证可复现** | 「AI 说有漏洞」要能被证明、被复查 | [黑客松 18 号](../field-notes/ethshenzhen-2026/day1-demos.md) |
@@ -117,19 +111,19 @@ AI Agent 开始替人花钱、替人操作账号，安全问题从「代码」�
 :   把任意数据变成固定长度「指纹」的函数。改一个字，指纹完全不同；从指纹几乎不可能反推原文。区块链防篡改的基础。
 
 ECDSA / 椭圆曲线签名
-:   以太坊和比特币钱包签名用的算法，安全性依赖椭圆曲线上的离散对数难题。量子计算机能破解它。
+:   以太坊普通账户所用的签名算法，安全性依赖椭圆曲线上的离散对数难题。足够大且容错的量子计算机会威胁它，不等于现有量子设备已能破解。
 
 椭圆曲线配对 Pairing
-:   椭圆曲线上一种特殊的运算，BLS 签名和大多数 SNARK 都靠它，效率高，但数学结构最「丰富」，Vitalik 认为最怕 AI。
+:   特定椭圆曲线上的双线性运算，用于 BLS 签名、Groth16、KZG 等。并非所有 SNARK 都需要配对；安全性要看具体方案和假设。
 
 格密码 Lattice
-:   基于「格」上难题的密码学，被认为能抵抗量子计算机，后量子签名、全同态加密都基于它；能不能抵抗 AI 还不知道。
+:   基于格上难题构建的密码学，是后量子签名和全同态加密的重要路线；不能把所有后量子签名或所有 FHE 方案都等同于格密码。
 
 抗量子密码学 PQC
-:   能抵抗量子计算机攻击的密码学。以太坊路线图的两大重点之一。
+:   以抵抗已知量子攻击为目标的密码学，仍依赖所选算法、参数和实现的安全性。
 
 零知识证明 ZK
-:   在不透露秘密的前提下，证明某件事是真的。比如证明「我满 18 岁」而不交出身份证。分为 SNARK（小而快，常基于配对）和 STARK（基于哈希，更抗量子）。
+:   在不泄露指定秘密的前提下证明一个陈述，例如证明满 18 岁而不交出完整身份证。SNARK 强调简洁、非交互的知识论证；STARK 是透明、可扩展的证明路线。两者不是互斥的安全等级，零知识性和后量子安全都需看具体构造。
 
 PIR 私有信息检索
 :   让服务器在不知道你查什么的情况下，把正确答案返回给你。
@@ -147,7 +141,7 @@ MPC 多方计算
 :   私钥被拆成多个分片分给不同参与方，签名时各自计算、无需把私钥拼回来。
 
 形式化验证
-:   用数学方法证明程序在所有情况下都符合规范，而不是靠测试「抽查」。
+:   用机器可检查的数学证明，验证系统在明确假设下符合所写规范。规范是否正确、证明覆盖到哪一层，也需要审查。
 
 FIDO2 / Passkey
 :   新一代免密码登录标准，用硬件设备或手机里的密钥代替密码，防钓鱼。
@@ -160,6 +154,7 @@ ePBS
 
 ## 延伸阅读
 
-- 现场笔记：[ETHShenzhen 2026 · Day 2 上午](../field-notes/ethshenzhen-2026/day2-morning.md)（这一页的主要来源）
+- 重点专题：[Vitalik · AI 时代的以太坊安全](../field-notes/ethshenzhen-2026/vitalik-ai-security.md)
+- 现场笔记：[ETHShenzhen 2026 · Day 2 上午](../field-notes/ethshenzhen-2026/day2-morning.md)（含 Winderica、Nym 与路线图圆桌）
 - 合约安全练习：[精选课程中心](../roadmap/courses.md) 里的 Ethernaut、Capture the Ether
 - 更多基础概念：[核心概念词典](../fundamentals/core-concepts.md)
