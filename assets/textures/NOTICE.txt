@@ -1,0 +1,5 @@
+Notebook textile
+
+`ivory-fleece.webp` is an AI-generated short-pile ivory fleece texture, generated with the built-in imagegen tool for this notebook on 2026-10-31. The original was encoded as WebP for the site.
+
+Prompt: seamless top-down square macro texture of warm ivory/oatmeal short-pile minky fleece; tiny dense soft fibers, even diffuse lighting, subtle variation; edge-to-edge textile only, without objects, stitches, text, borders or watermarks. Intended for CSS tiling and red fabric tinting.
