@@ -124,6 +124,8 @@ plugins:
             AI 辅助开发: AI-assisted Development
             开发者工具: Developer Tools
             现场笔记: Field Notes
+            Reactive 共学与链上自动化: Reactive Camp & On-chain Automation
+            Bittensor 共学与本地 Miner: Bittensor Camp & Local Miner
             ETHShenzhen 2026: ETHShenzhen 2026
             Day 1 · 硬件钱包与 Vibecoding: Day 1 · Hardware Wallets & Vibecoding
             Day 1 · 黑客松现场展示: Day 1 · Hackathon Demos
@@ -202,6 +204,8 @@ nav:
       - 开发者工具: devtools/index.md
   - 现场笔记:
       - field-notes/index.md
+      - Reactive 共学与链上自动化: field-notes/reactive-network.md
+      - Bittensor 共学与本地 Miner: field-notes/bittensor-study-camp.md
       - ETHShenzhen 2026:
           - field-notes/ethshenzhen-2026/index.md
           - Day 1 · 硬件钱包与 Vibecoding: field-notes/ethshenzhen-2026/day1-workshops.md

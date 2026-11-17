@@ -15,5 +15,10 @@ AI 系统与区块链基础设施交汇处的研究与实践笔记：链上 AI A
 - **谁来管预算和权限**：[路演夜 · Text Permit](../field-notes/pitch-night.md#项目三text-permit--给一群-ai-立预算和权限规矩) 的多 Agent 预算控制，可以和 [ETHShenzhen 的信任边界圆桌](../field-notes/ethshenzhen-2026/day2-afternoon.md#part-5) 对照着看。
 - **怎么把工具接进工作流**：[RustChinaConf · Kimi 展位交流](../field-notes/rustchinaconf-2026.md#part-3)，聊到了 Computer Use、API 与脚本接口，以及该怎样看一段自动化演示。
 
+## 从概念到实操
+
+- **AI 服务怎样被评价和奖励**：[Bittensor 共学](../field-notes/bittensor-study-camp.md)，用中文材料提取理解 Miner、Validator 和子网激励，附本地教学链进度。
+- **链上事件怎样触发下一步**：[Reactive 共学](../field-notes/reactive-network.md)，拆开订阅、判断、回调和费用。想让 AI 参与自动化，可以先从这条执行流程读起。
+
 !!! note "板块建设中"
     这个板块正在成长中。欢迎在 [贡献指南](../contributing.md) 的指导下补充笔记。

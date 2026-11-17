@@ -15,7 +15,7 @@ hide:
       <p class="lp-hero__now"><span>最近在筹划</span>寒假的香港访学活动 · Consensus Hong Kong 2027</p>
       <div class="lp-hero__actions">
         <a class="lp-btn" href="start/">从入门到入土喵</a>
-        <a class="lp-link" href="changelog/">v3.3 更新了什么？？</a>
+        <a class="lp-link" href="changelog/">v3.4 更新了什么？？</a>
       </div>
     </div>
     <figure class="lp-postcard">
@@ -32,18 +32,17 @@ hide:
 <section class="lp-section" aria-labelledby="lp-latest">
   <div class="lp-wrap lp-round">
     <header class="lp-round__head">
-      <p class="lp-round__no w3-num">R04</p>
-      <h2 class="lp-h2" id="lp-latest">ETHShenzhen 2026</h2>
-      <p class="lp-round__when"><span class="w3-num">10.24 – 25</span>　深圳　·　500+ 人　·　28 个黑客松项目</p>
-      <p class="lp-lede">11 月 4 日补了一篇 Vitalik 分享详解，展开 AI 给密码学、客户端和钱包带来的挑战，附技术说明和一手资料。这一站的隐私分享、开发经验和黑客松笔记也都在下面。</p>
-      <p class="lp-links"><a class="lp-link" href="field-notes/ethshenzhen-2026/">专题总览</a></p>
+      <p class="lp-round__no w3-num">11 月</p>
+      <h2 class="lp-h2" id="lp-latest">这两周在学什么</h2>
+      <p class="lp-round__when"><span class="w3-num">11.17 更新</span>　Bittensor × Reactive　·　线上共学中</p>
+      <p class="lp-lede">最近一边学 Bittensor，一边开始 Reactive 的跨链自动化。本地教学链和 Miner 已经启动，Reactive 做完了环境准备、用例卡和费用实测。把学到的概念、踩过的环境坑和下一步要做的事都放进来了，ETHShenzhen 的旧笔记也补了些细节。</p>
+      <p class="lp-links"><a class="lp-link" href="field-notes/">全部活动与共学笔记</a></p>
     </header>
     <ol class="lp-reports">
-      <li><a href="field-notes/ethshenzhen-2026/vitalik-ai-security/"><span class="lp-reports__k w3-num">11.04 · UPDATED</span><span class="lp-reports__t">Vitalik：AI 时代的以太坊安全</span><span class="lp-reports__d">三层风险详解：密码学假设、客户端代码、用户与钱包</span></a></li>
-      <li><a href="field-notes/ethshenzhen-2026/day2-morning/"><span class="lp-reports__k w3-num">DAY 2 · AM</span><span class="lp-reports__t">安全、隐私与路线图</span><span class="lp-reports__d">Vitalik，Winderica，Nym，Strawmap 路线图圆桌</span></a></li>
-      <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">DAY 2 · PM</span><span class="lp-reports__t">AI 开发与 Agent 的边界</span><span class="lp-reports__d">Qi Zhou 的 AI Coding 规矩，数据上链，信任边界圆桌，获奖项目</span></a></li>
-      <li><a href="field-notes/ethshenzhen-2026/day1-workshops/"><span class="lp-reports__k w3-num">DAY 1 · WORKSHOP</span><span class="lp-reports__t">硬件钱包与 Vibecoding</span><span class="lp-reports__d">OSKey 现场 DIY 硬件钱包，Tiny 熊从大模型讲到 Agent</span></a></li>
-      <li><a href="field-notes/ethshenzhen-2026/day1-demos/"><span class="lp-reports__k w3-num">DAY 1 · HACKATHON</span><span class="lp-reports__t">黑客松现场展示</span><span class="lp-reports__d">消费语义，可复现的漏洞验证，给 Agent 打榜</span></a></li>
+      <li><a href="field-notes/reactive-network/"><span class="lp-reports__k w3-num">R06 · REACTIVE</span><span class="lp-reports__t">链上事件怎样变成自动回调</span><span class="lp-reports__d">Omni 新写法，balance / reserves / debt，D1 用例卡与 D2 费用实测</span></a></li>
+      <li><a href="field-notes/bittensor-study-camp/"><span class="lp-reports__k w3-num">R05 · BITTENSOR</span><span class="lp-reports__t">从子网规则到本地 Miner</span><span class="lp-reports__d">矿工与验证者怎样协作，TAO 与 alpha，Windows / WSL / Docker 环境排错</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day2-afternoon/"><span class="lp-reports__k w3-num">R04 · 补记</span><span class="lp-reports__t">AI 开发与数据资产，继续往下拆</span><span class="lp-reports__d">上下文怎么给，数据贡献怎么追溯，企业 AI 的效果怎么量</span></a></li>
+      <li><a href="field-notes/ethshenzhen-2026/day1-demos/"><span class="lp-reports__k w3-num">R04 · DEMOS</span><span class="lp-reports__t">三组相关路演补记</span><span class="lp-reports__d">Agent 的任务验收、资金限额和可核验的执行凭证</span></a></li>
     </ol>
   </div>
 </section>
@@ -52,9 +51,11 @@ hide:
   <div class="lp-wrap">
     <header class="lp-head">
       <h2 class="lp-h2" id="lp-season">2026 赛季</h2>
-      <p class="lp-lede">每场活动算一站，跑完的都在这里。</p>
+      <p class="lp-lede">线下活动和线上共学都记成一站，边学边补。</p>
     </header>
     <ol class="lp-calendar">
+      <li><a href="field-notes/reactive-network/"><span class="lp-calendar__r w3-num">R06</span><span class="lp-calendar__name">Reactive Builder Camp</span><span class="lp-calendar__type">线上共学 · 进行中</span><span class="lp-calendar__date w3-num">11.16 – 29</span><span class="lp-calendar__n">1 篇</span></a></li>
+      <li><a href="field-notes/bittensor-study-camp/"><span class="lp-calendar__r w3-num">R05</span><span class="lp-calendar__name">Bittensor 第二期共学营</span><span class="lp-calendar__type">线上共学 · 进行中</span><span class="lp-calendar__date w3-num">11.10 – 23</span><span class="lp-calendar__n">1 篇</span></a></li>
       <li><a href="field-notes/ethshenzhen-2026/"><span class="lp-calendar__r w3-num">R04</span><span class="lp-calendar__name">ETHShenzhen 2026</span><span class="lp-calendar__type">大会 · 黑客松</span><span class="lp-calendar__date w3-num">10.24 – 25</span><span class="lp-calendar__n">5 篇</span></a></li>
       <li><a href="field-notes/rustchinaconf-2026/"><span class="lp-calendar__r w3-num">R03</span><span class="lp-calendar__name">RustChinaConf 2026</span><span class="lp-calendar__type">大会 · 志愿者</span><span class="lp-calendar__date w3-num">10.15 – 17</span><span class="lp-calendar__n">1 篇</span></a></li>
       <li><a href="field-notes/#r02"><span class="lp-calendar__r w3-num">R02</span><span class="lp-calendar__name">Monad Metropolis 深圳</span><span class="lp-calendar__type">黑客松宣讲 · 路演</span><span class="lp-calendar__date w3-num">09.26</span><span class="lp-calendar__n">2 篇</span></a></li>

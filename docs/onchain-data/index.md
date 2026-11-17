@@ -9,6 +9,11 @@
 - **查询实践**：Dune SQL 查询、仪表盘构建与常用模式；
 - **应用**：链上指标、市场复盘与 AI × 数据的结合。
 
+## 读与监听的两个例子
+
+- [Bittensor 共学笔记](../field-notes/bittensor-study-camp.md)：从子网与参与者指标理解服务评价，读数前先分清网络和字段。
+- [Reactive 的事件流程](../field-notes/reactive-network.md#event-loop)：只匹配需要的合约和事件，再处理阈值与重复执行；查到日志后，继续核对目标链动作有没有落地。
+
 ## 相关资料
 
 - [技能树与资源](../roadmap/skills-resources.md) —— 数据分析工具与课程；

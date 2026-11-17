@@ -27,6 +27,11 @@ description: 按主题查阅 Web3 与 AI 学习笔记：从区块链基础、链
 - [MCP 与 AI Agents](../ai-web3/mcp-agents.md)：Agent 怎么调用工具、怎么付钱，以及预算和权限怎么管。
 - [安全与隐私](../security/index.md)：从钱包和资产安全开始，再看密码学、链上隐私与 Agent 的权限边界。第一次接触钱包时就可以先看这一页。
 
+## 11 月的动手记录
+
+- [Bittensor：从子网规则到本地 Miner](../field-notes/bittensor-study-camp.md)：把任务、评分和激励接起来，也记了 Windows、WSL 和 Docker 的环境问题。
+- [Reactive：从链上事件到自动回调](../field-notes/reactive-network.md)：订阅事件、检查条件、请求回调，先看完整流程，再看费用和失败处理。
+
 ## 按问题查
 
 - **笔记里有个词看不懂？** 翻[核心概念词典](../fundamentals/core-concepts.md)。

@@ -6,13 +6,35 @@ description: Plain-language notes from Web3 and AI events in Shenzhen, laid out 
 # Field Notes
 
 <p class="w3-lead">
-Notes from events I went to, written up for friends in a group chat. Every event is a round (R01, R02 …), newest first.
+Notes from events I went to, written up for friends in a group chat. Online study camps are included too. Each is a round (R01, R02 …), newest first; ongoing camps are updated as I learn.
 <b>The notes are in Chinese</b>; the summaries here are in English.
 </p>
 
 ## Timeline
 
 <div class="w3-timeline">
+
+  <div class="w3-timeline__group" id="r06">
+    <div class="w3-timeline__date"><b class="w3-round w3-num">R06</b>11.16–29<small>Reactive · online, in progress</small></div>
+    <div class="w3-timeline__items">
+      <a class="w3-note" href="../../field-notes/reactive-network/">
+        <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">Nov 17 update</span><span>In Chinese · automation</span></div>
+        <p class="w3-note__title">Reactive: from on-chain events to callbacks</p>
+        <p class="w3-note__desc">Omni changes, subscriptions, funding both sides, duplicate events and callback failures. Includes environment checks, a transfer-alert use case and measured fee parameters.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="w3-timeline__group" id="r05">
+    <div class="w3-timeline__date"><b class="w3-round w3-num">R05</b>11.10–23<small>Bittensor · online, in progress</small></div>
+    <div class="w3-timeline__items">
+      <a class="w3-note" href="../../field-notes/bittensor-study-camp/">
+        <div class="w3-note__meta"><span class="w3-chip">Nov 17 update</span><span>In Chinese · decentralized AI</span></div>
+        <p class="w3-note__title">Bittensor: from subnet rules to a local miner</p>
+        <p class="w3-note__desc">Owners, miners, validators, Yuma, TAO and alpha, followed by actual study progress and Windows, WSL and Docker setup lessons.</p>
+      </a>
+    </div>
+  </div>
 
   <div class="w3-timeline__group" id="r04">
     <div class="w3-timeline__date"><b class="w3-round w3-num">R04</b>10.24–25<small>ETHShenzhen · Shenzhen</small></div>
@@ -45,7 +67,7 @@ Notes from events I went to, written up for friends in a group chat. Every event
       <a class="w3-note" href="ethshenzhen-2026/day1-demos/">
         <div class="w3-note__meta"><span class="w3-chip">Day 1 · Hackathon</span><span>Demo notes</span></div>
         <p class="w3-note__title">Hackathon demos and an LP helper tool</p>
-        <p class="w3-note__desc">Payment semantics, reproducible exploit checks, agent leaderboards, travel voucher redemption, a thank-you wall for open-source authors.</p>
+        <p class="w3-note__desc">Payment semantics, reproducible exploit checks, agent leaderboards and travel vouchers, plus separate related presentations on task budgets and execution receipts.</p>
       </a>
     </div>
   </div>

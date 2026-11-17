@@ -10,11 +10,11 @@
   {% set is_en = page and page.url and page.url.startswith("en/") %}
   <div class="w3-banner">
     {% if is_en %}
-      <b>Version 3.3</b>: Vitalik's security talk, explained in three layers.
-      <a href="{{ base_url.rstrip('/') }}/field-notes/ethshenzhen-2026/vitalik-ai-security/">Read the Chinese note ›</a>
+      <b>Version 3.4</b>: Bittensor and Reactive study notes, plus more ETHShenzhen demos.
+      <a href="{{ base_url.rstrip('/') }}/changelog/">See what changed ›</a>
     {% else %}
-      <b>版本 3.3</b>：Vitalik 安全分享更新了，三层风险展开讲。
-      <a href="{{ base_url.rstrip('/') }}/field-notes/ethshenzhen-2026/vitalik-ai-security/">打开专篇 ›</a>
+      <b>版本 3.4</b>：补上 Bittensor、Reactive 共学进度，也继续补全现场笔记。
+      <a href="{{ base_url.rstrip('/') }}/changelog/">看看更新 ›</a>
     {% endif %}
   </div>
 {% endblock %}

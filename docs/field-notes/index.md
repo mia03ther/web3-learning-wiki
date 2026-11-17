@@ -1,18 +1,42 @@
 ---
 title: 现场笔记 · Field Notes
-description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、RustChinaConf 2026、Monad Metropolis 深圳、AI × Web3 产业创新交流会，按时间线和主题索引。
+description: 行业活动与线上共学的「嚼碎版」笔记：Bittensor、Reactive、ETHShenzhen 2026、RustChinaConf 2026、Monad Metropolis 深圳、AI × Web3 产业创新交流会，按时间线和主题索引。
 ---
 
 # 现场笔记
 
 <p class="w3-lead">
-我去听的活动，都会整理成「嚼碎版」笔记。每篇按同一个结构写：<b>这场讲了什么 → 逐个拆解 → 小白能学到什么 → 现在能做什么</b>。
+我去听的活动和参加的线上共学，都会整理成「嚼碎版」笔记。每篇按同一个结构写：<b>这场讲了什么 → 逐个拆解 → 小白能学到什么 → 现在能做什么</b>。
 每场活动算一站（R01、R02……），按时间倒序排在下面，也可以拉到底按主题找。
 </p>
 
 ## 时间线
 
 <div class="w3-timeline">
+
+  <div class="w3-timeline__group" id="r06">
+    <div class="w3-timeline__date"><b class="w3-round w3-num">R06</b>11.16–29<small>Reactive · 线上共学中</small></div>
+    <div class="w3-timeline__items">
+      <a class="w3-note" href="reactive-network/">
+        <div class="w3-note__meta"><span class="w3-chip w3-chip--accent">11.17 更新</span><span>跨链自动化 · 实践</span></div>
+        <p class="w3-note__title">Reactive 共学：从链上事件到自动回调</p>
+        <p class="w3-note__desc">Omni 更新、订阅与回调、两边怎么付费、重复事件与失败怎么查。另记环境准备、D1 大额转账告警卡和 D2 Lasna 费用参数实测。</p>
+        <div class="w3-tags"><span>#Reactive</span><span>#Solidity</span><span>#跨链</span><span>#Foundry</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="w3-timeline__group" id="r05">
+    <div class="w3-timeline__date"><b class="w3-round w3-num">R05</b>11.10–23<small>Bittensor · 线上共学中</small></div>
+    <div class="w3-timeline__items">
+      <a class="w3-note" href="bittensor-study-camp/">
+        <div class="w3-note__meta"><span class="w3-chip">11.17 更新</span><span>去中心化 AI · 本地实操</span></div>
+        <p class="w3-note__title">Bittensor 共学：从子网规则到本地 Miner</p>
+        <p class="w3-note__desc">Owner、Miner、Validator 与 Yuma 怎样接起来；TAO 和 alpha 怎么区分；从概念题、钱包与工具，一路到 Docker、WSL 和本地教学链。</p>
+        <div class="w3-tags"><span>#Bittensor</span><span>#Subnet</span><span>#Miner</span><span>#Docker</span></div>
+      </a>
+    </div>
+  </div>
 
   <div class="w3-timeline__group" id="r04">
     <div class="w3-timeline__date"><b class="w3-round w3-num">R04</b>10.24–25<small>ETHShenzhen · 深圳</small></div>
@@ -48,7 +72,7 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
       <a class="w3-note" href="ethshenzhen-2026/day1-demos/">
         <div class="w3-note__meta"><span class="w3-chip">Day 1 · 黑客松</span><span>项目展示速记</span></div>
         <p class="w3-note__title">黑客松现场展示 + LP 工具 Demo</p>
-        <p class="w3-note__desc">支付的「消费语义」、可复现的 AI 漏洞验证、Agent 打榜、旅行凭证核销、开源作者感谢墙，以及一个帮新手做 LP 的小工具。</p>
+        <p class="w3-note__desc">支付的「消费语义」、可复现的 AI 漏洞验证、Agent 打榜与旅行凭证；另补三组相关路演，拆解任务预算和执行凭证。</p>
         <div class="w3-tags"><span>#黑客松</span><span>#Agent支付</span><span>#安全</span><span>#DeFi</span></div>
       </a>
     </div>
@@ -104,6 +128,9 @@ description: 一手行业活动的「嚼碎版」笔记：ETHShenzhen 2026、Rus
 |---|---|
 | **Agent 怎么花钱、怎么被管住** | [路演夜 · Text Permit](pitch-night.md) · [Day 2 下午 · 信任边界圆桌](ethshenzhen-2026/day2-afternoon.md#part-5) · [Day 1 · FluxA](ethshenzhen-2026/day1-workshops.md#part-3) |
 | **钱包和资产安全** | [Vitalik 专篇 · 多签与设备隔离](ethshenzhen-2026/vitalik-ai-security.md#wallets) · [Day 1 · OSKey](ethshenzhen-2026/day1-workshops.md#part-1) · [获奖项目 Nokia Wallet](ethshenzhen-2026/day2-afternoon.md#part-7) |
+| **去中心化 AI 与子网** | [Bittensor 共学笔记](bittensor-study-camp.md) · [我的学习进度](bittensor-study-camp.md#my-progress) |
+| **事件驱动的链上自动化** | [Reactive 共学笔记](reactive-network.md) · [合约费用与欠款](reactive-network.md#fees) |
+| **Windows 上搭开发环境** | [Bittensor · 环境排错](bittensor-study-camp.md#environment) · [Reactive · Foundry 练习](reactive-network.md#my-progress) |
 | **链上隐私** | [Day 2 上午 · Winderica & Nym](ethshenzhen-2026/day2-morning.md#part-2) |
 | **用 AI 写代码** | [Day 1 · Tiny 熊](ethshenzhen-2026/day1-workshops.md#part-2) · [Day 2 下午 · Qi Zhou](ethshenzhen-2026/day2-afternoon.md#part-2) |
 | **公链性能与路线图** | [Monad 黑客松](monad-hackathon.md) · [Day 2 上午 · 路线图圆桌](ethshenzhen-2026/day2-morning.md#part-4) |

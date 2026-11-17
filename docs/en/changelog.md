@@ -15,6 +15,25 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>Version 3.4</b><span>November study and practice notes</span></div>
+  <span class="w3-release__ver">v3.4.0</span>
+  <span class="w3-release__date">2026-11-17</span>
+</div>
+
+<p class="w3-release__summary">New Chinese notes from the Bittensor and Reactive study camps, actual practice progress, and additions to the ETHShenzhen sessions.</p>
+
+- **Bittensor**: [subnet rules and a local miner](../field-notes/bittensor-study-camp.md), with roles, evaluation, incentives and environment troubleshooting.
+- **Reactive**: [events and callbacks](../field-notes/reactive-network.md), with Omni changes, fees, failure handling and Buildathon tracks.
+- **Practice progress**: links to my public learning repositories, separating observed outputs from steps still to do.
+- **Session additions**: more on [AI development and data assets](field-notes/ethshenzhen-2026/day2-afternoon.md) and the [related project demos](field-notes/ethshenzhen-2026/day1-demos.md).
+- **Discovery**: home pages, the six-round index, knowledge pages and English summaries link to the new notes. Corrections and contributions are welcome.
+</div>
+
+## Previous releases
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>Version 3.3</b><span>Vitalik's security talk, explained</span></div>
   <span class="w3-release__ver">v3.3.0</span>
   <span class="w3-release__date">2026-11-04</span>
@@ -29,8 +48,6 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 - **Sources**: links to the [NIST hash-based signature standard](https://csrc.nist.gov/pubs/fips/205/final) and [ArkLib formal verification project](https://github.com/Verified-zkEVM/ArkLib) for further reading.
 - **Discovery**: links from the home page, event overview and announcement bar lead to the new note. Corrections and additions are welcome.
 </div>
-
-## Previous releases
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

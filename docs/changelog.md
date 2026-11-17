@@ -15,6 +15,25 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 <div class="w3-release w3-release--latest" markdown>
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
+  <div class="w3-release__name"><b>版本 3.4</b><span>11 月共学与实操补记</span></div>
+  <span class="w3-release__ver">v3.4.0</span>
+  <span class="w3-release__date">2026-11-17</span>
+</div>
+
+<p class="w3-release__summary">把最近参加的 Bittensor、Reactive 共学和实际动手记录补进笔记，也继续补全 ETHShenzhen 的开发、数据与项目路演内容。</p>
+
+- **新增 Bittensor 共学**：[从子网规则到本地 Miner](field-notes/bittensor-study-camp.md)，解释角色、评分与激励，记下本地教学链、Miner 启动和环境排错。
+- **新增 Reactive 共学**：[从链上事件到自动回调](field-notes/reactive-network.md)，整理 Omni 更新、双边费用、回调排错和三条黑客松赛道。
+- **补上学习进度**：连到自己的公开练习仓库，分别记录已经运行的步骤、当日参数和下一步计划。
+- **补全现场笔记**：[AI 开发与数据资产](field-notes/ethshenzhen-2026/day2-afternoon.md)增加上下文、贡献追溯与效果核验；[项目展示](field-notes/ethshenzhen-2026/day1-demos.md)补上三组相关路演记录。
+- **入口同步**：首页、六站目录、知识库和英文索引都能找到新笔记。发现漏记或解释不准确，欢迎一起改。
+</div>
+
+## 历史版本
+
+<div class="w3-release" markdown>
+<div class="w3-release__head">
+  <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.3</b><span>Vitalik 安全分享详解</span></div>
   <span class="w3-release__ver">v3.3.0</span>
   <span class="w3-release__date">2026-11-04</span>
@@ -29,8 +48,6 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 - **资料补充**：连到 [NIST 哈希签名标准](https://csrc.nist.gov/pubs/fips/205/final)和 [ArkLib 形式化验证项目](https://github.com/Verified-zkEVM/ArkLib)，方便继续读原始资料。
 - **入口更新**：首页、活动专题和公告条直达专篇，欢迎继续补充和纠错。
 </div>
-
-## 历史版本
 
 <div class="w3-release" markdown>
 <div class="w3-release__head">

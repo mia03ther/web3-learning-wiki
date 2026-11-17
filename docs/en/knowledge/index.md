@@ -28,6 +28,11 @@ For the event context, see <a href="../field-notes/">Field Notes</a>.
 - [MCP & AI Agents](../ai-web3/mcp-agents.md): how agents call tools and pay for things, and how budgets and permissions are limited.
 - [Security & Privacy](../security/index.md) (Chinese): wallet safety, cryptography, on-chain privacy and agent permissions. Read the wallet section early if you are new to wallets.
 
+## November practice notes
+
+- [Bittensor: subnet rules and a local miner](../../field-notes/bittensor-study-camp.md) (Chinese): task evaluation, incentives, and Windows, WSL and Docker setup.
+- [Reactive: on-chain events and callbacks](../../field-notes/reactive-network.md) (Chinese): subscriptions, callbacks, fees and failure handling, with actual practice progress.
+
 ## Find a starting point
 
 - **An unfamiliar term?** Look it up in [Core Concepts](../fundamentals/core-concepts.md).

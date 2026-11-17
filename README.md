@@ -2,7 +2,7 @@
 
 [在线阅读](https://mia03ther.github.io/web3-learning-wiki/) · [版本发布](https://mia03ther.github.io/web3-learning-wiki/changelog/) · [贡献指南](docs/contributing.md)
 
-MIA_Ether 写给群友看的 Web3 × AI 学习笔记。v3.3 新增 [Vitalik 的 AI 与以太坊安全分享详解](docs/field-notes/ethshenzhen-2026/vitalik-ai-security.md)，附技术说明、数学算例和一手资料。全站采用毛绒手账阅读界面：布面封皮、奶油纸页和缝线布贴，保留红色、F1 照片和拜仁队徽。内容分成入门、知识库、现场笔记、成长和关于五个板块。直接打开在线版就能阅读、搜索和切换明暗主题，不需要安装软件。
+MIA_Ether 写给群友看的 Web3 × AI 学习笔记。v3.4 新增 [Bittensor 共学](docs/field-notes/bittensor-study-camp.md)与 [Reactive 共学](docs/field-notes/reactive-network.md)，补上实际练习、环境排错，以及 ETHShenzhen 开发与路演细节。全站采用毛绒手账阅读界面：布面封皮、奶油纸页和缝线布贴，保留红色、F1 照片和拜仁队徽。内容分成入门、知识库、现场笔记、成长和关于五个板块。直接打开在线版就能阅读、搜索和切换明暗主题，不需要安装软件。
 
 中文内容在 `docs/`，英文骨架在 `docs/en/`。英文页面会标明哪些正文仍是中文，尚未翻译的页面由 [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) 回退到中文内容。
 
@@ -10,7 +10,7 @@ MIA_Ether 写给群友看的 Web3 × AI 学习笔记。v3.3 新增 [Vitalik 的 
 
 - 入门路线、精选课程、技能树和学习打卡。
 - 区块链基础、智能合约、链上数据、AI × Web3、安全与隐私、AI 辅助开发。
-- 四站现场笔记：R01 AI × Web3 产业创新交流会（09.19）、R02 Monad Metropolis 深圳（09.26）、R03 RustChinaConf 2026（10.15–17）、R04 ETHShenzhen 2026（10.24–25）。
+- 六站活动与共学笔记：R01 AI × Web3 产业创新交流会（09.19）、R02 Monad Metropolis 深圳（09.26）、R03 RustChinaConf 2026（10.15–17）、R04 ETHShenzhen 2026（10.24–25）、R05 Bittensor 第二期共学营（11.10–23）、R06 Reactive Builder Camp（11.16–29）。
 - 黑客松、GitHub、实习求职等手册，以及持续更新的版本记录。
 
 ## 目录
@@ -28,7 +28,9 @@ docs/
 │   ├── monad-hackathon.md   # R02 · 宣讲与圆桌
 │   ├── pitch-night.md       # R02 · 项目路演
 │   ├── rustchinaconf-2026.md # R03 · 志愿者见闻和展位交流
-│   └── ethshenzhen-2026/    # R04 · 总览、四篇现场笔记和 Vitalik 安全专篇
+│   ├── ethshenzhen-2026/    # R04 · 总览、四篇现场笔记和 Vitalik 安全专篇
+│   ├── bittensor-study-camp.md # R05 · 子网机制、本地 Miner 与环境排错
+│   └── reactive-network.md # R06 · 事件回调、Omni 与费用实测
 ├── handbook/                # Builder、黑客松、求职等手册
 ├── about/ support/ contributing.md
 ├── changelog.md             # 带版本号的发布记录

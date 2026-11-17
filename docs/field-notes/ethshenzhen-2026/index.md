@@ -66,8 +66,8 @@ description: ETHShenzhen 2026（10.24–25，深圳）两天现场笔记总览�
   <a class="w3-card" href="day1-demos/">
     <span class="w3-chip w3-chip--accent">Day 1 · 10.24 · 黑客松</span>
     <p class="w3-card__title">黑客松现场展示</p>
-    <p class="w3-card__desc">现场展示的几支队伍：支付的「消费语义」、可复现的 AI 漏洞验证、Agent 打榜、旅行凭证核销、开源作者感谢墙，外加一个 LP 小工具。</p>
-    <span class="w3-card__foot"><span>18 / 19 / 22 / 23 号等</span><span>→</span></span>
+    <p class="w3-card__desc">现场展示的几支队伍：消费语义、可复现的 AI 漏洞验证、Agent 打榜与旅行凭证；另附三组相关路演补记和一个 LP 小工具。</p>
+    <span class="w3-card__foot"><span>现场展示 · 相关路演补记</span><span>→</span></span>
   </a>
   <a class="w3-card" href="day2-morning/">
     <span class="w3-chip w3-chip--accent">Day 2 · 10.25 · 上午</span>
