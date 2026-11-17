@@ -16,12 +16,13 @@ The group-chat announcement is taken from here. The notes themselves are in Chin
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>Version 3.4</b><span>November study and practice notes</span></div>
-  <span class="w3-release__ver">v3.4.0</span>
+  <span class="w3-release__ver">v3.4.1</span>
   <span class="w3-release__date">2026-11-17</span>
 </div>
 
 <p class="w3-release__summary">New Chinese notes from the Bittensor and Reactive study camps, actual practice progress, and additions to the ETHShenzhen sessions.</p>
 
+- **Interactive checklists**: tick tasks with a click or keyboard and keep progress in the current browser.
 - **Bittensor**: [subnet rules and a local miner](../field-notes/bittensor-study-camp.md), with roles, evaluation, incentives and environment troubleshooting.
 - **Reactive**: [events and callbacks](../field-notes/reactive-network.md), with Omni changes, fees, failure handling and Buildathon tracks.
 - **Practice progress**: links to my public learning repositories, separating observed outputs from steps still to do.

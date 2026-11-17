@@ -16,12 +16,13 @@ description: Web3 Learning Wiki 的版本发布记录：每次更新了什么内
 <div class="w3-release__head">
   <span class="w3-release__icon" aria-hidden="true"><img src="../assets/avatar/logo.jpg" alt="" width="96" height="96"></span>
   <div class="w3-release__name"><b>版本 3.4</b><span>11 月共学与实操补记</span></div>
-  <span class="w3-release__ver">v3.4.0</span>
+  <span class="w3-release__ver">v3.4.1</span>
   <span class="w3-release__date">2026-11-17</span>
 </div>
 
 <p class="w3-release__summary">把最近参加的 Bittensor、Reactive 共学和实际动手记录补进笔记，也继续补全 ETHShenzhen 的开发、数据与项目路演内容。</p>
 
+- **清单可以打勾了**：正文里的待办支持点击和键盘操作，并在当前浏览器保存勾选进度。
 - **新增 Bittensor 共学**：[从子网规则到本地 Miner](field-notes/bittensor-study-camp.md)，解释角色、评分与激励，记下本地教学链、Miner 启动和环境排错。
 - **新增 Reactive 共学**：[从链上事件到自动回调](field-notes/reactive-network.md)，整理 Omni 更新、双边费用、回调排错和三条黑客松赛道。
 - **补上学习进度**：连到自己的公开练习仓库，分别记录已经运行的步骤、当日参数和下一步计划。

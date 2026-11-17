@@ -954,6 +954,36 @@ body {
 }
 
 /* Task lists */
+.md-typeset .task-list-control:has(input:not(:disabled)) {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.md-typeset .task-list-control input[data-w3-task-ready] {
+  position: static;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 .35em 0 0;
+  opacity: 1;
+  appearance: auto;
+  z-index: auto;
+  accent-color: var(--w3-ok);
+  cursor: pointer;
+}
+
+.md-typeset input[data-w3-task-ready] + .task-list-indicator {
+  display: none;
+}
+
+.md-typeset .task-list-control input:focus-visible {
+  outline: 2px solid var(--w3-text);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
 .md-typeset .task-list-indicator::before {
   background-color: var(--w3-line);
 }

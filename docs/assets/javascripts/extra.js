@@ -389,6 +389,27 @@
     }
   }
 
+  // ---------------------------------------------------------- task lists
+  function initTaskLists() {
+    var occurrences = Object.create(null);
+    $$(".md-content .task-list-item > .task-list-control > input[type='checkbox']").forEach(function (input) {
+      var item = input.closest("li");
+      var copy = item.cloneNode(true);
+      $$("ul, ol", copy).forEach(function (list) { list.remove(); });
+      var text = copy.textContent.replace(/\s+/g, " ").trim();
+      var occurrence = occurrences[text] || 0;
+      occurrences[text] = occurrence + 1;
+      if (input.dataset.w3TaskReady) return;
+      input.dataset.w3TaskReady = "1";
+      var key = "w3-task-v1:" + JSON.stringify([location.pathname, text, occurrence]);
+      var saved = store(key);
+      if (typeof saved === "boolean") input.checked = saved;
+      input.disabled = false;
+      input.setAttribute("aria-label", text);
+      input.addEventListener("change", function () { store(key, input.checked); });
+    });
+  }
+
   // ---------------------------------------------------------- boot
   eachPage(function () {
     initLanding();
@@ -397,6 +418,7 @@
     initDocNavigation();
     initSkillTree();
     initCheckin();
+    initTaskLists();
     initLightbox();
     initLanguageSwitcher();
     syncGiscus();
